@@ -417,7 +417,8 @@
             if (nodeView && [nodeView isKindOfClass:[PSBaseLeafView class]]) {
                 // TODO: Selection-highlighting is currently hardwired to our use of ContainerView.
                 // This should be generalized.
-                [(PSBaseLeafView *)nodeView setShowingSelected:([newSelectedModelNodes containsObject:modelNode] ? YES : NO)];
+                // [(PSBaseLeafView *)nodeView setShowingSelected:([newSelectedModelNodes containsObject:modelNode] ? YES : NO)];
+                [(PSBaseLeafView *)nodeView setShowingSelected: YES];
             }
         }
 
