@@ -418,7 +418,19 @@
                 // TODO: Selection-highlighting is currently hardwired to our use of ContainerView.
                 // This should be generalized.
                 // [(PSBaseLeafView *)nodeView setShowingSelected:([newSelectedModelNodes containsObject:modelNode] ? YES : NO)];
-                [(PSBaseLeafView *)nodeView setShowingSelected: YES];
+                [(PSBaseLeafView *)nodeView setShowingSelected:YES];
+                if (true) {
+                    id<PSTreeGraphModelNode> parent = [modelNode parentModelNode];
+                    while (parent != nil) {
+                        PSBaseSubtreeView *subtreeView = [self subtreeViewForModelNode:parent];
+                        UIView *nodeView = [subtreeView nodeView];
+                        if (nodeView && [nodeView isKindOfClass:[PSBaseLeafView class]]) {
+                            [(PSBaseLeafView *)nodeView setShowingSelected:YES];
+                        }
+                        parent = [parent parentModelNode];
+                    }
+                }
+            
             }
         }
 
