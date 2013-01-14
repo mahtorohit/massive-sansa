@@ -11,10 +11,13 @@
 
 @class PSHTreeGraphViewController;
 
-@interface PSHTreeGraphAppDelegate : UIResponder <UIApplicationDelegate>
+@interface PSHTreeGraphAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
 
 @property (nonatomic, strong) IBOutlet UIWindow *window;
 @property (nonatomic, strong) IBOutlet PSHTreeGraphViewController *viewController;
+@property (strong, nonatomic) UITabBarController *tabBarController;
+
+- (void) hideTabBar: (UITabBarController *) tabBarController animated:(BOOL) animated;
 
 @end
 

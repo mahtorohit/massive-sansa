@@ -38,20 +38,20 @@ static DataProvider *_sharedMySingleton = nil;
 	if (self != nil) {
 		
 		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (int i = 0; i < 7; i++) {
+		for (int i = 0; i < 2; i++) {
 			[array addObject:[[MenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Cat %i",i] imgUrl:nil usingChildren:nil andParent:nil]];
 		}
 		rootElements = [array copy];
 		
 		for (MenuItem *m in rootElements) {
 			array = [[NSMutableArray alloc] init];
-			for (int i = 0; i < 12; i++) {
+			for (int i = 0; i < 2; i++) {
 				[array addObject:[[MenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Item %i",i] imgUrl:nil usingChildren:nil andParent:m]];
 			}
 			[m setChildren:[array copy]];
 			for (MenuItem *mm in [m getChildren]) {
 				array = [[NSMutableArray alloc] init];
-				for (int i = 0; i < 4; i++) {
+				for (int i = 0; i < 2; i++) {
 					[array addObject:[[MenuItem alloc] initWithTitle:[NSString stringWithFormat:@"SubItem %i",i] imgUrl:nil usingChildren:nil andParent:mm]];
 				}
 				[mm setChildren:[array copy]];

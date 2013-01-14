@@ -33,13 +33,87 @@
 
 #pragma mark - Application Lifecycle
 
-- (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after app launch.
-    [window_ addSubview:viewController_.view];
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
+    
+    // Override point for customization after app launch
+    // [window addSubview:viewController.view];
+    
+    self.tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController.viewControllers = @[viewController_];
+    self.window.rootViewController = self.tabBarController;
+    
+    // Hide Bottom bar
+    [self hideTabBar:self.tabBarController animated:NO];
+    
+    
     [window_ makeKeyAndVisible];
+}
 
-	return YES;
+- (void)hideTabBar:(UITabBarController *)tabBarController
+          animated:(BOOL)animated {
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    
+    if (animated) {
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.5];
+    }
+    
+    float fHeight = screenRect.size.height;
+    if(  UIDeviceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation) )
+    {
+        fHeight = screenRect.size.width;
+    }
+    
+    for(UIView *view in tabBarController.view.subviews)
+    {
+        if([view isKindOfClass:[UITabBar class]])
+        {
+            [view setFrame:CGRectMake(view.frame.origin.x, fHeight, view.frame.size.width, view.frame.size.height)];
+        }
+        else
+        {
+            [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, fHeight)];
+            view.backgroundColor = [UIColor blackColor];
+        }
+    }
+    
+    if (animated) {
+        [UIView commitAnimations];
+    }
+}
+
+- (void) showTabBar:(UITabBarController *) tabBarController
+           animated:(BOOL) animated
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    float fHeight = screenRect.size.height - 49.0;
+    
+    if(  UIDeviceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation) )
+    {
+        fHeight = screenRect.size.width - 49.0;
+    }
+    
+    if (animated) {
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.5];
+    }
+    
+    for(UIView *view in tabBarController.view.subviews)
+    {
+        if([view isKindOfClass:[UITabBar class]])
+        {
+            [view setFrame:CGRectMake(view.frame.origin.x, fHeight, view.frame.size.width, view.frame.size.height)];
+        }
+        else
+        {
+            [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, fHeight)];
+        }
+    }
+    
+    if (animated)
+        [UIView commitAnimations];
+    
 }
 
 
