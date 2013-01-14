@@ -32,6 +32,8 @@
 	// Model
     id <PSTreeGraphModelNode> modelRoot_;
     
+    id <PSTreeGraphModelNode> lastDraggedOverNode_;
+    
 	// Delegate
 	id <PSTreeGraphDelegate> delegate_;
     
@@ -452,6 +454,45 @@
     return [self boundsOfModelNodes:[self selectedModelNodes]];
 }
 
+- (void) unselectAllNodes {
+    
+    id <PSTreeGraphModelNode> root = [self modelRoot];
+    [self unselectNode:root];
+}
+
+- (void) unselectNode: (id <PSTreeGraphModelNode>) modelNode {
+    
+    PSBaseSubtreeView *subtreeView = [self subtreeViewForModelNode:modelNode];
+    UIView *nodeView = [subtreeView nodeView];
+    if (nodeView && [nodeView isKindOfClass:[PSBaseLeafView class]]) {
+        [(PSBaseLeafView *)nodeView setShowingSelected:NO];
+    }
+    
+    NSArray *children = [modelNode childModelNodes];
+    
+    if (children.count == 0) {
+        return;
+    }
+    else {
+        for (id <PSTreeGraphModelNode> child in children) {
+            [self unselectNode:child];
+        }
+    }
+}
+
+- (void) unselectNodeBackwardsFromNode: (id <PSTreeGraphModelNode>) modelNode {
+    if (modelNode == nil)
+        return;
+    
+    PSBaseSubtreeView *subtreeView = [self subtreeViewForModelNode:modelNode];
+    UIView *nodeView = [subtreeView nodeView];
+    if (nodeView && [nodeView isKindOfClass:[PSBaseLeafView class]]) {
+        [(PSBaseLeafView *)nodeView setShowingSelected:NO];
+    }
+    
+    [self unselectNodeBackwardsFromNode:[modelNode parentModelNode]];
+    
+}
 
 #pragma mark - Graph Building
 
@@ -809,10 +850,11 @@
     // Identify the mdoel node (if any) that the user clicked, and make it the new selection.
     id <PSTreeGraphModelNode>  hitModelNode = [self modelNodeAtPoint:viewPoint];
     if (hitModelNode.childModelNodes != nil) {
+        
         [self setSelectedModelNodes:(hitModelNode ? [NSSet setWithObject:hitModelNode] : [NSSet set])];
     }
     // Respond to touch and become first responder.
-    //[self becomeFirstResponder];
+    [self becomeFirstResponder];
 }
 
 
@@ -821,6 +863,28 @@
 }
 
 
+- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    CGPoint viewPoint = [touch locationInView:self];
+    
+    // Identify the mdoel node (if any) that the user clicked, and make it the new selection.
+    id <PSTreeGraphModelNode>  hitModelNode = [self modelNodeAtPoint:viewPoint];
+    
+    if (hitModelNode.childModelNodes != nil) {
+        if ([hitModelNode childModelNodes].count == 0) {
+            [self executeAction: @"Action"];
+        }
+    }
+    
+    [self unselectAllNodes];
+    
+}
+
+- (void) executeAction: (NSString *) actionString {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Action title" message:actionString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alertView show];
+    [alertView release];
+}
 
 - (void) moveToSiblingByRelativeIndex:(NSInteger)relativeIndex
 {

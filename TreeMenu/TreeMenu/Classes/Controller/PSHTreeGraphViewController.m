@@ -22,7 +22,7 @@
 
 @private
 	PSBaseTreeGraphView *treeGraphView_;
-	NSString *rootClassName_;
+	MenuItem *rootClassName_;
 }
 
 @end
@@ -35,15 +35,11 @@
 
 @synthesize treeGraphView = treeGraphView_;
 @synthesize rootClassName = rootClassName_;
+@synthesize rootItem;
 
-- (void) setRootClassName:(NSString *)newRootClassName
+- (void) setRootClassName:(MenuItem *) menuItem
 {
-    NSParameterAssert(newRootClassName != nil);
-
-    if (![rootClassName_ isEqualToString:newRootClassName]) {
-        [rootClassName_ release];
-        rootClassName_ = [newRootClassName copy];
-
+    {
         treeGraphView_.treeGraphOrientation  = PSTreeGraphOrientationStyleVertical;
         treeGraphView_.connectingLineStyle = PSTreeGraphConnectingLineStyleDirect;
         treeGraphView_.connectingLineColor = [UIColor blackColor];
@@ -52,7 +48,8 @@
         treeGraphView_.siblingSpacing = 15.0f;
         treeGraphView_.resizesToFillEnclosingScrollView = YES;
         // Get an ObjCClassWrapper for the named Objective-C Class, and set it as the TreeGraph's root.
-        [treeGraphView_ setModelRoot:[ObjCClassWrapper wrapperForClassNamed:rootClassName_]];
+        //[treeGraphView_ setModelRoot:[ObjCClassWrapper wrapperForClassNamed:rootClassName_]];
+        [treeGraphView_ setModelRoot: menuItem];
     }
 }
 
@@ -64,6 +61,8 @@
 {
     [super viewDidLoad];
 
+    self.rootItem = [[DataProvider sharedInstance] getRootMenuItem];
+    
 	// Set the delegate to self.
 	[self.treeGraphView setDelegate:self];
 
@@ -73,9 +72,9 @@
     // Specify a starting root class to inspect on launch.
     
     //[self setRootClassName:@"UIControl"];
+    [self setRootClassName: self.rootItem];
     
     // The system includes some other abstract base classes that are interesting:
-    [self setRootClassName:@"CAPropertyAnimation"];
 
 }
 
@@ -103,7 +102,7 @@
     NSParameterAssert(modelNode != nil);
 
 	// NOT FLEXIBLE: treat it like a model node instead of the interface.
-	ObjCClassWrapper *objectWrapper = (ObjCClassWrapper *)modelNode;
+	MenuItem *objectWrapper = (MenuItem *)modelNode;
 	MyLeafView *leafView = (MyLeafView *)nodeView;
 
 	// button
@@ -112,9 +111,8 @@
 	}
 
 	// labels
-	leafView.titleLabel.text	= [objectWrapper name];
-	leafView.detailLabel.text	= [NSString stringWithFormat:@"%zd bytes",
-                                   [objectWrapper wrappedClassInstanceSize]];
+	leafView.titleLabel.text	= [objectWrapper getTitle];
+	leafView.detailLabel.text	= [objectWrapper getTitle];
 
 }
 
@@ -139,6 +137,14 @@
 {
 	[rootClassName_ release];
     [super dealloc];
+}
+
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAllButUpsideDown;
 }
 
 @end

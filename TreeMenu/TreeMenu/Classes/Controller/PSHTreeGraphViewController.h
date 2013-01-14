@@ -9,6 +9,8 @@
 
 #import <UIKit/UIKit.h>
 #import "PSTreeGraphDelegate.h"
+#import "DataProvider.h"
+#import "MenuItem.h"
 
 
 @class PSBaseTreeGraphView;
@@ -20,7 +22,10 @@
 @property(nonatomic, assign) IBOutlet PSBaseTreeGraphView *treeGraphView;
 
 // The name of the root class that the TreeGraph is currently showing.
-@property(nonatomic, copy) NSString *rootClassName;
+@property(nonatomic, copy) MenuItem *rootClassName;
+
+@property(nonatomic, retain) MenuItem *rootItem;
+
 
 @end
 
