@@ -38,14 +38,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="twJ-oB-tmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9" y="6"/>
+            <point key="canvasLocation" x="-49" y="116"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="DPSampleViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DPSampleViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

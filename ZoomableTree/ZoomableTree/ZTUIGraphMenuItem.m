@@ -19,6 +19,8 @@
 	BOOL visible;
 	
 	CGFloat scaling;
+	CGFloat realCoordX;
+	CGFloat realCoordY;
 }
 
 @synthesize menuItem = _menuItem;
@@ -44,7 +46,7 @@
 	
 	if (total > 0) {
 		CGPoint radialOffset = [self positionOfItem:num of:total];
-		circleOffset = CGPointMake(radialOffset.x*(300-d*50), radialOffset.y*(300-d*50));
+		circleOffset = CGPointMake(radialOffset.x*(400-d*100), radialOffset.y*(400-d*100));
 	} else {
 		circleOffset = CGPointMake(0, 0);
 	}
@@ -117,69 +119,82 @@
 }
 
 - (CGPoint) positionOfItem:(int)num of:(int)total {
-	return CGPointMake(sin(num * (2.0*M_PI/total)), -cos(num * (2.0*M_PI/total)));
+	return CGPointMake(sin(num * (2.0 * M_PI/total)), -cos(num * (2.0 * M_PI/total)));
 }
 
-- (CGFloat) distanceBetween:(CGPoint)p1 and:(CGPoint)p2 {
-	CGFloat x = p1.x - p2.x;
-	CGFloat y = p1.y - p2.y;
-	return sqrtf(x*x + y*y);
+- (void) calcPositionWithScaling {
+	realCoordX = circleCenter.x + circleOffset.x*scaling-75*scaling;
+	realCoordY = circleCenter.y + circleOffset.y*scaling-22*scaling;
 }
 
 - (void) setScale:(CGFloat)scale atPos:(CGPoint)pos {
 	
-	BOOL distanceOK = [self distanceBetween:circleCenter and:pos] < 50;
 	scaling = scale;
 	
-//	if (scaling > 1 && visible) {
-//		
-//		//Zoom Level too high for this depth - gray out and continue zooming for children
-//		
-//		[self.label setTextColor:[UIColor colorWithWhite:0.0 alpha:2-scaling]];
-//		
-//		for (ZTUIGraphMenuItem *child in self.children) {
-//			[child setScale:scaling-1 atPos:pos];
-//		}
-//	
-//	} else
-		if (scaling > 0 && visible) {
-		
-		//Zoom Level ok for this depth - refresh the position of the circleCenter for children
-		
-		[self.label setFrame:CGRectMake(circleCenter.x+circleOffset.x*scaling-75*scaling, circleCenter.y+circleOffset.y*scaling-22*scaling, 150*scaling, 44*scaling)];
-		[self.view drawRect:CGRectMake(circleCenter.x+circleOffset.x*scaling-75*scaling, circleCenter.y+circleOffset.y*scaling-22*scaling, circleCenter.x, circleCenter.y)];
-		[self.label setFont:[UIFont systemFontOfSize:20*scaling]];
-		[self.label setTextColor:[UIColor colorWithWhite:0.0 alpha:scaling]];
-		
-		for (ZTUIGraphMenuItem *child in self.children) {
-			[child setCircleCenter:circleCenter withOffset:circleOffset andScale:scaling];
-			[child setScale:scaling-1  atPos:pos];
-		}
-
-	} else if (scaling > 0 && !visible) {
-		
-		[self.label setFrame:CGRectMake(circleCenter.x+circleOffset.x*scaling-75*scaling, circleCenter.y+circleOffset.y*scaling-22*scaling, 150*scaling, 44*scaling)];
-		[self.view drawRect:CGRectMake(circleCenter.x+circleOffset.x*scaling-75*scaling, circleCenter.y+circleOffset.y*scaling-22*scaling, circleCenter.x, circleCenter.y)];
-		[self.label setFont:[UIFont systemFontOfSize:20*scaling]];
-		[self.label setTextColor:[UIColor colorWithWhite:0.0 alpha:scaling]];
+	[self calcPositionWithScaling];
 	
-//		if (distanceOK) {
-			[self setVisible:YES];
-//		}
-				
-	} else if (scaling <= 0) {
+	if (realCoordX < pos.x - 200
+		|| realCoordX > pos.x + 1200
+		|| realCoordY < pos.y - 200
+		|| realCoordY > pos.y + 900) {
+		[self setVisible:NO];
+	} else {
+		[self setVisible:YES];
+	}
+	
+	if (scaling > 0 && visible) {
 		
-		//Zoom Level too low for this depth - set invisible
+		[self.label setFrame:CGRectMake(realCoordX, realCoordY, 150*scaling, 44*scaling)];
+		[self.label setFont:[UIFont systemFontOfSize:20*scaling]];
+		[self.label setTextColor:[UIColor colorWithWhite:0.0 alpha:scaling]];
 		
-		for (ZTUIGraphMenuItem *child in self.children) {
-//			[child setVisible:NO];
-			[child setCircleCenter:circleCenter withOffset:circleOffset andScale:scaling];
-			[child setScale:scaling-1  atPos:pos];
-		}
-		
+	}
+	else {
 		[self setVisible:NO];
 		
 	}
+	
+	for (ZTUIGraphMenuItem *child in self.children) {
+		[child setCircleCenter:circleCenter withOffset:circleOffset andScale:scaling];
+		[child setScale:scaling-1  atPos:pos];
+	}
+	
+//	if (scaling > 0 && visible) {
+//		
+//		//Zoom Level ok for this depth - refresh the position of the circleCenter for children
+//		
+//		[self.label setFrame:CGRectMake(circleCenter.x+circleOffset.x*scaling-75*scaling, circleCenter.y+circleOffset.y*scaling-22*scaling, 150*scaling, 44*scaling)];
+//		[self.view drawRect:CGRectMake(circleCenter.x+circleOffset.x*scaling-75*scaling, circleCenter.y+circleOffset.y*scaling-22*scaling, circleCenter.x, circleCenter.y)];
+//		[self.label setFont:[UIFont systemFontOfSize:20*scaling]];
+//		[self.label setTextColor:[UIColor colorWithWhite:0.0 alpha:scaling]];
+//		
+//		for (ZTUIGraphMenuItem *child in self.children) {
+//			[child setCircleCenter:circleCenter withOffset:circleOffset andScale:scaling];
+//			[child setScale:scaling-1  atPos:pos];
+//		}
+//
+//	} else if (scaling > 0 && !visible) {
+//		
+//		[self.label setFrame:CGRectMake(circleCenter.x+circleOffset.x*scaling-75*scaling, circleCenter.y+circleOffset.y*scaling-22*scaling, 150*scaling, 44*scaling)];
+//		[self.view drawRect:CGRectMake(circleCenter.x+circleOffset.x*scaling-75*scaling, circleCenter.y+circleOffset.y*scaling-22*scaling, circleCenter.x, circleCenter.y)];
+//		[self.label setFont:[UIFont systemFontOfSize:20*scaling]];
+//		[self.label setTextColor:[UIColor colorWithWhite:0.0 alpha:scaling]];
+//	
+////		[self setVisible:YES];
+//				
+//	} else if (scaling <= 0) {
+//		
+//		//Zoom Level too low for this depth - set invisible
+//		
+//		for (ZTUIGraphMenuItem *child in self.children) {
+////			[child setVisible:NO];
+//			[child setCircleCenter:circleCenter withOffset:circleOffset andScale:scaling];
+//			[child setScale:scaling-1  atPos:pos];
+//		}
+//		
+////		[self setVisible:NO];
+//		
+//	}
 	
 	
 }
@@ -202,16 +217,16 @@
 }
 
 - (void) select {
-	NSLog(@"Selected %@", self.label.text);
-	[self setScale:scaling+0.5 atPos:circleCenter];
-	[self setScale:scaling+0.5 atPos:circleCenter];
-	selected = YES;
-	for (ZTUIGraphMenuItem *child in self.children) {
-		[child deselect];
-	}
-	for (ZTUIGraphMenuItem *neigh in self.neighbours) {
-		[neigh deselect];
-	}
+//	NSLog(@"Selected %@", self.label.text);
+//	[self setScale:scaling+0.5 atPos:circleCenter];
+//	[self setScale:scaling+0.5 atPos:circleCenter];
+//	selected = YES;
+//	for (ZTUIGraphMenuItem *child in self.children) {
+//		[child deselect];
+//	}
+//	for (ZTUIGraphMenuItem *neigh in self.neighbours) {
+//		[neigh deselect];
+//	}
 }
 
 - (void) deselect {

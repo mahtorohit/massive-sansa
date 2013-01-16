@@ -121,22 +121,18 @@
 
 	previousPanPosition = pos;
 	
-	if (([r state] == UIGestureRecognizerStateEnded)) {
-		//...
-	}
+	pos = graphView.frame.origin;
+	CGPoint p = CGPointMake(-pos.x, -pos.y);
+	[menuRoot setScale:scale + oscale  atPos:p];
+
 }
 
 -(void) handlePinchGesture: (UIPinchGestureRecognizer*) r {
 	scale = r.scale - 1;
 	
-	CGPoint pos = [r locationInView:graphView];
-
-//	if (scale > 1) scale = 1;
-	
-//	scale + oscale < 1 ? [menuRoot setScale:1 atPos:pos] :
-	[menuRoot setScale:scale + oscale  atPos:pos];
-
-//	[self zoomView];
+	CGPoint pos = graphView.frame.origin;
+	CGPoint p = CGPointMake(-pos.x, -pos.y);
+	[menuRoot setScale:scale + oscale  atPos:p];
 
 }
 
