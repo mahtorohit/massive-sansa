@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12A269" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="iNW-GC-OHN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="iNW-GC-OHN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -51,12 +51,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="283" height="282"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRK-uH-Cq9">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRK-uH-Cq9">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ygz-Wj-Bwz">
+                                            <color key="backgroundColor" red="1" green="0.2731590056" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="247" id="Njg-Wi-V96"/>
                                             </constraints>
@@ -65,10 +66,11 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="Ygz-Wj-Bwz" firstAttribute="leading" secondItem="T4O-W3-hgZ" secondAttribute="leading" type="default" id="12D-TB-htc"/>
-                                    <constraint firstItem="Ygz-Wj-Bwz" firstAttribute="trailing" secondItem="T4O-W3-hgZ" secondAttribute="trailing" type="default" id="3aK-hL-OaT"/>
-                                    <constraint firstItem="uRK-uH-Cq9" firstAttribute="leading" secondItem="T4O-W3-hgZ" secondAttribute="leading" constant="20" type="default" id="Fsc-Kx-alC"/>
-                                    <constraint firstItem="Ygz-Wj-Bwz" firstAttribute="top" secondItem="T4O-W3-hgZ" secondAttribute="top" type="default" id="rQ6-0e-DE7"/>
+                                    <constraint firstItem="Ygz-Wj-Bwz" firstAttribute="trailing" secondItem="T4O-W3-hgZ" secondAttribute="trailing" type="default" id="Att-sC-Az1"/>
+                                    <constraint firstItem="uRK-uH-Cq9" firstAttribute="leading" secondItem="T4O-W3-hgZ" secondAttribute="leading" constant="20" type="default" id="Yg6-yD-jc5"/>
+                                    <constraint firstItem="Ygz-Wj-Bwz" firstAttribute="top" secondItem="T4O-W3-hgZ" secondAttribute="top" type="default" id="ilt-wn-VoW"/>
+                                    <constraint firstAttribute="trailing" secondItem="uRK-uH-Cq9" secondAttribute="trailing" constant="20" type="default" id="p9B-mf-zyl"/>
+                                    <constraint firstItem="Ygz-Wj-Bwz" firstAttribute="leading" secondItem="T4O-W3-hgZ" secondAttribute="leading" type="default" id="vD8-iE-2ry"/>
                                     <constraint firstItem="uRK-uH-Cq9" firstAttribute="top" secondItem="Ygz-Wj-Bwz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zEc-AX-oNY"/>
                                 </constraints>
                                 <size key="customSize" width="283" height="282"/>
@@ -115,8 +117,6 @@
         <class className="MyCollectionViewCell" superclassName="UICollectionViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MyCollectionViewCell.h"/>
             <relationships>
-                <relationship kind="action" name="simpleAction:"/>
-                <relationship kind="outlet" name="button" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="label" candidateClass="UILabel"/>
             </relationships>

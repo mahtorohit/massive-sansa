@@ -31,6 +31,8 @@
 		8557700116A41B98007225B6 /* xy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85576FFF16A41B98007225B6 /* xy.m */; };
 		857E2C8D16A6D229004969AF /* disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 857E2C8B16A6D229004969AF /* disclosure.png */; };
 		857E2C8E16A6D229004969AF /* disclosure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 857E2C8C16A6D229004969AF /* disclosure@2x.png */; };
+		F956E45B16A8070A00241A8D /* disclosure90.png in Resources */ = {isa = PBXBuildFile; fileRef = F956E45916A8070A00241A8D /* disclosure90.png */; };
+		F956E45C16A8070A00241A8D /* disclosure90@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F956E45A16A8070A00241A8D /* disclosure90@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		85576FFF16A41B98007225B6 /* xy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xy.m; sourceTree = "<group>"; };
 		857E2C8B16A6D229004969AF /* disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure.png; sourceTree = "<group>"; };
 		857E2C8C16A6D229004969AF /* disclosure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure@2x.png"; sourceTree = "<group>"; };
+		F956E45916A8070A00241A8D /* disclosure90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure90.png; sourceTree = "<group>"; };
+		F956E45A16A8070A00241A8D /* disclosure90@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure90@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +196,8 @@
 			children = (
 				857E2C8B16A6D229004969AF /* disclosure.png */,
 				857E2C8C16A6D229004969AF /* disclosure@2x.png */,
+				F956E45916A8070A00241A8D /* disclosure90.png */,
+				F956E45A16A8070A00241A8D /* disclosure90@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -275,6 +281,8 @@
 				85576FD016A4107B007225B6 /* MainStoryboard.storyboard in Resources */,
 				857E2C8D16A6D229004969AF /* disclosure.png in Resources */,
 				857E2C8E16A6D229004969AF /* disclosure@2x.png in Resources */,
+				F956E45B16A8070A00241A8D /* disclosure90.png in Resources */,
+				F956E45C16A8070A00241A8D /* disclosure90@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +433,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnfoldingListMenu/UnfoldingListMenu-Prefix.pch";
 				INFOPLIST_FILE = "UnfoldingListMenu/UnfoldingListMenu-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -436,7 +446,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnfoldingListMenu/UnfoldingListMenu-Prefix.pch";
 				INFOPLIST_FILE = "UnfoldingListMenu/UnfoldingListMenu-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
