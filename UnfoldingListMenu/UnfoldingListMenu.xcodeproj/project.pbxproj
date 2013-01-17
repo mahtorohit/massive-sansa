@@ -33,6 +33,10 @@
 		857E2C8E16A6D229004969AF /* disclosure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 857E2C8C16A6D229004969AF /* disclosure@2x.png */; };
 		F956E45B16A8070A00241A8D /* disclosure90.png in Resources */ = {isa = PBXBuildFile; fileRef = F956E45916A8070A00241A8D /* disclosure90.png */; };
 		F956E45C16A8070A00241A8D /* disclosure90@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F956E45A16A8070A00241A8D /* disclosure90@2x.png */; };
+		F9BAFCBD16A82FF700314AA9 /* SMXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BAFCBB16A82FF700314AA9 /* SMXMLDocument.m */; };
+		F9BAFCBE16A82FF700314AA9 /* SMXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BAFCBB16A82FF700314AA9 /* SMXMLDocument.m */; };
+		F9BAFCC116A8315200314AA9 /* sample.xml in Resources */ = {isa = PBXBuildFile; fileRef = F9BAFCC016A8315200314AA9 /* sample.xml */; };
+		F9BAFCC216A8315200314AA9 /* sample.xml in Resources */ = {isa = PBXBuildFile; fileRef = F9BAFCC016A8315200314AA9 /* sample.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,9 @@
 		857E2C8C16A6D229004969AF /* disclosure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure@2x.png"; sourceTree = "<group>"; };
 		F956E45916A8070A00241A8D /* disclosure90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure90.png; sourceTree = "<group>"; };
 		F956E45A16A8070A00241A8D /* disclosure90@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure90@2x.png"; sourceTree = "<group>"; };
+		F9BAFCBB16A82FF700314AA9 /* SMXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMXMLDocument.m; sourceTree = "<group>"; };
+		F9BAFCBC16A82FF700314AA9 /* SMXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMXMLDocument.h; sourceTree = "<group>"; };
+		F9BAFCC016A8315200314AA9 /* sample.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,13 +146,16 @@
 		85576FBC16A4107B007225B6 /* UnfoldingListMenu */ = {
 			isa = PBXGroup;
 			children = (
+				F9BAFCBB16A82FF700314AA9 /* SMXMLDocument.m */,
+				F9BAFCBC16A82FF700314AA9 /* SMXMLDocument.h */,
+				F9BAFCC016A8315200314AA9 /* sample.xml */,
 				85576FFA16A41880007225B6 /* DataProvider.h */,
 				85576FFB16A41880007225B6 /* DataProvider.m */,
+				85576FF316A410B4007225B6 /* MenuItem.h */,
+				85576FF416A410B4007225B6 /* MenuItem.m */,
 				857E2C9016A6D235004969AF /* Images */,
 				85576FC516A4107B007225B6 /* ULAppDelegate.h */,
 				85576FC616A4107B007225B6 /* ULAppDelegate.m */,
-				85576FF316A410B4007225B6 /* MenuItem.h */,
-				85576FF416A410B4007225B6 /* MenuItem.m */,
 				85576FCE16A4107B007225B6 /* MainStoryboard.storyboard */,
 				85576FD116A4107B007225B6 /* ULViewController.h */,
 				85576FD216A4107B007225B6 /* ULViewController.m */,
@@ -283,6 +293,7 @@
 				857E2C8E16A6D229004969AF /* disclosure@2x.png in Resources */,
 				F956E45B16A8070A00241A8D /* disclosure90.png in Resources */,
 				F956E45C16A8070A00241A8D /* disclosure90@2x.png in Resources */,
+				F9BAFCC116A8315200314AA9 /* sample.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85576FE516A4107C007225B6 /* InfoPlist.strings in Resources */,
+				F9BAFCC216A8315200314AA9 /* sample.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +336,7 @@
 				85576FF916A41100007225B6 /* TreeItem.m in Sources */,
 				85576FFC16A41880007225B6 /* DataProvider.m in Sources */,
 				8557700016A41B98007225B6 /* xy.m in Sources */,
+				F9BAFCBD16A82FF700314AA9 /* SMXMLDocument.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +347,7 @@
 				85576FE816A4107C007225B6 /* UnfoldingListMenuTests.m in Sources */,
 				85576FFD16A41880007225B6 /* DataProvider.m in Sources */,
 				8557700116A41B98007225B6 /* xy.m in Sources */,
+				F9BAFCBE16A82FF700314AA9 /* SMXMLDocument.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

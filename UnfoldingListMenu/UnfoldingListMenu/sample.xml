@@ -1,0 +1,28 @@
+<items>
+	<item name="Obst">
+		<item name ="Äpfel">
+			<item name="Grüne">
+				<item name="Sorte 1" img="otherFile.jpg"/>
+				<item name="Sorte 2" img="someFile.png"/>
+			</item>
+			<item name="Blaue">
+				<item name="Sorte 1" img="otherFile.jpg"/>
+				<item name="Sorte 2" img="someFile.png"/>
+			</item>
+		</item>
+	</item>
+	<item name="Gemüse">
+		<item name ="Äpfel">
+			<item name="Grüne">
+				<item name="Sorte 1" img="otherFile.jpg"/>
+				<item name="Sorte 2" img="someFile.png"/>
+			</item>
+		</item>
+		<item name ="Birnen">
+			<item name="Grüne">
+				<item name="Sorte 1" img="otherFile.jpg"/>
+				<item name="Sorte 2" img="someFile.png"/>
+			</item>
+		</item>
+	</item>
+</items>

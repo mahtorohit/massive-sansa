@@ -325,6 +325,7 @@
 				F9460D2B169F06A40080C81D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
