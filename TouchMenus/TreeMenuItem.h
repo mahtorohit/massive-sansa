@@ -7,16 +7,16 @@
 #import "PSTreeGraphModelNode.h"
 
 
-@interface MenuItem : NSObject<PSTreeGraphModelNode, NSCopying> {
+@interface TreeMenuItem : NSObject<PSTreeGraphModelNode, NSCopying> {
 	NSString *title;
 	NSString *imgURL;
 	NSArray *childMenuItems;
-	MenuItem *parent;
+	TreeMenuItem *parent;
 }
 
-- (id) initWithTitle:(NSString*)theTitle imgUrl:(NSString*)theImgURL usingChildren:(NSArray *)children andParent:(MenuItem*)parent;
+- (id) initWithTitle:(NSString*)theTitle imgUrl:(NSString*)theImgURL usingChildren:(NSArray *)children andParent:(TreeMenuItem*)parent;
 - (void) setChildren:(NSArray*) children;
-- (void) setParent:(MenuItem*) parent;
+- (void) setParent:(TreeMenuItem*) parent;
 
 - (NSString*) getTitle; //nil if none
 
@@ -25,7 +25,7 @@
 
 - (int) getChildrenCount; //0 if none
 - (NSArray *) getChildren; //nil if none
-- (MenuItem *) getParent; //nil if none
+- (TreeMenuItem *) getParent; //nil if none
 - (BOOL) isLeaf;
 
 @end

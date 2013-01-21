@@ -4,13 +4,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MenuItem.h"
+#import "TreeMenuItem.h"
 
-@interface DataProvider : NSObject
+@interface TreeDataProvider : NSObject
 
-+ (DataProvider *) sharedInstance;
++ (TreeDataProvider *) sharedInstance;
 - (NSArray *) getRootLevelElements;
-- (MenuItem *) getRootMenuItem;
+- (TreeMenuItem *) getRootMenuItem;
 
 
 @end

@@ -15,8 +15,8 @@
 		2899E5220DE3E06400AC0155 /* PSHTreeGraphViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* PSHTreeGraphViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* PSHTreeGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* PSHTreeGraphViewController.m */; };
-		4834E0ED16A410C600B72D2D /* TreeDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4834E0EA16A410C600B72D2D /* TreeDataProvider.m */; };
-		4834E0EE16A410C600B72D2D /* TreeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4834E0EC16A410C600B72D2D /* TreeMenuItem.m */; };
+		4834E0ED16A410C600B72D2D /* DataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4834E0EA16A410C600B72D2D /* DataProvider.m */; };
+		4834E0EE16A410C600B72D2D /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4834E0EC16A410C600B72D2D /* MenuItem.m */; };
 		4895AFB7169EDE98005AC538 /* PSHSampleTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 4895AFB6169EDE98005AC538 /* PSHSampleTree.m */; };
 		4F3536F511FC851F00AABFF1 /* MyTreeGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3536F411FC851F00AABFF1 /* MyTreeGraphView.m */; };
 		4F35379D11FC8EC900AABFF1 /* PSBaseBranchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F35379611FC8EC900AABFF1 /* PSBaseBranchView.m */; };
@@ -47,10 +47,10 @@
 		28D7ACF70DDB3853001CB0EB /* PSHTreeGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSHTreeGraphViewController.m; path = Controller/PSHTreeGraphViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* PSHTreeGraph_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSHTreeGraph_Prefix.pch; sourceTree = "<group>"; };
-		4834E0E916A410C600B72D2D /* TreeDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TreeDataProvider.h; path = Model/TreeDataProvider.h; sourceTree = "<group>"; };
-		4834E0EA16A410C600B72D2D /* TreeDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TreeDataProvider.m; path = Model/TreeDataProvider.m; sourceTree = "<group>"; };
-		4834E0EB16A410C600B72D2D /* TreeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TreeMenuItem.h; path = Model/TreeMenuItem.h; sourceTree = "<group>"; };
-		4834E0EC16A410C600B72D2D /* TreeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TreeMenuItem.m; path = Model/TreeMenuItem.m; sourceTree = "<group>"; };
+		4834E0E916A410C600B72D2D /* DataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataProvider.h; path = Model/DataProvider.h; sourceTree = "<group>"; };
+		4834E0EA16A410C600B72D2D /* DataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataProvider.m; path = Model/DataProvider.m; sourceTree = "<group>"; };
+		4834E0EB16A410C600B72D2D /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuItem.h; path = Model/MenuItem.h; sourceTree = "<group>"; };
+		4834E0EC16A410C600B72D2D /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuItem.m; path = Model/MenuItem.m; sourceTree = "<group>"; };
 		4895AFB5169EDE98005AC538 /* PSHSampleTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSHSampleTree.h; sourceTree = "<group>"; };
 		4895AFB6169EDE98005AC538 /* PSHSampleTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSHSampleTree.m; sourceTree = "<group>"; };
 		4F0E109E1407EB94009B9214 /* Doxyfile */ = {isa = PBXFileReference; explicitFileType = text.script; fileEncoding = 4; name = Doxyfile; path = ../Doxyfile; sourceTree = "<group>"; };
@@ -170,10 +170,10 @@
 		4F3536AB11FC7C2500AABFF1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4834E0E916A410C600B72D2D /* TreeDataProvider.h */,
-				4834E0EA16A410C600B72D2D /* TreeDataProvider.m */,
-				4834E0EB16A410C600B72D2D /* TreeMenuItem.h */,
-				4834E0EC16A410C600B72D2D /* TreeMenuItem.m */,
+				4834E0E916A410C600B72D2D /* DataProvider.h */,
+				4834E0EA16A410C600B72D2D /* DataProvider.m */,
+				4834E0EB16A410C600B72D2D /* MenuItem.h */,
+				4834E0EC16A410C600B72D2D /* MenuItem.m */,
 				4F86D04213FAADC000A494AE /* ObjCClass */,
 			);
 			name = Model;
@@ -357,8 +357,8 @@
 				4F3537ED11FC9A2F00AABFF1 /* ObjCClassWrapper.m in Sources */,
 				4F353B8711FCF1A400AABFF1 /* MyLeafView.m in Sources */,
 				4895AFB7169EDE98005AC538 /* PSHSampleTree.m in Sources */,
-				4834E0ED16A410C600B72D2D /* TreeDataProvider.m in Sources */,
-				4834E0EE16A410C600B72D2D /* TreeMenuItem.m in Sources */,
+				4834E0ED16A410C600B72D2D /* DataProvider.m in Sources */,
+				4834E0EE16A410C600B72D2D /* MenuItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
