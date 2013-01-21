@@ -38,7 +38,7 @@ static DataProvider *_sharedMySingleton = nil;
 	self = [super init];
 	if (self != nil) {
 		
-		NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sample" ofType:@"xml"]];
+		NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sample2" ofType:@"xml"]];
 		
 		NSError *error;
 		SMXMLDocument *document = [SMXMLDocument documentWithData:data error:&error];
