@@ -3,13 +3,13 @@
 //  Copyright (c) 2012 Steffen Bauereiss. All rights reserved.
 //
 
-#import "MenuItem.h"
+#import "TreeMenuItem.h"
 
-@implementation MenuItem
+@implementation TreeMenuItem
 
 // Initialization/Setup
 
-- (id) initWithTitle:(NSString*)theTitle imgUrl:(NSString*)theImgURL usingChildren:(NSArray *)children andParent:(MenuItem *)theParent{
+- (id) initWithTitle:(NSString*)theTitle imgUrl:(NSString*)theImgURL usingChildren:(NSArray *)children andParent:(TreeMenuItem *)theParent{
 	if (self = [super init]) {
 		title = theTitle;
 		imgURL = theImgURL;
@@ -21,7 +21,7 @@
 }
 - (void) setChildren:(NSArray*) children {
 	childMenuItems = children;
-}- (void) setParent:(MenuItem*) theParent {
+}- (void) setParent:(TreeMenuItem*) theParent {
 	parent = theParent;
 }
 
@@ -50,7 +50,7 @@
 - (NSArray *) getChildren {
 	return childMenuItems;
 }
-- (MenuItem *) getParent {
+- (TreeMenuItem *) getParent {
 	return parent;
 }
 

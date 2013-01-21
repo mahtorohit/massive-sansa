@@ -12,9 +12,6 @@
 #import "PSBaseTreeGraphView.h"
 #import "MyLeafView.h"
 
-#import "ObjCClassWrapper.h"
-
-
 #pragma mark - Internal Interface
 
 @interface PSHTreeGraphViewController () 
@@ -74,8 +71,6 @@
     //[self setRootClassName:@"UIControl"];
     [self setRootClassName: self.rootItem];
     
-    // The system includes some other abstract base classes that are interesting:
-
 }
 
 // Override to allow orientations other than the default portrait orientation.
