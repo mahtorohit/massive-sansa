@@ -20,19 +20,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    _carImages = [@[@"chevy_small.jpg",
-                  @"mini_small.jpg",
-                  @"rover_small.jpg",
-                  @"smart_small.jpg",
-                  @"highlander_small.jpg",
-                  @"venza_small.jpg",
-                  @"volvo_small.jpg",
-                  @"vw_small.jpg",
-                  @"ford_small.jpg",
-                  @"nissan_small.jpg",
-                  @"honda_small.jpg",
-                  @"jeep_small.jpg"] mutableCopy];
    
     // if nil, assume this as a root view
     if (!self.menuItems) {
@@ -41,7 +28,16 @@
         self.title = @"GridMenu";
     }
     
-   
+//    UISwipeGestureRecognizer *leftRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftSwipeHandle:)];
+//    leftRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+//    [leftRecognizer setNumberOfTouchesRequired:1];
+//    [self.view addGestureRecognizer:leftRecognizer];
+    
+    UISwipeGestureRecognizer *rightRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rightSwipeHandle:)];
+    rightRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+    [rightRecognizer setNumberOfTouchesRequired:1];
+    [self.view addGestureRecognizer:rightRecognizer];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -101,6 +97,16 @@
         leafViewController.title = [[self.menuItems objectAtIndex:row] getTitle];
         [self.navigationController pushViewController:leafViewController animated:YES];
     }
+}
+
+//- (void)leftSwipeHandle:(UISwipeGestureRecognizer*)gestureRecognizer
+//{
+//    [self.navigationController popViewControllerAnimated:YES];
+//}
+
+- (void)rightSwipeHandle:(UISwipeGestureRecognizer*)gestureRecognizer
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

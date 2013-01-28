@@ -126,16 +126,19 @@
     
     UILabel* label = (UILabel*)[cell viewWithTag:11];
     UIImageView* image = (UIImageView*)[cell viewWithTag:10];
+    UIImageView* image2 = (UIImageView*)[cell viewWithTag:12];
     
     [self setLevelBounds:[displayedItem.menuItem getLevel] forLabel:label AndImageView:image];
     
     if (![displayedItem.menuItem isLeaf]) {
+        //[image2 setImage:[UIImage imageNamed:@"leopard-folder-big.png"]];
         if (![displayedItem isUnfolded]) {
             [image setImage:[UIImage imageNamed:@"disclosure"]];
         } else {
             [image setImage:[UIImage imageNamed:@"disclosure90"]];
 		}
     } else {
+        //[image2 setImage:[displayedItem.menuItem getImg]];
         [image setImage:nil];
     }
        
@@ -153,7 +156,7 @@
     image.bounds = rect;
     
     rect = label.bounds;
-    rect.origin.x = -10 + 20 * level;
+    rect.origin.x = 20 + 50 * level;
     label.bounds = rect;
 }
 
@@ -169,18 +172,22 @@
 
     int currentIndex = 0;
     int level = 1;
+    int itemIndex = [indexPath row];
+    TreeItem* selectedItem = [[TreeItem alloc]init];
     
     for (TreeItem* item in treeItems) {
         if ([item.menuItem getLevel] == 0) continue;
         if ([item.menuItem getLevel] <= level) {
-            
-			if (currentIndex == [indexPath row]) {
-                
-				[item setUnfolded: ![item isUnfolded]];
-                break;
+    
+                if (currentIndex == itemIndex) {
+                    [item setUnfolded: ![item isUnfolded]];
+                    selectedItem = item;
+                    break;
+                }
+                else
+                    currentIndex++;
             }
-            else
-                currentIndex++;
+      
             
 			if ([item.menuItem getLevel] < level) {
 				level = [item.menuItem getLevel];
@@ -190,11 +197,21 @@
 			if ([item isUnfolded])
                 level++;
         }
+    
+    
+    for (TreeItem* item in treeItems) {
+            if ([item.menuItem getParent] == [selectedItem.menuItem getParent] && ![[item.menuItem getTitle]isEqual:[selectedItem.menuItem getTitle]]) {
+                [item setUnfolded:FALSE];
+            }
+            //else if (item == selectedItem) [item setUnfolded:TRUE];
     }
-
+    
+    //NSLog(@"%@", [selectedItem.menuItem getTitle]);
+    
     [self.tableView reloadData];
     
 }
+
 
 - (void)didReceiveMemoryWarning
 {
