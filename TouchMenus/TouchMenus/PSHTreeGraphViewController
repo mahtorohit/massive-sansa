@@ -12,7 +12,7 @@
 #import "PSBaseTreeGraphView.h"
 #import "MyLeafView.h"
 
-#import "ObjCClassWrapper.h"
+//#import "ObjCClassWrapper.h"
 
 
 #pragma mark - Internal Interface
@@ -22,7 +22,7 @@
 
 @private
 	PSBaseTreeGraphView *treeGraphView_;
-	TreeMenuItem *rootClassName_;
+	MenuItem *rootClassName_;
 }
 
 @end
@@ -37,7 +37,7 @@
 @synthesize rootClassName = rootClassName_;
 @synthesize rootItem;
 
-- (void) setRootClassName:(TreeMenuItem *) menuItem
+- (void) setRootClassName:(MenuItem *) menuItem
 {
     {
         treeGraphView_.treeGraphOrientation  = PSTreeGraphOrientationStyleVertical;
@@ -61,7 +61,7 @@
 {
     [super viewDidLoad];
 
-    self.rootItem = [[TreeDataProvider sharedInstance] getRootMenuItem];
+    self.rootItem = [[DataProvider sharedInstance] getRootMenuItem];
     
 	// Set the delegate to self.
 	[self.treeGraphView setDelegate:self];
@@ -102,13 +102,15 @@
     NSParameterAssert(modelNode != nil);
 
 	// NOT FLEXIBLE: treat it like a model node instead of the interface.
-	TreeMenuItem *objectWrapper = (TreeMenuItem *)modelNode;
+	MenuItem *objectWrapper = (MenuItem *)modelNode;
 	MyLeafView *leafView = (MyLeafView *)nodeView;
 
 	// button
-	if ( [[objectWrapper childModelNodes] count] == 0 ) {
-		[leafView.expandButton setHidden:YES];
-	}
+//    NSArray *childModelNodes = [objectWrapper childModelNodes];
+//    
+//	if ( childModelNodes == nil || childModelNodes.count == 0 ) {
+//		[leafView.expandButton setHidden:YES];
+//	}
 
 	// labels
 	leafView.titleLabel.text	= [objectWrapper getTitle];

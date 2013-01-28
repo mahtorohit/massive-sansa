@@ -3,16 +3,16 @@
 //  Copyright (c) 2012 Steffen Bauereiss. All rights reserved.
 //
 
-#import "DataProvider.h"
+#import "TreeDataProvider.h"
 
-@implementation DataProvider
+@implementation TreeDataProvider
 
 NSArray* rootElements;
 
-static DataProvider *_sharedMySingleton = nil;
+static TreeDataProvider *_sharedMySingleton = nil;
 
-+ (DataProvider *) sharedInstance {
-	@synchronized([DataProvider class])
++ (TreeDataProvider *) sharedInstance {
+	@synchronized([TreeDataProvider class])
 	{
 		if (!_sharedMySingleton)
 			return [[self alloc] init];
@@ -23,7 +23,7 @@ static DataProvider *_sharedMySingleton = nil;
 }
 
 + (id) alloc {
-	@synchronized([DataProvider class])
+	@synchronized([TreeDataProvider class])
 	{
 		NSAssert(_sharedMySingleton == nil, @"Attempted to allocate a second instance of a singleton.");
 		_sharedMySingleton = [super alloc];
@@ -39,20 +39,20 @@ static DataProvider *_sharedMySingleton = nil;
 		
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (int i = 0; i < 2; i++) {
-			[array addObject:[[MenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Cat %i",i] imgUrl:nil usingChildren:nil andParent:nil]];
+			[array addObject:[[TreeMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Cat %i",i] imgUrl:nil usingChildren:nil andParent:nil]];
 		}
 		rootElements = [array copy];
 		
-		for (MenuItem *m in rootElements) {
+		for (TreeMenuItem *m in rootElements) {
 			array = [[NSMutableArray alloc] init];
 			for (int i = 0; i < 2; i++) {
-				[array addObject:[[MenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Item %i",i] imgUrl:nil usingChildren:nil andParent:m]];
+				[array addObject:[[TreeMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Item %i",i] imgUrl:nil usingChildren:nil andParent:m]];
 			}
 			[m setChildren:[array copy]];
-			for (MenuItem *mm in [m getChildren]) {
+			for (TreeMenuItem *mm in [m getChildren]) {
 				array = [[NSMutableArray alloc] init];
 				for (int i = 0; i < 2; i++) {
-					[array addObject:[[MenuItem alloc] initWithTitle:[NSString stringWithFormat:@"SubItem %i",i] imgUrl:nil usingChildren:nil andParent:mm]];
+					[array addObject:[[TreeMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"SubItem %i",i] imgUrl:nil usingChildren:nil andParent:mm]];
 				}
 				[mm setChildren:[array copy]];
 			}
@@ -67,12 +67,12 @@ static DataProvider *_sharedMySingleton = nil;
 	return rootElements;
 }
 
-- (MenuItem *)getRootMenuItem {
+- (TreeMenuItem *)getRootMenuItem {
     
     NSArray *rootLevelElements = [self getRootLevelElements];
-    MenuItem *rootItem = [[MenuItem alloc] initWithTitle:@"Root" imgUrl:@"" usingChildren:rootLevelElements andParent:nil];
+    TreeMenuItem *rootItem = [[TreeMenuItem alloc] initWithTitle:@"Root" imgUrl:@"" usingChildren:rootLevelElements andParent:nil];
     
-    for (MenuItem *item in rootLevelElements) {
+    for (TreeMenuItem *item in rootLevelElements) {
         [item setParent:rootItem];
     }
     
