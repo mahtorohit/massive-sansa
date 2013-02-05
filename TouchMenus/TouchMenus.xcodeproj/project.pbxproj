@@ -19,7 +19,6 @@
 		489ADDE716AD4F700048B014 /* TreeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 489ADDE516AD4F700048B014 /* TreeMenuItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		489ADDEA16AD4F790048B014 /* PSHTreeGraphViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489ADDE816AD4F790048B014 /* PSHTreeGraphViewController.xib */; };
 		489ADDEB16AD4F790048B014 /* ObjCClassTreeNodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489ADDE916AD4F790048B014 /* ObjCClassTreeNodeView.xib */; };
-		85C5D24916B6FBEE00BBDE42 /* leopard-folder-big.png in Resources */ = {isa = PBXBuildFile; fileRef = 85C5D24816B6FBEE00BBDE42 /* leopard-folder-big.png */; };
 		85C5D25116B7021700BBDE42 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C5D24F16B7021700BBDE42 /* MainStoryboard.storyboard */; };
 		F994C96016AD514C000BFF8F /* sample2.xml in Resources */ = {isa = PBXBuildFile; fileRef = F994C95F16AD514C000BFF8F /* sample2.xml */; };
 		F9BAFCD716A83D8500314AA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BAFCD616A83D8500314AA9 /* UIKit.framework */; };
@@ -82,7 +81,6 @@
 		489ADDE516AD4F700048B014 /* TreeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeMenuItem.m; sourceTree = "<group>"; };
 		489ADDE816AD4F790048B014 /* PSHTreeGraphViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSHTreeGraphViewController.xib; sourceTree = "<group>"; };
 		489ADDE916AD4F790048B014 /* ObjCClassTreeNodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ObjCClassTreeNodeView.xib; sourceTree = "<group>"; };
-		85C5D24816B6FBEE00BBDE42 /* leopard-folder-big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leopard-folder-big.png"; sourceTree = "<group>"; };
 		85C5D25016B7021700BBDE42 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F994C95F16AD514C000BFF8F /* sample2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample2.xml; sourceTree = "<group>"; };
 		F9BAFCD216A83D8500314AA9 /* TouchMenus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchMenus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,7 +285,6 @@
 		F9BAFD1316A83DD600314AA9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				85C5D24816B6FBEE00BBDE42 /* leopard-folder-big.png */,
 				F9BAFD0B16A83DD200314AA9 /* disclosure.png */,
 				F9BAFD0C16A83DD200314AA9 /* disclosure@2x.png */,
 				F9BAFD0D16A83DD200314AA9 /* disclosure90.png */,
@@ -410,7 +407,6 @@
 				F994C96016AD514C000BFF8F /* sample2.xml in Resources */,
 				489ADDEA16AD4F790048B014 /* PSHTreeGraphViewController.xib in Resources */,
 				489ADDEB16AD4F790048B014 /* ObjCClassTreeNodeView.xib in Resources */,
-				85C5D24916B6FBEE00BBDE42 /* leopard-folder-big.png in Resources */,
 				85C5D25116B7021700BBDE42 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
