@@ -84,11 +84,14 @@ static CGFloat subtreeBorderWidth(void)
         [[self enclosingTreeGraph] setNeedsGraphLayout];
 
         // Expand or collapse subtrees recursively.
-        for (UIView *subview in [self subviews]) {
-            if ([subview isKindOfClass:[PSBaseSubtreeView class]]) {
-                [(PSBaseSubtreeView *)subview setExpanded:expanded_];
-            }
-        }
+//        for (UIView *subview in [self subviews]) {
+//            if ([subview isKindOfClass:[PSBaseSubtreeView class]]) {
+//                [(PSBaseSubtreeView *)subview setExpanded:expanded_];
+//            }
+//        }
+        
+        
+        
     }
 }
 
@@ -129,7 +132,7 @@ static CGFloat subtreeBorderWidth(void)
         // Initialize ivars directly.  As a rule, it's best to avoid invoking accessors from an -init...
 		// method, since they may wrongly expect the instance to be fully formed.
 
-        expanded_ = YES;
+        expanded_ = NO;
         needsGraphLayout_ = YES;
 
         // autoresizesSubviews defaults to YES.  We don't want autoresizing, which would interfere
