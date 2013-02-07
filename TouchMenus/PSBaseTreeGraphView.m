@@ -415,6 +415,10 @@
 
         for (id <PSTreeGraphModelNode> modelNode in differenceSet) {
             PSBaseSubtreeView *subtreeView = [self subtreeViewForModelNode:modelNode];
+            
+            if (!subtreeView.isExpanded)
+                [subtreeView toggleExpansion:nil];
+            
             UIView *nodeView = [subtreeView nodeView];
             if (nodeView && [nodeView isKindOfClass:[PSBaseLeafView class]]) {
                 // TODO: Selection-highlighting is currently hardwired to our use of ContainerView.
@@ -458,6 +462,8 @@
     
     id <PSTreeGraphModelNode> root = [self modelRoot];
     [self unselectNode:root];
+
+    [self setNeedsGraphLayout];
 }
 
 - (void) unselectNode: (id <PSTreeGraphModelNode>) modelNode {
@@ -873,12 +879,28 @@
     if (hitModelNode.childModelNodes != nil) {
         if ([hitModelNode childModelNodes].count == 0) {
             [self executeAction: @"Action"];
+            [self hideAllNodes];
         }
     }
     
     [self unselectAllNodes];
     
 }
+
+- (void) hideAllNodes {
+    id<PSTreeGraphModelNode> selectedModelNode = self.singleSelectedModelNode;
+    PSBaseSubtreeView *subtreeView = [self subtreeViewForModelNode:selectedModelNode];
+    [subtreeView toggleExpansion:nil];
+    
+    id<PSTreeGraphModelNode> parentModel = [selectedModelNode parentModelNode];
+    while (parentModel != nil) {
+        PSBaseSubtreeView *subtreeView = [self subtreeViewForModelNode:parentModel];
+        [subtreeView toggleExpansion:nil];
+        parentModel = [parentModel parentModelNode];
+    }
+    
+}
+
 
 - (void) executeAction: (NSString *) actionString {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Action title" message:actionString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
