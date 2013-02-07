@@ -46,7 +46,6 @@ static DataProvider *_sharedMySingleton = nil;
 		SMXMLElement *item = document.root;
 
 		rootElements = [[self getChildrenOf:item usingParent:nil] copy];
-		NSLog(@"--> %i ", [rootElements count]);
 		
 	}
 	return self;
@@ -82,7 +81,7 @@ static DataProvider *_sharedMySingleton = nil;
 - (MenuItem *)getRootMenuItem {
     
     NSArray *rootLevelElements = [self getRootLevelElements];
-    MenuItem *rootItem = [[MenuItem alloc] initWithTitle:@"Root" imgUrl:@"" usingChildren:rootLevelElements andParent:nil];
+    MenuItem *rootItem = [[MenuItem alloc] initWithTitle:@"Menu" imgUrl:@"" usingChildren:rootLevelElements andParent:nil];
     
     for (MenuItem *item in rootLevelElements) {
         [item setParent:rootItem];
