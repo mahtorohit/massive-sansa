@@ -19,10 +19,15 @@
 		489ADDE716AD4F700048B014 /* TreeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 489ADDE516AD4F700048B014 /* TreeMenuItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		489ADDEA16AD4F790048B014 /* PSHTreeGraphViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489ADDE816AD4F790048B014 /* PSHTreeGraphViewController.xib */; };
 		489ADDEB16AD4F790048B014 /* ObjCClassTreeNodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489ADDE916AD4F790048B014 /* ObjCClassTreeNodeView.xib */; };
+		85C5D25116B7021700BBDE42 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C5D24F16B7021700BBDE42 /* MainStoryboard.storyboard */; };
 		F916DA6816B6724A0066F17D /* ZTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F916DA6716B6724A0066F17D /* ZTMainViewController.m */; };
 		F916DA6B16B67C6D0066F17D /* ZTMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F916DA6A16B67C6D0066F17D /* ZTMenuItem.m */; };
-		85C5D25116B7021700BBDE42 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C5D24F16B7021700BBDE42 /* MainStoryboard.storyboard */; };
 		F994C96016AD514C000BFF8F /* sample2.xml in Resources */ = {isa = PBXBuildFile; fileRef = F994C95F16AD514C000BFF8F /* sample2.xml */; };
+		F9B9B8C116C41645002B1B91 /* MapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B9B8BC16C41645002B1B91 /* MapOverlayView.m */; };
+		F9B9B8C216C41645002B1B91 /* MapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B9B8BE16C41645002B1B91 /* MapOverlay.m */; };
+		F9B9B8C316C41645002B1B91 /* ZTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B9B8C016C41645002B1B91 /* ZTMapViewController.m */; };
+		F9B9B8C616C41716002B1B91 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B9B8C516C41716002B1B91 /* CoreLocation.framework */; };
+		F9B9B8C816C4171F002B1B91 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B9B8C716C4171F002B1B91 /* MapKit.framework */; };
 		F9BAFCD716A83D8500314AA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BAFCD616A83D8500314AA9 /* UIKit.framework */; };
 		F9BAFCD916A83D8500314AA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BAFCD816A83D8500314AA9 /* Foundation.framework */; };
 		F9BAFCDB16A83D8500314AA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BAFCDA16A83D8500314AA9 /* CoreGraphics.framework */; };
@@ -83,12 +88,20 @@
 		489ADDE516AD4F700048B014 /* TreeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeMenuItem.m; sourceTree = "<group>"; };
 		489ADDE816AD4F790048B014 /* PSHTreeGraphViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSHTreeGraphViewController.xib; sourceTree = "<group>"; };
 		489ADDE916AD4F790048B014 /* ObjCClassTreeNodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ObjCClassTreeNodeView.xib; sourceTree = "<group>"; };
+		85C5D25016B7021700BBDE42 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F916DA6616B6724A0066F17D /* ZTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTMainViewController.h; sourceTree = "<group>"; };
 		F916DA6716B6724A0066F17D /* ZTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTMainViewController.m; sourceTree = "<group>"; };
 		F916DA6916B67C6D0066F17D /* ZTMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTMenuItem.h; sourceTree = "<group>"; };
 		F916DA6A16B67C6D0066F17D /* ZTMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTMenuItem.m; sourceTree = "<group>"; };
-		85C5D25016B7021700BBDE42 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F994C95F16AD514C000BFF8F /* sample2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample2.xml; sourceTree = "<group>"; };
+		F9B9B8BB16C41645002B1B91 /* MapOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverlayView.h; sourceTree = "<group>"; };
+		F9B9B8BC16C41645002B1B91 /* MapOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverlayView.m; sourceTree = "<group>"; };
+		F9B9B8BD16C41645002B1B91 /* MapOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverlay.h; sourceTree = "<group>"; };
+		F9B9B8BE16C41645002B1B91 /* MapOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverlay.m; sourceTree = "<group>"; };
+		F9B9B8BF16C41645002B1B91 /* ZTMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTMapViewController.h; sourceTree = "<group>"; };
+		F9B9B8C016C41645002B1B91 /* ZTMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTMapViewController.m; sourceTree = "<group>"; };
+		F9B9B8C516C41716002B1B91 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F9B9B8C716C4171F002B1B91 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F9BAFCD216A83D8500314AA9 /* TouchMenus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchMenus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BAFCD616A83D8500314AA9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F9BAFCD816A83D8500314AA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -148,6 +161,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9B9B8C816C4171F002B1B91 /* MapKit.framework in Frameworks */,
+				F9B9B8C616C41716002B1B91 /* CoreLocation.framework in Frameworks */,
 				F9BAFD5E16A843CF00314AA9 /* QuartzCore.framework in Frameworks */,
 				F9BAFCD716A83D8500314AA9 /* UIKit.framework in Frameworks */,
 				F9BAFCD916A83D8500314AA9 /* Foundation.framework in Frameworks */,
@@ -202,9 +217,24 @@
 			name = "ZoomableTree v2";
 			sourceTree = "<group>";
 		};
+		F9B9B8C416C4164E002B1B91 /* ZoomableTree Map */ = {
+			isa = PBXGroup;
+			children = (
+				F9B9B8BB16C41645002B1B91 /* MapOverlayView.h */,
+				F9B9B8BC16C41645002B1B91 /* MapOverlayView.m */,
+				F9B9B8BD16C41645002B1B91 /* MapOverlay.h */,
+				F9B9B8BE16C41645002B1B91 /* MapOverlay.m */,
+				F9B9B8BF16C41645002B1B91 /* ZTMapViewController.h */,
+				F9B9B8C016C41645002B1B91 /* ZTMapViewController.m */,
+			);
+			name = "ZoomableTree Map";
+			sourceTree = "<group>";
+		};
 		F9BAFCC716A83D8500314AA9 = {
 			isa = PBXGroup;
 			children = (
+				F9B9B8C716C4171F002B1B91 /* MapKit.framework */,
+				F9B9B8C516C41716002B1B91 /* CoreLocation.framework */,
 				F9BAFCDC16A83D8500314AA9 /* TouchMenus */,
 				F9BAFCD516A83D8500314AA9 /* Frameworks */,
 				F9BAFCD316A83D8500314AA9 /* Products */,
@@ -240,6 +270,7 @@
 				F9BAFCFA16A83D9400314AA9 /* DataProvider */,
 				F9BAFCF916A83D8D00314AA9 /* UnfoldingList */,
 				F9BAFD1E16A83E6500314AA9 /* DropDown */,
+				F9B9B8C416C4164E002B1B91 /* ZoomableTree Map */,
 				F916DA6416B6715F0066F17D /* ZoomableTree v2 */,
 				F9BAFD2B16A83FAA00314AA9 /* ZoomableTree */,
 				F9BAFD4116A8412E00314AA9 /* GridMenu */,
@@ -280,11 +311,11 @@
 				F9BAFD0016A83DC000314AA9 /* SMXMLDocument.m */,
 				F9BAFD0116A83DC000314AA9 /* SMXMLDocument.h */,
 				F9BAFD0216A83DC000314AA9 /* sample.xml */,
+				F994C95F16AD514C000BFF8F /* sample2.xml */,
 				F9BAFD0316A83DC000314AA9 /* DataProvider.h */,
 				F9BAFD0416A83DC000314AA9 /* DataProvider.m */,
 				F9BAFD0516A83DC000314AA9 /* MenuItem.h */,
 				F9BAFD0616A83DC000314AA9 /* MenuItem.m */,
-				F994C95F16AD514C000BFF8F /* sample2.xml */,
 			);
 			name = DataProvider;
 			sourceTree = "<group>";
@@ -466,6 +497,9 @@
 				489ADDE716AD4F700048B014 /* TreeMenuItem.m in Sources */,
 				F916DA6816B6724A0066F17D /* ZTMainViewController.m in Sources */,
 				F916DA6B16B67C6D0066F17D /* ZTMenuItem.m in Sources */,
+				F9B9B8C116C41645002B1B91 /* MapOverlayView.m in Sources */,
+				F9B9B8C216C41645002B1B91 /* MapOverlay.m in Sources */,
+				F9B9B8C316C41645002B1B91 /* ZTMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
