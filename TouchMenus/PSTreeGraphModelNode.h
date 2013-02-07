@@ -32,4 +32,9 @@
 
 - (NSArray *) childModelNodes;
 
+- (int) nodeDepth;
+
+/// Returns yes of node is part of the nodes path 
+- (BOOL) containsNodeInPath: (id <PSTreeGraphModelNode>) node;
+
 @end

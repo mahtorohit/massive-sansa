@@ -27,5 +27,7 @@
 - (NSArray *) getChildren; //nil if none
 - (TreeMenuItem *) getParent; //nil if none
 - (BOOL) isLeaf;
+- (int)nodeDepth;
+- (BOOL)containsNodeInPath:(id<PSTreeGraphModelNode>)node;
 
 @end

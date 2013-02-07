@@ -32,7 +32,7 @@
 	// Model
     id <PSTreeGraphModelNode> modelRoot_;
     
-    id <PSTreeGraphModelNode> lastDraggedOverNode_;
+    id <PSTreeGraphModelNode> previousDraggedOverNode_;
     
 	// Delegate
 	id <PSTreeGraphDelegate> delegate_;
@@ -424,8 +424,9 @@
                 // TODO: Selection-highlighting is currently hardwired to our use of ContainerView.
                 // This should be generalized.
                 // [(PSBaseLeafView *)nodeView setShowingSelected:([newSelectedModelNodes containsObject:modelNode] ? YES : NO)];
-                [(PSBaseLeafView *)nodeView setShowingSelected:YES];
-                if (true) {
+                PSBaseLeafView *leafView = (PSBaseLeafView *)nodeView;
+                if (!leafView.isShowingSelected) {
+                    [(PSBaseLeafView *)nodeView setShowingSelected:YES];
                     id<PSTreeGraphModelNode> parent = [modelNode parentModelNode];
                     while (parent != nil) {
                         PSBaseSubtreeView *subtreeView = [self subtreeViewForModelNode:parent];
@@ -855,12 +856,25 @@
 
     // Identify the mdoel node (if any) that the user clicked, and make it the new selection.
     id <PSTreeGraphModelNode>  hitModelNode = [self modelNodeAtPoint:viewPoint];
+    
     if (hitModelNode.childModelNodes != nil) {
         
+        NSLog(@"Depth %d", [hitModelNode nodeDepth]);
         [self setSelectedModelNodes:(hitModelNode ? [NSSet setWithObject:hitModelNode] : [NSSet set])];
+        
     }
+    
     // Respond to touch and become first responder.
     [self becomeFirstResponder];
+}
+
+
+- (void)hideAllNodesForNode: (id<PSTreeGraphModelNode>) node
+                   andDepth: (int) depth {
+
+    
+    
+    //int nodeDepth = node.nodeDepth;
 }
 
 
@@ -879,10 +893,11 @@
     if (hitModelNode.childModelNodes != nil) {
         if ([hitModelNode childModelNodes].count == 0) {
             [self executeAction: @"Action"];
-            [self hideAllNodes];
+            
         }
     }
     
+    [self hideAllNodes];
     [self unselectAllNodes];
     
 }
@@ -896,6 +911,11 @@
     while (parentModel != nil) {
         PSBaseSubtreeView *subtreeView = [self subtreeViewForModelNode:parentModel];
         [subtreeView toggleExpansion:nil];
+        
+        PSBaseLeafView *nodeView = (PSBaseLeafView *) [subtreeView nodeView];
+        [nodeView setShowingSelected:NO];
+        
+        
         parentModel = [parentModel parentModelNode];
     }
     

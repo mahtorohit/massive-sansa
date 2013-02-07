@@ -75,4 +75,25 @@
     return [self retain];
 }
 
+- (int)nodeDepth {
+    TreeMenuItem *p = [self getParent];
+    if (p == nil)
+        return 0;
+    else
+        return  1 + [p nodeDepth];
+}
+
+- (BOOL)containsNodeInPath:(id<PSTreeGraphModelNode>)node {
+    TreeMenuItem *p = [self getParent];
+    if (p == nil)
+        return NO;
+    
+    if (p == node)
+        return YES;
+    else
+        return [p containsNodeInPath: node];
+    
+    
+}
+
 @end
