@@ -19,6 +19,8 @@
 		489ADDE716AD4F700048B014 /* TreeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 489ADDE516AD4F700048B014 /* TreeMenuItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		489ADDEA16AD4F790048B014 /* PSHTreeGraphViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489ADDE816AD4F790048B014 /* PSHTreeGraphViewController.xib */; };
 		489ADDEB16AD4F790048B014 /* ObjCClassTreeNodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489ADDE916AD4F790048B014 /* ObjCClassTreeNodeView.xib */; };
+		8521A07E16C6692B006A33F2 /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A07C16C6692B006A33F2 /* minus.png */; };
+		8521A07F16C6692B006A33F2 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A07D16C6692B006A33F2 /* plus.png */; };
 		85C5D25116B7021700BBDE42 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C5D24F16B7021700BBDE42 /* MainStoryboard.storyboard */; };
 		F916DA6816B6724A0066F17D /* ZTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F916DA6716B6724A0066F17D /* ZTMainViewController.m */; };
 		F916DA6B16B67C6D0066F17D /* ZTMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F916DA6A16B67C6D0066F17D /* ZTMenuItem.m */; };
@@ -88,6 +90,8 @@
 		489ADDE516AD4F700048B014 /* TreeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeMenuItem.m; sourceTree = "<group>"; };
 		489ADDE816AD4F790048B014 /* PSHTreeGraphViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSHTreeGraphViewController.xib; sourceTree = "<group>"; };
 		489ADDE916AD4F790048B014 /* ObjCClassTreeNodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ObjCClassTreeNodeView.xib; sourceTree = "<group>"; };
+		8521A07C16C6692B006A33F2 /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus.png; sourceTree = "<group>"; };
+		8521A07D16C6692B006A33F2 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		85C5D25016B7021700BBDE42 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F916DA6616B6724A0066F17D /* ZTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTMainViewController.h; sourceTree = "<group>"; };
 		F916DA6716B6724A0066F17D /* ZTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTMainViewController.m; sourceTree = "<group>"; };
@@ -296,6 +300,8 @@
 		F9BAFCF916A83D8D00314AA9 /* UnfoldingList */ = {
 			isa = PBXGroup;
 			children = (
+				8521A07C16C6692B006A33F2 /* minus.png */,
+				8521A07D16C6692B006A33F2 /* plus.png */,
 				F9BAFD1416A83DE900314AA9 /* ULViewController.h */,
 				F9BAFD1516A83DE900314AA9 /* ULViewController.m */,
 				F9BAFD1616A83DE900314AA9 /* TreeItem.h */,
@@ -457,6 +463,8 @@
 				489ADDEA16AD4F790048B014 /* PSHTreeGraphViewController.xib in Resources */,
 				489ADDEB16AD4F790048B014 /* ObjCClassTreeNodeView.xib in Resources */,
 				85C5D25116B7021700BBDE42 /* MainStoryboard.storyboard in Resources */,
+				8521A07E16C6692B006A33F2 /* minus.png in Resources */,
+				8521A07F16C6692B006A33F2 /* plus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
