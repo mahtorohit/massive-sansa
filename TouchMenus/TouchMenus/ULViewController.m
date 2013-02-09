@@ -124,47 +124,88 @@
 
     }
     
-    UILabel* label = (UILabel*)[cell viewWithTag:11];
-    UIImageView* image = (UIImageView*)[cell viewWithTag:10];
-    UIImageView* image2 = (UIImageView*)[cell viewWithTag:12];
+    UILabel* label = (UILabel*)[cell viewWithTag:12];
+
+    UIImageView* icon = (UIImageView*)[cell viewWithTag:10];
     
-    [self setLevelBounds:[displayedItem.menuItem getLevel] forLabel:label AndImageView:image];
     
     if (![displayedItem.menuItem isLeaf]) {
         //[image2 setImage:[UIImage imageNamed:@"leopard-folder-big.png"]];
         if (![displayedItem isUnfolded]) {
-            [image setImage:[UIImage imageNamed:@"disclosure"]];
+            [icon setImage:[UIImage imageNamed:@"plus"]];
         } else {
-            [image setImage:[UIImage imageNamed:@"disclosure90"]];
+            [icon setImage:[UIImage imageNamed:@"minus"]];
 		}
     } else {
-        //[image2 setImage:[displayedItem.menuItem getImg]];
-        [image setImage:nil];
+        //[icon setImage:[UIImage imageNamed:[displayedItem.menuItem getImgUrl]]];
+        [icon setImage:nil];
     }
-       
+    
     [label setText:[NSString stringWithFormat:@"%@",[displayedItem.menuItem getTitle]]];
     
+    NSLog(@"%@ %i", [displayedItem.menuItem getTitle], [displayedItem.menuItem getLevel]);
+    [self setLevelBounds:[displayedItem.menuItem getLevel] forLabel:label AndIcon:icon ];
+       
     return cell;
 }
 
-- (void)setLevelBounds:(NSInteger)level forLabel: (UILabel*) label AndImageView: (UIImageView*) image {
+- (void)setLevelBounds:(NSInteger)level forLabel: (UILabel*) label AndIcon: (UIImageView*) icon {
 	
     CGRect rect;
-    
-    rect = image.bounds;
-    rect.origin.x = 20 * level;
-    image.bounds = rect;
-    
-    rect = label.bounds;
-    rect.origin.x = 20 + 50 * level;
-    label.bounds = rect;
+    // Label
+    rect = label.frame;
+    //rect.origin.x = 45 + 35 * (level - 1);
+    label.frame = rect;
+    [label setFrame:CGRectMake(45 + 35 * (level - 1), rect.origin.y, rect.size.width, rect.size.height)];
+    // Icon
+    rect = icon.frame;
+    //rect.origin.x = 5 + 35 * (level - 1);
+    icon.frame = rect;
+    [icon setFrame:CGRectMake(5 + 35 * (level - 1), rect.origin.y, rect.size.width, rect.size.height)];
+
 }
 
-//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-//
-//    [cell setBackgroundColor: [UIColor grayColor]];
-//    
-//}
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    UILabel* label = (UILabel*)[cell viewWithTag:12];
+    
+    UIImageView* icon = (UIImageView*)[cell viewWithTag:10];
+    
+    TreeItem* displayedItem = [[TreeItem alloc] init];
+    
+    int currentIndex = 0;
+    int level = 1;
+    
+    for (TreeItem* item in treeItems) {
+        int itemLevel = [item.menuItem getLevel];
+        
+		//we don't want the root node
+        if (itemLevel == 0) continue;
+		
+		//level fits, moving on same leel or to children
+        if (itemLevel <= level) {
+            if (currentIndex == [indexPath row]) {
+                displayedItem = item;
+                break;
+            }
+            else
+                currentIndex++;
+            
+			if (itemLevel < level) {
+				level = itemLevel;
+			}
+			
+			if ([item isUnfolded]) {
+                level++;
+			}
+            
+        }
+        
+    }
+    
+    [self setLevelBounds:[displayedItem.menuItem getLevel] forLabel:label AndIcon:icon];
+    
+//    [cell setBackgroundColor:[UIColor grayColor]];
+}
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -196,17 +237,15 @@
 			
 			if ([item isUnfolded])
                 level++;
-        }
-    
-    
-    for (TreeItem* item in treeItems) {
-            if ([item.menuItem getParent] == [selectedItem.menuItem getParent] && ![[item.menuItem getTitle]isEqual:[selectedItem.menuItem getTitle]]) {
-                [item setUnfolded:FALSE];
-            }
-            //else if (item == selectedItem) [item setUnfolded:TRUE];
     }
     
-    //NSLog(@"%@", [selectedItem.menuItem getTitle]);
+    for (TreeItem* item in treeItems) {
+        if ([item.menuItem getParent] == [selectedItem.menuItem getParent]) {
+            if  (![[item.menuItem getTitle]isEqualToString:[selectedItem.menuItem getTitle]]) {
+                [item setUnfolded:FALSE];
+        }
+    }
+    }
     
     [self.tableView reloadData];
     
