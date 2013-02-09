@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 #import "DataProvider.h"
 
-@interface ZTMenuItem : NSObject
+@interface ZTMenuItem : MKAnnotationView <MKAnnotation>
 
 @property (retain) MenuItem *menuItem;
 @property (retain) UILabel *label;
@@ -19,16 +20,15 @@
 @property (retain) UIView* view;
 
 - (id) initWithMenuItem:(MenuItem *)item
-			  usingView:(UIView *)view
+			  usingMapView:(MKMapView *)view
 			andPosition:(CGPoint)pos
 			  andRadius:(CGFloat)radius
 				atDepth:(int)d
 			 withParent:(ZTMenuItem *)parent;
 
-- (void)setScale:(CGFloat)scale atPos:(CGPoint)pos;
+- (void)setZoom:(double)zoom;
 
-- (void)transform:(CGAffineTransform)trans;
-- (CGAffineTransform)transform;
+- (void)addAllItemsToArray:(NSMutableArray *)array;
 
 - (void)setVisible:(BOOL)b;
 - (void)setDepth:(int)d;

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface ZTMapViewController : UIViewController
+@interface ZTMapViewController : UIViewController <MKMapViewDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, assign) IBOutlet MKMapView * mapView;
 

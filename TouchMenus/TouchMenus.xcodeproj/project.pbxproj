@@ -19,9 +19,14 @@
 		489ADDE716AD4F700048B014 /* TreeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 489ADDE516AD4F700048B014 /* TreeMenuItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		489ADDEA16AD4F790048B014 /* PSHTreeGraphViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489ADDE816AD4F790048B014 /* PSHTreeGraphViewController.xib */; };
 		489ADDEB16AD4F790048B014 /* ObjCClassTreeNodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489ADDE916AD4F790048B014 /* ObjCClassTreeNodeView.xib */; };
+		8521A08816C6A786006A33F2 /* minusa.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A08416C6A786006A33F2 /* minusa.png */; };
+		8521A08916C6A786006A33F2 /* minusa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A08516C6A786006A33F2 /* minusa@2x.png */; };
+		8521A08A16C6A786006A33F2 /* plusa.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A08616C6A786006A33F2 /* plusa.png */; };
+		8521A08B16C6A786006A33F2 /* plusa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A08716C6A786006A33F2 /* plusa@2x.png */; };
 		85C5D25116B7021700BBDE42 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C5D24F16B7021700BBDE42 /* MainStoryboard.storyboard */; };
 		F916DA6816B6724A0066F17D /* ZTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F916DA6716B6724A0066F17D /* ZTMainViewController.m */; };
 		F916DA6B16B67C6D0066F17D /* ZTMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F916DA6A16B67C6D0066F17D /* ZTMenuItem.m */; };
+		F91ED50316C69C910073F778 /* apfel.png in Resources */ = {isa = PBXBuildFile; fileRef = F91ED50216C69C910073F778 /* apfel.png */; };
 		F994C96016AD514C000BFF8F /* sample2.xml in Resources */ = {isa = PBXBuildFile; fileRef = F994C95F16AD514C000BFF8F /* sample2.xml */; };
 		F9B9B8C116C41645002B1B91 /* MapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B9B8BC16C41645002B1B91 /* MapOverlayView.m */; };
 		F9B9B8C216C41645002B1B91 /* MapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B9B8BE16C41645002B1B91 /* MapOverlay.m */; };
@@ -88,11 +93,16 @@
 		489ADDE516AD4F700048B014 /* TreeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeMenuItem.m; sourceTree = "<group>"; };
 		489ADDE816AD4F790048B014 /* PSHTreeGraphViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSHTreeGraphViewController.xib; sourceTree = "<group>"; };
 		489ADDE916AD4F790048B014 /* ObjCClassTreeNodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ObjCClassTreeNodeView.xib; sourceTree = "<group>"; };
+		8521A08416C6A786006A33F2 /* minusa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minusa.png; sourceTree = "<group>"; };
+		8521A08516C6A786006A33F2 /* minusa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minusa@2x.png"; sourceTree = "<group>"; };
+		8521A08616C6A786006A33F2 /* plusa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusa.png; sourceTree = "<group>"; };
+		8521A08716C6A786006A33F2 /* plusa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plusa@2x.png"; sourceTree = "<group>"; };
 		85C5D25016B7021700BBDE42 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F916DA6616B6724A0066F17D /* ZTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTMainViewController.h; sourceTree = "<group>"; };
 		F916DA6716B6724A0066F17D /* ZTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTMainViewController.m; sourceTree = "<group>"; };
 		F916DA6916B67C6D0066F17D /* ZTMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTMenuItem.h; sourceTree = "<group>"; };
 		F916DA6A16B67C6D0066F17D /* ZTMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTMenuItem.m; sourceTree = "<group>"; };
+		F91ED50216C69C910073F778 /* apfel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apfel.png; sourceTree = "<group>"; };
 		F994C95F16AD514C000BFF8F /* sample2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample2.xml; sourceTree = "<group>"; };
 		F9B9B8BB16C41645002B1B91 /* MapOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverlayView.h; sourceTree = "<group>"; };
 		F9B9B8BC16C41645002B1B91 /* MapOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverlayView.m; sourceTree = "<group>"; };
@@ -217,6 +227,14 @@
 			name = "ZoomableTree v2";
 			sourceTree = "<group>";
 		};
+		F91ED50416C69C980073F778 /* Dataset1_Images */ = {
+			isa = PBXGroup;
+			children = (
+				F91ED50216C69C910073F778 /* apfel.png */,
+			);
+			name = Dataset1_Images;
+			sourceTree = "<group>";
+		};
 		F9B9B8C416C4164E002B1B91 /* ZoomableTree Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,8 +251,6 @@
 		F9BAFCC716A83D8500314AA9 = {
 			isa = PBXGroup;
 			children = (
-				F9B9B8C716C4171F002B1B91 /* MapKit.framework */,
-				F9B9B8C516C41716002B1B91 /* CoreLocation.framework */,
 				F9BAFCDC16A83D8500314AA9 /* TouchMenus */,
 				F9BAFCD516A83D8500314AA9 /* Frameworks */,
 				F9BAFCD316A83D8500314AA9 /* Products */,
@@ -252,6 +268,8 @@
 		F9BAFCD516A83D8500314AA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9B9B8C716C4171F002B1B91 /* MapKit.framework */,
+				F9B9B8C516C41716002B1B91 /* CoreLocation.framework */,
 				F9BAFD5D16A843CF00314AA9 /* QuartzCore.framework */,
 				F9BAFCD616A83D8500314AA9 /* UIKit.framework */,
 				F9BAFCD816A83D8500314AA9 /* Foundation.framework */,
@@ -308,6 +326,7 @@
 		F9BAFCFA16A83D9400314AA9 /* DataProvider */ = {
 			isa = PBXGroup;
 			children = (
+				F91ED50416C69C980073F778 /* Dataset1_Images */,
 				F9BAFD0016A83DC000314AA9 /* SMXMLDocument.m */,
 				F9BAFD0116A83DC000314AA9 /* SMXMLDocument.h */,
 				F9BAFD0216A83DC000314AA9 /* sample.xml */,
@@ -334,6 +353,10 @@
 		F9BAFD1316A83DD600314AA9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8521A08416C6A786006A33F2 /* minusa.png */,
+				8521A08516C6A786006A33F2 /* minusa@2x.png */,
+				8521A08616C6A786006A33F2 /* plusa.png */,
+				8521A08716C6A786006A33F2 /* plusa@2x.png */,
 				F9BAFD0B16A83DD200314AA9 /* disclosure.png */,
 				F9BAFD0C16A83DD200314AA9 /* disclosure@2x.png */,
 				F9BAFD0D16A83DD200314AA9 /* disclosure90.png */,
@@ -457,6 +480,11 @@
 				489ADDEA16AD4F790048B014 /* PSHTreeGraphViewController.xib in Resources */,
 				489ADDEB16AD4F790048B014 /* ObjCClassTreeNodeView.xib in Resources */,
 				85C5D25116B7021700BBDE42 /* MainStoryboard.storyboard in Resources */,
+				F91ED50316C69C910073F778 /* apfel.png in Resources */,
+				8521A08816C6A786006A33F2 /* minusa.png in Resources */,
+				8521A08916C6A786006A33F2 /* minusa@2x.png in Resources */,
+				8521A08A16C6A786006A33F2 /* plusa.png in Resources */,
+				8521A08B16C6A786006A33F2 /* plusa@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
