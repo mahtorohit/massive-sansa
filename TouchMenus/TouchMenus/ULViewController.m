@@ -27,7 +27,7 @@
     [self createTreeInArray:array withMenuItem:[[DataProvider sharedInstance] getRootMenuItem]];
     treeItems = array;
     
-    NSLog(@"%i", [treeItems count]);
+//    NSLog(@"%i", [treeItems count]);
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -38,7 +38,7 @@
     [item setMenuItem:menuItem];
     [item setUnfolded:NO];
 
-	NSLog(@"%@", [item.menuItem getTitle]);
+//	NSLog(@"%@", [item.menuItem getTitle]);
 
     [array addObject:item];
     
@@ -80,7 +80,7 @@
         
     }
     
-    NSLog(@"%i", count);
+//    NSLog(@"%i", count);
     
     return count;
 }
@@ -143,7 +143,7 @@
     
     [label setText:[NSString stringWithFormat:@"%@",[displayedItem.menuItem getTitle]]];
     
-    NSLog(@"%@ %i", [displayedItem.menuItem getTitle], [displayedItem.menuItem getLevel]);
+//    NSLog(@"%@ %i", [displayedItem.menuItem getTitle], [displayedItem.menuItem getLevel]);
     [self setLevelBounds:[displayedItem.menuItem getLevel] forLabel:label AndIcon:icon ];
        
     return cell;
@@ -214,11 +214,16 @@
     int currentIndex = 0;
     int level = 1;
     int itemIndex = [indexPath row];
+	
     TreeItem* selectedItem = [[TreeItem alloc]init];
     
     for (TreeItem* item in treeItems) {
-        if ([item.menuItem getLevel] == 0) continue;
-        if ([item.menuItem getLevel] <= level) {
+		int itemLevel = [item.menuItem getLevel];
+
+        if (itemLevel == 0) continue;
+        if (itemLevel <= level) {
+
+			NSLog(@"%@", [item.menuItem getTitle]);
     
                 if (currentIndex == itemIndex) {
                     [item setUnfolded: ![item isUnfolded]];
@@ -227,24 +232,26 @@
                 }
                 else
                     currentIndex++;
-            }
+            
       
             
-			if ([item.menuItem getLevel] < level) {
+			if (itemLevel < level) {
 				level = [item.menuItem getLevel];
 			}
 
-			
 			if ([item isUnfolded])
+			{
                 level++;
+			}
+		}
     }
     
     for (TreeItem* item in treeItems) {
         if ([item.menuItem getParent] == [selectedItem.menuItem getParent]) {
             if  (![[item.menuItem getTitle]isEqualToString:[selectedItem.menuItem getTitle]]) {
-                [item setUnfolded:FALSE];
-        }
-    }
+                [item setUnfolded:NO];
+			}
+		}
     }
     
     [self.tableView reloadData];
