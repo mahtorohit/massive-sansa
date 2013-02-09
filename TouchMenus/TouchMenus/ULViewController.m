@@ -132,9 +132,9 @@
     if (![displayedItem.menuItem isLeaf]) {
         //[image2 setImage:[UIImage imageNamed:@"leopard-folder-big.png"]];
         if (![displayedItem isUnfolded]) {
-            [icon setImage:[UIImage imageNamed:@"plus"]];
+            [icon setImage:[UIImage imageNamed:@"plusa"]];
         } else {
-            [icon setImage:[UIImage imageNamed:@"minus"]];
+            [icon setImage:[UIImage imageNamed:@"minusa"]];
 		}
     } else {
         [icon setImage:[UIImage imageNamed:[displayedItem.menuItem getImgUrl]]];
@@ -232,9 +232,7 @@
                 }
                 else
                     currentIndex++;
-            
-      
-            
+        
 			if (itemLevel < level) {
 				level = [item.menuItem getLevel];
 			}
