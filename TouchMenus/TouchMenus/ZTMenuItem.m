@@ -27,16 +27,16 @@
 @synthesize parent = _parent;
 @synthesize view = _view;
 
+@synthesize title = _title;
+@synthesize coordinate = _coordinate;
+
 - (id) initWithMenuItem:(MenuItem *)item
-			  usingView:(UIView *)view
-
-			  andPosition:(CGPoint)pos
+		   usingMapView:(MKMapView *)view
+			andPosition:(CGPoint)pos
 			  andRadius:(CGFloat)radius
-
 				atDepth:(int)d
 			 withParent:(ZTMenuItem *)parent {
 
-	
 	self = [super init];
 	
 	self.parent = parent;
@@ -47,23 +47,27 @@
 	
 	depth = d;
 	position = pos;
-
+	
+	_title = [self.menuItem getTitle];
+	_coordinate = CLLocationCoordinate2DMake(pos.x/30, pos.y/30);
+	[view addAnnotation:self];
+	
 	if (self.menuItem == nil) {
 		//root
 		DataProvider *p = [DataProvider sharedInstance];
 		self.menuItem = [p getRootMenuItem];
 	}
 	
-	self.label = [[UILabel alloc] initWithFrame:CGRectMake(pos.x-250, pos.y-44, 500, 88)];
+	self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 500, 88)];
 	
-	[self.label setFont:[UIFont systemFontOfSize:MAX(40-10*depth,5)]];//UGLY
+	[self setZoom:50];
 	
 	[self.label setText:[self.menuItem getTitle]];
 	[self.label setBackgroundColor:[UIColor clearColor]];
-	[self.label setTextAlignment:NSTextAlignmentCenter];
+	[self.label setTextAlignment:NSTextAlignmentLeft];
 	[self.label setUserInteractionEnabled:YES];
 	
-	[view addSubview:self.label];
+	[self addSubview:self.label];
 	
 	selected = NO;
 	
@@ -82,7 +86,7 @@
 							//TODO: COSINUS
 		
 		ZTMenuItem *childItem = [[ZTMenuItem alloc] initWithMenuItem:child
-														   usingView:view
+														   usingMapView:view
 														 andPosition:childPosition
 														   andRadius:childRadius
 															 atDepth:depth+1
@@ -101,30 +105,18 @@
 	return CGPointMake(sin(num * (2.0 * M_PI/total)), -cos(num * (2.0 * M_PI/total)));
 }
 
-- (void)transform:(CGAffineTransform)trans {
-	self.label.transform = trans;
-	
-	for (ZTMenuItem *child in self.children) {
-		[child transform:trans];
+- (void)setZoom:(double)startfont
+{
+	[self.label setFont:[UIFont systemFontOfSize:MAX(startfont-depth*10,5)]];
+}
+
+- (void)addAllItemsToArray:(NSMutableArray *)array
+{
+	[array addObject:self];
+	for (ZTMenuItem *child in self.children)
+	{
+		[child addAllItemsToArray:array];
 	}
-}
-
-- (CGAffineTransform)transform {
-	return self.label.transform;
-}
-
-
-- (void) setScale:(CGFloat)scale atPos:(CGPoint)pos{
-//	CGAffineTransform trans = self.transform;
-//	trans = CGAffineTransformScale(trans, scale, scale);
-//	[self transform:trans];
-//
-//	[self.label setFont:[UIFont systemFontOfSize:MIN(20*scale,20)]];
-//	[self.label setTextColor:[UIColor colorWithWhite:0.0 alpha:1-scale]];
-//	
-//	for (ZTMenuItem *child in self.children) {
-//		[child setScale:scale-1 atPos:pos];
-//	}
 }
 
 - (void) setDepth:(int)d {

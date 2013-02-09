@@ -7,30 +7,39 @@
 //
 
 #import "iCarouselExampleViewController.h"
+#import "DataProvider.h"
 
-
-@interface iCarouselExampleViewController () <UIActionSheetDelegate>
+@interface iCarouselExampleViewController () {
+	
+}
 
 @property (nonatomic, assign) BOOL wrap;
-@property (nonatomic, strong) NSMutableArray *items;
+
+@property MenuItem *menuItem1;
+@property MenuItem *menuItem3;
 
 @end
 
 
 @implementation iCarouselExampleViewController
 
-@synthesize carousel1;
-@synthesize carousel3;
-@synthesize items;
+@synthesize carousel1 = _carousel1;
+@synthesize carousel3 = _carousel3;
+
+@synthesize menuItem1 = _menuItem1;
+@synthesize menuItem3 = _menuItem3;
 
 - (void)setUp
 {
-	//set up data
-	self.items = [NSMutableArray array];
-	for (int i = 0; i < 100; i++)
-	{
-		[items addObject:[NSNumber numberWithInt:i]];
-	}
+	
+	DataProvider *dp = [DataProvider sharedInstance];
+	
+	self.menuItem1 = [dp getRootMenuItem];
+	self.menuItem3 = [[[dp getRootMenuItem] getChildren] objectAtIndex:0];
+	
+	[self.carousel1 setBackgroundColor:[UIColor clearColor]];
+	[self.carousel3 setBackgroundColor:[UIColor clearColor]];
+	
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -55,8 +64,8 @@
 {
 	//it's a good idea to set these to nil here to avoid
 	//sending messages to a deallocated viewcontroller
-	carousel1.delegate = nil;
-	carousel1.dataSource = nil;
+	self.carousel1.delegate = nil;
+	self.carousel1.dataSource = nil;
 }
 
 #pragma mark -
@@ -67,9 +76,9 @@
     [super viewDidLoad];
     
     //configure carousel
-    carousel1.type = iCarouselTypeCoverFlow2;
-    carousel3.type = iCarouselTypeCoverFlow2;
-	carousel3.vertical = !carousel1.vertical;
+    self.carousel1.type = iCarouselTypeCoverFlow2;
+    self.carousel3.type = iCarouselTypeCoverFlow2;
+	self.carousel3.vertical = !self.carousel1.vertical;
 	
 }
 
@@ -85,15 +94,6 @@
     return YES;
 }
 
-- (IBAction)toggleOrientation
-{
-    //carousel orientation can be animated
-    [UIView beginAnimations:nil context:nil];
-    carousel1.vertical = !carousel1.vertical;
-    carousel3.vertical = !carousel3.vertical;
-    [UIView commitAnimations];
-}
-
 #pragma mark -
 #pragma mark UIActionSheet methods
 
@@ -104,8 +104,8 @@
     
     //carousel can smoothly animate between types
     [UIView beginAnimations:nil context:nil];
-    carousel1.type = type;
-    carousel3.type = type;
+    self.carousel1.type = type;
+    self.carousel3.type = type;
     [UIView commitAnimations];
 }
 
@@ -114,7 +114,10 @@
 
 - (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel
 {
-    return [items count];
+    if (carousel == self.carousel1) return [self.menuItem1 getChildrenCount] + 1;
+	else if (carousel == self.carousel3) return [self.menuItem3 getChildrenCount] + 1;
+	
+	return 0;
 }
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
@@ -125,11 +128,11 @@
 	if (view == nil)
 	{
         view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200.0f, 200.0f)];
-        view.backgroundColor = [UIColor lightGrayColor];
+        view.backgroundColor = (index == 0) ? [UIColor orangeColor] : [UIColor lightGrayColor];
         label = [[UILabel alloc] initWithFrame:view.bounds];
         label.backgroundColor = [UIColor clearColor];
-        label.textAlignment = UITextAlignmentCenter;
-        label.font = [label.font fontWithSize:50];
+        label.font = [label.font fontWithSize:20];
+		label.textAlignment = NSTextAlignmentCenter;
         [view addSubview:label];
     }
     else
@@ -137,40 +140,49 @@
 		label = [[view subviews] lastObject];
 	}
 	
-    //set label
-	label.text = [NSString stringWithFormat:@"%i", index];
-	
+	NSString *title;
+	if (carousel == self.carousel1)
+	{
+		if (index == 0)
+			title = [self.menuItem1 getTitle];
+		else
+			title = [[self.menuItem1.getChildren objectAtIndex:index-1] getTitle];
+	}
+	else if (carousel == self.carousel3)
+	{
+		if (index == 0)
+			title = [self.menuItem3 getTitle];
+		else
+			title = [[self.menuItem3.getChildren objectAtIndex:index-1] getTitle];
+	}
+	label.text = title;
+		
 	return view;
 }
 
-- (CATransform3D)carousel:(iCarousel *)_carousel itemTransformForOffset:(CGFloat)offset baseTransform:(CATransform3D)transform
+- (CATransform3D)carousel:(iCarousel *)carousel itemTransformForOffset:(CGFloat)offset baseTransform:(CATransform3D)transform
 {
     //implement 'flip3D' style carousel
     transform = CATransform3DRotate(transform, M_PI / 8.0f, 0.0f, 1.0f, 0.0f);
-    return CATransform3DTranslate(transform, 0.0f, 0.0f, offset * carousel1.itemWidth);
+    return CATransform3DTranslate(transform, 0.0f, 0.0f, offset * self.carousel1.itemWidth);
 }
 
-- (CGFloat)carousel:(iCarousel *)_carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value
+- (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value
 {
     //customize carousel display
     switch (option)
     {
         case iCarouselOptionWrap:
         {
-            return YES;
+            return NO;
         }
         case iCarouselOptionSpacing:
         {
             //add a bit of spacing between the item views
-            return value * 1.05f;
+            return value * 1.55f;
         }
         case iCarouselOptionFadeMax:
         {
-            if (_carousel.type == iCarouselTypeCustom)
-            {
-                //set opacity based on distance from camera
-                return 0.0f;
-            }
             return value;
         }
         default:
@@ -178,6 +190,99 @@
             return value;
         }
     }
+}
+
+- (void)carouselWillBeginDragging:(iCarousel *)carousel
+{
+	self.carousel1.layer.zPosition = 9;
+	self.carousel3.layer.zPosition = 9;
+	[self.carousel1 setHidden:YES];
+	[self.carousel3 setHidden:YES];
+	carousel.layer.zPosition = 10;
+	[carousel setHidden:NO];
+}
+- (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index
+{
+	self.carousel1.layer.zPosition = 9;
+	self.carousel3.layer.zPosition = 9;
+	[self.carousel1 setHidden:YES];
+	[self.carousel3 setHidden:YES];
+	carousel.layer.zPosition = 10;
+	[carousel setHidden:NO];
+}
+- (void)carouselDidEndDragging:(iCarousel *)carousel willDecelerate:(BOOL)decelerate
+{
+
+}
+
+- (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel
+{
+	if (carousel == self.carousel1)
+	{
+		int index = self.carousel1.currentItemIndex;
+		
+		if (index == 0)
+		{
+			//back
+			self.menuItem3 = self.menuItem1.getParent;
+			[self.carousel3 setCurrentItemIndex:[[self.menuItem3 getChildren] indexOfObject:self.menuItem1]+1];
+			[self.carousel3 reloadData];
+			[self.carousel3 setHidden:NO];
+			self.carousel1.layer.zPosition = 9;
+			self.carousel3.layer.zPosition = 10;
+			
+		}
+		else
+		{
+			//down
+			MenuItem *oldItem = self.menuItem3;
+			self.menuItem3 = [self.menuItem1.getChildren objectAtIndex:index-1];
+			if ([self.menuItem3 getChildrenCount] == 0)
+				self.menuItem3 = oldItem;
+			else
+			{
+				[self.carousel3 setCurrentItemIndex:0];
+				[self.carousel3 reloadData];
+				[self.carousel3 setHidden:NO];
+				//				self.carousel1.layer.zPosition = 9;
+				//				self.carousel3.layer.zPosition = 10;
+			}
+		}
+	}
+	else if (carousel == self.carousel3)
+	{
+		int index = self.carousel3.currentItemIndex;
+		
+		if (index == 0)
+		{
+			//back
+			self.menuItem1 = self.menuItem3.getParent;
+			[self.carousel1 setCurrentItemIndex:[[self.menuItem1 getChildren] indexOfObject:self.menuItem3]+1];
+			[self.carousel1 reloadData];
+			[self.carousel1 setHidden:NO];
+			self.carousel1.layer.zPosition = 10;
+			self.carousel3.layer.zPosition = 9;
+			
+		}
+		else
+		{
+			//down
+			MenuItem *oldItem = self.menuItem1;
+			self.menuItem1 = [self.menuItem3.getChildren objectAtIndex:index-1];
+			if ([self.menuItem1 getChildrenCount] == 0)
+				self.menuItem1 = oldItem;
+			else
+			{
+				[self.carousel1 setCurrentItemIndex:0];
+				[self.carousel1 reloadData];
+				[self.carousel1 setHidden:NO];
+				//				self.carousel1.layer.zPosition = 10;
+				//				self.carousel3.layer.zPosition = 9;
+			}
+		}
+		
+	}
+	
 }
 
 @end

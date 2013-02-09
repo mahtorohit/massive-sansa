@@ -18,9 +18,9 @@
 - (MKMapRect)boundingMapRect
 {
     //Latitue and longitude for each corner point
-    MKMapPoint upperLeft = MKMapPointForCoordinate(CLLocationCoordinate2DMake(45, -90));
-    MKMapPoint upperRight = MKMapPointForCoordinate(CLLocationCoordinate2DMake(45, 90));
-    MKMapPoint bottomLeft = MKMapPointForCoordinate(CLLocationCoordinate2DMake(-45, -90));
+    MKMapPoint upperLeft = MKMapPointForCoordinate(CLLocationCoordinate2DMake(90, -180));
+    MKMapPoint upperRight = MKMapPointForCoordinate(CLLocationCoordinate2DMake(90, 180));
+    MKMapPoint bottomLeft = MKMapPointForCoordinate(CLLocationCoordinate2DMake(-90, -180));
     
     //Building a map rect that represents the image projection on the map
     MKMapRect bounds = MKMapRectMake(upperLeft.x, upperLeft.y, fabs(upperLeft.x - upperRight.x), fabs(upperLeft.y - bottomLeft.y));
