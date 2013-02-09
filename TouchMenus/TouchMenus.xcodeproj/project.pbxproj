@@ -24,6 +24,7 @@
 		85C5D25116B7021700BBDE42 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C5D24F16B7021700BBDE42 /* MainStoryboard.storyboard */; };
 		F916DA6816B6724A0066F17D /* ZTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F916DA6716B6724A0066F17D /* ZTMainViewController.m */; };
 		F916DA6B16B67C6D0066F17D /* ZTMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F916DA6A16B67C6D0066F17D /* ZTMenuItem.m */; };
+		F91ED50316C69C910073F778 /* apfel.png in Resources */ = {isa = PBXBuildFile; fileRef = F91ED50216C69C910073F778 /* apfel.png */; };
 		F994C96016AD514C000BFF8F /* sample2.xml in Resources */ = {isa = PBXBuildFile; fileRef = F994C95F16AD514C000BFF8F /* sample2.xml */; };
 		F9B9B8C116C41645002B1B91 /* MapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B9B8BC16C41645002B1B91 /* MapOverlayView.m */; };
 		F9B9B8C216C41645002B1B91 /* MapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B9B8BE16C41645002B1B91 /* MapOverlay.m */; };
@@ -97,6 +98,7 @@
 		F916DA6716B6724A0066F17D /* ZTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTMainViewController.m; sourceTree = "<group>"; };
 		F916DA6916B67C6D0066F17D /* ZTMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTMenuItem.h; sourceTree = "<group>"; };
 		F916DA6A16B67C6D0066F17D /* ZTMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTMenuItem.m; sourceTree = "<group>"; };
+		F91ED50216C69C910073F778 /* apfel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apfel.png; sourceTree = "<group>"; };
 		F994C95F16AD514C000BFF8F /* sample2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample2.xml; sourceTree = "<group>"; };
 		F9B9B8BB16C41645002B1B91 /* MapOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverlayView.h; sourceTree = "<group>"; };
 		F9B9B8BC16C41645002B1B91 /* MapOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverlayView.m; sourceTree = "<group>"; };
@@ -221,6 +223,14 @@
 			name = "ZoomableTree v2";
 			sourceTree = "<group>";
 		};
+		F91ED50416C69C980073F778 /* Dataset1_Images */ = {
+			isa = PBXGroup;
+			children = (
+				F91ED50216C69C910073F778 /* apfel.png */,
+			);
+			name = Dataset1_Images;
+			sourceTree = "<group>";
+		};
 		F9B9B8C416C4164E002B1B91 /* ZoomableTree Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +324,7 @@
 		F9BAFCFA16A83D9400314AA9 /* DataProvider */ = {
 			isa = PBXGroup;
 			children = (
+				F91ED50416C69C980073F778 /* Dataset1_Images */,
 				F9BAFD0016A83DC000314AA9 /* SMXMLDocument.m */,
 				F9BAFD0116A83DC000314AA9 /* SMXMLDocument.h */,
 				F9BAFD0216A83DC000314AA9 /* sample.xml */,
@@ -465,6 +476,7 @@
 				85C5D25116B7021700BBDE42 /* MainStoryboard.storyboard in Resources */,
 				8521A07E16C6692B006A33F2 /* minus.png in Resources */,
 				8521A07F16C6692B006A33F2 /* plus.png in Resources */,
+				F91ED50316C69C910073F778 /* apfel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

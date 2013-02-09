@@ -137,8 +137,8 @@
             [icon setImage:[UIImage imageNamed:@"minus"]];
 		}
     } else {
-        //[icon setImage:[UIImage imageNamed:[displayedItem.menuItem getImgUrl]]];
-        [icon setImage:nil];
+        [icon setImage:[UIImage imageNamed:[displayedItem.menuItem getImgUrl]]];
+        //[icon setImage:nil];
     }
     
     [label setText:[NSString stringWithFormat:@"%@",[displayedItem.menuItem getTitle]]];

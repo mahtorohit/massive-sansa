@@ -36,7 +36,7 @@
 	
 	[self.debugLabel setText:@"Touches:\n"];
 	
-	self.menuRoot = [[ZTMenuItem alloc] initWithMenuItem:nil usingView:self.view andPosition:CGPointMake(512, 368) andRadius:1500 atDepth:0 withParent:nil];
+//	self.menuRoot = [[ZTMenuItem alloc] initWithMenuItem:nil usingView:self.view andPosition:CGPointMake(512, 368) andRadius:1500 atDepth:0 withParent:nil];
 	
 	UIGestureRecognizer *r;
 	r = [[UIPanGestureRecognizer alloc] initWithTarget:self action: @selector(handlePanGesture:)];
@@ -70,7 +70,7 @@
 	CGAffineTransform trans = self.menuRoot.transform;
 	
 	trans = CGAffineTransformTranslate(trans, pos.x - lastPosition.x, pos.y - lastPosition.y);
-	[self.menuRoot transform:trans];
+//	[self.menuRoot transform:trans];
 	
 	lastPosition = pos;
 	
@@ -78,7 +78,7 @@
 }
 
 -(void) handlePinchGesture: (UIPinchGestureRecognizer*) r {
-	[self.menuRoot setScale:r.scale atPos:[r locationInView:self.view]];
+//	[self.menuRoot setScale:r.scale atPos:[r locationInView:self.view]];
 	
 }
 

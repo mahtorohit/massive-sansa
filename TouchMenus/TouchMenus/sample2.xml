@@ -1,7 +1,7 @@
 <items>
 	<item name="Obst" img="">
 		<item name="Kernobst" img="">
-			<item name="Apfel" img=""/>
+			<item name="Apfel" img="apfel.png"/>
 			<item name="Birnen" img=""/>
 			<item name="Hagebutte" img=""/>
 			<item name="Quitte" img=""/>
