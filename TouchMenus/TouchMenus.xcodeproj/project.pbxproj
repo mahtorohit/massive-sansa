@@ -251,8 +251,6 @@
 		F9BAFCC716A83D8500314AA9 = {
 			isa = PBXGroup;
 			children = (
-				F9B9B8C716C4171F002B1B91 /* MapKit.framework */,
-				F9B9B8C516C41716002B1B91 /* CoreLocation.framework */,
 				F9BAFCDC16A83D8500314AA9 /* TouchMenus */,
 				F9BAFCD516A83D8500314AA9 /* Frameworks */,
 				F9BAFCD316A83D8500314AA9 /* Products */,
@@ -270,6 +268,8 @@
 		F9BAFCD516A83D8500314AA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9B9B8C716C4171F002B1B91 /* MapKit.framework */,
+				F9B9B8C516C41716002B1B91 /* CoreLocation.framework */,
 				F9BAFD5D16A843CF00314AA9 /* QuartzCore.framework */,
 				F9BAFCD616A83D8500314AA9 /* UIKit.framework */,
 				F9BAFCD816A83D8500314AA9 /* Foundation.framework */,

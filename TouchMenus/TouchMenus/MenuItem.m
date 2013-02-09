@@ -36,7 +36,7 @@
 }
 - (UIImage *) getImg {
 	if (imgURL == nil) return nil;
-	return [UIImage imageNamed:[[NSString alloc] initWithContentsOfURL:[NSURL URLWithString:imgURL] encoding:NSUTF8StringEncoding error:nil]];
+	return [UIImage imageNamed:imgURL];
 }
 
 // Navigation relevant

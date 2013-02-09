@@ -137,7 +137,7 @@
             [icon setImage:[UIImage imageNamed:@"minusa"]];
 		}
     } else {
-        [icon setImage:[UIImage imageNamed:[displayedItem.menuItem getImgUrl]]];
+        [icon setImage:[displayedItem.menuItem getImg]];
         //[icon setImage:nil];
     }
     
