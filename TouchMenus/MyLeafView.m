@@ -45,7 +45,7 @@
 
         // Example: Inverse the color scheme
 
-        self.fillColor = [UIColor grayColor];
+        self.fillColor = [UIColor clearColor];
         self.selectionColor = [UIColor redColor];
 
     }

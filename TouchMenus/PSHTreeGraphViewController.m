@@ -37,10 +37,10 @@
 - (void) setRootClassName:(TreeMenuItem *) menuItem
 {
     {
-        treeGraphView_.treeGraphOrientation  = PSTreeGraphOrientationStyleVertical;
-        treeGraphView_.connectingLineStyle = PSTreeGraphConnectingLineStyleDirect;
-        treeGraphView_.connectingLineColor = [UIColor blackColor];
-        treeGraphView_.connectingLineWidth = 0.5f;
+        treeGraphView_.treeGraphOrientation  = PSTreeGraphOrientationStyleVerticalFlipped;
+        treeGraphView_.connectingLineStyle = PSTreeGraphConnectingLineStyleOrthogonal;
+        treeGraphView_.connectingLineColor = [UIColor orangeColor];
+        treeGraphView_.connectingLineWidth = 2.0f;
         treeGraphView_.backgroundColor = [UIColor whiteColor];
         treeGraphView_.siblingSpacing = 15.0f;
         treeGraphView_.resizesToFillEnclosingScrollView = YES;

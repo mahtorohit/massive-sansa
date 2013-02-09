@@ -18,6 +18,7 @@
 
 #import "PSTreeGraphDelegate.h"
 #import "PSTreeGraphModelNode.h"
+#import "TreeMenuItem.h"
 
 // For displayIfNeeded
 #import <QuartzCore/QuartzCore.h>
@@ -858,12 +859,17 @@
     id <PSTreeGraphModelNode>  hitModelNode = [self modelNodeAtPoint:viewPoint];
     
     if (hitModelNode.childModelNodes != nil) {
-        
         NSLog(@"Depth %d", [hitModelNode nodeDepth]);
         [self setSelectedModelNodes:(hitModelNode ? [NSSet setWithObject:hitModelNode] : [NSSet set])];
-        
+    }
+    else {
+        previousDraggedOverNode_ = self.singleSelectedModelNode;
     }
     
+    NSLog(@"previous: %@", [previousDraggedOverNode_ description]);
+    
+    
+//
     // Respond to touch and become first responder.
     [self becomeFirstResponder];
 }
@@ -892,7 +898,7 @@
     
     if (hitModelNode.childModelNodes != nil) {
         if ([hitModelNode childModelNodes].count == 0) {
-            [self executeAction: @"Action"];
+            [self executeAction: @"Item ausgewählt"];
             
         }
     }
