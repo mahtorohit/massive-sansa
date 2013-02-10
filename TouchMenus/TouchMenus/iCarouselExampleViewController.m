@@ -35,7 +35,7 @@
 	DataProvider *dp = [DataProvider sharedInstance];
 	
 	self.menuItem1 = [dp getRootMenuItem];
-	self.menuItem3 = [[[dp getRootMenuItem] getChildren] objectAtIndex:0];
+//	self.menuItem3 = [[[dp getRootMenuItem] getChildren] objectAtIndex:0];
 	
 	[self.carousel1 setBackgroundColor:[UIColor clearColor]];
 	[self.carousel3 setBackgroundColor:[UIColor clearColor]];
@@ -123,39 +123,54 @@
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
 {
     UILabel *label = nil;
-    
+    UIImageView *imgV = nil;
+	
 	//create new view if no view is available for recycling
 	if (view == nil)
 	{
-        view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200.0f, 200.0f)];
+        view = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 200.0f, 200.0f)];
         view.backgroundColor = (index == 0) ? [UIColor orangeColor] : [UIColor lightGrayColor];
-        label = [[UILabel alloc] initWithFrame:view.bounds];
+		
+		imgV = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 200.0f, 160.0f)];
+		[view addSubview:imgV];
+
+        label = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 160.0f, 200.0f, 40.0f)];
         label.backgroundColor = [UIColor clearColor];
         label.font = [label.font fontWithSize:20];
 		label.textAlignment = NSTextAlignmentCenter;
-        [view addSubview:label];
-    }
+		[view addSubview:label];
+	
+	}
     else
 	{
 		label = [[view subviews] lastObject];
 	}
 	
 	NSString *title;
+	UIImage *img;
 	if (carousel == self.carousel1)
 	{
 		if (index == 0)
 			title = [self.menuItem1 getTitle];
 		else
+		{
 			title = [[self.menuItem1.getChildren objectAtIndex:index-1] getTitle];
+			img = [[self.menuItem1.getChildren objectAtIndex:index-1] getImg];
+		}
 	}
 	else if (carousel == self.carousel3)
 	{
 		if (index == 0)
 			title = [self.menuItem3 getTitle];
 		else
+		{
 			title = [[self.menuItem3.getChildren objectAtIndex:index-1] getTitle];
+			img = [[self.menuItem3.getChildren objectAtIndex:index-1] getImg];
+		}
+			
 	}
 	label.text = title;
+	imgV.image = img;
 		
 	return view;
 }
@@ -210,12 +225,9 @@
 	carousel.layer.zPosition = 10;
 	[carousel setHidden:NO];
 }
+
 - (void)carouselDidEndDragging:(iCarousel *)carousel willDecelerate:(BOOL)decelerate
-{
-
-}
-
-- (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel
+//- (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel
 {
 	if (carousel == self.carousel1)
 	{
@@ -227,6 +239,7 @@
 			self.menuItem3 = self.menuItem1.getParent;
 			[self.carousel3 setCurrentItemIndex:[[self.menuItem3 getChildren] indexOfObject:self.menuItem1]+1];
 			[self.carousel3 reloadData];
+			[self.carousel1 setHidden:YES];
 			[self.carousel3 setHidden:NO];
 			self.carousel1.layer.zPosition = 9;
 			self.carousel3.layer.zPosition = 10;
@@ -260,6 +273,7 @@
 			[self.carousel1 setCurrentItemIndex:[[self.menuItem1 getChildren] indexOfObject:self.menuItem3]+1];
 			[self.carousel1 reloadData];
 			[self.carousel1 setHidden:NO];
+			[self.carousel3 setHidden:YES];
 			self.carousel1.layer.zPosition = 10;
 			self.carousel3.layer.zPosition = 9;
 			

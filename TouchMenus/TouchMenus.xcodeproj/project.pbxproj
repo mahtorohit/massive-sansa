@@ -102,7 +102,7 @@
 		8521A18816C7EA75006A33F2 /* magermilch.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A15F16C7EA75006A33F2 /* magermilch.png */; };
 		8521A18916C7EA75006A33F2 /* mascarpone.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A16016C7EA75006A33F2 /* mascarpone.png */; };
 		8521A18A16C7EA75006A33F2 /* milch.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A16116C7EA75006A33F2 /* milch.png */; };
-		8521A18B16C7EA75006A33F2 /* milchprodukte.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A16216C7EA75006A33F2 /* milchprodukte.png */; };
+		8521A18B16C7EA75006A33F2 /* milchprodukte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8521A16216C7EA75006A33F2 /* milchprodukte.jpg */; };
 		8521A18C16C7EA75006A33F2 /* mozzarella.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A16316C7EA75006A33F2 /* mozzarella.png */; };
 		8521A18D16C7EA75006A33F2 /* parmesan.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A16416C7EA75006A33F2 /* parmesan.png */; };
 		8521A18E16C7EA75006A33F2 /* pecorino.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A16516C7EA75006A33F2 /* pecorino.png */; };
@@ -441,7 +441,7 @@
 		8521A15F16C7EA75006A33F2 /* magermilch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magermilch.png; sourceTree = "<group>"; };
 		8521A16016C7EA75006A33F2 /* mascarpone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mascarpone.png; sourceTree = "<group>"; };
 		8521A16116C7EA75006A33F2 /* milch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = milch.png; sourceTree = "<group>"; };
-		8521A16216C7EA75006A33F2 /* milchprodukte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = milchprodukte.png; sourceTree = "<group>"; };
+		8521A16216C7EA75006A33F2 /* milchprodukte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = milchprodukte.jpg; sourceTree = "<group>"; };
 		8521A16316C7EA75006A33F2 /* mozzarella.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mozzarella.png; sourceTree = "<group>"; };
 		8521A16416C7EA75006A33F2 /* parmesan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parmesan.png; sourceTree = "<group>"; };
 		8521A16516C7EA75006A33F2 /* pecorino.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pecorino.png; sourceTree = "<group>"; };
@@ -834,7 +834,7 @@
 				8521A15F16C7EA75006A33F2 /* magermilch.png */,
 				8521A16016C7EA75006A33F2 /* mascarpone.png */,
 				8521A16116C7EA75006A33F2 /* milch.png */,
-				8521A16216C7EA75006A33F2 /* milchprodukte.png */,
+				8521A16216C7EA75006A33F2 /* milchprodukte.jpg */,
 				8521A16316C7EA75006A33F2 /* mozzarella.png */,
 				8521A16416C7EA75006A33F2 /* parmesan.png */,
 				8521A16516C7EA75006A33F2 /* pecorino.png */,
@@ -1504,7 +1504,7 @@
 				8521A18816C7EA75006A33F2 /* magermilch.png in Resources */,
 				8521A18916C7EA75006A33F2 /* mascarpone.png in Resources */,
 				8521A18A16C7EA75006A33F2 /* milch.png in Resources */,
-				8521A18B16C7EA75006A33F2 /* milchprodukte.png in Resources */,
+				8521A18B16C7EA75006A33F2 /* milchprodukte.jpg in Resources */,
 				8521A18C16C7EA75006A33F2 /* mozzarella.png in Resources */,
 				8521A18D16C7EA75006A33F2 /* parmesan.png in Resources */,
 				8521A18E16C7EA75006A33F2 /* pecorino.png in Resources */,

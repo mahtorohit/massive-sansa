@@ -12,6 +12,8 @@
 	MenuItem *parent;
 }
 
+@property (retain) UIImage *img;
+
 - (id) initWithTitle:(NSString*)theTitle imgUrl:(NSString*)theImgURL usingChildren:(NSArray *)children andParent:(MenuItem*)parent;
 - (void) setChildren:(NSArray*) children;
 - (void) setParent:(MenuItem*) parent;
