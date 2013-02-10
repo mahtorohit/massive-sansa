@@ -1,0 +1,232 @@
+<items>
+	<item name="Obst" img="">
+		<item name="Kernobst" img="">
+			<item name="Apfel" img="apfel.png"/>
+			<item name="Birnen" img=""/>
+			<item name="Hagebutte" img=""/>
+			<item name="Quitte" img=""/>
+			<item name="Trauben" img="">
+				<item name="Weiße Trauben" img=""/>
+				<item name="Rote Trauben" img=""/>
+			</item>
+		</item>
+		<item name="Steinobst" img="">
+			<item name="Aprikose" img=""/>
+			<item name="Kirschen" img="">
+				<item name="Süßkirsche" img=""/>
+				<item name="Sauerkirsche" img=""/>
+			</item>
+			<item name="Pflaumen" img="">
+				<item name="Echte Pflaume" img=""/>
+				<item name="Mirabelle" img=""/>
+				<item name="Zwetschge" img=""/>
+			</item>
+			<item name="Pfirsiche" img="">
+				<item name="Nektarine" img=""/>
+				<item name="Pfirsich" img=""/>
+			</item>
+		</item>
+		<item name="Beerenobst" img="">
+			<item name="Sammelsteinfrüchte" img="">
+				<item name="Brombeere" img=""/>
+				<item name="Himbeere" img=""/>
+			</item>
+			<item name="Sammelnussfrüchte" img="">
+				<item name="Erdbeere" img="">
+					<item name="Walderdbeere" img=""/>
+					<item name="Gartenerdbeere" img=""/>
+				</item>
+				<item name="Hagebutte" img=""/>
+				<item name="Heidelbeere" img=""/>
+				<item name="Holunder" img=""/>
+				<item name="Preiselbeere" img=""/>
+				<item name="Rote Johannisbeere" img=""/>
+				<item name="Sanddorn" img=""/>
+				<item name="Schwarze Johannisbeere" img=""/>
+				<item name="Stachelbeere" img=""/>
+			</item>
+		</item>
+		<item name="Schalenobst/Nüssse" img="">
+			<item name="Cashew" img=""/>
+			<item name="Erdnuss" img=""/>
+			<item name="Edelkastanie" img=""/>
+			<item name="Haselnuss" img=""/>
+			<item name="Kokosnuss" img=""/>
+			<item name="Macadamia" img=""/>
+			<item name="Mandel" img=""/>
+			<item name="Paranuss" img=""/>
+			<item name="Pistazie" img=""/>
+			<item name="Walnuss" img=""/>
+		</item>
+		<item name="Südfrüchte" img="">
+			<item name="Ananas" img=""/>
+			<item name="Banane" img=""/>
+			<item name="Zitrusfrüchte" img="">
+				<item name="Grapefruit" img=""/>
+				<item name="Limette" img=""/>
+				<item name="Mandarine" img=""/>
+				<item name="Orange" img=""/>
+				<item name="Pomelo" img=""/>
+				<item name="Zitrone" img=""/>
+			</item>
+		</item>
+		<item name="Exotische Früchte" img="">
+			<item name="Acerola" img=""/>
+			<item name="Avocado" img=""/>
+			<item name="Dattel" img=""/>
+			<item name="Durian" img=""/>
+			<item name="Feige" img=""/>
+			<item name="Guave" img=""/>
+			<item name="Kaktusfeige" img=""/>
+			<item name="Kiwi" img=""/>
+			<item name="Litschi" img=""/>
+			<item name="Mango" img=""/>
+			<item name="Papaya" img=""/>
+			<item name="Sternfrucht" img=""/>
+			<item name="Tamarinde" img=""/>
+		</item>
+	</item>
+	<item name="Gemüse" img="">
+		<item name="Zwiebelgemüse" img="">
+			<item name="Zwiebel" img="">
+				<item name="Speisezwiebel" img=""/>
+				<item name="Schalotten" img=""/>
+				<item name="Perlzwiebel" img=""/>
+				<item name="Knoblauch" img=""/>
+			</item>
+			<item name="Schaft" img="">
+				<item name="Porree" img=""/>
+			</item>
+			<item name="Lauch" img="">
+				<item name="Winterzwiebeln" img=""/>
+				<item name="Schnittlauch" img=""/>
+			</item>
+		</item>
+		<item name="Gewürzgemüse" img="">
+			<item name="Thymian" img=""/>
+			<item name="Majoran" img=""/>
+			<item name="Bohnenkraut" img=""/>
+			<item name="Salbei" img=""/>
+			<item name="Zitronenmelisse" img=""/>
+			<item name="Dill" img=""/>
+			<item name="Liebstöckel" img=""/>
+			<item name="Kerbel" img=""/>
+			<item name="Fenchel" img=""/>
+			<item name="Beifuß" img=""/>
+			<item name="Borretsch" img=""/>
+		</item>
+		<item name="Blütengemüse" img="">
+			<item name="Artischoke" img=""/>
+			<item name="Zucchini" img=""/>
+			<item name="Blumenkohl" img=""/>
+			<item name="Broccoli" img=""/>
+			<item name="Romanesco" img=""/>
+		</item>
+		<item name="Sprossengemüse" img="">
+			<item name="Getreide" img="">
+				<item name="Gerste" img=""/>
+				<item name="Hafer" img=""/>
+				<item name="Hirse" img=""/>
+				<item name="Mais" img=""/>
+				<item name="Rogen" img=""/>
+			</item>
+			<item name="Hülsenfrüchte" img="">
+				<item name="Azukibohne" img=""/>
+				<item name="Alfalfa" img=""/>
+				<item name="Erbse" img=""/>
+				<item name="Linsen" img=""/>
+				<item name="Strucherbse" img=""/>
+			</item>
+			<item name="Ölsaaten" img="">
+				<item name="Buchweizen" img=""/>
+				<item name="Daikon-Kresse" img=""/>
+				<item name="Gartenkresse" img=""/>
+				<item name="Lein" img=""/>
+				<item name="Reis" img=""/>
+				<item name="Rettich" img=""/>
+				<item name="Senf" img=""/>
+				<item name="Sesam" img=""/>
+				<item name="Sonnenblume" img=""/>
+				<item name="Olive" img=""/>
+			</item>
+		</item>
+		<item name="Fruchtgemüse" img="">
+			<item name="Tomate" img=""/>
+			<item name="Paprika" img=""/>
+			<item name="Aubergine" img=""/>
+			<item name="Kürbisgewächse" img="">
+				<item name="Gurke" img=""/>
+				<item name="Kürbis" img=""/>
+				<item name="Melonen" img=""/>
+				<item name="Flaschenkürbis" img=""/>
+				<item name="Wachskürbis" img=""/>
+			</item>
+		</item>
+		<item name="Hülsenfrüchte" img="">
+			<item name="Erbsen" img=""/>
+			<item name="Bohnen" img=""/>
+			<item name="Puffbohnen" img=""/>
+			<item name="Sojabohnen" img=""/>
+		</item>
+		<item name="Blattgemüse" img="">
+			<item name="Salate" img="">
+				<item name="Gartensalat" img="">
+					<item name="Kopfsalat" img=""/>
+					<item name="Schnittsalat" img=""/>
+					<item name="Bindesalat" img=""/>
+					<item name="Spargelsalat" img=""/>
+					<item name="Eisbergsalat" img=""/>
+					<item name="Blattsalat" img=""/>
+				</item>
+				<item name="Blattstiele" img="">
+					<item name="Cardy" img=""/>
+					<item name="Stangensellerie" img=""/>
+					<item name="Mangold" img=""/>
+				</item>
+				<item name="Spinat" img=""/>
+				<item name="Portulak" img=""/>
+				<item name="Sauerampfer" img=""/>
+				<item name="Löwenzahn" img=""/>
+				<item name="Schnittmangold" img=""/>
+				<item name="Blattpetersilie" img=""/>
+				<item name="Schnittselerie" img=""/>
+				<item name="Feldsalat" img=""/>
+				<item name="Rutensenf" img=""/>
+				<item name="Rucola" img=""/>
+			</item>
+		</item>
+		<item name="Kohlgemüse" img="">
+			<item name="Kopfkohl" img="">
+				<item name="Weißkohl" img=""/>
+				<item name="Rotkohl" img=""/>
+				<item name="Wirsingkohl" img=""/>
+				<item name="Rosenkohl" img=""/>
+			</item>
+			<item name="Blattrosette / Blätter" img="">
+				<item name="Blätterkohl" img=""/>
+				<item name="Grünkohl" img=""/>
+			</item>
+			<item name="Blütenstand" img="">
+				<item name="Blumenkohl" img=""/>
+				<item name="Brokkoli" img=""/>
+			</item>
+			<item name="Sproßknolle" img="">
+				<item name="Kohlrabi" img=""/>
+			</item>
+		</item>
+		<item name="Wurzelgemüse" img="">
+			<item name="verdickte Wurzel" img="">
+				<item name="Möhre" img=""/>
+				<item name="Petersilie" img=""/>
+				<item name="Ingwer" img=""/>
+			</item>
+			<item name="Rübe" img="">
+				<item name="Radieschen" img=""/>
+				<item name="Rettich" img=""/>
+				<item name="Mairübe" img=""/>
+				<item name="Kohlrübe" img=""/>
+				<item name="Rote Rübe" img=""/>
+			</item>
+		</item>
+	</item>
+</items>
