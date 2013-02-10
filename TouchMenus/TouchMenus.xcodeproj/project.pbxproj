@@ -176,6 +176,8 @@
 		8521A2E616C7F924006A33F2 /* walnuss.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A2AD16C7F924006A33F2 /* walnuss.png */; };
 		8521A2E716C7F924006A33F2 /* zitronen.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A2AE16C7F924006A33F2 /* zitronen.png */; };
 		8521A2E816C7F924006A33F2 /* zwetschgen.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A2AF16C7F924006A33F2 /* zwetschgen.png */; };
+		8521A2F216C8082A006A33F2 /* HLCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521A2F116C8082A006A33F2 /* HLCollectionViewCell.m */; };
+		8521A2F516C80E22006A33F2 /* HLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521A2F416C80E22006A33F2 /* HLViewController.m */; };
 		85C5D25116B7021700BBDE42 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C5D24F16B7021700BBDE42 /* MainStoryboard.storyboard */; };
 		F91ED50316C69C910073F778 /* apfel.png in Resources */ = {isa = PBXBuildFile; fileRef = F91ED50216C69C910073F778 /* apfel.png */; };
 		F958D0C416C7B25900E5F30A /* ZTMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F958D0C316C7B25900E5F30A /* ZTMenuItem.m */; };
@@ -513,6 +515,10 @@
 		8521A2AD16C7F924006A33F2 /* walnuss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walnuss.png; sourceTree = "<group>"; };
 		8521A2AE16C7F924006A33F2 /* zitronen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zitronen.png; sourceTree = "<group>"; };
 		8521A2AF16C7F924006A33F2 /* zwetschgen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zwetschgen.png; sourceTree = "<group>"; };
+		8521A2F016C8082A006A33F2 /* HLCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLCollectionViewCell.h; sourceTree = "<group>"; };
+		8521A2F116C8082A006A33F2 /* HLCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLCollectionViewCell.m; sourceTree = "<group>"; };
+		8521A2F316C80E22006A33F2 /* HLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLViewController.h; sourceTree = "<group>"; };
+		8521A2F416C80E22006A33F2 /* HLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLViewController.m; sourceTree = "<group>"; };
 		85C5D25016B7021700BBDE42 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F91ED50216C69C910073F778 /* apfel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apfel.png; sourceTree = "<group>"; };
 		F958D0C216C7B25900E5F30A /* ZTMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTMenuItem.h; sourceTree = "<group>"; };
@@ -913,6 +919,17 @@
 			path = Obst;
 			sourceTree = SOURCE_ROOT;
 		};
+		8521A2E916C80529006A33F2 /* HorizontalList */ = {
+			isa = PBXGroup;
+			children = (
+				8521A2F016C8082A006A33F2 /* HLCollectionViewCell.h */,
+				8521A2F116C8082A006A33F2 /* HLCollectionViewCell.m */,
+				8521A2F316C80E22006A33F2 /* HLViewController.h */,
+				8521A2F416C80E22006A33F2 /* HLViewController.m */,
+			);
+			name = HorizontalList;
+			sourceTree = "<group>";
+		};
 		F91ED50416C69C980073F778 /* Dataset1_Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -974,6 +991,7 @@
 		F9BAFCDC16A83D8500314AA9 /* TouchMenus */ = {
 			isa = PBXGroup;
 			children = (
+				8521A2E916C80529006A33F2 /* HorizontalList */,
 				85C5D24F16B7021700BBDE42 /* MainStoryboard.storyboard */,
 				489ADDC516AD4F4D0048B014 /* TreeMenu */,
 				F9BAFCDD16A83D8500314AA9 /* Supporting Files */,
@@ -1602,6 +1620,8 @@
 				F9B9B8C216C41645002B1B91 /* MapOverlay.m in Sources */,
 				F9B9B8C316C41645002B1B91 /* ZTMapViewController.m in Sources */,
 				F958D0C416C7B25900E5F30A /* ZTMenuItem.m in Sources */,
+				8521A2F216C8082A006A33F2 /* HLCollectionViewCell.m in Sources */,
+				8521A2F516C80E22006A33F2 /* HLViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
