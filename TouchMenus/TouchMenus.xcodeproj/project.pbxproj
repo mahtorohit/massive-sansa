@@ -119,6 +119,57 @@
 		8521A19916C7EA75006A33F2 /* tilsiter.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A17016C7EA75006A33F2 /* tilsiter.png */; };
 		8521A19A16C7EA75006A33F2 /* vollmilch.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A17116C7EA75006A33F2 /* vollmilch.png */; };
 		8521A19B16C7EA75006A33F2 /* weichkaese.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A17216C7EA75006A33F2 /* weichkaese.png */; };
+		8521A1D016C7F388006A33F2 /* ananas.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A19D16C7F388006A33F2 /* ananas.png */; };
+		8521A1D116C7F388006A33F2 /* apfel.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A19E16C7F388006A33F2 /* apfel.png */; };
+		8521A1D216C7F388006A33F2 /* aprikose.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A19F16C7F388006A33F2 /* aprikose.png */; };
+		8521A1D316C7F388006A33F2 /* avocado.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1A016C7F388006A33F2 /* avocado.png */; };
+		8521A1D416C7F388006A33F2 /* banane.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1A116C7F388006A33F2 /* banane.png */; };
+		8521A1D516C7F388006A33F2 /* beerenobst.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1A216C7F388006A33F2 /* beerenobst.png */; };
+		8521A1D616C7F388006A33F2 /* birne.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1A316C7F388006A33F2 /* birne.png */; };
+		8521A1D716C7F388006A33F2 /* brombeere.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1A416C7F388006A33F2 /* brombeere.png */; };
+		8521A1D816C7F388006A33F2 /* cashews.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1A516C7F388006A33F2 /* cashews.png */; };
+		8521A1D916C7F388006A33F2 /* datteln.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1A616C7F388006A33F2 /* datteln.png */; };
+		8521A1DA16C7F388006A33F2 /* echtepflaume.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1A716C7F388006A33F2 /* echtepflaume.png */; };
+		8521A1DB16C7F388006A33F2 /* erdbeeren.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1A816C7F388006A33F2 /* erdbeeren.jpg */; };
+		8521A1DC16C7F388006A33F2 /* erdnuesse.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1A916C7F388006A33F2 /* erdnuesse.png */; };
+		8521A1DD16C7F388006A33F2 /* exotische_fruechte.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1AA16C7F388006A33F2 /* exotische_fruechte.png */; };
+		8521A1DE16C7F388006A33F2 /* feige.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1AB16C7F388006A33F2 /* feige.png */; };
+		8521A1DF16C7F388006A33F2 /* Grapefruit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1AC16C7F388006A33F2 /* Grapefruit.png */; };
+		8521A1E016C7F388006A33F2 /* hagebutte.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1AD16C7F388006A33F2 /* hagebutte.png */; };
+		8521A1E116C7F388006A33F2 /* heidelbeere.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1AE16C7F388006A33F2 /* heidelbeere.png */; };
+		8521A1E216C7F388006A33F2 /* himbeere.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1AF16C7F388006A33F2 /* himbeere.png */; };
+		8521A1E316C7F388006A33F2 /* holunder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1B016C7F388006A33F2 /* holunder.png */; };
+		8521A1E416C7F388006A33F2 /* johannisbeere_rot.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1B116C7F388006A33F2 /* johannisbeere_rot.png */; };
+		8521A1E516C7F388006A33F2 /* johannisbeere_schwarz.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1B216C7F388006A33F2 /* johannisbeere_schwarz.png */; };
+		8521A1E616C7F388006A33F2 /* kernobst.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1B316C7F388006A33F2 /* kernobst.png */; };
+		8521A1E716C7F388006A33F2 /* kirsche.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1B416C7F388006A33F2 /* kirsche.png */; };
+		8521A1E816C7F388006A33F2 /* kiwi.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1B516C7F388006A33F2 /* kiwi.png */; };
+		8521A1E916C7F388006A33F2 /* Limette.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1B616C7F388006A33F2 /* Limette.jpeg */; };
+		8521A1EA16C7F388006A33F2 /* litschi.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1B716C7F388006A33F2 /* litschi.png */; };
+		8521A1EB16C7F388006A33F2 /* mandarine.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1B816C7F388006A33F2 /* mandarine.png */; };
+		8521A1EC16C7F388006A33F2 /* mango.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1B916C7F388006A33F2 /* mango.png */; };
+		8521A1ED16C7F388006A33F2 /* maroni.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1BA16C7F388006A33F2 /* maroni.png */; };
+		8521A1EE16C7F388006A33F2 /* mirabelle.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1BB16C7F388006A33F2 /* mirabelle.png */; };
+		8521A1EF16C7F388006A33F2 /* nektarine.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1BC16C7F388006A33F2 /* nektarine.png */; };
+		8521A1F016C7F388006A33F2 /* nuesse.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1BD16C7F388006A33F2 /* nuesse.png */; };
+		8521A1F116C7F388006A33F2 /* obst.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1BE16C7F388006A33F2 /* obst.png */; };
+		8521A1F216C7F388006A33F2 /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1BF16C7F388006A33F2 /* orange.png */; };
+		8521A1F316C7F388006A33F2 /* papaya.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1C016C7F388006A33F2 /* papaya.png */; };
+		8521A1F416C7F388006A33F2 /* pflaume.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1C116C7F388006A33F2 /* pflaume.png */; };
+		8521A1F516C7F388006A33F2 /* pistazie.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1C216C7F388006A33F2 /* pistazie.png */; };
+		8521A1F616C7F388006A33F2 /* pomelo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1C316C7F388006A33F2 /* pomelo.png */; };
+		8521A1F716C7F388006A33F2 /* preiselbeere.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1C416C7F388006A33F2 /* preiselbeere.png */; };
+		8521A1F816C7F388006A33F2 /* sammelstein.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1C516C7F388006A33F2 /* sammelstein.png */; };
+		8521A1F916C7F388006A33F2 /* sauerkirschen.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1C616C7F388006A33F2 /* sauerkirschen.png */; };
+		8521A1FA16C7F388006A33F2 /* stachelbeere.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1C716C7F388006A33F2 /* stachelbeere.png */; };
+		8521A1FB16C7F388006A33F2 /* steinobst.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1C816C7F388006A33F2 /* steinobst.png */; };
+		8521A1FC16C7F388006A33F2 /* sternfrucht.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1C916C7F388006A33F2 /* sternfrucht.png */; };
+		8521A1FD16C7F388006A33F2 /* suedfruechte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1CA16C7F388006A33F2 /* suedfruechte.jpg */; };
+		8521A1FE16C7F388006A33F2 /* suesskirsche.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1CB16C7F388006A33F2 /* suesskirsche.png */; };
+		8521A1FF16C7F388006A33F2 /* trauben.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1CC16C7F388006A33F2 /* trauben.png */; };
+		8521A20016C7F388006A33F2 /* walnuss.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1CD16C7F388006A33F2 /* walnuss.png */; };
+		8521A20116C7F388006A33F2 /* zitronen.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1CE16C7F388006A33F2 /* zitronen.png */; };
+		8521A20216C7F388006A33F2 /* zwetschgen.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A1CF16C7F388006A33F2 /* zwetschgen.png */; };
 		85C5D25116B7021700BBDE42 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C5D24F16B7021700BBDE42 /* MainStoryboard.storyboard */; };
 		F91ED50316C69C910073F778 /* apfel.png in Resources */ = {isa = PBXBuildFile; fileRef = F91ED50216C69C910073F778 /* apfel.png */; };
 		F958D0C416C7B25900E5F30A /* ZTMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F958D0C316C7B25900E5F30A /* ZTMenuItem.m */; };
@@ -399,6 +450,57 @@
 		8521A17016C7EA75006A33F2 /* tilsiter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tilsiter.png; sourceTree = "<group>"; };
 		8521A17116C7EA75006A33F2 /* vollmilch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vollmilch.png; sourceTree = "<group>"; };
 		8521A17216C7EA75006A33F2 /* weichkaese.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weichkaese.png; sourceTree = "<group>"; };
+		8521A19D16C7F388006A33F2 /* ananas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ananas.png; sourceTree = "<group>"; };
+		8521A19E16C7F388006A33F2 /* apfel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apfel.png; sourceTree = "<group>"; };
+		8521A19F16C7F388006A33F2 /* aprikose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aprikose.png; sourceTree = "<group>"; };
+		8521A1A016C7F388006A33F2 /* avocado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avocado.png; sourceTree = "<group>"; };
+		8521A1A116C7F388006A33F2 /* banane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banane.png; sourceTree = "<group>"; };
+		8521A1A216C7F388006A33F2 /* beerenobst.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beerenobst.png; sourceTree = "<group>"; };
+		8521A1A316C7F388006A33F2 /* birne.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = birne.png; sourceTree = "<group>"; };
+		8521A1A416C7F388006A33F2 /* brombeere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brombeere.png; sourceTree = "<group>"; };
+		8521A1A516C7F388006A33F2 /* cashews.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cashews.png; sourceTree = "<group>"; };
+		8521A1A616C7F388006A33F2 /* datteln.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = datteln.png; sourceTree = "<group>"; };
+		8521A1A716C7F388006A33F2 /* echtepflaume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = echtepflaume.png; sourceTree = "<group>"; };
+		8521A1A816C7F388006A33F2 /* erdbeeren.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = erdbeeren.jpg; sourceTree = "<group>"; };
+		8521A1A916C7F388006A33F2 /* erdnuesse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = erdnuesse.png; sourceTree = "<group>"; };
+		8521A1AA16C7F388006A33F2 /* exotische_fruechte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exotische_fruechte.png; sourceTree = "<group>"; };
+		8521A1AB16C7F388006A33F2 /* feige.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feige.png; sourceTree = "<group>"; };
+		8521A1AC16C7F388006A33F2 /* Grapefruit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grapefruit.png; sourceTree = "<group>"; };
+		8521A1AD16C7F388006A33F2 /* hagebutte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hagebutte.png; sourceTree = "<group>"; };
+		8521A1AE16C7F388006A33F2 /* heidelbeere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heidelbeere.png; sourceTree = "<group>"; };
+		8521A1AF16C7F388006A33F2 /* himbeere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = himbeere.png; sourceTree = "<group>"; };
+		8521A1B016C7F388006A33F2 /* holunder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = holunder.png; sourceTree = "<group>"; };
+		8521A1B116C7F388006A33F2 /* johannisbeere_rot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = johannisbeere_rot.png; sourceTree = "<group>"; };
+		8521A1B216C7F388006A33F2 /* johannisbeere_schwarz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = johannisbeere_schwarz.png; sourceTree = "<group>"; };
+		8521A1B316C7F388006A33F2 /* kernobst.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kernobst.png; sourceTree = "<group>"; };
+		8521A1B416C7F388006A33F2 /* kirsche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kirsche.png; sourceTree = "<group>"; };
+		8521A1B516C7F388006A33F2 /* kiwi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kiwi.png; sourceTree = "<group>"; };
+		8521A1B616C7F388006A33F2 /* Limette.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Limette.jpeg; sourceTree = "<group>"; };
+		8521A1B716C7F388006A33F2 /* litschi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = litschi.png; sourceTree = "<group>"; };
+		8521A1B816C7F388006A33F2 /* mandarine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mandarine.png; sourceTree = "<group>"; };
+		8521A1B916C7F388006A33F2 /* mango.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mango.png; sourceTree = "<group>"; };
+		8521A1BA16C7F388006A33F2 /* maroni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maroni.png; sourceTree = "<group>"; };
+		8521A1BB16C7F388006A33F2 /* mirabelle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mirabelle.png; sourceTree = "<group>"; };
+		8521A1BC16C7F388006A33F2 /* nektarine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nektarine.png; sourceTree = "<group>"; };
+		8521A1BD16C7F388006A33F2 /* nuesse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuesse.png; sourceTree = "<group>"; };
+		8521A1BE16C7F388006A33F2 /* obst.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = obst.png; sourceTree = "<group>"; };
+		8521A1BF16C7F388006A33F2 /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange.png; sourceTree = "<group>"; };
+		8521A1C016C7F388006A33F2 /* papaya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = papaya.png; sourceTree = "<group>"; };
+		8521A1C116C7F388006A33F2 /* pflaume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pflaume.png; sourceTree = "<group>"; };
+		8521A1C216C7F388006A33F2 /* pistazie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pistazie.png; sourceTree = "<group>"; };
+		8521A1C316C7F388006A33F2 /* pomelo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pomelo.png; sourceTree = "<group>"; };
+		8521A1C416C7F388006A33F2 /* preiselbeere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preiselbeere.png; sourceTree = "<group>"; };
+		8521A1C516C7F388006A33F2 /* sammelstein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sammelstein.png; sourceTree = "<group>"; };
+		8521A1C616C7F388006A33F2 /* sauerkirschen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sauerkirschen.png; sourceTree = "<group>"; };
+		8521A1C716C7F388006A33F2 /* stachelbeere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stachelbeere.png; sourceTree = "<group>"; };
+		8521A1C816C7F388006A33F2 /* steinobst.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = steinobst.png; sourceTree = "<group>"; };
+		8521A1C916C7F388006A33F2 /* sternfrucht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sternfrucht.png; sourceTree = "<group>"; };
+		8521A1CA16C7F388006A33F2 /* suedfruechte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = suedfruechte.jpg; sourceTree = "<group>"; };
+		8521A1CB16C7F388006A33F2 /* suesskirsche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suesskirsche.png; sourceTree = "<group>"; };
+		8521A1CC16C7F388006A33F2 /* trauben.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trauben.png; sourceTree = "<group>"; };
+		8521A1CD16C7F388006A33F2 /* walnuss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walnuss.png; sourceTree = "<group>"; };
+		8521A1CE16C7F388006A33F2 /* zitronen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zitronen.png; sourceTree = "<group>"; };
+		8521A1CF16C7F388006A33F2 /* zwetschgen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zwetschgen.png; sourceTree = "<group>"; };
 		85C5D25016B7021700BBDE42 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F91ED50216C69C910073F778 /* apfel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apfel.png; sourceTree = "<group>"; };
 		F958D0C216C7B25900E5F30A /* ZTMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTMenuItem.h; sourceTree = "<group>"; };
@@ -735,9 +837,68 @@
 			path = Milch;
 			sourceTree = "<group>";
 		};
+		8521A19C16C7F388006A33F2 /* Obst */ = {
+			isa = PBXGroup;
+			children = (
+				8521A19D16C7F388006A33F2 /* ananas.png */,
+				8521A19E16C7F388006A33F2 /* apfel.png */,
+				8521A19F16C7F388006A33F2 /* aprikose.png */,
+				8521A1A016C7F388006A33F2 /* avocado.png */,
+				8521A1A116C7F388006A33F2 /* banane.png */,
+				8521A1A216C7F388006A33F2 /* beerenobst.png */,
+				8521A1A316C7F388006A33F2 /* birne.png */,
+				8521A1A416C7F388006A33F2 /* brombeere.png */,
+				8521A1A516C7F388006A33F2 /* cashews.png */,
+				8521A1A616C7F388006A33F2 /* datteln.png */,
+				8521A1A716C7F388006A33F2 /* echtepflaume.png */,
+				8521A1A816C7F388006A33F2 /* erdbeeren.jpg */,
+				8521A1A916C7F388006A33F2 /* erdnuesse.png */,
+				8521A1AA16C7F388006A33F2 /* exotische_fruechte.png */,
+				8521A1AB16C7F388006A33F2 /* feige.png */,
+				8521A1AC16C7F388006A33F2 /* Grapefruit.png */,
+				8521A1AD16C7F388006A33F2 /* hagebutte.png */,
+				8521A1AE16C7F388006A33F2 /* heidelbeere.png */,
+				8521A1AF16C7F388006A33F2 /* himbeere.png */,
+				8521A1B016C7F388006A33F2 /* holunder.png */,
+				8521A1B116C7F388006A33F2 /* johannisbeere_rot.png */,
+				8521A1B216C7F388006A33F2 /* johannisbeere_schwarz.png */,
+				8521A1B316C7F388006A33F2 /* kernobst.png */,
+				8521A1B416C7F388006A33F2 /* kirsche.png */,
+				8521A1B516C7F388006A33F2 /* kiwi.png */,
+				8521A1B616C7F388006A33F2 /* Limette.jpeg */,
+				8521A1B716C7F388006A33F2 /* litschi.png */,
+				8521A1B816C7F388006A33F2 /* mandarine.png */,
+				8521A1B916C7F388006A33F2 /* mango.png */,
+				8521A1BA16C7F388006A33F2 /* maroni.png */,
+				8521A1BB16C7F388006A33F2 /* mirabelle.png */,
+				8521A1BC16C7F388006A33F2 /* nektarine.png */,
+				8521A1BD16C7F388006A33F2 /* nuesse.png */,
+				8521A1BE16C7F388006A33F2 /* obst.png */,
+				8521A1BF16C7F388006A33F2 /* orange.png */,
+				8521A1C016C7F388006A33F2 /* papaya.png */,
+				8521A1C116C7F388006A33F2 /* pflaume.png */,
+				8521A1C216C7F388006A33F2 /* pistazie.png */,
+				8521A1C316C7F388006A33F2 /* pomelo.png */,
+				8521A1C416C7F388006A33F2 /* preiselbeere.png */,
+				8521A1C516C7F388006A33F2 /* sammelstein.png */,
+				8521A1C616C7F388006A33F2 /* sauerkirschen.png */,
+				8521A1C716C7F388006A33F2 /* stachelbeere.png */,
+				8521A1C816C7F388006A33F2 /* steinobst.png */,
+				8521A1C916C7F388006A33F2 /* sternfrucht.png */,
+				8521A1CA16C7F388006A33F2 /* suedfruechte.jpg */,
+				8521A1CB16C7F388006A33F2 /* suesskirsche.png */,
+				8521A1CC16C7F388006A33F2 /* trauben.png */,
+				8521A1CD16C7F388006A33F2 /* walnuss.png */,
+				8521A1CE16C7F388006A33F2 /* zitronen.png */,
+				8521A1CF16C7F388006A33F2 /* zwetschgen.png */,
+			);
+			path = Obst;
+			sourceTree = "<group>";
+		};
 		F91ED50416C69C980073F778 /* Dataset1_Images */ = {
 			isa = PBXGroup;
 			children = (
+				8521A19C16C7F388006A33F2 /* Obst */,
 				8521A14916C7EA75006A33F2 /* Milch */,
 				F9DFB7A116C7E50A00016C60 /* Sweets */,
 				F9DFB72416C7CC4400016C60 /* Gemuese */,
@@ -1324,6 +1485,57 @@
 				8521A19916C7EA75006A33F2 /* tilsiter.png in Resources */,
 				8521A19A16C7EA75006A33F2 /* vollmilch.png in Resources */,
 				8521A19B16C7EA75006A33F2 /* weichkaese.png in Resources */,
+				8521A1D016C7F388006A33F2 /* ananas.png in Resources */,
+				8521A1D116C7F388006A33F2 /* apfel.png in Resources */,
+				8521A1D216C7F388006A33F2 /* aprikose.png in Resources */,
+				8521A1D316C7F388006A33F2 /* avocado.png in Resources */,
+				8521A1D416C7F388006A33F2 /* banane.png in Resources */,
+				8521A1D516C7F388006A33F2 /* beerenobst.png in Resources */,
+				8521A1D616C7F388006A33F2 /* birne.png in Resources */,
+				8521A1D716C7F388006A33F2 /* brombeere.png in Resources */,
+				8521A1D816C7F388006A33F2 /* cashews.png in Resources */,
+				8521A1D916C7F388006A33F2 /* datteln.png in Resources */,
+				8521A1DA16C7F388006A33F2 /* echtepflaume.png in Resources */,
+				8521A1DB16C7F388006A33F2 /* erdbeeren.jpg in Resources */,
+				8521A1DC16C7F388006A33F2 /* erdnuesse.png in Resources */,
+				8521A1DD16C7F388006A33F2 /* exotische_fruechte.png in Resources */,
+				8521A1DE16C7F388006A33F2 /* feige.png in Resources */,
+				8521A1DF16C7F388006A33F2 /* Grapefruit.png in Resources */,
+				8521A1E016C7F388006A33F2 /* hagebutte.png in Resources */,
+				8521A1E116C7F388006A33F2 /* heidelbeere.png in Resources */,
+				8521A1E216C7F388006A33F2 /* himbeere.png in Resources */,
+				8521A1E316C7F388006A33F2 /* holunder.png in Resources */,
+				8521A1E416C7F388006A33F2 /* johannisbeere_rot.png in Resources */,
+				8521A1E516C7F388006A33F2 /* johannisbeere_schwarz.png in Resources */,
+				8521A1E616C7F388006A33F2 /* kernobst.png in Resources */,
+				8521A1E716C7F388006A33F2 /* kirsche.png in Resources */,
+				8521A1E816C7F388006A33F2 /* kiwi.png in Resources */,
+				8521A1E916C7F388006A33F2 /* Limette.jpeg in Resources */,
+				8521A1EA16C7F388006A33F2 /* litschi.png in Resources */,
+				8521A1EB16C7F388006A33F2 /* mandarine.png in Resources */,
+				8521A1EC16C7F388006A33F2 /* mango.png in Resources */,
+				8521A1ED16C7F388006A33F2 /* maroni.png in Resources */,
+				8521A1EE16C7F388006A33F2 /* mirabelle.png in Resources */,
+				8521A1EF16C7F388006A33F2 /* nektarine.png in Resources */,
+				8521A1F016C7F388006A33F2 /* nuesse.png in Resources */,
+				8521A1F116C7F388006A33F2 /* obst.png in Resources */,
+				8521A1F216C7F388006A33F2 /* orange.png in Resources */,
+				8521A1F316C7F388006A33F2 /* papaya.png in Resources */,
+				8521A1F416C7F388006A33F2 /* pflaume.png in Resources */,
+				8521A1F516C7F388006A33F2 /* pistazie.png in Resources */,
+				8521A1F616C7F388006A33F2 /* pomelo.png in Resources */,
+				8521A1F716C7F388006A33F2 /* preiselbeere.png in Resources */,
+				8521A1F816C7F388006A33F2 /* sammelstein.png in Resources */,
+				8521A1F916C7F388006A33F2 /* sauerkirschen.png in Resources */,
+				8521A1FA16C7F388006A33F2 /* stachelbeere.png in Resources */,
+				8521A1FB16C7F388006A33F2 /* steinobst.png in Resources */,
+				8521A1FC16C7F388006A33F2 /* sternfrucht.png in Resources */,
+				8521A1FD16C7F388006A33F2 /* suedfruechte.jpg in Resources */,
+				8521A1FE16C7F388006A33F2 /* suesskirsche.png in Resources */,
+				8521A1FF16C7F388006A33F2 /* trauben.png in Resources */,
+				8521A20016C7F388006A33F2 /* walnuss.png in Resources */,
+				8521A20116C7F388006A33F2 /* zitronen.png in Resources */,
+				8521A20216C7F388006A33F2 /* zwetschgen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
