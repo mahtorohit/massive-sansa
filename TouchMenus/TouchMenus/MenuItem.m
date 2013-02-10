@@ -7,8 +7,9 @@
 
 @implementation MenuItem
 
-// Initialization/Setup
+@synthesize img = _img;
 
+// Initialization/Setup
 - (id) initWithTitle:(NSString*)theTitle imgUrl:(NSString*)theImgURL usingChildren:(NSArray *)children andParent:(MenuItem *)theParent{
 	if (self = [super init]) {
 		title = theTitle;
@@ -35,8 +36,40 @@
 	return imgURL;
 }
 - (UIImage *) getImg {
-	if (imgURL == nil) return nil;
-	return [UIImage imageNamed:imgURL];
+	if (imgURL != nil && self.img == nil) {
+		UIImage *img = [UIImage imageNamed:imgURL];
+		
+		CGSize newSize = CGSizeMake(500, 500);
+		UIGraphicsBeginImageContextWithOptions(newSize, YES, 0.0);
+		
+		float imgW = 500;
+		float imgH = 500;
+		float imgX = 0;
+		float imgY = 0;
+		
+		if (img.size.height > img.size.width)
+		{
+			imgW = (500/img.size.height)*img.size.width;
+			imgX = (500-imgW)/2;
+		}
+		else
+		{
+			imgH = (500/img.size.width)*img.size.height;
+			imgY = (500-imgH)/2;
+		}
+		
+		[[UIColor whiteColor] setFill];
+		[[UIBezierPath bezierPathWithRect:CGRectMake(0, 0, newSize.width, newSize.height)] fill];
+		
+		[img drawInRect:CGRectMake(imgX, imgY, imgW, imgH)];
+	
+		UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+		UIGraphicsEndImageContext();
+		
+		self.img = newImage;
+	}
+	
+	return self.img;
 }
 
 // Navigation relevant

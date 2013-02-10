@@ -1,7 +1,7 @@
 <items>
 	<item name="Backwaren" img="backwaren.png">
 		<item name="Brötchen" img="broetchen.png">
-			<item name="Laugengebäck" img="laugengebaeck.jpg">
+			<item name="Laugengebäck" img="laugengebaeck.png">
 				<item name="Breze" img="breze.png"/>
 				<item name="Dinkel-Laugeneck mit Salz" img="dinkel_laugeneck_salz.jpg"/>
 				<item name="Dinkel-Laugeneck mit Sesam" img="dinkel_laugeneck_sesam.jpg"/>
@@ -30,7 +30,7 @@
 				<item name="Roggenvollkornbrot" img="roggenvollkorn.jpg"/>
 				<item name="Sonnenblumenbrot" img="sonnenblumenbrot.jpg"/>
 			</item>
-			<item name="Roggen- und Weizen-Mischbrote" img="roggen_weizenbrote.jpg">
+			<item name="Roggen- und Weizen-Mischbrote" img="roggen_weizenbrote.png">
 				<item name="Kartoffel-Kruste" img="kartoffelkruste.jpg"/>
 				<item name="Mehrkornbrot" img="mehrkorn.jpg"/>
 				<item name="Roggenfeinbrot" img="roggenfeinbrot.jpg"/>
@@ -142,70 +142,68 @@
 				<item name="Petersilie" img="petersilie.png"/>
 			</item>
 		</item>
-		<item name="Zwiebelgemüse" img="">
-			<item name="Lauch" img="">
-				<item name="Schnittlauch" img=""/>
-				<item name="Winterzwiebeln" img=""/>
-			</item>
-			<item name="Zwiebel" img="">
-				<item name="Knoblauch" img=""/>
-				<item name="Speisezwiebel" img=""/>
-				<item name="Schalotten" img=""/>
+		<item name="Zwiebelgemüse" img="zwiebeln.png">
+			<item name="Lauch" img="lauch.png"/>
+			<item name="Schnittlauch" img="schnittlauch.png"/>
+			<item name="Zwiebel" img="zwiebeln.png">
+				<item name="Knoblauch" img="knoblauch.png"/>
+				<item name="Speisezwiebel" img="zwiebeln.png"/>
+				<item name="Schalotten" img="schalotten.jpg"/>
 			</item>
 		</item>
 	</item>
-	<item name="Milchprodukte" img="">
-		<item name="Käse" img="">
-			<item name="Frischkäse" img="">
-				<item name="Feta" img=""/>
-				<item name="Mozzarella" img=""/>
+	<item name="Milchprodukte" img="milchprodukte.jpg">
+		<item name="Käse" img="kaese.png">
+			<item name="Frischkäse" img="frischkaese.jpg">
+				<item name="Feta" img="feta.png"/>
+				<item name="Mozzarella" img="mozzarella.png"/>
 			</item>
-			<item name="Hartkäse" img="">
-				<item name="Bergkäse" img=""/>
-				<item name="Cheddar" img=""/>
-				<item name="Emmentaler" img=""/>
-				<item name="Parmesan" img=""/>
-				<item name="Peccorino" img=""/>
+			<item name="Hartkäse" img="hartkaese.png">
+				<item name="Bergkäse" img="bergkaese.png"/>
+				<item name="Cheddar" img="cheddar.png"/>
+				<item name="Emmentaler" img="emmentaler.png"/>
+				<item name="Parmesan" img="parmesan.png"/>
+				<item name="Pecorino" img="pecorino.png"/>
 			</item>
-			<item name="Schnittkäse" img="">
-				<item name="Butterkäse" img=""/>
-				<item name="Edamer" img=""/>
-				<item name="Gouda" img=""/>
-				<item name="Tilsiter" img=""/>
+			<item name="Schnittkäse" img="schnittkaese.jpg">
+				<item name="Butterkäse" img="butterkaese.jpg"/>
+				<item name="Edamer" img="edamer.png"/>
+				<item name="Gouda" img="gouda.png"/>
+				<item name="Tilsiter" img="tilsiter.png"/>
 			</item>
-			<item name="Weichkäse" img="">
-				<item name="Brie" img=""/>
-				<item name="Camembert" img=""/>
-				<item name="Gorgonzola" img=""/>
-			</item>
-		</item>
-		<item name="Milch" img="">
-			<item name="Fettarme Milch" img=""/>
-			<item name="Magermilch" img=""/>
-			<item name="Vollmilch" img=""/>
-		</item>
-		<item name="Rahm" img="">
-			<item name="Sahne" img="">
-				<item name="Kaffeesahne" img=""/>
-				<item name="Schlagsahne" img=""/>
-			</item>
-			<item name="Sauerrahmprodukte" img="">
-				<item name="Creme Fraiche" img=""/>
-				<item name="Saure Sahne" img=""/>
-				<item name="Schmand" img=""/>
-				<item name="Mascarpone" img=""/>
+			<item name="Weichkäse" img="weichkaese.png">
+				<item name="Brie" img="brie.png"/>
+				<item name="Camembert" img="camembert.png"/>
+				<item name="Gorgonzola" img="gorgonzola.png"/>
 			</item>
 		</item>
-		<item name="Sauermilchprodukte" img="">
-			<item name="Joghurt" img="">
-				<item name="Fettarmer Joghurt" img=""/>
-				<item name="Kefir" img=""/>
-				<item name="Sahnejoghurt" img=""/>
-			</item>
-			<item name="Buttermilch" img=""/>
+		<item name="Milch" img="milch.png">
+			<item name="Fettarme Milch" img="fettarme_milch.png"/>
+			<item name="Magermilch" img="magermilch.png"/>
+			<item name="Vollmilch" img="vollmilch.png"/>
 		</item>
-		<item name="Butter" img=""/>
-		<item name="Quark" img=""/>
+		<item name="Rahm" img="rahm.jpg">
+			<item name="Sahne" img="sahne.png">
+				<item name="Kaffeesahne" img="kaffeesahne.png"/>
+				<item name="Schlagsahne" img="schlagsahne.png"/>
+			</item>
+			<item name="Sauerrahmprodukte" img="sauerrahmprodukte.png">
+				<item name="Creme Fraiche" img="creme_fraiche.png"/>
+				<item name="Saure Sahne" img="saure_sahne.png"/>
+				<item name="Schmand" img="schmand.png"/>
+				<item name="Mascarpone" img="mascarpone.png"/>
+			</item>
+		</item>
+		<item name="Sauermilchprodukte" img="sauermilchprodukte.png">
+			<item name="Joghurt" img="joghurt.png">
+				<item name="Fettarmer Joghurt" img="fettarmer_joghurt.png"/>
+				<item name="Kefir" img="kefir.png"/>
+				<item name="Sahnejoghurt" img="sahnejoghurt.png"/>
+			</item>
+			<item name="Buttermilch" img="buttermilch.png"/>
+		</item>
+		<item name="Butter" img="butter.png"/>
+		<item name="Quark" img="quark.jpg"/>
 	</item>
 	<item name="Obst" img="">
 		<item name="Beerenobst" img="">
