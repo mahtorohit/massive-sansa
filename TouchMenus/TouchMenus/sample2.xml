@@ -1,7 +1,7 @@
 <items>
 	<item name="Backwaren" img="backwaren.png">
 		<item name="Brötchen" img="broetchen.png">
-			<item name="Laugengebäck" img="laugengebaeck.png">
+			<item name="Laugengebäck" img="laugengebaeck.jpg">
 				<item name="Breze" img="breze.png"/>
 				<item name="Dinkel-Laugeneck mit Salz" img="dinkel_laugeneck_salz.jpg"/>
 				<item name="Dinkel-Laugeneck mit Sesam" img="dinkel_laugeneck_sesam.jpg"/>
@@ -30,7 +30,7 @@
 				<item name="Roggenvollkornbrot" img="roggenvollkorn.jpg"/>
 				<item name="Sonnenblumenbrot" img="sonnenblumenbrot.jpg"/>
 			</item>
-			<item name="Roggen- und Weizen-Mischbrote" img="roggen_weizenbrote.png">
+			<item name="Roggen- und Weizen-Mischbrote" img="roggen_weizenbrote.jpg">
 				<item name="Kartoffel-Kruste" img="kartoffelkruste.jpg"/>
 				<item name="Mehrkornbrot" img="mehrkorn.jpg"/>
 				<item name="Roggenfeinbrot" img="roggenfeinbrot.jpg"/>
@@ -62,7 +62,6 @@
 				<item name="Mangold" img="mangold.jpg"/>
 				<item name="Stangensellerie" img="stangensellerie.jpg"/>
 			</item>
-			<item name="Feldsalat" img="feldsalat.jpg"/>
 			<item name="Gartensalat" img="kopfsalat.jpg">
 				<item name="Blattsalat" img="blattsalat.jpg"/>
 				<item name="Eisbergsalat" img="eisbergsalat.jpg"/>
@@ -70,6 +69,7 @@
 				<item name="Spargel" img="spargel.jpg"/>
 			</item>
 			<item name="Blattpetersilie" img="petersilie.jpg"/>
+			<item name="Feldsalat" img="feldsalat.jpg"/>
 			<item name="Rucola" img="rucola.png"/>
 			<item name="Spinat" img="spinat.png"/>
 		</item>
@@ -80,12 +80,12 @@
 			<item name="Zucchini" img="zucchini.jpg"/>
 		</item>
 		<item name="Fruchtgemüse" img="fruchtgemuese.jpg">
-			<item name="Aubergine" img="aubergine.png"/>
 			<item name="Kürbisgewächse" img="kuerbis.png">
 				<item name="Gurke" img="gurke.png"/>
 				<item name="Kürbis" img="kuerbis.png"/>
 				<item name="Melonen" img="melone.png"/>
 			</item>
+			<item name="Aubergine" img="aubergine.png"/>
 			<item name="Paprika" img="paprika.png"/>
 			<item name="Tomate" img="tomate.png"/>
 		</item>
@@ -143,13 +143,13 @@
 			</item>
 		</item>
 		<item name="Zwiebelgemüse" img="zwiebeln.png">
-			<item name="Lauch" img="lauch.png"/>
-			<item name="Schnittlauch" img="schnittlauch.png"/>
 			<item name="Zwiebel" img="zwiebeln.png">
 				<item name="Knoblauch" img="knoblauch.png"/>
 				<item name="Speisezwiebel" img="zwiebeln.png"/>
 				<item name="Schalotten" img="schalotten.jpg"/>
 			</item>
+			<item name="Lauch" img="lauch.png"/>
+			<item name="Schnittlauch" img="schnittlauch.png"/>
 		</item>
 	</item>
 	<item name="Milchprodukte" img="milchprodukte.jpg">
@@ -205,76 +205,77 @@
 		<item name="Butter" img="butter.png"/>
 		<item name="Quark" img="quark.jpg"/>
 	</item>
-	<item name="Obst" img="">
-		<item name="Beerenobst" img="">
-			<item name="Sammelnussfrüchte" img="">
-				<item name="Erdbeere" img=""/>
-				<item name="Heidelbeere" img=""/>
-				<item name="Holunder" img=""/>
-				<item name="Preiselbeere" img=""/>
-				<item name="Rote Johannisbeere" img=""/>
-				<item name="Schwarze Johannisbeere" img=""/>
-				<item name="Stachelbeere" img=""/>
+	<item name="Obst" img="obst.png">
+		<item name="Beerenobst" img="beerenobst.png">
+			<item name="Sammelnussfrüchte" img="erdbeeren.jpg">
+				<item name="Erdbeere" img="erdbeeren.jpg"/>
+				<item name="Heidelbeere" img="heidelbeere.png"/>
+				<item name="Holunder" img="holunder.png"/>
+				<item name="Preiselbeere" img="preiselbeere.png"/>
+				<item name="Rote Johannisbeere" img="johannisbeere_rot.png"/>
+				<item name="Schwarze Johannisbeere" img="johannisbeere_schwarz.png"/>
+				<item name="Stachelbeere" img="stachelbeere.png"/>
 			</item>
-			<item name="Sammelsteinfrüchte" img="">
-				<item name="Brombeere" img=""/>
-				<item name="Himbeere" img=""/>
+			<item name="Sammelsteinfrüchte" img="sammelstein.png">
+				<item name="Brombeere" img="brombeere.png"/>
+				<item name="Himbeere" img="himbeere.png"/>
 			</item>
 		</item>
-		<item name="Exotische Früchte" img="">
-			<item name="Avocado" img=""/>
-			<item name="Dattel" img=""/>
-			<item name="Feige" img=""/>
-			<item name="Kiwi" img=""/>
-			<item name="Litschi" img=""/>
-			<item name="Mango" img=""/>
-			<item name="Papaya" img=""/>
-			<item name="Sternfrucht" img=""/>
+		<item name="Exotische Früchte" img="exotische_fruechte.png">
+			<item name="Avocado" img="avocado.png"/>
+			<item name="Dattel" img="datteln.png"/>
+			<item name="Feige" img="feige.png"/>
+			<item name="Kiwi" img="kiwi.png"/>
+			<item name="Litschi" img="litschi.png"/>
+			<item name="Mango" img="mango.png"/>
+			<item name="Papaya" img="papaya.png"/>
+			<item name="Sternfrucht" img="sternfrucht.png"/>
 		</item>
-		<item name="Kernobst" img="">
-			<item name="Apfel" img=""/>
-			<item name="Birnen" img=""/>
-			<item name="Hagebutte" img=""/>
-			<item name="Trauben" img=""/>
+		<item name="Kernobst" img="kernobst.png">
+			<item name="Apfel" img="apfel.png"/>
+			<item name="Birne" img="birne.png"/>
+			<item name="Hagebutte" img="hagebutte.png"/>
+			<item name="Trauben" img="trauben.png"/>
 		</item>
-		<item name="Schalenobst/Nüssse" img="">
-			<item name="Cashew" img=""/>
-			<item name="Erdnuss" img=""/>
-			<item name="Edelkastanie" img=""/>
-			<item name="Haselnuss" img=""/>
-			<item name="Kokosnuss" img=""/>
-			<item name="Macadamia" img=""/>
-			<item name="Mandel" img=""/>
-			<item name="Paranuss" img=""/>
-			<item name="Pistazie" img=""/>
-			<item name="Walnuss" img=""/>
+		<item name="Schalenobst/Nüssse" img="nuesse.png">
+			<item name="Cashew" img="cashews.png"/>
+			<item name="Erdnuss" img="erdnuesse.png"/>
+			<item name="Edelkastanie" img="maroni.png"/>
+			<item name="Haselnuss" img="haselnuesse.png"/>
+			<item name="Kokosnuss" img="kokos.png"/>
+			<item name="Macadamia" img="macadamia.png"/>
+			<item name="Mandel" img="Mandel.png"/>
+			<item name="Paranuss" img="Paranuss.png"/>
+			<item name="Pistazie" img="pistazie.png"/>
+			<item name="Walnuss" img="walnuss.png"/>
 		</item>
-		<item name="Steinobst" img="">
-			<item name="Kirschen" img="">
-				<item name="Sauerkirsche" img=""/>
-				<item name="Süßkirsche" img=""/>
+		<item name="Steinobst" img="steinobst.png">
+			<item name="Kirschen" img="kirsche.png">
+				<item name="Sauerkirsche" img="sauerkirschen.png"/>
+				<item name="Süßkirsche" img="suesskirsche.png"/>
 			</item>
-			<item name="Pflaumen" img="">
-				<item name="Echte Pflaume" img=""/>
-				<item name="Mirabelle" img=""/>
-				<item name="Zwetschge" img=""/>
+			<item name="Pflaumen" img="pflaume.png">
+				<item name="Echte Pflaume" img="echtepflaume.png"/>
+				<item name="Mirabelle" img="mirabelle.png"/>
+				<item name="Zwetschge" img="zwetschgen.png"/>
 			</item>
-			<item name="Pfirsiche" img="">
-				<item name="Nektarine" img=""/>
-				<item name="Pfirsich		" img=""/>
+			<item name="Pfirsiche" img="Pfirsich.png">
+				<item name="Nektarine" img="nektarine.png"/>
+				<item name="Pfirsich" img="Pfirsich.png"/>
 			</item>
-			<item name="Aprikose" img=""/>
+			<item name="Aprikose" img="aprikose.png"/>
 		</item>
-		<item name="Südfrüchte" img="">
-			<item name="Zitrusfrüchte" img="">
-				<item name="Grapefruit" img=""/>
-				<item name="Limette" img=""/>
-				<item name="Mandarine" img=""/>
-				<item name="Orange" img=""/>
-				<item name="Pomelo" img=""/>
+		<item name="Südfrüchte" img="suedfruechte.jpg">
+			<item name="Zitrusfrüchte" img="zitronen.png">
+				<item name="Grapefruit" img="Grapefruit.png"/>
+				<item name="Limette" img="Limette.jpeg"/>
+				<item name="Mandarine" img="mandarine.png"/>
+				<item name="Orange" img="orange.png"/>
+				<item name="Pomelo" img="pomelo.png"/>
+				<item name="Zitronen" img="zitronen.png"/>
 			</item>
-			<item name="Ananas" img=""/>
-			<item name="Banane" img=""/>
+			<item name="Ananas" img="ananas.png"/>
+			<item name="Banane" img="banane.png"/>
 		</item>
 	</item>
 	<item name="Süßes, Snacks" img="sweets.jpg">
