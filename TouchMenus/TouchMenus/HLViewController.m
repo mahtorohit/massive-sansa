@@ -88,7 +88,9 @@
     
     int row = [indexPath row];
     
-    NSArray *children = [[self.menuItems objectAtIndex:row] getChildren];
+    self.menuItems = [[self.menuItems objectAtIndex:row] getChildren];
+    
+    [self.colView reloadData];
     
 //    
 //     *collectionViewController = [self.storyboard instantiateViewControllerWithIdentifier: @"HorizontalList"];

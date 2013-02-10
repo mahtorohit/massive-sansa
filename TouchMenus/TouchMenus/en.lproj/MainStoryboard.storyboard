@@ -7,12 +7,12 @@
         <!--View Controller - Item-->
         <scene sceneID="Jfb-pI-nXG">
             <objects>
-                <viewController storyboardIdentifier="HorizontalList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nI3-oc-Ukq" customClass="HLViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HorizontalList" id="nI3-oc-Ukq" customClass="HLViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QY1-0P-fOk">
                         <rect key="frame" x="0.0" y="20" width="1024" height="699"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="Jkm-Ul-lWQ">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="HorizontalList" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="Jkm-Ul-lWQ">
                                 <rect key="frame" x="0.0" y="565" width="1024" height="134"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,6 +60,9 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="cD0-rl-P4b"/>
+                    <connections>
+                        <outlet property="colView" destination="Jkm-Ul-lWQ" id="itJ-hZ-5wM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPh-Cs-eDc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -504,100 +507,6 @@
             <point key="canvasLocation" x="3130" y="-1147"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="DDTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DDTableViewController.h"/>
-        </class>
-        <class className="DDViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DDViewController.h"/>
-        </class>
-        <class className="HLCollectionViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HLCollectionViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="HLViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HLViewController.h"/>
-        </class>
-        <class className="LeafViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LeafViewController.h"/>
-        </class>
-        <class className="MyCollectionViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyCollectionViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="MyCollectionViewController" superclassName="UICollectionViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyCollectionViewController.h"/>
-        </class>
-        <class className="MyTreeGraphView" superclassName="PSBaseTreeGraphView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyTreeGraphView.h"/>
-        </class>
-        <class className="PSBaseTreeGraphView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PSBaseTreeGraphView.h"/>
-            <relationships>
-                <relationship kind="action" name="moveDown:"/>
-                <relationship kind="action" name="moveLeft:"/>
-                <relationship kind="action" name="moveRight:"/>
-                <relationship kind="action" name="moveToNearestChild:"/>
-                <relationship kind="action" name="moveToParent:"/>
-                <relationship kind="action" name="moveUp:"/>
-                <relationship kind="action" name="toggleExpansionOfSelectedModelNodes:"/>
-                <relationship kind="outlet" name="inputView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="PSHTreeGraphViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PSHTreeGraphViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="treeGraphView" candidateClass="PSBaseTreeGraphView"/>
-            </relationships>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="ULViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ULViewController.h"/>
-        </class>
-        <class className="ZTMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ZTMapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="ZTViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ZTViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="uiView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="iCarousel" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iCarousel.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dataSource"/>
-                <relationship kind="outlet" name="delegate"/>
-            </relationships>
-        </class>
-        <class className="iCarouselExampleViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iCarouselExampleViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="carousel1" candidateClass="iCarousel"/>
-                <relationship kind="outlet" name="carousel3" candidateClass="iCarousel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -11,6 +11,6 @@
 @interface HLViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (strong, nonatomic) NSArray *menuItems;
-@property (strong,nonatomic) UICollectionView* view;
+@property (weak, nonatomic) IBOutlet UICollectionView *colView;
 
 @end
