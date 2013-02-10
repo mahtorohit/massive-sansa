@@ -13,6 +13,8 @@
 @property (retain) id<selectionDelegate> sdelegate;
 @property (retain) NSArray *menuItems;
 @property (retain) UIPopoverController *popover;
+@property (retain) NSMutableArray *parentviews;
+@property (retain) NSIndexPath *selIndexPath;
 
 @end
 
@@ -21,7 +23,8 @@
 @synthesize sdelegate = _sdelegate;
 @synthesize menuItems = _menuItems;
 @synthesize popover = _popover;
-
+@synthesize parentviews = _parentviews;
+@synthesize selIndexPath = _selIndexPath;
 
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
@@ -33,12 +36,16 @@
 
 - (id) initWithMenuItems:(NSArray *)menuItems
   usingSelectionDelegate:(id<selectionDelegate>)sdelegate
-				  inView:(UIView *)view {
+				  inView:(UIView *)view
+		  withOtherViews:(NSMutableArray *)views
+{
 	
 	self = [super initWithStyle:UITableViewStylePlain];
 	
 	self.sdelegate = sdelegate;
 	self.menuItems = menuItems;
+	self.parentviews = views;
+	[self.parentviews addObject:self.view];
 	
 	[self.tableView registerNib:[UINib nibWithNibName:@"CellNib" bundle:nil] forCellReuseIdentifier:@"Cell"];
 
@@ -77,6 +84,10 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 	
 	[cell.textLabel setText:[[self.menuItems objectAtIndex:[indexPath row]] getTitle]];
+	[cell.imageView setImage:[[self.menuItems objectAtIndex:[indexPath row]] getImg]];
+	[cell.textLabel setNumberOfLines:2];
+	[cell.textLabel setFont:[UIFont systemFontOfSize:16]];
+	
 	
 	if ([[self.menuItems objectAtIndex:[indexPath row]] getChildrenCount] > 0) {
 		[cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
@@ -91,20 +102,31 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
+	self.selIndexPath = indexPath;
+	 
 	if ([[self.menuItems objectAtIndex:[indexPath row]] getChildrenCount] > 0) {
+		
 		DDTableViewController *tblvc = [[DDTableViewController alloc] initWithMenuItems:[[self.menuItems objectAtIndex:[indexPath row]] getChildren]
 																 usingSelectionDelegate:self.sdelegate
-																				 inView:self.view];
+																				 inView:self.view
+																		 withOtherViews:self.parentviews];
+		[self.popover dismissPopoverAnimated:NO];
 		
 		self.popover = [[UIPopoverController alloc] initWithContentViewController:tblvc];
-		[self.popover presentPopoverFromRect:CGRectMake(tableView.frame.size.width / 1 - 12, tableView.frame.origin.y+[indexPath row]*44+20, 1, 1) inView:tableView permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+		self.popover.passthroughViews = self.parentviews;
+		self.popover.delegate = self;
+		[self.popover presentPopoverFromRect:CGRectMake(tableView.frame.size.width / 1.33 - 12, tableView.frame.origin.y+[indexPath row]*44+20, 1, 1) inView:tableView permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+	
 	} else {
 		
 		[self.sdelegate selectMenuItem:[self.menuItems objectAtIndex:[indexPath row]]];
 		
 	}
-	
+}
 
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
+{
+	[self.tableView deselectRowAtIndexPath:self.selIndexPath animated:NO];
 }
 
 @end

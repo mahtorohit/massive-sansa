@@ -10,6 +10,6 @@
 #import "DataProvider.h"
 #import "DDTableViewController.h"
 
-@interface DDViewController : UIViewController <selectionDelegate>
+@interface DDViewController : UIViewController <selectionDelegate, UIPopoverControllerDelegate>
 
 @end

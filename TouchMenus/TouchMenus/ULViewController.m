@@ -223,7 +223,7 @@
         if (itemLevel == 0) continue;
         if (itemLevel <= level) {
 
-			NSLog(@"%@", [item.menuItem getTitle]);
+//			NSLog(@"%@", [item.menuItem getTitle]);
     
                 if (currentIndex == itemIndex) {
                     [item setUnfolded: ![item isUnfolded]];

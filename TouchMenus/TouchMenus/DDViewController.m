@@ -37,16 +37,22 @@
 		
 	DDTableViewController *tblvc = [[DDTableViewController alloc] initWithMenuItems:items
 															 usingSelectionDelegate:self
-																			 inView:self.view];
+																			 inView:self.view
+																	 withOtherViews:[[NSMutableArray alloc] init]];
 
 	self.popover = [[UIPopoverController alloc] initWithContentViewController:tblvc];
+	self.popover.delegate = self;
     [self.popover presentPopoverFromRect:CGRectMake(sender.frame.size.width / 2, sender.frame.size.height / 1, 1, 1) inView:sender permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
-
 }
 
 - (void) selectMenuItem:(MenuItem *)item {
 	[self.popover dismissPopoverAnimated:NO];
 	NSLog(@"Selected %@", [item getTitle]);
+}
+
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
+{
+//	NSLog(@"dismissed");
 }
 
 @end

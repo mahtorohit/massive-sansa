@@ -1,50 +1,259 @@
 <items>
+	<item name="Backwaren" img="">
+		<item name="Brötchen" img="">
+			<item name="Laugengebäck" img="">
+				<item name="Bretze" img=""/>
+				<item name="Butterbretze" img=""/>
+				<item name="Dinkel-Laugeneck mit Salz" img=""/>
+				<item name="Dinkel-Laugeneck mit Sesam" img=""/>
+				<item name="Stange" img=""/>
+				<item name="Stange mit Käse" img=""/>
+			</item>
+			<item name="Käsekrusti" img=""/>
+			<item name="Keisersemmel" img=""/>
+			<item name="Mehrkornbrötchen" img=""/>
+			<item name="Mohnbrötchen" img=""/>
+			<item name="Quark-rosi" img=""/>
+			<item name="Sesambrötchen" img=""/>
+			<item name="Sonnenblummenbrötchen" img=""/>
+			<item name="Weizenbrötchen" img=""/>
+		</item>
+		<item name="Brote" img="">
+			<item name="Dinkelbrote" img="">
+				<item name="Dinkel-Hafer" img=""/>
+				<item name="Dinkel-Kasten" img=""/>
+				<item name="Dinkel-Kruste" img=""/>
+				<item name="Dinkel-Saaten" img=""/>
+				<item name="Karo-Dinkel" img=""/>
+				<item name="Keimling" img=""/>
+			</item>
+			<item name="Roggenbrote" img="">
+				<item name="Korn an Korn" img=""/>
+				<item name="Roggenvollkornbrot" img=""/>
+				<item name="Sonnenblumenbrot" img=""/>
+			</item>
+			<item name="Roggen- und Weizen-Mischbrote" img="">
+				<item name="Kartoffel-Kruste" img=""/>
+				<item name="Mehrkornbrot" img=""/>
+				<item name="Roggenfeinbrot" img=""/>
+				<item name="Roggenmischbrot" img=""/>
+				<item name="Vierkornbrot" img=""/>
+			</item>
+			<item name="Schnittbrote" img="">
+				<item name="Butter-Toastbrot, geschnitten" img=""/>
+				<item name="Korn an Korn, geschnitten" img=""/>
+				<item name="Mehrkornbrot, geschnitten" img=""/>
+				<item name="Roggenvollkornbrot, geschnitten" img=""/>
+				<item name="Sonnenblumenbrot, geschnitten" img=""/>
+			</item>
+			<item name="Weizenbrote" img="">
+				<item name="Bottermelk-Brot" img=""/>
+				<item name="Butter-Toastbrot" img=""/>
+				<item name="Ciabatta" img=""/>
+				<item name="Fladenbrot" img=""/>
+				<item name="Französisches Baguette" img=""/>
+				<item name="Oliven-Ciabatta" img=""/>
+				<item name="Rosinenstuten" img=""/>
+			</item>
+		</item>
+		<item name="Süßes" img="">
+			<item name="Donuts" img=""/>
+			<item name="Kuchen" img=""/>
+			<item name="Muffins" img=""/>
+			<item name="Waffeln" img=""/>
+		</item>
+	</item>
+	<item name="Gemüse" img="">
+		<item name="Blattgemüse / Salate" img="">
+			<item name="Blattstiele" img="">
+				<item name="Cardy" img=""/>
+				<item name="Mangold" img=""/>
+				<item name="Stangensellerie" img=""/>
+			</item>
+			<item name="Feldsalat" img=""/>
+			<item name="Gartensalat" img="">
+				<item name="Blattsalat" img=""/>
+				<item name="Eisbergsalat" img=""/>
+				<item name="Kopfsalat" img=""/>
+				<item name="Spargelsalat" img=""/>
+			</item>
+			<item name="Blattpetersilie" img=""/>
+			<item name="Rucola" img=""/>
+			<item name="Schnittselerie" img=""/>
+			<item name="Spinat" img=""/>
+		</item>
+		<item name="Blütengemüse" img="">
+			<item name="Artischoke" img=""/>
+			<item name="Blumenkohl" img=""/>
+			<item name="Broccoli" img=""/>
+			<item name="Zucchini" img=""/>
+		</item>
+		<item name="Fruchtgemüse" img="">
+			<item name="Aubergine" img=""/>
+			<item name="Kürbisgewächse" img="">
+				<item name="Gurke" img=""/>
+				<item name="Kürbis" img=""/>
+				<item name="Melonen" img=""/>
+			</item>
+			<item name="Paprika" img=""/>
+			<item name="Tomate" img=""/>
+		</item>
+		<item name="Gewürzgemüse" img="">
+			<item name="Beifuß" img=""/>
+			<item name="Dill" img=""/>
+			<item name="Fenchel" img=""/>
+			<item name="Majoran" img=""/>
+			<item name="Salbei" img=""/>
+			<item name="Thymian" img=""/>
+			<item name="Zitronenmelisse" img=""/>
+		</item>
+		<item name="Hülsenfrüchte" img="">
+			<item name="Bohnen" img=""/>
+			<item name="Erbsen" img=""/>
+			<item name="Puffbohnen" img=""/>
+			<item name="Sojabohnen" img=""/>
+		</item>
+		<item name="Kohlgemüse" img="">
+			<item name="Blattrosette / Blätter" img="">
+				<item name="Blätterkohl" img=""/>
+				<item name="Grünkohl" img=""/>
+			</item>
+			<item name="Kopfkohl" img="">
+				<item name="Rosenkohl" img=""/>
+				<item name="Rotkohl" img=""/>
+				<item name="Weißkohl" img=""/>
+				<item name="Wirsingkohl" img=""/>
+			</item>
+			<item name="Kohlrabi" img=""/>
+		</item>
+		<item name="Sprossengemüse" img="">
+			<item name="Getreide" img="">
+				<item name="Gerste" img=""/>
+				<item name="Hafer" img=""/>
+				<item name="Hirse" img=""/>
+				<item name="Mais" img=""/>
+				<item name="Rogen" img=""/>
+				<item name="Weizen" img=""/>
+			</item>
+			<item name="Ölsaaten" img="">
+				<item name="Gartenkresse" img=""/>
+				<item name="Lein" img=""/>
+				<item name="Reis" img=""/>
+				<item name="Sesam" img=""/>
+				<item name="Sonnenblume" img=""/>
+				<item name="Olive" img=""/>
+			</item>
+		</item>
+		<item name="Wurzelgemüse" img="">
+			<item name="Rübe" img="">
+				<item name="Kohlrübe" img=""/>
+				<item name="Mairübe" img=""/>
+				<item name="Radieschen" img=""/>
+				<item name="Rettich" img=""/>
+				<item name="Rote Rübe" img=""/>
+			</item>
+			<item name="Verdickte Wurzel" img="">
+				<item name="Ingwer" img=""/>
+				<item name="Möhre" img=""/>
+				<item name="Petersilie" img=""/>
+			</item>
+		</item>
+		<item name="Zwiebelgemüse" img="">
+			<item name="Lauch" img="">
+				<item name="Schnittlauch" img=""/>
+				<item name="Winterzwiebeln" img=""/>
+			</item>
+			<item name="Zwiebel" img="">
+				<item name="Knoblauch" img=""/>
+				<item name="Speisezwiebel" img=""/>
+				<item name="Schalotten" img=""/>
+			</item>
+		</item>
+	</item>
+	<item name="Milchprodukte" img="">
+		<item name="Käse" img="">
+			<item name="Frischkäse" img="">
+				<item name="Feta" img=""/>
+				<item name="Mozzarella" img=""/>
+			</item>
+			<item name="Hartkäse" img="">
+				<item name="Bergkäse" img=""/>
+				<item name="Cheddar" img=""/>
+				<item name="Emmentaler" img=""/>
+				<item name="Parmesan" img=""/>
+				<item name="Peccorino" img=""/>
+			</item>
+			<item name="Schnittkäse" img="">
+				<item name="Butterkäse" img=""/>
+				<item name="Edamer" img=""/>
+				<item name="Gouda" img=""/>
+				<item name="Tilsiter" img=""/>
+			</item>
+			<item name="Weichkäse" img="">
+				<item name="Brie" img=""/>
+				<item name="Camembert" img=""/>
+				<item name="Gorgonzola" img=""/>
+			</item>
+		</item>
+		<item name="Milch" img="">
+			<item name="Fettarme Milch" img=""/>
+			<item name="Magermilch" img=""/>
+			<item name="Vollmilch" img=""/>
+		</item>
+		<item name="Rahm" img="">
+			<item name="Sahne" img="">
+				<item name="Kaffeesahne" img=""/>
+				<item name="Schlagsahne" img=""/>
+			</item>
+			<item name="Sauerrahmprodukte" img="">
+				<item name="Creme Fraiche" img=""/>
+				<item name="Saure Sahne" img=""/>
+				<item name="Schmand" img=""/>
+				<item name="Mascarpone" img=""/>
+			</item>
+		</item>
+		<item name="Sauermilchprodukte" img="">
+			<item name="Joghurt" img="">
+				<item name="Fettarmer Joghurt" img=""/>
+				<item name="Kefir" img=""/>
+				<item name="Sahnejoghurt" img=""/>
+			</item>
+			<item name="Buttermilch" img=""/>
+		</item>
+		<item name="Butter" img=""/>
+		<item name="Quark" img=""/>
+	</item>
 	<item name="Obst" img="">
-		<item name="Kernobst" img="">
-			<item name="Apfel" img="apfel.png"/>
-			<item name="Birnen" img=""/>
-			<item name="Hagebutte" img=""/>
-			<item name="Quitte" img=""/>
-			<item name="Trauben" img="">
-				<item name="Weiße Trauben" img=""/>
-				<item name="Rote Trauben" img=""/>
-			</item>
-		</item>
-		<item name="Steinobst" img="">
-			<item name="Aprikose" img=""/>
-			<item name="Kirschen" img="">
-				<item name="Süßkirsche" img=""/>
-				<item name="Sauerkirsche" img=""/>
-			</item>
-			<item name="Pflaumen" img="">
-				<item name="Echte Pflaume" img=""/>
-				<item name="Mirabelle" img=""/>
-				<item name="Zwetschge" img=""/>
-			</item>
-			<item name="Pfirsiche" img="">
-				<item name="Nektarine" img=""/>
-				<item name="Pfirsich" img=""/>
-			</item>
-		</item>
 		<item name="Beerenobst" img="">
-			<item name="Sammelsteinfrüchte" img="">
-				<item name="Brombeere" img=""/>
-				<item name="Himbeere" img=""/>
-			</item>
 			<item name="Sammelnussfrüchte" img="">
-				<item name="Erdbeere" img="">
-					<item name="Walderdbeere" img=""/>
-					<item name="Gartenerdbeere" img=""/>
-				</item>
-				<item name="Hagebutte" img=""/>
+				<item name="Erdbeere" img=""/>
 				<item name="Heidelbeere" img=""/>
 				<item name="Holunder" img=""/>
 				<item name="Preiselbeere" img=""/>
 				<item name="Rote Johannisbeere" img=""/>
-				<item name="Sanddorn" img=""/>
 				<item name="Schwarze Johannisbeere" img=""/>
 				<item name="Stachelbeere" img=""/>
 			</item>
+			<item name="Sammelsteinfrüchte" img="">
+				<item name="Brombeere" img=""/>
+				<item name="Himbeere" img=""/>
+			</item>
+		</item>
+		<item name="Exotische Früchte" img="">
+			<item name="Avocado" img=""/>
+			<item name="Dattel" img=""/>
+			<item name="Feige" img=""/>
+			<item name="Kiwi" img=""/>
+			<item name="Litschi" img=""/>
+			<item name="Mango" img=""/>
+			<item name="Papaya" img=""/>
+			<item name="Sternfrucht" img=""/>
+		</item>
+		<item name="Kernobst" img="">
+			<item name="Apfel" img=""/>
+			<item name="Birnen" img=""/>
+			<item name="Hagebutte" img=""/>
+			<item name="Trauben" img=""/>
 		</item>
 		<item name="Schalenobst/Nüssse" img="">
 			<item name="Cashew" img=""/>
@@ -58,175 +267,93 @@
 			<item name="Pistazie" img=""/>
 			<item name="Walnuss" img=""/>
 		</item>
+		<item name="Steinobst" img="">
+			<item name="Kirschen" img="">
+				<item name="Sauerkirsche" img=""/>
+				<item name="Süßkirsche" img=""/>
+			</item>
+			<item name="Pflaumen" img="">
+				<item name="Echte Pflaume" img=""/>
+				<item name="Mirabelle" img=""/>
+				<item name="Zwetschge" img=""/>
+			</item>
+			<item name="Pfirsiche" img="">
+				<item name="Nektarine" img=""/>
+				<item name="Pfirsich		" img=""/>
+			</item>
+			<item name="Aprikose" img=""/>
+		</item>
 		<item name="Südfrüchte" img="">
-			<item name="Ananas" img=""/>
-			<item name="Banane" img=""/>
 			<item name="Zitrusfrüchte" img="">
 				<item name="Grapefruit" img=""/>
 				<item name="Limette" img=""/>
 				<item name="Mandarine" img=""/>
 				<item name="Orange" img=""/>
 				<item name="Pomelo" img=""/>
-				<item name="Zitrone" img=""/>
 			</item>
-		</item>
-		<item name="Exotische Früchte" img="">
-			<item name="Acerola" img=""/>
-			<item name="Avocado" img=""/>
-			<item name="Dattel" img=""/>
-			<item name="Durian" img=""/>
-			<item name="Feige" img=""/>
-			<item name="Guave" img=""/>
-			<item name="Kaktusfeige" img=""/>
-			<item name="Kiwi" img=""/>
-			<item name="Litschi" img=""/>
-			<item name="Mango" img=""/>
-			<item name="Papaya" img=""/>
-			<item name="Sternfrucht" img=""/>
-			<item name="Tamarinde" img=""/>
+			<item name="Ananas" img=""/>
+			<item name="Banane" img=""/>
 		</item>
 	</item>
-	<item name="Gemüse" img="">
-		<item name="Zwiebelgemüse" img="">
-			<item name="Zwiebel" img="">
-				<item name="Speisezwiebel" img=""/>
-				<item name="Schalotten" img=""/>
-				<item name="Perlzwiebel" img=""/>
-				<item name="Knoblauch" img=""/>
+	<item name="Süßes, Snacks" img="">
+		<item name="Kekse, Riegel" img="">
+			<item name="Kekse" img="">
+				<item name="Butterkekse" img=""/>
+				<item name="Cookies" img=""/>
+				<item name="Glückkekse" img=""/>
+				<item name="Schokokekse" img=""/>
+				<item name="Teekekse" img=""/>
+				<item name="Zwieback" img=""/>
 			</item>
-			<item name="Schaft" img="">
-				<item name="Porree" img=""/>
-			</item>
-			<item name="Lauch" img="">
-				<item name="Winterzwiebeln" img=""/>
-				<item name="Schnittlauch" img=""/>
-			</item>
+			<item name="Fruchtriegel" img=""/>
+			<item name="Müsliriegel" img=""/>
+			<item name="Schokoladenriegel" img=""/>
 		</item>
-		<item name="Gewürzgemüse" img="">
-			<item name="Thymian" img=""/>
-			<item name="Majoran" img=""/>
-			<item name="Bohnenkraut" img=""/>
-			<item name="Salbei" img=""/>
-			<item name="Zitronenmelisse" img=""/>
-			<item name="Dill" img=""/>
-			<item name="Liebstöckel" img=""/>
-			<item name="Kerbel" img=""/>
-			<item name="Fenchel" img=""/>
-			<item name="Beifuß" img=""/>
-			<item name="Borretsch" img=""/>
+		<item name="Schokoladen" img="">
+			<item name="Tafeln" img="">
+				<item name="Bitterschokolade" img=""/>
+				<item name="Milchschokolade" img=""/>
+				<item name="Weiße Schokolade" img=""/>
+			</item>
+			<item name="Figuren" img=""/>
+			<item name="Pralinen" img=""/>
+			<item name="Schokofrüchte" img=""/>
+			<item name="Trüffel" img=""/>
 		</item>
-		<item name="Blütengemüse" img="">
-			<item name="Artischoke" img=""/>
-			<item name="Zucchini" img=""/>
-			<item name="Blumenkohl" img=""/>
-			<item name="Broccoli" img=""/>
-			<item name="Romanesco" img=""/>
+		<item name="Snacks" img="">
+			<item name="Nüsse, Kerne" img="">
+				<item name="Nüsse" img=""/>
+				<item name="Studentenfutter" img=""/>
+				<item name="Schokonüsse" img=""/>
+			</item>
+			<item name="Blätterteigstangen" img=""/>
+			<item name="Chips " img=""/>
+			<item name="Crackers" img=""/>
+			<item name="Grissini" img=""/>
+			<item name="Kornflips" img=""/>
+			<item name="Party-Mix" img=""/>
+			<item name="Popcorn" img=""/>
+			<item name="Reiswaffeln" img=""/>
+			<item name="Salzgebäck" img=""/>
 		</item>
-		<item name="Sprossengemüse" img="">
-			<item name="Getreide" img="">
-				<item name="Gerste" img=""/>
-				<item name="Hafer" img=""/>
-				<item name="Hirse" img=""/>
-				<item name="Mais" img=""/>
-				<item name="Rogen" img=""/>
+		<item name="Zucker-, Süßwaren" img="">
+			<item name="Bonbons" img="">
+				<item name="Fruchtbonbons" img=""/>
+				<item name="Hustenbonbons" img=""/>
+				<item name="Karamellbonbons" img=""/>
+				<item name="Mentholbonbons" img=""/>
+				<item name="Pfefferminzbonbons" img=""/>
+				<item name="Schokoladenbonbons" img=""/>
 			</item>
-			<item name="Hülsenfrüchte" img="">
-				<item name="Azukibohne" img=""/>
-				<item name="Alfalfa" img=""/>
-				<item name="Erbse" img=""/>
-				<item name="Linsen" img=""/>
-				<item name="Strucherbse" img=""/>
-			</item>
-			<item name="Ölsaaten" img="">
-				<item name="Buchweizen" img=""/>
-				<item name="Daikon-Kresse" img=""/>
-				<item name="Gartenkresse" img=""/>
-				<item name="Lein" img=""/>
-				<item name="Reis" img=""/>
-				<item name="Rettich" img=""/>
-				<item name="Senf" img=""/>
-				<item name="Sesam" img=""/>
-				<item name="Sonnenblume" img=""/>
-				<item name="Olive" img=""/>
-			</item>
-		</item>
-		<item name="Fruchtgemüse" img="">
-			<item name="Tomate" img=""/>
-			<item name="Paprika" img=""/>
-			<item name="Aubergine" img=""/>
-			<item name="Kürbisgewächse" img="">
-				<item name="Gurke" img=""/>
-				<item name="Kürbis" img=""/>
-				<item name="Melonen" img=""/>
-				<item name="Flaschenkürbis" img=""/>
-				<item name="Wachskürbis" img=""/>
-			</item>
-		</item>
-		<item name="Hülsenfrüchte" img="">
-			<item name="Erbsen" img=""/>
-			<item name="Bohnen" img=""/>
-			<item name="Puffbohnen" img=""/>
-			<item name="Sojabohnen" img=""/>
-		</item>
-		<item name="Blattgemüse" img="">
-			<item name="Salate" img="">
-				<item name="Gartensalat" img="">
-					<item name="Kopfsalat" img=""/>
-					<item name="Schnittsalat" img=""/>
-					<item name="Bindesalat" img=""/>
-					<item name="Spargelsalat" img=""/>
-					<item name="Eisbergsalat" img=""/>
-					<item name="Blattsalat" img=""/>
-				</item>
-				<item name="Blattstiele" img="">
-					<item name="Cardy" img=""/>
-					<item name="Stangensellerie" img=""/>
-					<item name="Mangold" img=""/>
-				</item>
-				<item name="Spinat" img=""/>
-				<item name="Portulak" img=""/>
-				<item name="Sauerampfer" img=""/>
-				<item name="Löwenzahn" img=""/>
-				<item name="Schnittmangold" img=""/>
-				<item name="Blattpetersilie" img=""/>
-				<item name="Schnittselerie" img=""/>
-				<item name="Feldsalat" img=""/>
-				<item name="Rutensenf" img=""/>
-				<item name="Rucola" img=""/>
-			</item>
-		</item>
-		<item name="Kohlgemüse" img="">
-			<item name="Kopfkohl" img="">
-				<item name="Weißkohl" img=""/>
-				<item name="Rotkohl" img=""/>
-				<item name="Wirsingkohl" img=""/>
-				<item name="Rosenkohl" img=""/>
-			</item>
-			<item name="Blattrosette / Blätter" img="">
-				<item name="Blätterkohl" img=""/>
-				<item name="Grünkohl" img=""/>
-			</item>
-			<item name="Blütenstand" img="">
-				<item name="Blumenkohl" img=""/>
-				<item name="Brokkoli" img=""/>
-			</item>
-			<item name="Sproßknolle" img="">
-				<item name="Kohlrabi" img=""/>
-			</item>
-		</item>
-		<item name="Wurzelgemüse" img="">
-			<item name="verdickte Wurzel" img="">
-				<item name="Möhre" img=""/>
-				<item name="Petersilie" img=""/>
-				<item name="Ingwer" img=""/>
-			</item>
-			<item name="Rübe" img="">
-				<item name="Radieschen" img=""/>
-				<item name="Rettich" img=""/>
-				<item name="Mairübe" img=""/>
-				<item name="Kohlrübe" img=""/>
-				<item name="Rote Rübe" img=""/>
-			</item>
+			<item name="Fruchtgummis" img=""/>
+			<item name="Halva" img=""/>
+			<item name="Jelly Beans" img=""/>
+			<item name="Kaugummis" img=""/>
+			<item name="Krokant" img=""/>
+			<item name="Lakritze" img=""/>
+			<item name="Lebkuchen" img=""/>
+			<item name="Lollies" img=""/>
+			<item name="Marshmallows" img=""/>
 		</item>
 	</item>
 </items>

@@ -15,9 +15,10 @@
 
 @end;
 
-@interface DDTableViewController : UITableViewController
+@interface DDTableViewController : UITableViewController <UIPopoverControllerDelegate>
 
 - (id) initWithMenuItems:(NSArray *)menuItems
   usingSelectionDelegate:(id<selectionDelegate>)delegate
-				  inView:(UIView *)view;
+				  inView:(UIView *)view
+		  withOtherViews:(NSMutableArray *)views;
 @end
