@@ -1,7 +1,7 @@
 <items>
 	<item name="Backwaren" img="backwaren.png">
-		<item name="Brötchen" img="brötchen.png">
-			<item name="Laugengebäck" img="laugengebaeck.png">
+		<item name="Brötchen" img="broetchen.png">
+			<item name="Laugengebäck" img="laugengebaeck.jpg">
 				<item name="Breze" img="breze.png"/>
 				<item name="Dinkel-Laugeneck mit Salz" img="dinkel_laugeneck_salz.jpg"/>
 				<item name="Dinkel-Laugeneck mit Sesam" img="dinkel_laugeneck_sesam.jpg"/>
@@ -13,7 +13,7 @@
 			<item name="Mohnbrötchen" img="mohnbroetchen.jpg"/>
 			<item name="Quark-rosi" img="quarkrosi.jpg"/>
 			<item name="Sesambrötchen" img="sesambroetchen.jpg"/>
-			<item name="Sonnenblummenbrötchen" img="sonnenblummenbroetchen.jpg"/>
+			<item name="Sonnenblummenbrötchen" img="sonnenblumenbroetchen.jpg"/>
 			<item name="Weizenbrötchen" img="weizenbroetchen.jpg"/>
 		</item>
 		<item name="Brote" img="brote.png">
@@ -30,19 +30,12 @@
 				<item name="Roggenvollkornbrot" img="roggenvollkorn.jpg"/>
 				<item name="Sonnenblumenbrot" img="sonnenblumenbrot.jpg"/>
 			</item>
-			<item name="Roggen- und Weizen-Mischbrote" img="roggen_weizenbrote.png">
+			<item name="Roggen- und Weizen-Mischbrote" img="roggen_weizenbrote.jpg">
 				<item name="Kartoffel-Kruste" img="kartoffelkruste.jpg"/>
-				<item name="Mehrkornbrot" img="mehrkornbrot.jpg"/>
+				<item name="Mehrkornbrot" img="mehrkorn.jpg"/>
 				<item name="Roggenfeinbrot" img="roggenfeinbrot.jpg"/>
 				<item name="Roggenmischbrot" img="roggenmischbrot.jpg"/>
 				<item name="Vierkornbrot" img="vierkorn.jpg"/>
-			</item>
-			<item name="Schnittbrote" img="schnittbrote.png">
-				<item name="Butter-Toastbrot, geschnitten" img="butter_toast.jpg"/>
-				<item name="Korn an Korn, geschnitten" img="korn_an_korn_geschnitten.jpg"/>
-				<item name="Mehrkornbrot, geschnitten" img="mehrkorn_geschnitten.jpg"/>
-				<item name="Roggenvollkornbrot, geschnitten" img="roggenvollkorn_geschnitten.jpg"/>
-				<item name="Sonnenblumenbrot, geschnitten" img="sonnenblumen_geschnitten.jpg"/>
 			</item>
 			<item name="Weizenbrote" img="weizenbrote.jpg">
 				<item name="Bottermelk-Brot" img="bottermelk.jpg"/>
@@ -54,7 +47,7 @@
 				<item name="Rosinenstuten" img="rosinenstuten.jpg"/>
 			</item>
 		</item>
-		<item name="Süßes" img="Süßes.jpg">
+		<item name="Süßes" img="suesses.jpg">
 			<item name="Croissants" img="croissant.png"/>
 			<item name="Donuts" img="donut.png"/>
 			<item name="Kuchen" img="kuchen.png"/>
@@ -137,8 +130,8 @@
 			</item>
 		</item>
 		<item name="Wurzelgemüse" img="karotte.png">
-			<item name="Rübe" img="kohlruebe.png">
-				<item name="Kohlrübe" img="kohlruebe.png"/>
+			<item name="Rübe" img="kohlruebe.jpg">
+				<item name="Kohlrübe" img="kohlruebe.jpg"/>
 				<item name="Radieschen" img="radieschen.png"/>
 				<item name="Rettich" img="rettich.jpg"/>
 				<item name="Rote Rübe" img="roteruebe.png"/>
@@ -286,65 +279,59 @@
 			<item name="Banane" img=""/>
 		</item>
 	</item>
-	<item name="Süßes, Snacks" img="">
-		<item name="Kekse, Riegel" img="">
-			<item name="Kekse" img="">
-				<item name="Butterkekse" img=""/>
-				<item name="Cookies" img=""/>
-				<item name="Glückkekse" img=""/>
-				<item name="Schokokekse" img=""/>
-				<item name="Teekekse" img=""/>
-				<item name="Zwieback" img=""/>
+	<item name="Süßes, Snacks" img="sweets.jpg">
+		<item name="Kekse, Riegel" img="butterkeks.png">
+			<item name="Kekse" img="butterkeks.png">
+				<item name="Butterkekse" img="butterkeks.png"/>
+				<item name="Cookies" img="cookie.png"/>
+				<item name="Glückkekse" img="glueckskeks.png"/>
+				<item name="Schokokekse" img="schokokeks.jpg"/>
+				<item name="Teekekse" img="teekeks.jpg"/>
+				<item name="Zwieback" img="zwieback.png"/>
 			</item>
-			<item name="Fruchtriegel" img=""/>
-			<item name="Müsliriegel" img=""/>
-			<item name="Schokoladenriegel" img=""/>
+			<item name="Fruchtriegel" img="fruchtriegel.jpg"/>
+			<item name="Müsliriegel" img="muesliriegel.png"/>
+			<item name="Schokoladenriegel" img="schokoriegel.jpg"/>
 		</item>
-		<item name="Schokoladen" img="">
-			<item name="Tafeln" img="">
-				<item name="Bitterschokolade" img=""/>
-				<item name="Milchschokolade" img=""/>
-				<item name="Weiße Schokolade" img=""/>
+		<item name="Schokoladen" img="schokolade.png">
+			<item name="Tafeln" img="schokolade.png">
+				<item name="Bitterschokolade" img="bitterschokolade.jpg"/>
+				<item name="Milchschokolade" img="schoko.jpg"/>
+				<item name="Weiße Schokolade" img="wschoko.jpg"/>
 			</item>
-			<item name="Figuren" img=""/>
-			<item name="Pralinen" img=""/>
-			<item name="Schokofrüchte" img=""/>
-			<item name="Trüffel" img=""/>
+			<item name="Pralinen" img="pralinen.png"/>
+			<item name="Schokofrüchte" img="schokofrucht.jpg"/>
+			<item name="Trüffel" img="schokotrueffel.png"/>
 		</item>
-		<item name="Snacks" img="">
-			<item name="Nüsse, Kerne" img="">
-				<item name="Nüsse" img=""/>
-				<item name="Studentenfutter" img=""/>
-				<item name="Schokonüsse" img=""/>
+		<item name="Snacks" img="snacks.png">
+			<item name="Nüsse, Kerne" img="nuesse.png">
+				<item name="Nüsse" img="nuesse.png"/>
+				<item name="Studentenfutter" img="studentenfutter.jpg"/>
 			</item>
-			<item name="Blätterteigstangen" img=""/>
-			<item name="Chips " img=""/>
-			<item name="Crackers" img=""/>
-			<item name="Grissini" img=""/>
-			<item name="Kornflips" img=""/>
-			<item name="Party-Mix" img=""/>
-			<item name="Popcorn" img=""/>
-			<item name="Reiswaffeln" img=""/>
-			<item name="Salzgebäck" img=""/>
+			<item name="Blätterteigstangen" img="blaetterteig.jpg"/>
+			<item name="Chips" img="chips.png"/>
+			<item name="Crackers" img="crackers.jpg"/>
+			<item name="Grissini" img="grissini.png"/>
+			<item name="Party-Mix" img="partymix.jpg"/>
+			<item name="Popcorn" img="popcorn.png"/>
+			<item name="Reiswaffeln" img="reiswaffeln.jpg"/>
+			<item name="Salzgebäck" img="salzgeb.jpg"/>
 		</item>
-		<item name="Zucker-, Süßwaren" img="">
-			<item name="Bonbons" img="">
-				<item name="Fruchtbonbons" img=""/>
-				<item name="Hustenbonbons" img=""/>
-				<item name="Karamellbonbons" img=""/>
-				<item name="Mentholbonbons" img=""/>
-				<item name="Pfefferminzbonbons" img=""/>
-				<item name="Schokoladenbonbons" img=""/>
+		<item name="Zucker-, Süßwaren" img="bonbons.png">
+			<item name="Bonbons" img="bonbons.png">
+				<item name="Fruchtbonbons" img="fruchtbonbon.png"/>
+				<item name="Hustenbonbons" img="hustenbonbon.png"/>
+				<item name="Karamellbonbons" img="karamell.png"/>
+				<item name="Mentholbonbons" img="mentholbonbon.png"/>
+				<item name="Pfefferminzbonbons" img="peppermints.jpg"/>
 			</item>
-			<item name="Fruchtgummis" img=""/>
-			<item name="Halva" img=""/>
-			<item name="Jelly Beans" img=""/>
-			<item name="Kaugummis" img=""/>
-			<item name="Krokant" img=""/>
-			<item name="Lakritze" img=""/>
-			<item name="Lebkuchen" img=""/>
-			<item name="Lollies" img=""/>
-			<item name="Marshmallows" img=""/>
+			<item name="Fruchtgummis" img="fruchtgummi.png"/>
+			<item name="Jelly Beans" img="jellybeans.png"/>
+			<item name="Kaugummis" img="kaugummi.jpg"/>
+			<item name="Lakritze" img="lakritze.jpg"/>
+			<item name="Lebkuchen" img="lebkuchen.png"/>
+			<item name="Lollies" img="lollipop.png"/>
+			<item name="Marshmallows" img="marshmallow.jpg"/>
 		</item>
 	</item>
 </items>
