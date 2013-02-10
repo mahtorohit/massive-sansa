@@ -35,6 +35,8 @@
 	[navView addSubview:self.navController.view];
 	[self.navController.view setFrame:CGRectMake(0, 0, navView.frame.size.width, navView.frame.size.height)];
 	
+	[self.navController.navigationBar setHidden:YES];
+	
 	UISwipeGestureRecognizer *rightRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rightSwipeHandle)];
     rightRecognizer.direction = UISwipeGestureRecognizerDirectionDown;
     [rightRecognizer setNumberOfTouchesRequired:1];
@@ -45,6 +47,10 @@
 	NCTableViewController *tblv = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"NCTBLV"];
 	[self.navController pushViewController:tblv animated:YES];
 
+}
+- (IBAction)backButtonClick:(UIButton *)sender
+{
+	[self rightSwipeHandle];
 }
 
 - (void)rightSwipeHandle

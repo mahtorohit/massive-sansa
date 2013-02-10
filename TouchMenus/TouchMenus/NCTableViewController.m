@@ -60,13 +60,14 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-	[cell.textLabel setText:@"Hallo"];
+	[((UILabel *)[cell.contentView viewWithTag:11]) setText:@"Hallo"];
+	[((UIImageView *)[cell.contentView viewWithTag:10]) setImage:[UIImage imageNamed:@"apfel"]];
 	
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	return 100;
+	return 170;
 }
 
 #pragma mark - Table view delegate
