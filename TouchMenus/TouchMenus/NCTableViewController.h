@@ -10,4 +10,6 @@
 
 @interface NCTableViewController : UITableViewController
 
+@property(strong,nonatomic) NSArray* menuItems;
+
 @end

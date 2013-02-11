@@ -8,12 +8,17 @@
 
 #import "NCTableViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "DataProvider.h"
+#import "MenuItem.h"
 
 @interface NCTableViewController ()
+
 
 @end
 
 @implementation NCTableViewController
+
+@synthesize menuItems = _menuItems;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,6 +38,9 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    if (!self.menuItems) {
+         self.menuItems = [[[DataProvider sharedInstance] getRootMenuItem]getChildren];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,7 +60,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 100;
+    return [self.menuItems count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -60,8 +68,10 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-	[((UILabel *)[cell.contentView viewWithTag:11]) setText:@"Hallo"];
-	[((UIImageView *)[cell.contentView viewWithTag:10]) setImage:[UIImage imageNamed:@"apfel"]];
+    MenuItem* item = [self.menuItems objectAtIndex:[indexPath row]];
+    
+	[((UILabel *)[cell.contentView viewWithTag:11]) setText: [item getTitle]];
+	[((UIImageView *)[cell.contentView viewWithTag:10]) setImage:[item getImg]];
 	
     return cell;
 }
@@ -75,6 +85,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	NCTableViewController *tblv = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"NCTBLV"];
+    
+    MenuItem* currentItem = [self.menuItems objectAtIndex:[indexPath row]];
+//    NSLog(@"%@",[currentItem getTitle]);
+    if (![currentItem isLeaf]) {
+    tblv.menuItems = [currentItem getChildren];
 	
 	CATransition* transition = [CATransition animation];
 	transition.duration = 0.5;
@@ -84,6 +99,7 @@
 	[self.navigationController pushViewController:tblv animated:NO];
 	[self.navigationController.view.layer addAnimation:transition forKey:nil];
 //	[self.navigationController pushViewController:tblv animated:NO];
+    }
 	
 	
 }
