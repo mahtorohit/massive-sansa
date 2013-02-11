@@ -440,6 +440,8 @@
     
     BOOL oldNodeOnSameBranchAsNewNode = [previousSelectedModelNode isOnSameBranchAsNode:newModelNode];
     
+    NSLog(@"Old node on the same path as new selected node=%@, NewModelNodeLevel=%d", oldNodeOnSameBranchAsNewNode == YES ? @"YES" : @"NO", [newModelNode currentLevel]);
+    
     if (!oldNodeOnSameBranchAsNewNode) {
         int newModelNodeLevel = [newModelNode currentLevel];
         id<PSTreeGraphModelNode> ancestorOfPreviousNodeFromSameLevel = [previousSelectedModelNode ancestorFromLevel:newModelNodeLevel];
