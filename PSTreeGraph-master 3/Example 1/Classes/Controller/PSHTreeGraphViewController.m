@@ -11,8 +11,9 @@
 
 #import "PSBaseTreeGraphView.h"
 #import "MyLeafView.h"
+#import "DataProvider.h"
 
-#import "ObjCClassWrapper.h"
+// #import "ObjCClassWrapper.h"
 
 #define DegreesToRadians(x) ((x) * M_PI / 180.0)    
 
@@ -23,7 +24,7 @@
 
 @private
 	PSBaseTreeGraphView *treeGraphView_;
-	NSString *rootClassName_;
+	TreeMenuItem *rootItem_;
 }
 
 @end
@@ -35,20 +36,25 @@
 #pragma mark - Property Accessors
 
 @synthesize treeGraphView = treeGraphView_;
-@synthesize rootClassName = rootClassName_;
+@synthesize rootItem = rootItem_;
 
-- (void) setRootClassName:(NSString *)newRootClassName
-{   
-    NSParameterAssert(newRootClassName != nil);
 
-    if (![rootClassName_ isEqualToString:newRootClassName]) {
-        [rootClassName_ release];
-        rootClassName_ = [newRootClassName copy];
-    
-        // Get an ObjCClassWrapper for the named Objective-C Class, and set it as the TreeGraph's root.
-        [treeGraphView_ setModelRoot:[ObjCClassWrapper wrapperForClassNamed:rootClassName_]];
-    }
+- (void)setRootItem:(TreeMenuItem *)rootItem {
+    [treeGraphView_ setModelRoot: rootItem];
 }
+
+//- (void) setRootClassName:(NSString *)newRootClassName
+//{   
+//    NSParameterAssert(newRootClassName != nil);
+//
+//    if (![rootClassName_ isEqualToString:newRootClassName]) {
+//        [rootClassName_ release];
+//        rootClassName_ = [newRootClassName copy];
+//    
+//        // Get an ObjCClassWrapper for the named Objective-C Class, and set it as the TreeGraph's root.
+//        [treeGraphView_ setModelRoot:[ObjCClassWrapper wrapperForClassNamed:rootClassName_]];
+//    }
+//}
 
 
 #pragma mark - View Creation and Initializer
@@ -73,7 +79,11 @@
     // Specify a starting root class to inspect on launch.
     
     // The system includes some other abstract base classes that are interesting:
-     [self setRootClassName:@"CAAnimation"];
+    
+    TreeMenuItem *rootMenuItem = (TreeMenuItem *)[[DataProvider sharedInstance] getRootMenuItem];
+    NSLog(@"RootItem: %@", [rootMenuItem getTitle]);
+    
+    [self setRootItem: rootMenuItem];
     
 }
 
@@ -100,7 +110,9 @@
     NSParameterAssert(modelNode != nil);
 
 	// NOT FLEXIBLE: treat it like a model node instead of the interface.
-	ObjCClassWrapper *objectWrapper = (ObjCClassWrapper *)modelNode;
+	//ObjCClassWrapper *objectWrapper = (ObjCClassWrapper *)modelNode;
+    
+    TreeMenuItem *treeMenuItem = (TreeMenuItem *) modelNode;
 	MyLeafView *leafView = (MyLeafView *)nodeView;
 
 	// button
@@ -109,7 +121,7 @@
 //	}
 
 	// labels
-	leafView.titleLabel.text	= [objectWrapper name];
+	leafView.titleLabel.text	= [treeMenuItem getTitle];
 //	leafView.detailLabel.text	= [NSString stringWithFormat:@"%zd bytes",
 //                                   [objectWrapper wrappedClassInstanceSize]];
 
@@ -134,7 +146,7 @@
 
 - (void) dealloc
 {
-	[rootClassName_ release];
+	[rootItem_ release];
     [super dealloc];
 }
 

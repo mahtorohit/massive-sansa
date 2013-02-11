@@ -749,6 +749,10 @@
 
 - (void) setModelRoot:(id <PSTreeGraphModelNode> )newModelRoot
 {
+    
+    NSLog(@"New Model root is nil: %@", newModelRoot == nil ? @"YES" : @"NO");
+    NSLog(@"Confirms To PSTreeGraphModelNode: %@", [newModelRoot conformsToProtocol:@protocol(PSTreeGraphModelNode)] ? @"YES" : @"");
+    
     NSParameterAssert(newModelRoot == nil || [newModelRoot conformsToProtocol:@protocol(PSTreeGraphModelNode)]);
 
     if ( modelRoot_ != newModelRoot ) {

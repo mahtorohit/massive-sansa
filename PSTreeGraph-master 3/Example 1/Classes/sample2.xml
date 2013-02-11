@@ -1,0 +1,336 @@
+<items>
+	<item name="Backwaren" img="backwaren.png">
+		<item name="Brötchen" img="broetchen.png">
+			<item name="Laugengebäck" img="laugengebaeck.jpg">
+				<item name="Breze" img="breze.png"/>
+				<item name="Dinkel-Laugeneck mit Salz" img="dinkel_laugeneck_salz.jpg"/>
+				<item name="Dinkel-Laugeneck mit Sesam" img="dinkel_laugeneck_sesam.jpg"/>
+				<item name="Stange" img="laugenstange.png"/>
+			</item>
+			<item name="Käsekrusti" img="kaesekrusti.jpg"/>
+			<item name="Kaisersemmel" img="kaisersemmel.png"/>
+			<item name="Mehrkornbrötchen" img="mehrkornbroetchen.jpg"/>
+			<item name="Mohnbrötchen" img="mohnbroetchen.jpg"/>
+			<item name="Quark-rosi" img="quarkrosi.jpg"/>
+			<item name="Sesambrötchen" img="sesambroetchen.jpg"/>
+			<item name="Sonnenblummenbrötchen" img="sonnenblumenbroetchen.jpg"/>
+			<item name="Weizenbrötchen" img="weizenbroetchen.jpg"/>
+		</item>
+		<item name="Brote" img="brote.png">
+			<item name="Dinkelbrote" img="dinkelbrote.png">
+				<item name="Dinkel-Hafer" img="dinkelhafer.jpg"/>
+				<item name="Dinkel-Kasten" img="dinkelkasten.jpg"/>
+				<item name="Dinkel-Kruste" img="dinkelkruste.jpg"/>
+				<item name="Dinkel-Saaten" img="dinkelsaaten.jpg"/>
+				<item name="Karo-Dinkel" img="karodinkel.jpg"/>
+				<item name="Keimling" img="keimling.jpg"/>
+			</item>
+			<item name="Roggenbrote" img="roggenbrote.png">
+				<item name="Korn an Korn" img="korn_an_korn.jpg"/>
+				<item name="Roggenvollkornbrot" img="roggenvollkorn.jpg"/>
+				<item name="Sonnenblumenbrot" img="sonnenblumenbrot.jpg"/>
+			</item>
+			<item name="Roggen- und Weizen-Mischbrote" img="roggen_weizenbrote.jpg">
+				<item name="Kartoffel-Kruste" img="kartoffelkruste.jpg"/>
+				<item name="Mehrkornbrot" img="mehrkorn.jpg"/>
+				<item name="Roggenfeinbrot" img="roggenfeinbrot.jpg"/>
+				<item name="Roggenmischbrot" img="roggenmischbrot.jpg"/>
+				<item name="Vierkornbrot" img="vierkorn.jpg"/>
+			</item>
+			<item name="Weizenbrote" img="weizenbrote.jpg">
+				<item name="Bottermelk-Brot" img="bottermelk.jpg"/>
+				<item name="Butter-Toastbrot" img="butter_toast.jpg"/>
+				<item name="Ciabatta" img="ciabatta.jpg"/>
+				<item name="Fladenbrot" img="fladenbrot.jpg"/>
+				<item name="Französisches Baguette" img="baguette.jpg"/>
+				<item name="Oliven-Ciabatta" img="oliven-ciabatta.jpg"/>
+				<item name="Rosinenstuten" img="rosinenstuten.jpg"/>
+			</item>
+		</item>
+		<item name="Süßes" img="suesses.jpg">
+			<item name="Croissants" img="croissant.png"/>
+			<item name="Donuts" img="donut.png"/>
+			<item name="Kuchen" img="kuchen.png"/>
+			<item name="Muffins" img="muffin.png"/>
+			<item name="Waffeln" img="waffeln.png"/>
+		</item>
+	</item>
+	<item name="Gemüse" img="gemuese.png">
+		<item name="Blattgemüse / Salate" img="salat.png">
+			<item name="Blattstiele" img="mangold.jpg">
+				<item name="Cardy" img="cardy.jpg"/>
+				<item name="Mangold" img="mangold.jpg"/>
+				<item name="Stangensellerie" img="stangensellerie.jpg"/>
+			</item>
+			<item name="Gartensalat" img="kopfsalat.jpg">
+				<item name="Blattsalat" img="blattsalat.jpg"/>
+				<item name="Eisbergsalat" img="eisbergsalat.jpg"/>
+				<item name="Kopfsalat" img="kopfsalat.jpg"/>
+				<item name="Spargel" img="spargel.jpg"/>
+			</item>
+			<item name="Blattpetersilie" img="petersilie.jpg"/>
+			<item name="Feldsalat" img="feldsalat.jpg"/>
+			<item name="Rucola" img="rucola.png"/>
+			<item name="Spinat" img="spinat.png"/>
+		</item>
+		<item name="Blütengemüse" img="artischocke.png">
+			<item name="Artischocke" img="artischocke.png"/>
+			<item name="Blumenkohl" img="blumenkohl.png"/>
+			<item name="Broccoli" img="broccoli.png"/>
+			<item name="Zucchini" img="zucchini.jpg"/>
+		</item>
+		<item name="Fruchtgemüse" img="fruchtgemuese.jpg">
+			<item name="Kürbisgewächse" img="kuerbis.png">
+				<item name="Gurke" img="gurke.png"/>
+				<item name="Kürbis" img="kuerbis.png"/>
+				<item name="Melonen" img="melone.png"/>
+			</item>
+			<item name="Aubergine" img="aubergine.png"/>
+			<item name="Paprika" img="paprika.png"/>
+			<item name="Tomate" img="tomate.png"/>
+		</item>
+		<item name="Gewürzgemüse" img="dill.png">
+			<item name="Dill" img="dill.png"/>
+			<item name="Fenchel" img="fenchel.png"/>
+			<item name="Majoran" img="majoran.png"/>
+			<item name="Salbei" img="salbei.png"/>
+			<item name="Thymian" img="thymian.png"/>
+			<item name="Zitronenmelisse" img="zitronenmelisse.jpg"/>
+		</item>
+		<item name="Hülsenfrüchte" img="huelsenfruechte.jpg">
+			<item name="Bohnen" img="bohnen.jpg"/>
+			<item name="Erbsen" img="erbsen.png"/>
+			<item name="Puffbohnen" img="puff.jpg"/>
+			<item name="Sojabohnen" img="sojabohnen.jpg"/>
+		</item>
+		<item name="Kohlgemüse" img="wirsing.png">
+			<item name="Grünkohl" img="gruenkohl.png"/>
+			<item name="Rosenkohl" img="rosenkohl.png"/>
+			<item name="Rotkohl" img="rotkohl.png"/>
+			<item name="Weißkohl" img="weisskohl.jpg"/>
+			<item name="Wirsingkohl" img="wirsing.png"/>
+			<item name="Kohlrabi" img="kohlrabi.png"/>
+		</item>
+		<item name="Sprossengemüse" img="weizen.png">
+			<item name="Getreide" img="weizen.png">
+				<item name="Gerste" img="gerste.jpg"/>
+				<item name="Hafer" img="hafer.jpg"/>
+				<item name="Hirse" img="hirse.jpg"/>
+				<item name="Mais" img="mais.png"/>
+				<item name="Roggen" img="roggen.jpg"/>
+				<item name="Weizen" img="weizen.png"/>
+			</item>
+			<item name="Ölsaaten" img="oelsaaten.jpg">
+				<item name="Gartenkresse" img="gartenkresse.png"/>
+				<item name="Lein" img="lein.jpg"/>
+				<item name="Reis" img="reis.jpg"/>
+				<item name="Sesam" img="sesam.png"/>
+				<item name="Sonnenblume" img="sonnenblume.png"/>
+				<item name="Olive" img="olive.png"/>
+			</item>
+		</item>
+		<item name="Wurzelgemüse" img="karotte.png">
+			<item name="Rübe" img="kohlruebe.jpg">
+				<item name="Kohlrübe" img="kohlruebe.jpg"/>
+				<item name="Radieschen" img="radieschen.png"/>
+				<item name="Rettich" img="rettich.jpg"/>
+				<item name="Rote Rübe" img="roteruebe.png"/>
+			</item>
+			<item name="Verdickte Wurzel" img="karotte.png">
+				<item name="Ingwer" img="ingwer.png"/>
+				<item name="Möhre" img="karotte.png"/>
+				<item name="Petersilie" img="petersilie.png"/>
+			</item>
+		</item>
+		<item name="Zwiebelgemüse" img="zwiebeln.png">
+			<item name="Zwiebel" img="zwiebeln.png">
+				<item name="Knoblauch" img="knoblauch.png"/>
+				<item name="Speisezwiebel" img="zwiebeln.png"/>
+				<item name="Schalotten" img="schalotten.jpg"/>
+			</item>
+			<item name="Lauch" img="lauch.png"/>
+			<item name="Schnittlauch" img="schnittlauch.png"/>
+		</item>
+	</item>
+	<item name="Milchprodukte" img="milchprodukte.jpg">
+		<item name="Käse" img="kaese.png">
+			<item name="Frischkäse" img="frischkaese.jpg">
+				<item name="Feta" img="feta.png"/>
+				<item name="Mozzarella" img="mozzarella.png"/>
+			</item>
+			<item name="Hartkäse" img="hartkaese.png">
+				<item name="Bergkäse" img="bergkaese.png"/>
+				<item name="Cheddar" img="cheddar.png"/>
+				<item name="Emmentaler" img="emmentaler.png"/>
+				<item name="Parmesan" img="parmesan.png"/>
+				<item name="Pecorino" img="pecorino.png"/>
+			</item>
+			<item name="Schnittkäse" img="schnittkaese.jpg">
+				<item name="Butterkäse" img="butterkaese.jpg"/>
+				<item name="Edamer" img="edamer.png"/>
+				<item name="Gouda" img="gouda.png"/>
+				<item name="Tilsiter" img="tilsiter.png"/>
+			</item>
+			<item name="Weichkäse" img="weichkaese.png">
+				<item name="Brie" img="brie.png"/>
+				<item name="Camembert" img="camembert.png"/>
+				<item name="Gorgonzola" img="gorgonzola.png"/>
+			</item>
+		</item>
+		<item name="Milch" img="milch.png">
+			<item name="Fettarme Milch" img="fettarme_milch.png"/>
+			<item name="Magermilch" img="magermilch.png"/>
+			<item name="Vollmilch" img="vollmilch.png"/>
+		</item>
+		<item name="Rahm" img="rahm.jpg">
+			<item name="Sahne" img="sahne.png">
+				<item name="Kaffeesahne" img="kaffeesahne.png"/>
+				<item name="Schlagsahne" img="schlagsahne.png"/>
+			</item>
+			<item name="Sauerrahmprodukte" img="sauerrahmprodukte.png">
+				<item name="Creme Fraiche" img="creme_fraiche.png"/>
+				<item name="Saure Sahne" img="saure_sahne.png"/>
+				<item name="Schmand" img="schmand.png"/>
+				<item name="Mascarpone" img="mascarpone.png"/>
+			</item>
+		</item>
+		<item name="Sauermilchprodukte" img="sauermilchprodukte.png">
+			<item name="Joghurt" img="joghurt.png">
+				<item name="Fettarmer Joghurt" img="fettarmer_joghurt.png"/>
+				<item name="Kefir" img="kefir.png"/>
+				<item name="Sahnejoghurt" img="sahnejoghurt.png"/>
+			</item>
+			<item name="Buttermilch" img="buttermilch.png"/>
+		</item>
+		<item name="Butter" img="butter.png"/>
+		<item name="Quark" img="quark.jpg"/>
+	</item>
+	<item name="Obst" img="obst.png">
+		<item name="Beerenobst" img="beerenobst.png">
+			<item name="Sammelnussfrüchte" img="erdbeeren.jpg">
+				<item name="Erdbeere" img="erdbeeren.jpg"/>
+				<item name="Heidelbeere" img="heidelbeere.png"/>
+				<item name="Holunder" img="holunder.png"/>
+				<item name="Preiselbeere" img="preiselbeere.png"/>
+				<item name="Rote Johannisbeere" img="johannisbeere_rot.png"/>
+				<item name="Schwarze Johannisbeere" img="johannisbeere_schwarz.png"/>
+				<item name="Stachelbeere" img="stachelbeere.png"/>
+			</item>
+			<item name="Sammelsteinfrüchte" img="sammelstein.png">
+				<item name="Brombeere" img="brombeere.png"/>
+				<item name="Himbeere" img="himbeere.png"/>
+			</item>
+		</item>
+		<item name="Exotische Früchte" img="exotische_fruechte.png">
+			<item name="Avocado" img="avocado.png"/>
+			<item name="Dattel" img="datteln.png"/>
+			<item name="Feige" img="feige.png"/>
+			<item name="Kiwi" img="kiwi.png"/>
+			<item name="Litschi" img="litschi.png"/>
+			<item name="Mango" img="mango.png"/>
+			<item name="Papaya" img="papaya.png"/>
+			<item name="Sternfrucht" img="sternfrucht.png"/>
+		</item>
+		<item name="Kernobst" img="kernobst.png">
+			<item name="Apfel" img="apfel.png"/>
+			<item name="Birne" img="birne.png"/>
+			<item name="Hagebutte" img="hagebutte.png"/>
+			<item name="Trauben" img="trauben.png"/>
+		</item>
+		<item name="Schalenobst/Nüssse" img="nuesse.png">
+			<item name="Cashew" img="cashews.png"/>
+			<item name="Erdnuss" img="erdnuesse.png"/>
+			<item name="Edelkastanie" img="maroni.png"/>
+			<item name="Haselnuss" img="haselnuesse.png"/>
+			<item name="Kokosnuss" img="kokos.png"/>
+			<item name="Macadamia" img="macadamia.png"/>
+			<item name="Mandel" img="Mandel.png"/>
+			<item name="Paranuss" img="Paranuss.png"/>
+			<item name="Pistazie" img="pistazie.png"/>
+			<item name="Walnuss" img="walnuss.png"/>
+		</item>
+		<item name="Steinobst" img="steinobst.png">
+			<item name="Kirschen" img="kirsche.png">
+				<item name="Sauerkirsche" img="sauerkirschen.png"/>
+				<item name="Süßkirsche" img="suesskirsche.png"/>
+			</item>
+			<item name="Pflaumen" img="pflaume.png">
+				<item name="Echte Pflaume" img="echtepflaume.png"/>
+				<item name="Mirabelle" img="mirabelle.png"/>
+				<item name="Zwetschge" img="zwetschgen.png"/>
+			</item>
+			<item name="Pfirsiche" img="Pfirsich.png">
+				<item name="Nektarine" img="nektarine.png"/>
+				<item name="Pfirsich" img="Pfirsich.png"/>
+			</item>
+			<item name="Aprikose" img="aprikose.png"/>
+		</item>
+		<item name="Südfrüchte" img="suedfruechte.jpg">
+			<item name="Zitrusfrüchte" img="zitronen.png">
+				<item name="Grapefruit" img="Grapefruit.png"/>
+				<item name="Limette" img="Limette.jpeg"/>
+				<item name="Mandarine" img="mandarine.png"/>
+				<item name="Orange" img="orange.png"/>
+				<item name="Pomelo" img="pomelo.png"/>
+				<item name="Zitronen" img="zitronen.png"/>
+			</item>
+			<item name="Ananas" img="ananas.png"/>
+			<item name="Banane" img="banane.png"/>
+		</item>
+	</item>
+	<item name="Süßes, Snacks" img="sweets.jpg">
+		<item name="Kekse, Riegel" img="butterkeks.png">
+			<item name="Kekse" img="butterkeks.png">
+				<item name="Butterkekse" img="butterkeks.png"/>
+				<item name="Cookies" img="cookie.png"/>
+				<item name="Glückkekse" img="glueckskeks.png"/>
+				<item name="Schokokekse" img="schokokeks.jpg"/>
+				<item name="Teekekse" img="teekeks.jpg"/>
+				<item name="Zwieback" img="zwieback.png"/>
+			</item>
+			<item name="Fruchtriegel" img="fruchtriegel.jpg"/>
+			<item name="Müsliriegel" img="muesliriegel.png"/>
+			<item name="Schokoladenriegel" img="schokoriegel.jpg"/>
+		</item>
+		<item name="Schokoladen" img="schokolade.png">
+			<item name="Tafeln" img="schokolade.png">
+				<item name="Bitterschokolade" img="bitterschokolade.jpg"/>
+				<item name="Milchschokolade" img="schoko.jpg"/>
+				<item name="Weiße Schokolade" img="wschoko.jpg"/>
+			</item>
+			<item name="Pralinen" img="pralinen.png"/>
+			<item name="Schokofrüchte" img="schokofrucht.jpg"/>
+			<item name="Trüffel" img="schokotrueffel.png"/>
+		</item>
+		<item name="Snacks" img="snacks.png">
+			<item name="Nüsse, Kerne" img="nuesse.png">
+				<item name="Nüsse" img="nuesse.png"/>
+				<item name="Studentenfutter" img="studentenfutter.jpg"/>
+			</item>
+			<item name="Blätterteigstangen" img="blaetterteig.jpg"/>
+			<item name="Chips" img="chips.png"/>
+			<item name="Crackers" img="crackers.jpg"/>
+			<item name="Grissini" img="grissini.png"/>
+			<item name="Party-Mix" img="partymix.jpg"/>
+			<item name="Popcorn" img="popcorn.png"/>
+			<item name="Reiswaffeln" img="reiswaffeln.jpg"/>
+			<item name="Salzgebäck" img="salzgeb.jpg"/>
+		</item>
+		<item name="Zucker-, Süßwaren" img="bonbons.png">
+			<item name="Bonbons" img="bonbons.png">
+				<item name="Fruchtbonbons" img="fruchtbonbon.png"/>
+				<item name="Hustenbonbons" img="hustenbonbon.png"/>
+				<item name="Karamellbonbons" img="karamell.png"/>
+				<item name="Mentholbonbons" img="mentholbonbon.png"/>
+				<item name="Pfefferminzbonbons" img="peppermints.jpg"/>
+			</item>
+			<item name="Fruchtgummis" img="fruchtgummi.png"/>
+			<item name="Jelly Beans" img="jellybeans.png"/>
+			<item name="Kaugummis" img="kaugummi.jpg"/>
+			<item name="Lakritze" img="lakritze.jpg"/>
+			<item name="Lebkuchen" img="lebkuchen.png"/>
+			<item name="Lollies" img="lollipop.png"/>
+			<item name="Marshmallows" img="marshmallow.jpg"/>
+		</item>
+	</item>
+</items>

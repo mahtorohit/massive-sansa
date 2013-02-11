@@ -16,5 +16,6 @@
 @interface MyLeafView : PSBaseLeafView
 
 @property (nonatomic, assign) IBOutlet UILabel *titleLabel;
+@property (nonatomic, assign) IBOutlet UIImageView *imageView;
 
 @end

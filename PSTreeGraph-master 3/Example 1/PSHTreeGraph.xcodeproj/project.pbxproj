@@ -16,6 +16,11 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* PSHTreeGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* PSHTreeGraphViewController.m */; };
 		48F1CE4416C92D700001BDBD /* apfel_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F1CE4316C92D700001BDBD /* apfel_red.png */; };
+		48F1CE4F16C955790001BDBD /* DataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F1CE4E16C955790001BDBD /* DataProvider.m */; };
+		48F1CE5416C955A00001BDBD /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F1CE5316C955A00001BDBD /* MenuItem.m */; };
+		48F1CE5B16C9562C0001BDBD /* SMXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F1CE5A16C9562C0001BDBD /* SMXMLDocument.m */; };
+		48F1CE5E16C956340001BDBD /* sample2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 48F1CE5D16C956340001BDBD /* sample2.xml */; };
+		48F1CE6716C95DD40001BDBD /* TreeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F1CE6616C95DD40001BDBD /* TreeMenuItem.m */; };
 		4F3536F511FC851F00AABFF1 /* MyTreeGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3536F411FC851F00AABFF1 /* MyTreeGraphView.m */; };
 		4F35379D11FC8EC900AABFF1 /* PSBaseBranchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F35379611FC8EC900AABFF1 /* PSBaseBranchView.m */; };
 		4F35379E11FC8EC900AABFF1 /* PSBaseLeafView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F35379811FC8EC900AABFF1 /* PSBaseLeafView.m */; };
@@ -46,6 +51,15 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* PSHTreeGraph_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSHTreeGraph_Prefix.pch; sourceTree = "<group>"; };
 		48F1CE4316C92D700001BDBD /* apfel_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = apfel_red.png; path = Classes/apfel_red.png; sourceTree = "<group>"; };
+		48F1CE4D16C955790001BDBD /* DataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataProvider.h; sourceTree = "<group>"; };
+		48F1CE4E16C955790001BDBD /* DataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataProvider.m; sourceTree = "<group>"; };
+		48F1CE5216C955A00001BDBD /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
+		48F1CE5316C955A00001BDBD /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
+		48F1CE5916C9562B0001BDBD /* SMXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMXMLDocument.h; sourceTree = "<group>"; };
+		48F1CE5A16C9562C0001BDBD /* SMXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMXMLDocument.m; sourceTree = "<group>"; };
+		48F1CE5D16C956340001BDBD /* sample2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample2.xml; sourceTree = "<group>"; };
+		48F1CE6516C95DD40001BDBD /* TreeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeMenuItem.h; sourceTree = "<group>"; };
+		48F1CE6616C95DD40001BDBD /* TreeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeMenuItem.m; sourceTree = "<group>"; };
 		4F0E109E1407EB94009B9214 /* Doxyfile */ = {isa = PBXFileReference; explicitFileType = text.script; fileEncoding = 4; name = Doxyfile; path = ../Doxyfile; sourceTree = "<group>"; };
 		4F0EE31B15D2F99B009BC883 /* PSTreeGraphDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSTreeGraphDelegate.h; sourceTree = "<group>"; };
 		4F3536F311FC851F00AABFF1 /* MyTreeGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTreeGraphView.h; path = Classes/View/MyTreeGraphView.h; sourceTree = SOURCE_ROOT; };
@@ -150,6 +164,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		48F1CE5116C9557D0001BDBD /* Laden */ = {
+			isa = PBXGroup;
+			children = (
+				48F1CE5D16C956340001BDBD /* sample2.xml */,
+				48F1CE5916C9562B0001BDBD /* SMXMLDocument.h */,
+				48F1CE5A16C9562C0001BDBD /* SMXMLDocument.m */,
+				48F1CE5216C955A00001BDBD /* MenuItem.h */,
+				48F1CE5316C955A00001BDBD /* MenuItem.m */,
+				48F1CE4D16C955790001BDBD /* DataProvider.h */,
+				48F1CE4E16C955790001BDBD /* DataProvider.m */,
+				48F1CE6516C95DD40001BDBD /* TreeMenuItem.h */,
+				48F1CE6616C95DD40001BDBD /* TreeMenuItem.m */,
+			);
+			name = Laden;
+			sourceTree = "<group>";
+		};
 		4F3536A811FC7C1F00AABFF1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +194,7 @@
 		4F3536AB11FC7C2500AABFF1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				48F1CE5116C9557D0001BDBD /* Laden */,
 				4F86D04213FAADC000A494AE /* ObjCClass */,
 			);
 			name = Model;
@@ -325,6 +356,7 @@
 				4F4AA33913FA305700607517 /* Entitlements.plist in Resources */,
 				4F4AA34513FA32C700607517 /* Icon-72.png in Resources */,
 				48F1CE4416C92D700001BDBD /* apfel_red.png in Resources */,
+				48F1CE5E16C956340001BDBD /* sample2.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +377,10 @@
 				4F3537A011FC8EC900AABFF1 /* PSBaseTreeGraphView.m in Sources */,
 				4F3537ED11FC9A2F00AABFF1 /* ObjCClassWrapper.m in Sources */,
 				4F353B8711FCF1A400AABFF1 /* MyLeafView.m in Sources */,
+				48F1CE4F16C955790001BDBD /* DataProvider.m in Sources */,
+				48F1CE5416C955A00001BDBD /* MenuItem.m in Sources */,
+				48F1CE5B16C9562C0001BDBD /* SMXMLDocument.m in Sources */,
+				48F1CE6716C95DD40001BDBD /* TreeMenuItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

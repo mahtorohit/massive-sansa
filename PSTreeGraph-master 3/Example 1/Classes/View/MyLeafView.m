@@ -17,6 +17,7 @@
     // Interface
  //   UIButton *expandButton_;
     UILabel *titleLabel_;
+    UIImageView *imageView_;
 //    UILabel *detailLabel_;
 }
 
@@ -30,6 +31,7 @@
 
 //@synthesize expandButton = expandButton_;
 @synthesize titleLabel = titleLabel_;
+@synthesize imageView = imageView_;
 //@synthesize detailLabel = detailLabel_;
 
 
