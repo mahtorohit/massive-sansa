@@ -122,36 +122,30 @@
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
 {
-    UILabel *label = nil;
-    UIImageView *imgV = nil;
+	UILabel *label = nil;
+	UIImageView *imgV = nil;
 	
-	//create new view if no view is available for recycling
-	if (view == nil)
-	{
-        view = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 200.0f, 200.0f)];
-        view.backgroundColor = (index == 0) ? [UIColor orangeColor] : [UIColor lightGrayColor];
+	view = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 200.0f, 200.0f)];
+	view.backgroundColor = /*(index == 0) ? [UIColor clearColor] :*/ [UIColor lightGrayColor];
 		
-		imgV = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 200.0f, 160.0f)];
-		[view addSubview:imgV];
+	imgV = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 200.0f, 160.0f)];
+	[view addSubview:imgV];
 
-        label = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 160.0f, 200.0f, 40.0f)];
-        label.backgroundColor = [UIColor clearColor];
-        label.font = [label.font fontWithSize:20];
-		label.textAlignment = NSTextAlignmentCenter;
-		[view addSubview:label];
-	
-	}
-    else
-	{
-		label = [[view subviews] lastObject];
-	}
+	label = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 160.0f, 200.0f, 40.0f)];
+	label.backgroundColor = [UIColor clearColor];
+	label.font = [label.font fontWithSize:20];
+	label.textAlignment = NSTextAlignmentCenter;
+	[view addSubview:label];
 	
 	NSString *title;
 	UIImage *img;
 	if (carousel == self.carousel1)
 	{
 		if (index == 0)
+		{
 			title = [self.menuItem1 getTitle];
+			img = [self.menuItem1 getImg];
+		}
 		else
 		{
 			title = [[self.menuItem1.getChildren objectAtIndex:index-1] getTitle];
@@ -161,14 +155,17 @@
 	else if (carousel == self.carousel3)
 	{
 		if (index == 0)
+		{
 			title = [self.menuItem3 getTitle];
+			img = [self.menuItem3 getImg];
+		}
 		else
 		{
 			title = [[self.menuItem3.getChildren objectAtIndex:index-1] getTitle];
 			img = [[self.menuItem3.getChildren objectAtIndex:index-1] getImg];
 		}
-			
 	}
+	
 	label.text = title;
 	imgV.image = img;
 		
@@ -209,25 +206,49 @@
 
 - (void)carouselWillBeginDragging:(iCarousel *)carousel
 {
-	self.carousel1.layer.zPosition = 9;
-	self.carousel3.layer.zPosition = 9;
-	[self.carousel1 setHidden:YES];
-	[self.carousel3 setHidden:YES];
-	carousel.layer.zPosition = 10;
-	[carousel setHidden:NO];
+	[self startCarouseling:carousel];
 }
 - (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index
 {
-	self.carousel1.layer.zPosition = 9;
-	self.carousel3.layer.zPosition = 9;
-	[self.carousel1 setHidden:YES];
-	[self.carousel3 setHidden:YES];
-	carousel.layer.zPosition = 10;
-	[carousel setHidden:NO];
+	[self startCarouseling:carousel];
 }
 
-- (void)carouselDidEndDragging:(iCarousel *)carousel willDecelerate:(BOOL)decelerate
-//- (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel
+-(void)carouselDidEndDragging:(iCarousel *)carousel willDecelerate:(BOOL)decelerate
+{
+	//Anschubsten vermeiden!
+	[carousel setCurrentItemIndex:carousel.currentItemIndex];
+}
+
+BOOL reloadCarousel1;
+BOOL reloadCarousel3;
+
+- (void)startCarouseling:(iCarousel*)carousel
+{
+	self.carousel1.layer.zPosition = 9;
+	self.carousel3.layer.zPosition = 9;
+	carousel.layer.zPosition = 10;
+	[self.carousel1 setHidden:YES];
+	[self.carousel3 setHidden:YES];
+	[carousel setHidden:NO];
+	
+	if (carousel == self.carousel1)
+		reloadCarousel1 = YES;
+	else
+		reloadCarousel3 = YES;
+}
+
+- (void)carouselDidEndScrollingAnimation:(iCarousel *)carousel{
+	if (reloadCarousel1) {
+		reloadCarousel1 = NO;
+		[self carouselReload:self.carousel1];
+	}
+	if (reloadCarousel3) {
+		reloadCarousel3 = NO;
+		[self carouselReload:self.carousel3];
+	}
+}
+
+- (void)carouselReload:(iCarousel *)carousel
 {
 	if (carousel == self.carousel1)
 	{
@@ -239,26 +260,21 @@
 			self.menuItem3 = self.menuItem1.getParent;
 			[self.carousel3 setCurrentItemIndex:[[self.menuItem3 getChildren] indexOfObject:self.menuItem1]+1];
 			[self.carousel3 reloadData];
-			[self.carousel1 setHidden:YES];
 			[self.carousel3 setHidden:NO];
-			self.carousel1.layer.zPosition = 9;
-			self.carousel3.layer.zPosition = 10;
-			
 		}
 		else
 		{
 			//down
-			MenuItem *oldItem = self.menuItem3;
 			self.menuItem3 = [self.menuItem1.getChildren objectAtIndex:index-1];
 			if ([self.menuItem3 getChildrenCount] == 0)
-				self.menuItem3 = oldItem;
+			{
+				[self.carousel3 setHidden:YES];
+			}
 			else
 			{
 				[self.carousel3 setCurrentItemIndex:0];
 				[self.carousel3 reloadData];
 				[self.carousel3 setHidden:NO];
-				//				self.carousel1.layer.zPosition = 9;
-				//				self.carousel3.layer.zPosition = 10;
 			}
 		}
 	}
@@ -273,25 +289,20 @@
 			[self.carousel1 setCurrentItemIndex:[[self.menuItem1 getChildren] indexOfObject:self.menuItem3]+1];
 			[self.carousel1 reloadData];
 			[self.carousel1 setHidden:NO];
-			[self.carousel3 setHidden:YES];
-			self.carousel1.layer.zPosition = 10;
-			self.carousel3.layer.zPosition = 9;
-			
 		}
 		else
 		{
 			//down
-			MenuItem *oldItem = self.menuItem1;
 			self.menuItem1 = [self.menuItem3.getChildren objectAtIndex:index-1];
 			if ([self.menuItem1 getChildrenCount] == 0)
-				self.menuItem1 = oldItem;
+			{
+				[self.carousel1 setHidden:YES];
+			}
 			else
 			{
 				[self.carousel1 setCurrentItemIndex:0];
 				[self.carousel1 reloadData];
 				[self.carousel1 setHidden:NO];
-				//				self.carousel1.layer.zPosition = 10;
-				//				self.carousel3.layer.zPosition = 9;
 			}
 		}
 		

@@ -45,10 +45,14 @@
 	self.sdelegate = sdelegate;
 	self.menuItems = menuItems;
 	self.parentviews = views;
-	[self.parentviews addObject:self.view];
+	
+	self.parentviews = [[NSMutableArray alloc] initWithObjects:self.view, nil];
+	[self.parentviews addObjectsFromArray:views];
 	
 	[self.tableView registerNib:[UINib nibWithNibName:@"CellNib" bundle:nil] forCellReuseIdentifier:@"Cell"];
 
+	self.tableView.scrollEnabled = NO;
+	
 	return self;
 }
 
@@ -115,7 +119,7 @@
 		self.popover = [[UIPopoverController alloc] initWithContentViewController:tblvc];
 		self.popover.passthroughViews = self.parentviews;
 		self.popover.delegate = self;
-		[self.popover presentPopoverFromRect:CGRectMake(tableView.frame.size.width / 1.33 - 12, tableView.frame.origin.y+[indexPath row]*44+20, 1, 1) inView:tableView permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+		[self.popover presentPopoverFromRect:CGRectMake(tableView.frame.size.width / 1.0 - 12, tableView.frame.origin.y+[indexPath row]*44+20, 1, 1) inView:tableView permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
 	
 	} else {
 		

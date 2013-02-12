@@ -18,7 +18,7 @@
 
 @implementation NCTableViewController
 
-@synthesize menuItems = _menuItems;
+@synthesize menuItem = _menuItem;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,14 +33,13 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    if (!self.menuItems) {
-         self.menuItems = [[[DataProvider sharedInstance] getRootMenuItem]getChildren];
+	[self.tableView setBackgroundColor:[UIColor clearColor]];
+	
+	if (!self.menuItem) {
+         self.menuItem = [[DataProvider sharedInstance] getRootMenuItem];
     }
+	
+	[self.delegate addToBreadCrumb:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,7 +59,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.menuItems count];
+    return [self.menuItem getChildrenCount];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -68,7 +67,7 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    MenuItem* item = [self.menuItems objectAtIndex:[indexPath row]];
+    MenuItem* item = [[self.menuItem getChildren] objectAtIndex:[indexPath row]];
     
 	[((UILabel *)[cell.contentView viewWithTag:11]) setText: [item getTitle]];
 	[((UIImageView *)[cell.contentView viewWithTag:10]) setImage:[item getImg]];
@@ -86,19 +85,19 @@
 {
 	NCTableViewController *tblv = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"NCTBLV"];
     
-    MenuItem* currentItem = [self.menuItems objectAtIndex:[indexPath row]];
-//    NSLog(@"%@",[currentItem getTitle]);
+    MenuItem* currentItem = [[self.menuItem getChildren] objectAtIndex:[indexPath row]];
     if (![currentItem isLeaf]) {
-    tblv.menuItems = [currentItem getChildren];
 	
-	CATransition* transition = [CATransition animation];
-	transition.duration = 0.5;
-	transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-	transition.type = kCATransitionMoveIn; //kCATransitionFade, kCATransitionPush, kCATransitionReveal, kCATransitionFade
-	transition.subtype = kCATransitionFromTop; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
-	[self.navigationController pushViewController:tblv animated:NO];
-	[self.navigationController.view.layer addAnimation:transition forKey:nil];
-//	[self.navigationController pushViewController:tblv animated:NO];
+		tblv.menuItem = currentItem;
+		tblv.delegate = self.delegate;
+	
+		CATransition* transition = [CATransition animation];
+		transition.duration = 0.2;
+		transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+		transition.type = kCATransitionMoveIn; //kCATransitionFade, kCATransitionPush, kCATransitionReveal, kCATransitionFade
+		transition.subtype = kCATransitionFromTop; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
+		[self.navigationController pushViewController:tblv animated:NO];
+		[self.navigationController.view.layer addAnimation:transition forKey:nil];
     }
 	
 	

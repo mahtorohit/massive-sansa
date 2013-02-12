@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NCTableViewController.h"
 
-@interface NCViewController : UIViewController <UIGestureRecognizerDelegate>
+@interface NCViewController : UIViewController <UIGestureRecognizerDelegate, BreadCrumbDelegate>
 
 @end

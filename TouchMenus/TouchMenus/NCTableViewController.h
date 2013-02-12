@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MenuItem.h"
+
+@protocol BreadCrumbDelegate <NSObject>
+- (void) addToBreadCrumb:(id)tblv;
+@end
 
 @interface NCTableViewController : UITableViewController
 
-@property(strong,nonatomic) NSArray* menuItems;
+@property (strong,nonatomic) MenuItem* menuItem;
+@property id<BreadCrumbDelegate> delegate;
 
 @end

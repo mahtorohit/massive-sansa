@@ -38,7 +38,7 @@
 	DDTableViewController *tblvc = [[DDTableViewController alloc] initWithMenuItems:items
 															 usingSelectionDelegate:self
 																			 inView:self.view
-																	 withOtherViews:[[NSMutableArray alloc] init]];
+																	 withOtherViews:[[NSMutableArray alloc] initWithObjects:self.view, nil]];
 
 	self.popover = [[UIPopoverController alloc] initWithContentViewController:tblvc];
 	self.popover.delegate = self;
@@ -48,6 +48,11 @@
 - (void) selectMenuItem:(MenuItem *)item {
 	[self.popover dismissPopoverAnimated:NO];
 	NSLog(@"Selected %@", [item getTitle]);
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	[self.popover dismissPopoverAnimated:NO];
 }
 
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController

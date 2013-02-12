@@ -46,10 +46,26 @@ static DataProvider *_sharedMySingleton = nil;
 		SMXMLElement *item = document.root;
 
 		rootElements = [[self getChildrenOf:item usingParent:nil] copy];
-		
+	
+		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+			[self loadPicsFor:rootElements];
+			dispatch_async(dispatch_get_main_queue(), ^{
+				NSLog(@"Got all them pictures!");
+			});
+		});
 	}
 	return self;
 }
+
+- (void)loadPicsFor:(NSArray*)items
+{
+	for (MenuItem *item in items)
+	{
+		[item getImg];
+		[self loadPicsFor:[item getChildren]];
+	}
+}
+
 
 - (NSMutableArray *) getChildrenOf:(SMXMLElement *)node usingParent:(MenuItem *)parent {
 	
@@ -83,6 +99,8 @@ static DataProvider *_sharedMySingleton = nil;
     NSArray *rootLevelElements = [self getRootLevelElements];
     MenuItem *rootItem = [[MenuItem alloc] initWithTitle:@"Menu" imgUrl:@"" usingChildren:rootLevelElements andParent:nil];
     
+	[rootItem setParent:rootItem];
+	
     for (MenuItem *item in rootLevelElements) {
         [item setParent:rootItem];
     }

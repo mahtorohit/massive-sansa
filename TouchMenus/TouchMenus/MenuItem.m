@@ -17,7 +17,6 @@
 		childMenuItems = children;
 		parent = theParent;
 	}
-	
 	return self;
 }
 - (void) setChildren:(NSArray*) children {
@@ -39,23 +38,23 @@
 	if (imgURL != nil && self.img == nil) {
 		UIImage *img = [UIImage imageNamed:imgURL];
 		
-		CGSize newSize = CGSizeMake(500, 500);
+		CGSize newSize = CGSizeMake(200, 200);
 		UIGraphicsBeginImageContextWithOptions(newSize, YES, 0.0);
 		
-		float imgW = 500;
-		float imgH = 500;
+		float imgW = newSize.width;
+		float imgH = newSize.height;
 		float imgX = 0;
 		float imgY = 0;
 		
 		if (img.size.height > img.size.width)
 		{
-			imgW = (500/img.size.height)*img.size.width;
-			imgX = (500-imgW)/2;
+			imgW = (newSize.height/img.size.height)*img.size.width;
+			imgX = (newSize.width-imgW)/2;
 		}
 		else
 		{
-			imgH = (500/img.size.width)*img.size.height;
-			imgY = (500-imgH)/2;
+			imgH = (newSize.width/img.size.width)*img.size.height;
+			imgY = (newSize.height-imgH)/2;
 		}
 		
 		[[UIColor whiteColor] setFill];
@@ -63,6 +62,8 @@
 		
 		[img drawInRect:CGRectMake(imgX, imgY, imgW, imgH)];
 	
+		if ([self getChildrenCount] > 0) [[UIImage imageNamed:@"toggle-expand-alt"] drawInRect:CGRectMake(newSize.width-64, newSize.height-64, 64, 64)];
+		
 		UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
 		UIGraphicsEndImageContext();
 		
