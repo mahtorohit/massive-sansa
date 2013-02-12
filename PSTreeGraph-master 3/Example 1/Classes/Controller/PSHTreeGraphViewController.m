@@ -11,17 +11,20 @@
 
 #import "PSBaseTreeGraphView.h"
 #import "MyLeafView.h"
+#import "DataProvider.h"
+
+// #import "ObjCClassWrapper.h"
+
+#define DegreesToRadians(x) ((x) * M_PI / 180.0)    
 
 #pragma mark - Internal Interface
-
-#define DegreesToRadians(x) ((x) * M_PI / 180.0)
 
 @interface PSHTreeGraphViewController () 
 {
 
 @private
 	PSBaseTreeGraphView *treeGraphView_;
-	TreeMenuItem *rootClassName_;
+	TreeMenuItem *rootItem_;
 }
 
 @end
@@ -33,24 +36,25 @@
 #pragma mark - Property Accessors
 
 @synthesize treeGraphView = treeGraphView_;
-@synthesize rootClassName = rootClassName_;
-@synthesize rootItem;
+@synthesize rootItem = rootItem_;
 
-- (void) setRootClassName:(TreeMenuItem *) menuItem
-{
-    {
-        treeGraphView_.treeGraphOrientation  = PSTreeGraphOrientationStyleVertical;
-        treeGraphView_.connectingLineStyle = PSTreeGraphConnectingLineStyleOrthogonal;
-        treeGraphView_.connectingLineColor = [UIColor orangeColor];
-        treeGraphView_.connectingLineWidth = 2.0f;
-        treeGraphView_.backgroundColor = [UIColor whiteColor];
-        treeGraphView_.siblingSpacing = 15.0f;
-        treeGraphView_.resizesToFillEnclosingScrollView = YES;
-        // Get an ObjCClassWrapper for the named Objective-C Class, and set it as the TreeGraph's root.
-        //[treeGraphView_ setModelRoot:[ObjCClassWrapper wrapperForClassNamed:rootClassName_]];
-        [treeGraphView_ setModelRoot: menuItem];
-    }
+
+- (void)setRootItem:(TreeMenuItem *)rootItem {
+    [treeGraphView_ setModelRoot: rootItem];
 }
+
+//- (void) setRootClassName:(NSString *)newRootClassName
+//{   
+//    NSParameterAssert(newRootClassName != nil);
+//
+//    if (![rootClassName_ isEqualToString:newRootClassName]) {
+//        [rootClassName_ release];
+//        rootClassName_ = [newRootClassName copy];
+//    
+//        // Get an ObjCClassWrapper for the named Objective-C Class, and set it as the TreeGraph's root.
+//        [treeGraphView_ setModelRoot:[ObjCClassWrapper wrapperForClassNamed:rootClassName_]];
+//    }
+//}
 
 
 #pragma mark - View Creation and Initializer
@@ -58,12 +62,14 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void) viewDidLoad
 {
+    
     [super viewDidLoad];
-
+    
+    // rotate the view for 180 degrees
     self.treeGraphView.transform = CGAffineTransformMakeRotation(DegreesToRadians(180));
     
-    self.rootItem = [[TreeDataProvider sharedInstance] getRootMenuItem];
-    
+    //[super viewDidLoad];
+
 	// Set the delegate to self.
 	[self.treeGraphView setDelegate:self];
 
@@ -72,8 +78,12 @@
 
     // Specify a starting root class to inspect on launch.
     
-    //[self setRootClassName:@"UIControl"];
-    [self setRootClassName: self.rootItem];
+    // The system includes some other abstract base classes that are interesting:
+    
+    TreeMenuItem *rootMenuItem = (TreeMenuItem *)[[DataProvider sharedInstance] getRootMenuItem];
+    NSLog(@"RootItem: %@", [rootMenuItem getTitle]);
+    
+    [self setRootItem: rootMenuItem];
     
 }
 
@@ -91,7 +101,6 @@
 }
 
 
-
 #pragma mark - TreeGraph Delegate
 
 -(void) configureNodeView:(UIView *)nodeView
@@ -101,17 +110,20 @@
     NSParameterAssert(modelNode != nil);
 
 	// NOT FLEXIBLE: treat it like a model node instead of the interface.
-	TreeMenuItem *objectWrapper = (TreeMenuItem *)modelNode;
+	//ObjCClassWrapper *objectWrapper = (ObjCClassWrapper *)modelNode;
+    
+    TreeMenuItem *treeMenuItem = (TreeMenuItem *) modelNode;
 	MyLeafView *leafView = (MyLeafView *)nodeView;
 
 	// button
-	if ( [[objectWrapper childModelNodes] count] == 0 ) {
-		[leafView.expandButton setHidden:YES];
-	}
+//	if ( [[objectWrapper childModelNodes] count] == 0 ) {
+//		[leafView.expandButton setHidden:YES];
+//	}
 
 	// labels
-	leafView.titleLabel.text	= [objectWrapper getTitle];
-	leafView.detailLabel.text	= [objectWrapper getTitle];
+	leafView.titleLabel.text	= [treeMenuItem getTitle];
+//	leafView.detailLabel.text	= [NSString stringWithFormat:@"%zd bytes",
+//                                   [objectWrapper wrappedClassInstanceSize]];
 
 }
 
@@ -134,16 +146,8 @@
 
 - (void) dealloc
 {
-	[rootClassName_ release];
+	[rootItem_ release];
     [super dealloc];
-}
-
-- (BOOL)shouldAutorotate {
-    return YES;
-}
-
-- (NSUInteger)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskAllButUpsideDown;
 }
 
 @end

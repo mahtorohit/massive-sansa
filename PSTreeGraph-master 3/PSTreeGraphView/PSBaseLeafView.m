@@ -15,7 +15,6 @@
 
 // for CALayer definition
 #import <QuartzCore/QuartzCore.h>
-
 #define DegreesToRadians(x) ((x) * M_PI / 180.0)
 
 #pragma mark - Internal Interface
@@ -163,11 +162,10 @@
 	fillColor_ = [[UIColor colorWithRed:1.0 green:0.5 blue:0.0 alpha:1.0] retain];
     selectionColor_ = [[UIColor colorWithRed:1.0 green:1.0 blue:0.0 alpha:1.0] retain];
     showingSelected_ = NO;
-
+    
     self.transform = CGAffineTransformMakeRotation(DegreesToRadians(180));
     
 }
-
 
 #pragma mark - Resource Management
 
@@ -211,7 +209,7 @@
 {
     self = [super initWithCoder:decoder];
     if (self) {
-
+        
         [self configureDetaults];
 
         if ([decoder containsValueForKey:@"borderColor"])
