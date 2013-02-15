@@ -35,7 +35,7 @@
 	DataProvider *dp = [DataProvider sharedInstance];
 	
 	self.menuItem1 = [dp getRootMenuItem];
-//	self.menuItem3 = [[[dp getRootMenuItem] getChildren] objectAtIndex:0];
+	self.menuItem3 = [dp getRootMenuItem];
 	
 	[self.carousel1 setBackgroundColor:[UIColor clearColor]];
 	[self.carousel3 setBackgroundColor:[UIColor clearColor]];
@@ -127,6 +127,8 @@
 	
 	view = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 200.0f, 200.0f)];
 	view.backgroundColor = /*(index == 0) ? [UIColor clearColor] :*/ [UIColor lightGrayColor];
+	view.layer.cornerRadius = 10;
+	view.layer.masksToBounds = YES;
 		
 	imgV = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 200.0f, 160.0f)];
 	[view addSubview:imgV];
@@ -210,12 +212,13 @@
 }
 - (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index
 {
-	[self startCarouseling:carousel];
+	if (carousel.currentItemIndex != index) //no movement?! -> no animation -> no carouselReload -> don't startCarouseling!
+		[self startCarouseling:carousel];
 }
 
 -(void)carouselDidEndDragging:(iCarousel *)carousel willDecelerate:(BOOL)decelerate
 {
-	//Anschubsten vermeiden!
+	//Anschubsen vermeiden!
 	[carousel setCurrentItemIndex:carousel.currentItemIndex];
 }
 
@@ -258,6 +261,7 @@ BOOL reloadCarousel3;
 		{
 			//back
 			self.menuItem3 = self.menuItem1.getParent;
+			if (self.menuItem3 == nil) self.menuItem3 = self.menuItem1; //Anti-"Nothing visible"-bug
 			int backindex = [[self.menuItem3 getChildren] indexOfObject:self.menuItem1]+1;
 			[self.carousel3 reloadData];
 			[self.carousel3 setCurrentItemIndex:backindex];
@@ -287,6 +291,7 @@ BOOL reloadCarousel3;
 		{
 			//back
 			self.menuItem1 = self.menuItem3.getParent;
+			if (self.menuItem1 == nil) self.menuItem1 = self.menuItem3; //Anti-"Nothing visible"-bug
 			int backindex = [[self.menuItem1 getChildren] indexOfObject:self.menuItem3]+1;
 			[self.carousel1 reloadData];
 			[self.carousel1 setCurrentItemIndex:backindex];
