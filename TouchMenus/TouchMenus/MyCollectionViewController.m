@@ -28,16 +28,12 @@
         self.title = @"GridMenu";
     }
     
-//    UISwipeGestureRecognizer *leftRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftSwipeHandle:)];
-//    leftRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
-//    [leftRecognizer setNumberOfTouchesRequired:1];
-//    [self.view addGestureRecognizer:leftRecognizer];
-    
     UISwipeGestureRecognizer *rightRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rightSwipeHandle:)];
     rightRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
     [rightRecognizer setNumberOfTouchesRequired:1];
     [self.view addGestureRecognizer:rightRecognizer];
     
+    [self.delegate addToBreadCrumb:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,10 +60,7 @@
     MyCollectionViewCell *myCell = [collectionView
                                     dequeueReusableCellWithReuseIdentifier:@"MyCell"
                                     forIndexPath:indexPath];
-    UIImage *image;
-    
     int row = [indexPath row];
-    image = [UIImage imageNamed:_carImages[row]];
     
     MenuItem *currentMenuItem = [self.menuItems objectAtIndex:row];
     
@@ -90,23 +83,20 @@
         MyCollectionViewController *collectionViewController = [self.storyboard instantiateViewControllerWithIdentifier: @"MyCollectionViewController"];
         collectionViewController.menuItems = children;
         collectionViewController.title = [[self.menuItems objectAtIndex:row] getTitle];
+        collectionViewController.delegate = self.delegate;
         [self.navigationController pushViewController:collectionViewController animated:YES];
     }
     else {
-        LeafViewController *leafViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LeafViewController"];
-        leafViewController.title = [[self.menuItems objectAtIndex:row] getTitle];
-        [self.navigationController pushViewController:leafViewController animated:YES];
+        ///clickclick
     }
 }
-
-//- (void)leftSwipeHandle:(UISwipeGestureRecognizer*)gestureRecognizer
-//{
-//    [self.navigationController popViewControllerAnimated:YES];
-//}
 
 - (void)rightSwipeHandle:(UISwipeGestureRecognizer*)gestureRecognizer
 {
     [self.navigationController popViewControllerAnimated:YES];
+    
+    if ([[[self.menuItems objectAtIndex:0] getParent] getParent]!= nil)
+        [self.delegate breadCrumbPopOnce];
 }
 
 @end

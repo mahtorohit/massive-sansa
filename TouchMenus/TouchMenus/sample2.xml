@@ -30,7 +30,7 @@
 				<item name="Roggenvollkornbrot" img="roggenvollkorn.jpg"/>
 				<item name="Sonnenblumenbrot" img="sonnenblumenbrot.jpg"/>
 			</item>
-			<item name="Roggen- und Weizen-Mischbrote" img="roggen_weizenbrote.jpg">
+			<item name="Mischbrote" img="roggen_weizenbrote.jpg">
 				<item name="Kartoffel-Kruste" img="kartoffelkruste.jpg"/>
 				<item name="Mehrkornbrot" img="mehrkorn.jpg"/>
 				<item name="Roggenfeinbrot" img="roggenfeinbrot.jpg"/>
