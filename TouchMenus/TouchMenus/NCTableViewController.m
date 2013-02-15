@@ -72,8 +72,6 @@
     
 	[((UILabel *)[cell.contentView viewWithTag:11]) setText: [item getTitle]];
 	UIImageView* imageView = (UIImageView *)[cell.contentView viewWithTag:10];
-    imageView.layer.masksToBounds = YES;
-    imageView.layer.cornerRadius = 10;
     [imageView setImage:[item getImg]];
 	
     return cell;

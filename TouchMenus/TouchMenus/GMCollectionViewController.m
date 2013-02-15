@@ -98,7 +98,6 @@
 
 - (void)addToBreadCrumb:(id)tblv
 {
-    NSLog(@"foooooooooo");
 	MyCollectionViewController *tblview = (MyCollectionViewController *)tblv;
 	[self breadcrumPush:tblview];
 }

@@ -528,6 +528,7 @@
         <class className="GMCollectionViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GMCollectionViewController.h"/>
             <relationships>
+                <relationship kind="action" name="backButtonClick:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
             </relationships>
         </class>
@@ -559,6 +560,7 @@
         <class className="NCViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NCViewController.h"/>
             <relationships>
+                <relationship kind="action" name="backButtonClick:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
             </relationships>
         </class>
