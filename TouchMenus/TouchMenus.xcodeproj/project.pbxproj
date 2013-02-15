@@ -19,6 +19,7 @@
 		489ADDE716AD4F700048B014 /* TreeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 489ADDE516AD4F700048B014 /* TreeMenuItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		489ADDEA16AD4F790048B014 /* PSHTreeGraphViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489ADDE816AD4F790048B014 /* PSHTreeGraphViewController.xib */; };
 		489ADDEB16AD4F790048B014 /* ObjCClassTreeNodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489ADDE916AD4F790048B014 /* ObjCClassTreeNodeView.xib */; };
+		85026E0A16CE596400874FEA /* GMCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85026E0916CE596400874FEA /* GMCollectionViewController.m */; };
 		8521A08816C6A786006A33F2 /* minusa.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A08416C6A786006A33F2 /* minusa.png */; };
 		8521A08916C6A786006A33F2 /* minusa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A08516C6A786006A33F2 /* minusa@2x.png */; };
 		8521A08A16C6A786006A33F2 /* plusa.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A08616C6A786006A33F2 /* plusa.png */; };
@@ -361,6 +362,8 @@
 		489ADDE516AD4F700048B014 /* TreeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeMenuItem.m; sourceTree = "<group>"; };
 		489ADDE816AD4F790048B014 /* PSHTreeGraphViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSHTreeGraphViewController.xib; sourceTree = "<group>"; };
 		489ADDE916AD4F790048B014 /* ObjCClassTreeNodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ObjCClassTreeNodeView.xib; sourceTree = "<group>"; };
+		85026E0816CE596400874FEA /* GMCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMCollectionViewController.h; sourceTree = "<group>"; };
+		85026E0916CE596400874FEA /* GMCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMCollectionViewController.m; sourceTree = "<group>"; };
 		8521A08416C6A786006A33F2 /* minusa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minusa.png; sourceTree = "<group>"; };
 		8521A08516C6A786006A33F2 /* minusa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minusa@2x.png"; sourceTree = "<group>"; };
 		8521A08616C6A786006A33F2 /* plusa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusa.png; sourceTree = "<group>"; };
@@ -1113,6 +1116,8 @@
 				F9BAFD4516A8414500314AA9 /* MyCollectionViewController.m */,
 				F9BAFD4616A8414500314AA9 /* LeafViewController.h */,
 				F9BAFD4716A8414500314AA9 /* LeafViewController.m */,
+				85026E0816CE596400874FEA /* GMCollectionViewController.h */,
+				85026E0916CE596400874FEA /* GMCollectionViewController.m */,
 			);
 			name = GridMenu;
 			sourceTree = "<group>";
@@ -1646,6 +1651,7 @@
 				F9DFB84216C81B1D00016C60 /* NCTableViewController.m in Sources */,
 				F9DFB84316C81B1D00016C60 /* NCTableView.m in Sources */,
 				F9DFB84416C81B1D00016C60 /* NCTableViewCell.m in Sources */,
+				85026E0A16CE596400874FEA /* GMCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

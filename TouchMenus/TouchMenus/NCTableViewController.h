@@ -11,6 +11,7 @@
 
 @protocol BreadCrumbDelegate <NSObject>
 - (void) addToBreadCrumb:(id)tblv;
+- (void) breadCrumbPopOnce;
 @end
 
 @interface NCTableViewController : UITableViewController

@@ -1,16 +1,17 @@
 //
-//  NCViewController.m
-//  NavController
+//  GMCollectionViewController.m
+//  TouchMenus
 //
-//  Created by Steffen Bauereiss on 10.02.13.
-//  Copyright (c) 2013 Steffen Bauereiss. All rights reserved.
+//  Created by Nađa on 2/15/13.
+//  Copyright (c) 2013 TUM. All rights reserved.
 //
 
-#import "NCViewController.h"
-#import "NCTableViewController.h"
+#import "GMCollectionViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "MyCollectionViewController.h"
 
-@interface NCViewController ()
+@interface GMCollectionViewController ()
+
 {
 	int pos;
 }
@@ -20,7 +21,8 @@
 
 @end
 
-@implementation NCViewController
+@implementation GMCollectionViewController
+
 
 - (void)viewDidLoad
 {
@@ -32,17 +34,17 @@
 	
 	self.stack = [[NSMutableArray alloc] init];
 	
-	NCTableViewController *tblv = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"NCTBLV"];
-	tblv.delegate = self;
+    MyCollectionViewController *gridView = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"MyCollectionViewController"];
+	gridView.delegate = self;
 	
-	UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:tblv];
+	UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:gridView];
 	self.navController = nc;
 	
-	UIView *navView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height-150, self.view.bounds.size.width, 150)];
+	UIView *navView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height-650, self.view.bounds.size.width, 650)];
 	[navView setClipsToBounds:YES];
 	[navView addSubview:self.navController.view];
 	
-	[navView setBackgroundColor:[UIColor scrollViewTexturedBackgroundColor]];
+	///[navView setBackgroundColor:[UIColor scrollViewTexturedBackgroundColor]];
 	
 	[self.navController.view setFrame:CGRectMake(0, 0, navView.frame.size.width, navView.frame.size.height)];
 	
@@ -59,7 +61,7 @@
 	[self.view addSubview:self.backButton];
 	
 	self.backButton.layer.zPosition = 10;
-	[self.backButton setFrame:CGRectMake(-5,  self.view.bounds.size.height-190, 80, 80)];
+	[self.backButton setFrame:CGRectMake(-5,  self.view.bounds.size.height-690, 80, 80)];
 	
 	pos = 25;
 	
@@ -75,15 +77,15 @@
 	if ([self.navController.viewControllers count] == 1)
 	{
 		CGFloat offset = 100.0;
-		CGFloat endposY = self.navController.view.frame.origin.y;
+		CGFloat endposX = self.navController.view.frame.origin.x;
 		[UIView animateWithDuration:.2 animations:^{
 			CGRect frame = self.navController.view.frame;
-			frame.origin.y = endposY + offset;
+			frame.origin.x = endposX + offset;
 			self.navController.view.frame = frame;
 		} completion:^(BOOL finished){
 			[UIView animateWithDuration:.1 animations:^{
 				CGRect frame = self.navController.view.frame;
-				frame.origin.y = endposY;
+				frame.origin.x = endposX;
 				self.navController.view.frame = frame;
 			}];
 		}];
@@ -96,16 +98,17 @@
 
 - (void)addToBreadCrumb:(id)tblv
 {
-	NCTableViewController *tblview = (NCTableViewController *)tblv;
+    NSLog(@"foooooooooo");
+	MyCollectionViewController *tblview = (MyCollectionViewController *)tblv;
 	[self breadcrumPush:tblview];
 }
 
-- (void)breadcrumPush:(NCTableViewController *)tblv
+- (void)breadcrumPush:(MyCollectionViewController *)tblv
 {
-	NSString *title = [tblv.menuItem getTitle];
-//	UIFont *myFont = [UIFont systemFontOfSize:17.0];
+	NSString *title = [[[tblv.menuItems objectAtIndex:0] getParent] getTitle];
+    //	UIFont *myFont = [UIFont systemFontOfSize:17.0];
 	CGFloat width = 200; //[title sizeWithFont:myFont].width + 20;
-	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(pos,  self.view.bounds.size.height-186, width, 36)];
+	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(pos,  self.view.bounds.size.height-686, width, 36)];
 	
 	[button addTarget:self action:@selector(breadcrumbClick:) forControlEvents:UIControlEventTouchUpInside];
 	pos += width-25;
@@ -120,12 +123,10 @@
 	[self.backButton removeFromSuperview];
 	[self.view addSubview:self.backButton];
 }
-
 - (void)breadCrumbPopOnce
 {
     [self breadcrumbPop];
 }
-
 - (void)breadcrumbPop
 {
 	UIButton *button = [self.stack lastObject];
@@ -137,18 +138,18 @@
 - (void)controllerPop
 {
 	CATransition* transition = [CATransition animation];
-	transition.duration = 0.2;
+	transition.duration = 0.4;
 	transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
 	transition.type = kCATransitionMoveIn; //kCATransitionFade, kCATransitionPush, kCATransitionReveal, kCATransitionFade
-	transition.subtype = kCATransitionFromBottom; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
-	[self.navController.view.layer addAnimation:transition forKey:nil];
+	transition.subtype = kCATransitionFromLeft; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
+    [self.navController.view.layer addAnimation:transition forKey:nil];
 	[self.navController popViewControllerAnimated:NO];
 	//breadcrumbpop
 	[self breadcrumbPop];
 }
 - (void)breadcrumbClick:(UIButton *)button
 {
-	while (![[((NCTableViewController *)self.navController.topViewController).menuItem getTitle] isEqualToString:[button titleLabel].text])
+	while (![[[[((MyCollectionViewController *)self.navController.topViewController).menuItems objectAtIndex:0] getParent] getTitle] isEqualToString:[button titleLabel].text])
 	{
 		[self controllerPop];
 	}

@@ -10,10 +10,12 @@
 #import "MyCollectionViewCell.h"
 #import "DataProvider.h"
 #import "LeafViewController.h"
+#import "NCTableViewController.h"//for delegate protocol
 
 @interface MyCollectionViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (strong, nonatomic) NSMutableArray *carImages;
 @property (strong, nonatomic) NSArray *menuItems;
+
+@property id<BreadCrumbDelegate> delegate;
 
 @end
