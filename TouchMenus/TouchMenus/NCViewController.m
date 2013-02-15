@@ -103,11 +103,16 @@
 
 - (void)breadcrumPush:(NCTableViewController *)tblv
 {
-	UILabel *button = [[UILabel alloc] initWithFrame:CGRectMake(pos, 300, 100, 44)];
 	
-	pos += 100;
+	NSString *title = [tblv.menuItem getTitle];
+	UIFont *myFont = [UIFont systemFontOfSize:17.0];
+	CGFloat width = 200; //[title sizeWithFont:myFont].width + 20;
+	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(pos, 300, width, 36)];
 	
-	[button setText:[tblv.menuItem getTitle]];
+	pos += width-25;
+	
+	[button setTitle:title forState:UIControlStateNormal];
+	[button setBackgroundImage:[UIImage imageNamed:@"breadcrumb.png"] forState:UIControlStateNormal];
 	
 	[self.view addSubview:button];
 	[self.stack addObject:button];
@@ -115,11 +120,11 @@
 }
 - (void)breadcrumbPop
 {
-	UILabel *button = [self.stack lastObject];
+	UIButton *button = [self.stack lastObject];
 	[button removeFromSuperview];
 	
+	pos -= button.frame.size.width-25;
 	[self.stack removeLastObject];
-	pos -= 100;
 }
 
 - (void)didReceiveMemoryWarning

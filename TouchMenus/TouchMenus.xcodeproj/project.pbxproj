@@ -177,6 +177,7 @@
 		8521A2E716C7F924006A33F2 /* zitronen.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A2AE16C7F924006A33F2 /* zitronen.png */; };
 		8521A2E816C7F924006A33F2 /* zwetschgen.png in Resources */ = {isa = PBXBuildFile; fileRef = 8521A2AF16C7F924006A33F2 /* zwetschgen.png */; };
 		85C5D25116B7021700BBDE42 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C5D24F16B7021700BBDE42 /* MainStoryboard.storyboard */; };
+		F9117B6D16CE30D0001FCB7B /* breadcrumb.png in Resources */ = {isa = PBXBuildFile; fileRef = F9117B6C16CE30D0001FCB7B /* breadcrumb.png */; };
 		F91ED50316C69C910073F778 /* apfel.png in Resources */ = {isa = PBXBuildFile; fileRef = F91ED50216C69C910073F778 /* apfel.png */; };
 		F93ED2D416C96220000B8AC7 /* toggle-expand-alt.png in Resources */ = {isa = PBXBuildFile; fileRef = F93ED2D316C96220000B8AC7 /* toggle-expand-alt.png */; };
 		F958D0C416C7B25900E5F30A /* ZTMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F958D0C316C7B25900E5F30A /* ZTMenuItem.m */; };
@@ -519,6 +520,7 @@
 		8521A2AE16C7F924006A33F2 /* zitronen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zitronen.png; sourceTree = "<group>"; };
 		8521A2AF16C7F924006A33F2 /* zwetschgen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zwetschgen.png; sourceTree = "<group>"; };
 		85C5D25016B7021700BBDE42 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		F9117B6C16CE30D0001FCB7B /* breadcrumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = breadcrumb.png; sourceTree = "<group>"; };
 		F91ED50216C69C910073F778 /* apfel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apfel.png; sourceTree = "<group>"; };
 		F93ED2D316C96220000B8AC7 /* toggle-expand-alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle-expand-alt.png"; sourceTree = "<group>"; };
 		F958D0C216C7B25900E5F30A /* ZTMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTMenuItem.h; sourceTree = "<group>"; };
@@ -988,6 +990,7 @@
 		F9BAFCDC16A83D8500314AA9 /* TouchMenus */ = {
 			isa = PBXGroup;
 			children = (
+				F9117B6C16CE30D0001FCB7B /* breadcrumb.png */,
 				F9DFB83816C81AF400016C60 /* HorizontalListNavController */,
 				85C5D24F16B7021700BBDE42 /* MainStoryboard.storyboard */,
 				489ADDC516AD4F4D0048B014 /* TreeMenu */,
@@ -1592,6 +1595,7 @@
 				8521A2E716C7F924006A33F2 /* zitronen.png in Resources */,
 				8521A2E816C7F924006A33F2 /* zwetschgen.png in Resources */,
 				F93ED2D416C96220000B8AC7 /* toggle-expand-alt.png in Resources */,
+				F9117B6D16CE30D0001FCB7B /* breadcrumb.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
