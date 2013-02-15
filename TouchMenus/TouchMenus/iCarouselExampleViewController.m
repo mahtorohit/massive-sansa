@@ -258,8 +258,9 @@ BOOL reloadCarousel3;
 		{
 			//back
 			self.menuItem3 = self.menuItem1.getParent;
-			[self.carousel3 setCurrentItemIndex:[[self.menuItem3 getChildren] indexOfObject:self.menuItem1]+1];
+			int backindex = [[self.menuItem3 getChildren] indexOfObject:self.menuItem1]+1;
 			[self.carousel3 reloadData];
+			[self.carousel3 setCurrentItemIndex:backindex];
 			[self.carousel3 setHidden:NO];
 		}
 		else
@@ -286,8 +287,9 @@ BOOL reloadCarousel3;
 		{
 			//back
 			self.menuItem1 = self.menuItem3.getParent;
-			[self.carousel1 setCurrentItemIndex:[[self.menuItem1 getChildren] indexOfObject:self.menuItem3]+1];
+			int backindex = [[self.menuItem1 getChildren] indexOfObject:self.menuItem3]+1;
 			[self.carousel1 reloadData];
+			[self.carousel1 setCurrentItemIndex:backindex];
 			[self.carousel1 setHidden:NO];
 		}
 		else

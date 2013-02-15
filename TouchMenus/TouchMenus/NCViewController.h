@@ -11,4 +11,6 @@
 
 @interface NCViewController : UIViewController <UIGestureRecognizerDelegate, BreadCrumbDelegate>
 
+@property (strong, nonatomic) IBOutlet UIButton *backButton;
+
 @end

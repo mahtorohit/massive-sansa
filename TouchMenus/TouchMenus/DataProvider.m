@@ -99,7 +99,7 @@ static DataProvider *_sharedMySingleton = nil;
     NSArray *rootLevelElements = [self getRootLevelElements];
     MenuItem *rootItem = [[MenuItem alloc] initWithTitle:@"Menu" imgUrl:@"" usingChildren:rootLevelElements andParent:nil];
     
-	[rootItem setParent:rootItem];
+//	[rootItem setParent:rootItem];
 	
     for (MenuItem *item in rootLevelElements) {
         [item setParent:rootItem];
