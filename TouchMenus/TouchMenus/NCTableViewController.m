@@ -40,6 +40,7 @@
     }
 	
 	[self.delegate addToBreadCrumb:self];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,7 +71,10 @@
     MenuItem* item = [[self.menuItem getChildren] objectAtIndex:[indexPath row]];
     
 	[((UILabel *)[cell.contentView viewWithTag:11]) setText: [item getTitle]];
-	[((UIImageView *)[cell.contentView viewWithTag:10]) setImage:[item getImg]];
+	UIImageView* imageView = (UIImageView *)[cell.contentView viewWithTag:10];
+    imageView.layer.masksToBounds = YES;
+    imageView.layer.cornerRadius = 10;
+    [imageView setImage:[item getImg]];
 	
     return cell;
 }
