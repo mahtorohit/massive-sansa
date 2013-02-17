@@ -180,6 +180,7 @@
 		85C5D25116B7021700BBDE42 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C5D24F16B7021700BBDE42 /* MainStoryboard.storyboard */; };
 		F9117B6D16CE30D0001FCB7B /* breadcrumb.png in Resources */ = {isa = PBXBuildFile; fileRef = F9117B6C16CE30D0001FCB7B /* breadcrumb.png */; };
 		F9117B7116CE3855001FCB7B /* back button.png in Resources */ = {isa = PBXBuildFile; fileRef = F9117B7016CE3855001FCB7B /* back button.png */; };
+		F9117B7516CE77EA001FCB7B /* IDPTaskProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F9117B7416CE77EA001FCB7B /* IDPTaskProvider.m */; };
 		F91ED50316C69C910073F778 /* apfel.png in Resources */ = {isa = PBXBuildFile; fileRef = F91ED50216C69C910073F778 /* apfel.png */; };
 		F93ED2D416C96220000B8AC7 /* toggle-expand-alt.png in Resources */ = {isa = PBXBuildFile; fileRef = F93ED2D316C96220000B8AC7 /* toggle-expand-alt.png */; };
 		F958D0C416C7B25900E5F30A /* ZTMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F958D0C316C7B25900E5F30A /* ZTMenuItem.m */; };
@@ -526,6 +527,8 @@
 		85C5D25016B7021700BBDE42 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F9117B6C16CE30D0001FCB7B /* breadcrumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = breadcrumb.png; sourceTree = "<group>"; };
 		F9117B7016CE3855001FCB7B /* back button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back button.png"; sourceTree = "<group>"; };
+		F9117B7316CE77EA001FCB7B /* IDPTaskProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPTaskProvider.h; sourceTree = "<group>"; };
+		F9117B7416CE77EA001FCB7B /* IDPTaskProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPTaskProvider.m; sourceTree = "<group>"; };
 		F91ED50216C69C910073F778 /* apfel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apfel.png; sourceTree = "<group>"; };
 		F93ED2D316C96220000B8AC7 /* toggle-expand-alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle-expand-alt.png"; sourceTree = "<group>"; };
 		F958D0C216C7B25900E5F30A /* ZTMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTMenuItem.h; sourceTree = "<group>"; };
@@ -934,6 +937,15 @@
 			path = Obst;
 			sourceTree = SOURCE_ROOT;
 		};
+		F9117B7216CE740F001FCB7B /* ActionLogger */ = {
+			isa = PBXGroup;
+			children = (
+				F9117B7316CE77EA001FCB7B /* IDPTaskProvider.h */,
+				F9117B7416CE77EA001FCB7B /* IDPTaskProvider.m */,
+			);
+			name = ActionLogger;
+			sourceTree = "<group>";
+		};
 		F91ED50416C69C980073F778 /* Dataset1_Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -997,12 +1009,13 @@
 			children = (
 				F9117B6C16CE30D0001FCB7B /* breadcrumb.png */,
 				F9117B7016CE3855001FCB7B /* back button.png */,
-				F9DFB83816C81AF400016C60 /* HorizontalListNavController */,
 				85C5D24F16B7021700BBDE42 /* MainStoryboard.storyboard */,
 				489ADDC516AD4F4D0048B014 /* TreeMenu */,
 				F9BAFCDD16A83D8500314AA9 /* Supporting Files */,
 				F9BAFCFB16A83D9A00314AA9 /* MAIN_TouchMenuApp */,
+				F9117B7216CE740F001FCB7B /* ActionLogger */,
 				F9BAFCFA16A83D9400314AA9 /* DataProvider */,
+				F9DFB83816C81AF400016C60 /* HorizontalListNavController */,
 				F9BAFCF916A83D8D00314AA9 /* UnfoldingList */,
 				F9BAFD1E16A83E6500314AA9 /* DropDown */,
 				F9B9B8C416C4164E002B1B91 /* ZoomableTree Map */,
@@ -1652,6 +1665,7 @@
 				F9DFB84316C81B1D00016C60 /* NCTableView.m in Sources */,
 				F9DFB84416C81B1D00016C60 /* NCTableViewCell.m in Sources */,
 				85026E0A16CE596400874FEA /* GMCollectionViewController.m in Sources */,
+				F9117B7516CE77EA001FCB7B /* IDPTaskProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

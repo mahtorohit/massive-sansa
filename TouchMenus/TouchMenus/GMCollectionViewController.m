@@ -76,16 +76,17 @@
 	
 	if ([self.navController.viewControllers count] == 1)
 	{
-		CGFloat offset = 100.0;
-		CGFloat endposX = self.navController.view.frame.origin.x;
+		//bounce
+//		CGFloat offset = 100.0;
+//		CGFloat endposX = self.navController.view.frame.origin.x;
 		[UIView animateWithDuration:.2 animations:^{
 			CGRect frame = self.navController.view.frame;
-			frame.origin.x = endposX + offset;
+			frame.origin.x = 100.0;
 			self.navController.view.frame = frame;
 		} completion:^(BOOL finished){
 			[UIView animateWithDuration:.1 animations:^{
 				CGRect frame = self.navController.view.frame;
-				frame.origin.x = endposX;
+				frame.origin.x = 0.0;
 				self.navController.view.frame = frame;
 			}];
 		}];

@@ -8,6 +8,7 @@
 
 #import "iCarouselExampleViewController.h"
 #import "DataProvider.h"
+#import "IDPTaskProvider.h"
 
 @interface iCarouselExampleViewController () {
 	
@@ -257,10 +258,14 @@ BOOL reloadCarousel3;
 	{
 		int index = self.carousel1.currentItemIndex;
 		
+		
 		if (index == 0)
 		{
 			//back
 			self.menuItem3 = self.menuItem1.getParent;
+			
+			[[IDPTaskProvider sharedInstance] selectItem:self.menuItem1];
+
 			if (self.menuItem3 == nil) self.menuItem3 = self.menuItem1; //Anti-"Nothing visible"-bug
 			int backindex = [[self.menuItem3 getChildren] indexOfObject:self.menuItem1]+1;
 			[self.carousel3 reloadData];
@@ -271,6 +276,9 @@ BOOL reloadCarousel3;
 		{
 			//down
 			self.menuItem3 = [self.menuItem1.getChildren objectAtIndex:index-1];
+			
+			[[IDPTaskProvider sharedInstance] selectItem:self.menuItem3];
+			
 			if ([self.menuItem3 getChildrenCount] == 0)
 			{
 				[self.carousel3 setHidden:YES];
@@ -291,6 +299,9 @@ BOOL reloadCarousel3;
 		{
 			//back
 			self.menuItem1 = self.menuItem3.getParent;
+			
+			[[IDPTaskProvider sharedInstance] selectItem:self.menuItem3];
+
 			if (self.menuItem1 == nil) self.menuItem1 = self.menuItem3; //Anti-"Nothing visible"-bug
 			int backindex = [[self.menuItem1 getChildren] indexOfObject:self.menuItem3]+1;
 			[self.carousel1 reloadData];
@@ -301,6 +312,9 @@ BOOL reloadCarousel3;
 		{
 			//down
 			self.menuItem1 = [self.menuItem3.getChildren objectAtIndex:index-1];
+			
+			[[IDPTaskProvider sharedInstance] selectItem:self.menuItem1];
+			
 			if ([self.menuItem1 getChildrenCount] == 0)
 			{
 				[self.carousel1 setHidden:YES];

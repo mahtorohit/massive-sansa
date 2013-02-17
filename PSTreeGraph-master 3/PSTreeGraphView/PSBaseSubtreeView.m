@@ -291,7 +291,10 @@ static CGFloat subtreeBorderWidth(void)
         ( treeOrientation == PSTreeGraphOrientationStyleHorizontalFlipped )){
         nextSubtreeViewOrigin = CGPointMake(rootNodeViewSize.width + parentChildSpacing, 0.0f);
     } else {
-        nextSubtreeViewOrigin = CGPointMake(0.0f, rootNodeViewSize.height + parentChildSpacing);
+		
+		//GROWING THE TREE 1
+		
+        nextSubtreeViewOrigin = CGPointMake((-(self.nodeView.frame.size.width + siblingSpacing) * count) / 3, rootNodeViewSize.height + parentChildSpacing);
     }
 
     for (index = count - 1; index >= 0; index--) {
@@ -328,7 +331,7 @@ static CGFloat subtreeBorderWidth(void)
 
             } else {
                 // TODO: Lay out our child SubtreeViews going from our left edge, last to first. SWITCH ME
-                subview.frame = CGRectMake( nextSubtreeViewOrigin.x,
+                subview.frame = CGRectMake(nextSubtreeViewOrigin.x,
                                            nextSubtreeViewOrigin.y,
                                            subtreeViewSize.width,
                                            subtreeViewSize.height );
@@ -402,7 +405,8 @@ static CGFloat subtreeBorderWidth(void)
         windowPoint.y = round(windowPoint.y);
         nodeViewOrigin = [self convertPoint:windowPoint fromView:nil];
 
-        self.nodeView.frame = CGRectMake(nodeViewOrigin.x,
+		//CHANGED
+        self.nodeView.frame = CGRectMake(self.nodeView.frame.origin.x,//*/nodeViewOrigin.x,
                                          nodeViewOrigin.y,
                                          self.nodeView.frame.size.width,
                                          self.nodeView.frame.size.height );
@@ -456,12 +460,13 @@ static CGFloat subtreeBorderWidth(void)
     }
 
     // Return our new size.
-    return selfTargetSize;
+
+    // CHANGED
+	return CGSizeMake(self.nodeView.frame.size.width, self.frame.size.height);//*/selfTargetSize;
 }
 
 - (CGSize) layoutCollapsedGraph
 {
-
     // This node is collapsed. Everything will be collapsed behind the leafNode
     CGSize selfTargetSize = [self sizeNodeViewToFitContent];
 

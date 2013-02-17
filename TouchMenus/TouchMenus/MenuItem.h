@@ -30,4 +30,6 @@
 - (MenuItem *) getParent; //nil if none
 - (BOOL) isLeaf;
 
+- (void) selectItem;
+
 @end

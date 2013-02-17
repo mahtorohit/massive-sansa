@@ -74,16 +74,14 @@
 	
 	if ([self.navController.viewControllers count] == 1)
 	{
-		CGFloat offset = 100.0;
-		CGFloat endposY = self.navController.view.frame.origin.y;
 		[UIView animateWithDuration:.2 animations:^{
 			CGRect frame = self.navController.view.frame;
-			frame.origin.y = endposY + offset;
+			frame.origin.y = 100;//endposY + offset;
 			self.navController.view.frame = frame;
 		} completion:^(BOOL finished){
 			[UIView animateWithDuration:.1 animations:^{
 				CGRect frame = self.navController.view.frame;
-				frame.origin.y = endposY;
+				frame.origin.y = 0;//endposY;
 				self.navController.view.frame = frame;
 			}];
 		}];

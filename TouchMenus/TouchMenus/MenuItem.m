@@ -4,6 +4,7 @@
 //
 
 #import "MenuItem.h"
+#import "IDPTaskProvider.h"
 
 @implementation MenuItem
 
@@ -23,6 +24,12 @@
 	childMenuItems = children;
 }- (void) setParent:(MenuItem*) theParent {
 	parent = theParent;
+}
+
+// Logging relevant
+- (void) selectItem
+{
+	[[IDPTaskProvider sharedInstance] selectItem:self];
 }
 
 // View / Represenatation relevant
