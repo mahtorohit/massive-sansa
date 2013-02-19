@@ -8,7 +8,6 @@
 
 #import "iCarouselExampleViewController.h"
 #import "DataProvider.h"
-#import "IDPTaskProvider.h"
 
 @interface iCarouselExampleViewController () {
 	
@@ -36,11 +35,29 @@
 	DataProvider *dp = [DataProvider sharedInstance];
 	
 	self.menuItem1 = [dp getRootMenuItem];
-	self.menuItem3 = [dp getRootMenuItem];
+	self.menuItem3 = nil;
 	
 	[self.carousel1 setBackgroundColor:[UIColor clearColor]];
 	[self.carousel3 setBackgroundColor:[UIColor clearColor]];
+
+}
+
+//delegate
+- (void) resetMenu
+{
+	DataProvider *dp = [DataProvider sharedInstance];
+
+	self.menuItem1 = [dp getRootMenuItem];
+	self.menuItem3 = nil;
 	
+	[self carouselReload:self.carousel1];
+	[self carouselReload:self.carousel3];
+	
+	[self.carousel1 setCurrentItemIndex:0];
+	[self.carousel3 setCurrentItemIndex:0];
+	
+	[self.carousel1 setHidden:NO];
+	[self.carousel3 setHidden:YES];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -231,13 +248,22 @@ BOOL reloadCarousel3;
 	self.carousel1.layer.zPosition = 9;
 	self.carousel3.layer.zPosition = 9;
 	carousel.layer.zPosition = 10;
-	[self.carousel1 setHidden:YES];
+	
+	if (self.menuItem3 == nil) //if at rootlevel, do not bring carousel3 to foreground;
+	{
+		self.carousel1.layer.zPosition = 10;
+	} else {
+		carousel.layer.zPosition = 10;
+	}
+	
+	if (self.menuItem3 != nil) //if at rootlevel, do not hide carousel1;
+		[self.carousel1 setHidden:YES];
 	[self.carousel3 setHidden:YES];
 	[carousel setHidden:NO];
 	
 	if (carousel == self.carousel1)
 		reloadCarousel1 = YES;
-	else
+	else if (self.menuItem3 != nil)
 		reloadCarousel3 = YES;
 }
 
@@ -258,7 +284,6 @@ BOOL reloadCarousel3;
 	{
 		int index = self.carousel1.currentItemIndex;
 		
-		
 		if (index == 0)
 		{
 			//back
@@ -266,7 +291,7 @@ BOOL reloadCarousel3;
 			
 			[[IDPTaskProvider sharedInstance] selectItem:self.menuItem1];
 
-			if (self.menuItem3 == nil) self.menuItem3 = self.menuItem1; //Anti-"Nothing visible"-bug
+//			if (self.menuItem3 == nil) self.menuItem3 = self.menuItem1; //Anti-"Nothing visible"-bug
 			int backindex = [[self.menuItem3 getChildren] indexOfObject:self.menuItem1]+1;
 			[self.carousel3 reloadData];
 			[self.carousel3 setCurrentItemIndex:backindex];
@@ -293,6 +318,8 @@ BOOL reloadCarousel3;
 	}
 	else if (carousel == self.carousel3)
 	{
+		if (self.menuItem3 == nil) return; //Anti-"Nothing visible"-bug
+		
 		int index = self.carousel3.currentItemIndex;
 		
 		if (index == 0)
@@ -302,7 +329,7 @@ BOOL reloadCarousel3;
 			
 			[[IDPTaskProvider sharedInstance] selectItem:self.menuItem3];
 
-			if (self.menuItem1 == nil) self.menuItem1 = self.menuItem3; //Anti-"Nothing visible"-bug
+//			if (self.menuItem1 == nil) self.menuItem1 = self.menuItem3; //Anti-"Nothing visible"-bug
 			int backindex = [[self.menuItem1 getChildren] indexOfObject:self.menuItem3]+1;
 			[self.carousel1 reloadData];
 			[self.carousel1 setCurrentItemIndex:backindex];

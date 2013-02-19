@@ -10,15 +10,26 @@
 #import "MenuItem.h"
 
 @protocol MenuCandidate <NSObject>
-- (void) reset; //resets all menu-structure to default;
-				//?? REQUIRED TO RELOAD DATA! (DataProvider may have been changed by taskprovider)
+- (void) resetMenu;
+	//resets all menu-structure to default;
+	//?? REQUIRED TO RELOAD DATA! (DataProvider may have been changed by taskprovider)
 @end
 
 @protocol ExperimentStatus <NSObject>
+- (void) setTaskMessage:(NSString *)message;
 - (void) didFinishExperiment;
+- (void) didFinishTask;
+@end
+
+@protocol ExperimentController <NSObject>
+
+- (void) createViewControllerOfName:(NSString *)viewControllerName;
+
 @end
 
 @interface IDPTaskProvider : NSObject
+
+@property id<ExperimentController> experimentControllerDelegate;
 
 //singleton
 + (IDPTaskProvider *) sharedInstance;
@@ -29,8 +40,6 @@
 //collect all MenuItem clicks
 - (void) selectItem:(MenuItem *)item;
 
-//get notified when done
 - (void) registerExperimentStatusDelegate:(id<ExperimentStatus>)experimentStatusDelegate;
-
 
 @end

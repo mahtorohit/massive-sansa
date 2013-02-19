@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "iCarousel.h"
+#import "IDPTaskProvider.h"
 
 
-@interface iCarouselExampleViewController : UIViewController <iCarouselDataSource, iCarouselDelegate>
+@interface iCarouselExampleViewController : UIViewController <iCarouselDataSource, iCarouselDelegate, MenuCandidate>
 
 @property (nonatomic, strong) IBOutlet iCarousel *carousel1;
 @property (nonatomic, strong) IBOutlet iCarousel *carousel3;

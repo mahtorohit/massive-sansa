@@ -183,6 +183,7 @@
 		F9117B7516CE77EA001FCB7B /* IDPTaskProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F9117B7416CE77EA001FCB7B /* IDPTaskProvider.m */; };
 		F91ED50316C69C910073F778 /* apfel.png in Resources */ = {isa = PBXBuildFile; fileRef = F91ED50216C69C910073F778 /* apfel.png */; };
 		F93ED2D416C96220000B8AC7 /* toggle-expand-alt.png in Resources */ = {isa = PBXBuildFile; fileRef = F93ED2D316C96220000B8AC7 /* toggle-expand-alt.png */; };
+		F941C43616D4011F00A719DB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F941C43516D4011F00A719DB /* MainViewController.m */; };
 		F958D0C416C7B25900E5F30A /* ZTMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F958D0C316C7B25900E5F30A /* ZTMenuItem.m */; };
 		F994C96016AD514C000BFF8F /* sample2.xml in Resources */ = {isa = PBXBuildFile; fileRef = F994C95F16AD514C000BFF8F /* sample2.xml */; };
 		F9B9B8C116C41645002B1B91 /* MapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B9B8BC16C41645002B1B91 /* MapOverlayView.m */; };
@@ -531,6 +532,8 @@
 		F9117B7416CE77EA001FCB7B /* IDPTaskProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPTaskProvider.m; sourceTree = "<group>"; };
 		F91ED50216C69C910073F778 /* apfel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apfel.png; sourceTree = "<group>"; };
 		F93ED2D316C96220000B8AC7 /* toggle-expand-alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle-expand-alt.png"; sourceTree = "<group>"; };
+		F941C43416D4011F00A719DB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		F941C43516D4011F00A719DB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		F958D0C216C7B25900E5F30A /* ZTMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTMenuItem.h; sourceTree = "<group>"; };
 		F958D0C316C7B25900E5F30A /* ZTMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTMenuItem.m; sourceTree = "<group>"; };
 		F994C95F16AD514C000BFF8F /* sample2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample2.xml; sourceTree = "<group>"; };
@@ -1022,6 +1025,8 @@
 				F9BAFD2B16A83FAA00314AA9 /* ZoomableTree */,
 				F9BAFD4116A8412E00314AA9 /* GridMenu */,
 				F9BAFD5316A8430800314AA9 /* 2dCoverFlow */,
+				F941C43416D4011F00A719DB /* MainViewController.h */,
+				F941C43516D4011F00A719DB /* MainViewController.m */,
 			);
 			path = TouchMenus;
 			sourceTree = "<group>";
@@ -1666,6 +1671,7 @@
 				F9DFB84416C81B1D00016C60 /* NCTableViewCell.m in Sources */,
 				85026E0A16CE596400874FEA /* GMCollectionViewController.m in Sources */,
 				F9117B7516CE77EA001FCB7B /* IDPTaskProvider.m in Sources */,
+				F941C43616D4011F00A719DB /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
