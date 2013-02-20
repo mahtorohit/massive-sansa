@@ -61,7 +61,9 @@ static IDPTaskProvider *_sharedMySingleton = nil;
 - (void) startNextExperiment
 {
 	
-	[self.experimentControllerDelegate createViewControllerOfName:@"2DCoverflow"];
+//	[self.experimentControllerDelegate createViewControllerOfName:@"2DCoverflow"];
+    [self.experimentControllerDelegate createViewControllerOfName:@"FastActionTreeView"];
+    
 	self.taskSet = [[NSMutableArray alloc] initWithObjects:@"Feldsalat", @"Erbsen", @"Apfel", @"Limette", nil];
 
 	[self startNextTask];
