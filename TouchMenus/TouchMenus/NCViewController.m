@@ -29,7 +29,6 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-	
 	self.stack = [[NSMutableArray alloc] init];
 	
 	NCTableViewController *tblv = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"NCTBLV"];
@@ -61,8 +60,7 @@
 	self.backButton.layer.zPosition = 10;
 	[self.backButton setFrame:CGRectMake(-5,  self.view.bounds.size.height-190, 80, 80)];
 	
-	pos = 25;
-	
+	pos = 25;	
 }
 - (IBAction)backButtonClick:(UIButton *)sender
 {
@@ -70,8 +68,7 @@
 }
 
 - (void)rightSwipeHandle
-{
-	
+{	
 	if ([self.navController.viewControllers count] == 1)
 	{
 		[UIView animateWithDuration:.2 animations:^{
@@ -115,6 +112,17 @@
 	[self.view addSubview:button];
 	[self.stack addObject:button];
 	
+	if ([self.stack count] > 1)
+	{
+		[self.backButton setImage:[UIImage imageNamed:@"back button.png"] forState:UIControlStateNormal];
+		[self.backButton setImage:nil forState:UIControlStateHighlighted];
+	}
+	else
+	{
+		[self.backButton setImage:[UIImage imageNamed:@"back button bw.png"] forState:UIControlStateNormal];
+		[self.backButton setImage:[UIImage imageNamed:@"back button bw.png"] forState:UIControlStateHighlighted];
+	}
+	
 	[self.backButton removeFromSuperview];
 	[self.view addSubview:self.backButton];
 }
@@ -131,6 +139,17 @@
 	
 	pos -= button.frame.size.width-25;
 	[self.stack removeLastObject];
+	
+	if ([self.stack count] > 1)
+	{
+		[self.backButton setImage:[UIImage imageNamed:@"back button.png"] forState:UIControlStateNormal];
+		[self.backButton setImage:nil forState:UIControlStateHighlighted];
+	}
+	else
+	{
+		[self.backButton setImage:[UIImage imageNamed:@"back button bw.png"] forState:UIControlStateNormal];
+		[self.backButton setImage:[UIImage imageNamed:@"back button bw.png"] forState:UIControlStateHighlighted];
+	}
 }
 - (void)controllerPop
 {

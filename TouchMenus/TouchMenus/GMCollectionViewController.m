@@ -119,6 +119,17 @@
 	[self.view addSubview:button];
 	[self.stack addObject:button];
 	
+	if ([self.stack count] > 1)
+	{
+		[self.backButton setImage:[UIImage imageNamed:@"back button.png"] forState:UIControlStateNormal];
+		[self.backButton setImage:nil forState:UIControlStateHighlighted];
+	}
+	else
+	{
+		[self.backButton setImage:[UIImage imageNamed:@"back button bw.png"] forState:UIControlStateNormal];
+		[self.backButton setImage:[UIImage imageNamed:@"back button bw.png"] forState:UIControlStateHighlighted];
+	}
+	
 	[self.backButton removeFromSuperview];
 	[self.view addSubview:self.backButton];
 }
@@ -133,6 +144,17 @@
 	
 	pos -= button.frame.size.width-25;
 	[self.stack removeLastObject];
+	
+	if ([self.stack count] > 1)
+	{
+		[self.backButton setImage:[UIImage imageNamed:@"back button.png"] forState:UIControlStateNormal];
+		[self.backButton setImage:nil forState:UIControlStateHighlighted];
+	}
+	else
+	{
+		[self.backButton setImage:[UIImage imageNamed:@"back button bw.png"] forState:UIControlStateNormal];
+		[self.backButton setImage:[UIImage imageNamed:@"back button bw.png"] forState:UIControlStateHighlighted];
+	}
 }
 - (void)controllerPop
 {

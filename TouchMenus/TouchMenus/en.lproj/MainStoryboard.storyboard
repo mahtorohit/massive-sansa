@@ -541,6 +541,7 @@
         <class className="MainViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
             <relationships>
+                <relationship kind="action" name="startClicked:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="startButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="taskLabel" candidateClass="UILabel"/>
             </relationships>

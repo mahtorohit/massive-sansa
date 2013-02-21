@@ -333,6 +333,7 @@
 		F9DFB84416C81B1D00016C60 /* NCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DFB84016C81B1D00016C60 /* NCTableViewCell.m */; };
 		F9FD19F316D699520076CA29 /* IDPExercise.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FD19F216D699520076CA29 /* IDPExercise.m */; };
 		F9FD19F616D6B37D0076CA29 /* GMCollectionViewControllerNoBC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FD19F516D6B37D0076CA29 /* GMCollectionViewControllerNoBC.m */; };
+		F9FD19F816D6BABF0076CA29 /* back button bw.png in Resources */ = {isa = PBXBuildFile; fileRef = F9FD19F716D6BABE0076CA29 /* back button bw.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -697,6 +698,7 @@
 		F9FD19F216D699520076CA29 /* IDPExercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPExercise.m; sourceTree = "<group>"; };
 		F9FD19F416D6B37D0076CA29 /* GMCollectionViewControllerNoBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMCollectionViewControllerNoBC.h; sourceTree = "<group>"; };
 		F9FD19F516D6B37D0076CA29 /* GMCollectionViewControllerNoBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMCollectionViewControllerNoBC.m; sourceTree = "<group>"; };
+		F9FD19F716D6BABE0076CA29 /* back button bw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back button bw.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -981,10 +983,8 @@
 		F9BAFCDC16A83D8500314AA9 /* TouchMenus */ = {
 			isa = PBXGroup;
 			children = (
-				483D7DE916D52B61007D3D90 /* TreeView */,
-				F9117B6C16CE30D0001FCB7B /* breadcrumb.png */,
-				F9117B7016CE3855001FCB7B /* back button.png */,
 				85C5D24F16B7021700BBDE42 /* MainStoryboard.storyboard */,
+				F9FD19F916D6BAD60076CA29 /* Other Resources */,
 				F9BAFCDD16A83D8500314AA9 /* Supporting Files */,
 				F9BAFCFB16A83D9A00314AA9 /* MAIN_TouchMenuApp */,
 				F9117B7216CE740F001FCB7B /* ActionLogger */,
@@ -996,6 +996,7 @@
 				F9BAFD2B16A83FAA00314AA9 /* ZoomableTree */,
 				F9BAFD4116A8412E00314AA9 /* GridMenu */,
 				F9BAFD5316A8430800314AA9 /* 2dCoverFlow */,
+				483D7DE916D52B61007D3D90 /* TreeView */,
 				F941C43416D4011F00A719DB /* MainViewController.h */,
 				F941C43516D4011F00A719DB /* MainViewController.m */,
 			);
@@ -1258,6 +1259,16 @@
 				F9DFB84016C81B1D00016C60 /* NCTableViewCell.m */,
 			);
 			name = HorizontalListNavController;
+			sourceTree = "<group>";
+		};
+		F9FD19F916D6BAD60076CA29 /* Other Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F9117B6C16CE30D0001FCB7B /* breadcrumb.png */,
+				F9117B7016CE3855001FCB7B /* back button.png */,
+				F9FD19F716D6BABE0076CA29 /* back button bw.png */,
+			);
+			name = "Other Resources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1598,6 +1609,7 @@
 				483D7DF216D52B96007D3D90 /* zkaisersemmelg.png in Resources */,
 				483D7DF316D52B96007D3D90 /* button-46.mp3 in Resources */,
 				483D7DF416D52B96007D3D90 /* button-16.mp3 in Resources */,
+				F9FD19F816D6BABF0076CA29 /* back button bw.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

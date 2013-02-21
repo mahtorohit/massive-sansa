@@ -29,7 +29,7 @@
 	NSMutableArray *array = [[NSMutableArray alloc] init];
 	
 	IDPExercise *ex = [[IDPExercise alloc] init];
-	ex.menuIdentifier = @"HorizList";
+	ex.menuIdentifier = @"UnfoldingList";
 	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Käse", nil];
 	
 	[array addObject:ex];
@@ -59,7 +59,7 @@
 	[array addObject:ex];
 
 	ex = [[IDPExercise alloc] init];
-	ex.menuIdentifier = @"UnfoldingList";
+	ex.menuIdentifier = @"HorizList";
 	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Feldsalat", @"Erbsen", @"Apfel", @"Limette", nil];
 
 	[array addObject:ex];
