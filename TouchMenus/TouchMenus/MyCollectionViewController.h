@@ -14,7 +14,7 @@
 
 @interface MyCollectionViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (strong, nonatomic) NSArray *menuItems;
+@property (strong, nonatomic) MenuItem *menuItem;
 
 @property id<BreadCrumbDelegate> delegate;
 

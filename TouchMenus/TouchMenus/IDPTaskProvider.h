@@ -15,31 +15,31 @@
 	//?? REQUIRED TO RELOAD DATA! (DataProvider may have been changed by taskprovider)
 @end
 
-@protocol ExperimentStatus <NSObject>
-- (void) setTaskMessage:(NSString *)message;
-- (void) didFinishExperiment;
-- (void) didFinishTask;
-@end
-
 @protocol ExperimentController <NSObject>
 
 - (void) createViewControllerOfName:(NSString *)viewControllerName;
+- (void) setTaskMessage:(NSString *)message;
+- (void) didFinish;
+- (void) didFinishExperiment;
+- (void) didFinishTask;
 
 @end
 
 @interface IDPTaskProvider : NSObject
 
 @property id<ExperimentController> experimentControllerDelegate;
+@property id<MenuCandidate> currentMenu;
 
 //singleton
 + (IDPTaskProvider *) sharedInstance;
 
 //start/stop
+- (void) prepareNextExperiment;
 - (void) startNextExperiment;
 
 //collect all MenuItem clicks
 - (void) selectItem:(MenuItem *)item;
 
-- (void) registerExperimentStatusDelegate:(id<ExperimentStatus>)experimentStatusDelegate;
+//- (void) registerExperimentStatusDelegate:(id<ExperimentStatus>)experimentStatusDelegate;
 
 @end

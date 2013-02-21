@@ -50,7 +50,14 @@ static DataProvider *_sharedMySingleton = nil;
 		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 			[self loadPicsFor:rootElements];
 			dispatch_async(dispatch_get_main_queue(), ^{
-				NSLog(@"Got all them pictures!");
+				
+				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Cache"
+																message:@"Alle Bilder geladen"
+															   delegate:nil
+													  cancelButtonTitle:@"OK"
+													  otherButtonTitles:nil];
+				[alert show];
+				
 			});
 		});
 	}

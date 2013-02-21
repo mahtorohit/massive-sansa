@@ -244,6 +244,8 @@
 		}
     }
     
+	[selectedItem.menuItem selectItem];
+	
     for (TreeItem* item in treeItems) {
         if ([item.menuItem getParent] == [selectedItem.menuItem getParent]) {
             if  (![[item.menuItem getTitle]isEqualToString:[selectedItem.menuItem getTitle]]) {

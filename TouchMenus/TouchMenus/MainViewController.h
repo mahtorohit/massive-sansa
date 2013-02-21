@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "IDPTaskProvider.h"
 
-@interface MainViewController : UIViewController <ExperimentStatus, ExperimentController>
+@interface MainViewController : UIViewController <ExperimentController>
+
+@property (strong, nonatomic) IBOutlet UILabel *taskLabel;
+@property (strong, nonatomic) IBOutlet UIButton *startButton;
 
 @end

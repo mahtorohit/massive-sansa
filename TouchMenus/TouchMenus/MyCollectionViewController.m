@@ -14,7 +14,7 @@
 
 @implementation MyCollectionViewController
 
-@synthesize menuItems = _menuItems;
+@synthesize menuItem = _menuItem;
 
 
 - (void)viewDidLoad
@@ -22,9 +22,9 @@
     [super viewDidLoad];
    
     // if nil, assume this as a root view
-    if (!self.menuItems) {
+    if (!self.menuItem) {
         
-        self.menuItems = [[DataProvider sharedInstance] getRootLevelElements];
+        self.menuItem = [[DataProvider sharedInstance] getRootMenuItem];
         self.title = @"GridMenu";
     }
     
@@ -51,7 +51,7 @@
 -(NSInteger)collectionView:(UICollectionView *)collectionView
     numberOfItemsInSection:(NSInteger)section
 {
-    return [self.menuItems count];
+    return [self.menuItem getChildrenCount];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
@@ -62,7 +62,7 @@
                                     forIndexPath:indexPath];
     int row = [indexPath row];
     
-    MenuItem *currentMenuItem = [self.menuItems objectAtIndex:row];
+    MenuItem *currentMenuItem = [[self.menuItem getChildren] objectAtIndex:row];
     
     [myCell.label setText:[currentMenuItem getTitle]];
     [myCell.imageView setImage:[currentMenuItem getImg]];
@@ -77,17 +77,17 @@
   
     int row = [indexPath row];
 
-    NSArray *children = [[self.menuItems objectAtIndex:row] getChildren];
-    
-    if (children) {
+	if (![[[self.menuItem getChildren] objectAtIndex:row] isLeaf]) {
+		[[[self.menuItem getChildren] objectAtIndex:row] selectItem];
+		
         MyCollectionViewController *collectionViewController = [self.storyboard instantiateViewControllerWithIdentifier: @"MyCollectionViewController"];
-        collectionViewController.menuItems = children;
-        collectionViewController.title = [[self.menuItems objectAtIndex:row] getTitle];
+        collectionViewController.menuItem = [[self.menuItem getChildren] objectAtIndex:row];
+        collectionViewController.title = [[[self.menuItem getChildren] objectAtIndex:row] getTitle];
         collectionViewController.delegate = self.delegate;
         [self.navigationController pushViewController:collectionViewController animated:YES];
     }
     else {
-        ///clickclick
+		[[[self.menuItem getChildren] objectAtIndex:row] selectItem];
     }
 }
 
@@ -95,7 +95,7 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
     
-    if ([[[self.menuItems objectAtIndex:0] getParent] getParent]!= nil)
+    if ([self.menuItem getParent] != nil)
         [self.delegate breadCrumbPopOnce];
 }
 

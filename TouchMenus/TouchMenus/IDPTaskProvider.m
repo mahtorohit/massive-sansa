@@ -7,23 +7,23 @@
 //
 
 #import "IDPTaskProvider.h"
+#import "IDPExercise.h"
 
 @interface IDPTaskProvider()
 
 @property NSString *targetItem;
-@property NSMutableArray *experimentStatusDelegate;
-
-@property NSMutableArray *taskSet;
+@property NSMutableArray *exercises;
+@property IDPExercise *currentExercise;
 
 @end
 
 @implementation IDPTaskProvider
 
 @synthesize targetItem = _targetItem;
-@synthesize experimentStatusDelegate = _experimentStatusDelegate;
+@synthesize currentMenu = _currentMenu;
 @synthesize experimentControllerDelegate = _experimentControllerDelegate;
 
-@synthesize taskSet = _taskSet;
+@synthesize exercises = _exercises;
 
 static IDPTaskProvider *_sharedMySingleton = nil;
 
@@ -53,83 +53,77 @@ static IDPTaskProvider *_sharedMySingleton = nil;
 {
 	self = [super init];
 	if (self != nil) {
-		self.experimentStatusDelegate = [[NSMutableArray alloc] init];
+		
+		self.exercises = [IDPExercise exerciseSet];
+		
 	}
 	return self;
 }
 
 int cnt = 0;
 
+- (void) prepareNextExperiment
+{
+	
+	self.currentExercise = [self.exercises lastObject];
+	[self.exercises removeLastObject];
+	
+	[self.experimentControllerDelegate createViewControllerOfName:self.currentExercise.menuIdentifier];
+}
+
 - (void) startNextExperiment
 {
-	//TODO load from a set of tasks or implement random generation of Experiments with Tasks!
-	if (cnt == 0)
-	{
-		[self.experimentControllerDelegate createViewControllerOfName:@"2DCoverflow"];
-		self.taskSet = [[NSMutableArray alloc] initWithObjects:@"Feldsalat", @"Erbsen", nil];
-		cnt++;
-	}
-	else if (cnt == 1)
-	{
-		[self.experimentControllerDelegate createViewControllerOfName:@"HorizList"];
-		self.taskSet = [[NSMutableArray alloc] initWithObjects:@"Apfel", @"Limette", nil];
-		cnt++;
-	}
-	else
-	{
-		[self.experimentControllerDelegate createViewControllerOfName:@"Dropdown"];
-		self.taskSet = [[NSMutableArray alloc] initWithObjects:@"Schokokekse", @"Kefir", nil];
-	}
-	
+	[self.currentMenu resetMenu];
 	[self startNextTask];
 }
 
 - (void) startNextTask
 {
-	
-	if ([self.taskSet count] == 0)
+	if ([self.currentExercise.tasksForMenu count] == 0)
 	{
-		for (id<ExperimentStatus> delegate in self.experimentStatusDelegate)
+		if ([self.exercises count] > 0)
 		{
-			[delegate didFinishExperiment];
-			[self startNextExperiment];
+			[self.experimentControllerDelegate didFinishExperiment];
+			[self prepareNextExperiment];
+		}
+		else
+		{
+			[self.experimentControllerDelegate didFinish];
 		}
 	}
 	else
 	{
-		self.targetItem = [self.taskSet lastObject];
-		[self.taskSet removeLastObject];
+		self.targetItem = [self.currentExercise.tasksForMenu lastObject];
+		[self.currentExercise.tasksForMenu removeLastObject];
 		
-		for (id<ExperimentStatus> delegate in self.experimentStatusDelegate)
-		{
-			[delegate setTaskMessage:[NSString stringWithFormat:@"Bitte suchen Sie \"%@\"", self.targetItem]];
-		}
-	}
-	
-}
-
-- (void) registerExperimentStatusDelegate:(id<ExperimentStatus>)experimentStatusDelegate
-{
-	[self.experimentStatusDelegate addObject:experimentStatusDelegate];
+		[self.experimentControllerDelegate setTaskMessage:[NSString stringWithFormat:@"Bitte suchen Sie \"%@\"", self.targetItem]];
+		
+	}	
 }
 
 - (void) selectItem:(MenuItem *)item
 {
-
 	//Protokollierung aller gelaufenen Wege hier möglich!
+	
 	NSLog(@"%@",[item getTitle]);
 	
 	if ([[item getTitle] isEqualToString:self.targetItem])
 	{
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gefunden"
-														message:@"und weiter gehts..."
-													   delegate:nil
-											  cancelButtonTitle:@"OK"
-											  otherButtonTitles:nil];
-		[alert show];
-		
-		[self startNextTask];
+		[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(finishedTask) userInfo:nil repeats:NO];
 	}
+}
+
+- (void) finishedTask
+{
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gefunden"
+													message:@"und weiter gehts..."
+												   delegate:nil
+										  cancelButtonTitle:@"OK"
+										  otherButtonTitles:nil];
+	[alert show];
+	
+	[self.experimentControllerDelegate didFinishTask];
+	[self startNextTask];
 }
 
 @end

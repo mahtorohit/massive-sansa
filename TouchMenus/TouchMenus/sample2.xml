@@ -237,7 +237,7 @@
 			<item name="Hagebutte" img="hagebutte.png"/>
 			<item name="Trauben" img="trauben.png"/>
 		</item>
-		<item name="Schalenobst/Nüssse" img="nuesse.png">
+		<item name="Schalenobst/Nüsse" img="nuesse.png">
 			<item name="Cashew" img="cashews.png"/>
 			<item name="Erdnuss" img="erdnuesse.png"/>
 			<item name="Edelkastanie" img="maroni.png"/>

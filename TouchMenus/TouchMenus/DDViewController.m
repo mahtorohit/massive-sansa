@@ -67,7 +67,8 @@
 															 usingSelectionDelegate:self
 																			 inView:self.view
 																	 withOtherViews:[[NSMutableArray alloc] initWithObjects:self.view, nil]];
-
+	[self.popover dismissPopoverAnimated:NO];
+	
 	self.popover = [[UIPopoverController alloc] initWithContentViewController:tblvc];
 	self.popover.delegate = self;
     [self.popover presentPopoverFromRect:CGRectMake(sender.frame.size.width / 2, sender.frame.size.height / 1, 1, 1) inView:sender permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
