@@ -88,7 +88,10 @@
 	NCTableViewController *tblv = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"NCTBLV"];
     
     MenuItem* currentItem = [[self.menuItem getChildren] objectAtIndex:[indexPath row]];
-    if (![currentItem isLeaf]) {
+    
+	[currentItem selectItem];
+	
+	if (![currentItem isLeaf]) {
 	
 		tblv.menuItem = currentItem;
 		tblv.delegate = self.delegate;

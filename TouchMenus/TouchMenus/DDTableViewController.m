@@ -108,6 +108,8 @@
 
 	self.selIndexPath = indexPath;
 	 
+	[[self.menuItems objectAtIndex:[indexPath row]] selectItem];
+	
 	if ([[self.menuItems objectAtIndex:[indexPath row]] getChildrenCount] > 0) {
 		
 		DDTableViewController *tblvc = [[DDTableViewController alloc] initWithMenuItems:[[self.menuItems objectAtIndex:[indexPath row]] getChildren]

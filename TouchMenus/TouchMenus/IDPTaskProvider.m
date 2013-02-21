@@ -58,12 +58,29 @@ static IDPTaskProvider *_sharedMySingleton = nil;
 	return self;
 }
 
+int cnt = 0;
+
 - (void) startNextExperiment
 {
+	//TODO load from a set of tasks or implement random generation of Experiments with Tasks!
+	if (cnt == 0)
+	{
+		[self.experimentControllerDelegate createViewControllerOfName:@"2DCoverflow"];
+		self.taskSet = [[NSMutableArray alloc] initWithObjects:@"Feldsalat", @"Erbsen", nil];
+		cnt++;
+	}
+	else if (cnt == 1)
+	{
+		[self.experimentControllerDelegate createViewControllerOfName:@"HorizList"];
+		self.taskSet = [[NSMutableArray alloc] initWithObjects:@"Apfel", @"Limette", nil];
+		cnt++;
+	}
+	else
+	{
+		[self.experimentControllerDelegate createViewControllerOfName:@"Dropdown"];
+		self.taskSet = [[NSMutableArray alloc] initWithObjects:@"Schokokekse", @"Kefir", nil];
+	}
 	
-	[self.experimentControllerDelegate createViewControllerOfName:@"2DCoverflow"];
-	self.taskSet = [[NSMutableArray alloc] initWithObjects:@"Feldsalat", @"Erbsen", @"Apfel", @"Limette", nil];
-
 	[self startNextTask];
 }
 
@@ -85,7 +102,7 @@ static IDPTaskProvider *_sharedMySingleton = nil;
 		
 		for (id<ExperimentStatus> delegate in self.experimentStatusDelegate)
 		{
-			[delegate setTaskMessage:[NSString stringWithFormat:@"Bitte suchen sie \"%@\"", self.targetItem]];
+			[delegate setTaskMessage:[NSString stringWithFormat:@"Bitte suchen Sie \"%@\"", self.targetItem]];
 		}
 	}
 	
@@ -98,6 +115,7 @@ static IDPTaskProvider *_sharedMySingleton = nil;
 
 - (void) selectItem:(MenuItem *)item
 {
+
 	//Protokollierung aller gelaufenen Wege hier möglich!
 	NSLog(@"%@",[item getTitle]);
 	

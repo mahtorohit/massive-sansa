@@ -289,7 +289,7 @@ BOOL reloadCarousel3;
 			//back
 			self.menuItem3 = self.menuItem1.getParent;
 			
-			[[IDPTaskProvider sharedInstance] selectItem:self.menuItem1];
+			[self.menuItem1 selectItem];
 
 //			if (self.menuItem3 == nil) self.menuItem3 = self.menuItem1; //Anti-"Nothing visible"-bug
 			int backindex = [[self.menuItem3 getChildren] indexOfObject:self.menuItem1]+1;
@@ -302,7 +302,7 @@ BOOL reloadCarousel3;
 			//down
 			self.menuItem3 = [self.menuItem1.getChildren objectAtIndex:index-1];
 			
-			[[IDPTaskProvider sharedInstance] selectItem:self.menuItem3];
+			[self.menuItem3 selectItem];
 			
 			if ([self.menuItem3 getChildrenCount] == 0)
 			{

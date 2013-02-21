@@ -46,6 +46,8 @@
 
 - (void) createViewControllerOfName:(NSString *)viewControllerName
 {
+	self.controller = nil; //dealloc old instance;
+	
 	self.controller = [self.storyboard instantiateViewControllerWithIdentifier:viewControllerName];
 	
 	[self.view addSubview:self.controller.view];
