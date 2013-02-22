@@ -25,7 +25,7 @@
     if (!self.menuItem) {
         
         self.menuItem = [[DataProvider sharedInstance] getRootMenuItem];
-        self.title = @"GridMenu";
+        self.title = [self.menuItem getTitle];
     }
     
     UISwipeGestureRecognizer *rightRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rightSwipeHandle:)];

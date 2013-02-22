@@ -83,11 +83,23 @@ int cnt = 0;
 	{
 		if ([self.exercises count] > 0)
 		{
-			[self.experimentControllerDelegate didFinishExperiment];
-			[self prepareNextExperiment];
+			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gefunden"
+															message:@"Weiter mit dem nächsten Menü"
+														   delegate:self	//ONLY DELEGATE HERE -> prepareNextElement ausgelagert!
+												  cancelButtonTitle:@"OK"
+												  otherButtonTitles:nil];
+			[alert show];
+			
 		}
 		else
 		{
+			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Geschafft"
+															message:@"Danke für die Teilnahme"
+														   delegate:nil
+												  cancelButtonTitle:@"OK"
+												  otherButtonTitles:nil];
+			[alert show];
+			
 			[self.experimentControllerDelegate didFinish];
 		}
 	}
@@ -98,7 +110,21 @@ int cnt = 0;
 		
 		[self.experimentControllerDelegate setTaskMessage:[NSString stringWithFormat:@"Bitte suchen Sie \"%@\"", self.targetItem]];
 		
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Neue Aufgabe"
+														message:[NSString stringWithFormat:@"Bitte suchen Sie \"%@\"", self.targetItem]
+													   delegate:nil
+											  cancelButtonTitle:@"OK"
+											  otherButtonTitles:nil];
+		[alert show];
+
 	}	
+}
+
+//IMPORTANT: do not set delegate for every popup!!
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	[self.experimentControllerDelegate didFinishExperiment];
+	[self prepareNextExperiment];
 }
 
 - (void) selectItem:(MenuItem *)item
@@ -109,19 +135,12 @@ int cnt = 0;
 	
 	if ([[item getTitle] isEqualToString:self.targetItem])
 	{
-		[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(finishedTask) userInfo:nil repeats:NO];
+		[NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(finishedTask) userInfo:nil repeats:NO];
 	}
 }
 
 - (void) finishedTask
-{
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gefunden"
-													message:@"und weiter gehts..."
-												   delegate:nil
-										  cancelButtonTitle:@"OK"
-										  otherButtonTitles:nil];
-	[alert show];
-	
+{	
 	[self.experimentControllerDelegate didFinishTask];
 	[self startNextTask];
 }

@@ -25,7 +25,7 @@
 
 @end
 
-@interface IDPTaskProvider : NSObject
+@interface IDPTaskProvider : NSObject <UIAlertViewDelegate>
 
 @property id<ExperimentController> experimentControllerDelegate;
 @property id<MenuCandidate> currentMenu;
