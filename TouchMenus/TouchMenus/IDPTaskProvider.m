@@ -8,12 +8,19 @@
 
 #import "IDPTaskProvider.h"
 #import "IDPExercise.h"
+#import "DataProvider.h"
+#import <AVFoundation/AVFoundation.h>
+#import "CSVLogger.h"
 
-@interface IDPTaskProvider()
+@interface IDPTaskProvider() {
+	double startTime;
+	double endTime;
+}
 
 @property NSString *targetItem;
 @property NSMutableArray *exercises;
 @property IDPExercise *currentExercise;
+@property AVAudioPlayer *audioPlayer;
 
 @end
 
@@ -24,6 +31,8 @@
 @synthesize experimentControllerDelegate = _experimentControllerDelegate;
 
 @synthesize exercises = _exercises;
+
+@synthesize audioPlayer = _audioPlayer;
 
 static IDPTaskProvider *_sharedMySingleton = nil;
 
@@ -64,28 +73,49 @@ int cnt = 0;
 
 - (void) prepareNextExperiment
 {
-	
+
 	self.currentExercise = [self.exercises lastObject];
 	[self.exercises removeLastObject];
 	
-	[self.experimentControllerDelegate createViewControllerOfName:self.currentExercise.menuIdentifier];
+	[[DataProvider sharedInstance] useDataset:[self.currentExercise.dataSet integerValue]];
+	
+	UIViewController *vc = [self.experimentControllerDelegate createViewControllerOfName:self.currentExercise.menuIdentifier];
+//	self.currentMenu = (id<MenuCandidate>)vc; //TODO: MAKE SURE THIS HOLDS FOR EVERY MENU
+	
+	vc = nil;
 }
 
 - (void) startNextExperiment
 {
-	[self.currentMenu resetMenu];
-	[self startNextTask];
+	startTime = CACurrentMediaTime();
+
+//	[self.currentMenu resetMenu];
+	[self startNextTask:NO];
 }
 
-- (void) startNextTask
+- (void) startNextTask:(BOOL)audio
 {
+	if (audio) [self playClickAudio];
+	
+	endTime = CACurrentMediaTime();
+
+	if (audio)
+	{
+		//this audio flag works for this logmsg as audio is always plaed upon selections but never upon START EXPERIMENT
+		[[CSVLogger sharedInstance] logToFileAt:endTime mesage:@"FOUND" itemTitle:self.targetItem];
+	}
+	
 	if ([self.currentExercise.tasksForMenu count] == 0)
 	{
 		if ([self.exercises count] > 0)
 		{
+			//done with ex
+			
+			[[CSVLogger sharedInstance] logToFileAt:endTime mesage:@"EXERCISE DONE" itemTitle:@""];
+			
 			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gefunden"
 															message:@"Weiter mit dem nächsten Menü"
-														   delegate:self	//ONLY DELEGATE HERE -> prepareNextElement ausgelagert!
+														   delegate:self
 												  cancelButtonTitle:@"OK"
 												  otherButtonTitles:nil];
 			[alert show];
@@ -93,6 +123,10 @@ int cnt = 0;
 		}
 		else
 		{
+			//all done
+
+			[[CSVLogger sharedInstance] logToFileAt:endTime mesage:@"FINISHED" itemTitle:@""];
+			
 			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Geschafft"
 															message:@"Danke für die Teilnahme"
 														   delegate:nil
@@ -105,6 +139,7 @@ int cnt = 0;
 	}
 	else
 	{
+		//next
 		self.targetItem = [self.currentExercise.tasksForMenu lastObject];
 		[self.currentExercise.tasksForMenu removeLastObject];
 		
@@ -112,37 +147,92 @@ int cnt = 0;
 		
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Neue Aufgabe"
 														message:[NSString stringWithFormat:@"Bitte suchen Sie \"%@\"", self.targetItem]
-													   delegate:nil
+													   delegate:self
 											  cancelButtonTitle:@"OK"
 											  otherButtonTitles:nil];
 		[alert show];
 
 	}	
 }
+- (void) playClickAudio {
+    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/button-16.mp3", [[NSBundle mainBundle] resourcePath]]];
+	
+	NSError *error;
+	self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+	self.audioPlayer.numberOfLoops = 0;
+	
+	if (self.audioPlayer == nil)
+		NSLog(@"%@", [error description]);
+	else
+		[self.audioPlayer play];
+}
 
-//IMPORTANT: do not set delegate for every popup!!
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-	[self.experimentControllerDelegate didFinishExperiment];
-	[self prepareNextExperiment];
+	startTime = CACurrentMediaTime();
+	
+	if ([alertView.title isEqualToString:@"Gefunden"]) //GEFUNDEN indicates that the current Experiment was completed
+	{
+		[self.experimentControllerDelegate didFinishExperiment];
+		[self prepareNextExperiment];
+	}
+	else if ([alertView.title isEqualToString:@"Neue Aufgabe"])
+	{
+		[[CSVLogger sharedInstance] logToFileAt:startTime mesage:@"ISSUED" itemTitle:self.targetItem];
+	}
 }
 
 - (void) selectItem:(MenuItem *)item
 {
 	//Protokollierung aller gelaufenen Wege hier möglich!
-	
-	NSLog(@"%@",[item getTitle]);
+
+	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() mesage:@"SELECT" itemTitle:[item getTitle]];
 	
 	if ([[item getTitle] isEqualToString:self.targetItem])
 	{
-		[NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(finishedTask) userInfo:nil repeats:NO];
+		[self finishedTask];
+//		[NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(finishedTask) userInfo:nil repeats:NO];
 	}
 }
 
 - (void) finishedTask
 {	
 	[self.experimentControllerDelegate didFinishTask];
-	[self startNextTask];
+	[self startNextTask:YES];
+}
+
+
+//only for logging:
+- (void) backButtonClicked
+{
+	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() mesage:@"BACKBUTTON" itemTitle:@""];
+}
+- (void) breadCrumbClickedToTargetItem:(MenuItem *)item
+{
+	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() mesage:@"BREADCRUMB" itemTitle:[item getTitle]];
+}
+- (void) breadCrumbClickedToTarget:(NSString *)itemTitle
+{
+	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() mesage:@"BREADCRUMB" itemTitle:itemTitle];
+}
+- (void) swipeRecognizedFrom:(CGPoint)from to:(CGPoint)to
+{
+	//TODO store locations
+	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() mesage:@"SWIPE" itemTitle:@""];
+}
+- (void) swipeRecognizedInDirection:(UISwipeGestureRecognizerDirection)direction
+{
+	//TODO store direction
+	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() mesage:@"SWIPE" itemTitle:@""];
+}
+- (void) clickedOutside
+{
+	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() mesage:@"OUTSIDE" itemTitle:@""];
+}
+- (void) otherActionPerformed:(NSString *)description
+{
+	//TODO store description
+	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() mesage:@"OTHER" itemTitle:@""];
 }
 
 @end

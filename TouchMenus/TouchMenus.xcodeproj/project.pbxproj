@@ -177,6 +177,7 @@
 		F9117B7116CE3855001FCB7B /* back button.png in Resources */ = {isa = PBXBuildFile; fileRef = F9117B7016CE3855001FCB7B /* back button.png */; };
 		F9117B7516CE77EA001FCB7B /* IDPTaskProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F9117B7416CE77EA001FCB7B /* IDPTaskProvider.m */; };
 		F91ED50316C69C910073F778 /* apfel.png in Resources */ = {isa = PBXBuildFile; fileRef = F91ED50216C69C910073F778 /* apfel.png */; };
+		F92B279616DD19410060760E /* CSVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F92B279516DD19410060760E /* CSVLogger.m */; };
 		F93ED2D416C96220000B8AC7 /* toggle-expand-alt.png in Resources */ = {isa = PBXBuildFile; fileRef = F93ED2D316C96220000B8AC7 /* toggle-expand-alt.png */; };
 		F941C43616D4011F00A719DB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F941C43516D4011F00A719DB /* MainViewController.m */; };
 		F958D0C416C7B25900E5F30A /* ZTMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F958D0C316C7B25900E5F30A /* ZTMenuItem.m */; };
@@ -513,6 +514,8 @@
 		F9117B7316CE77EA001FCB7B /* IDPTaskProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPTaskProvider.h; sourceTree = "<group>"; };
 		F9117B7416CE77EA001FCB7B /* IDPTaskProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPTaskProvider.m; sourceTree = "<group>"; };
 		F91ED50216C69C910073F778 /* apfel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apfel.png; sourceTree = "<group>"; };
+		F92B279416DD19410060760E /* CSVLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSVLogger.h; sourceTree = "<group>"; };
+		F92B279516DD19410060760E /* CSVLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSVLogger.m; sourceTree = "<group>"; };
 		F93ED2D316C96220000B8AC7 /* toggle-expand-alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle-expand-alt.png"; sourceTree = "<group>"; };
 		F941C43416D4011F00A719DB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		F941C43516D4011F00A719DB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
@@ -917,6 +920,8 @@
 				F9117B7416CE77EA001FCB7B /* IDPTaskProvider.m */,
 				F9FD19F116D699520076CA29 /* IDPExercise.h */,
 				F9FD19F216D699520076CA29 /* IDPExercise.m */,
+				F92B279416DD19410060760E /* CSVLogger.h */,
+				F92B279516DD19410060760E /* CSVLogger.m */,
 			);
 			name = ActionLogger;
 			sourceTree = "<group>";
@@ -1653,6 +1658,7 @@
 				483D7DFC16D52DE6007D3D90 /* TDViewController.m in Sources */,
 				F9FD19F316D699520076CA29 /* IDPExercise.m in Sources */,
 				F9FD19F616D6B37D0076CA29 /* GMCollectionViewControllerNoBC.m in Sources */,
+				F92B279616DD19410060760E /* CSVLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

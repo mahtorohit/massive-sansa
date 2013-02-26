@@ -9,6 +9,7 @@
 #import "NCViewController.h"
 #import "NCTableViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "IDPTaskProvider.h"
 
 @interface NCViewController ()
 {
@@ -64,11 +65,16 @@
 }
 - (IBAction)backButtonClick:(UIButton *)sender
 {
-	[self rightSwipeHandle];
+	[[IDPTaskProvider sharedInstance] backButtonClicked];
+	[self bounceAnimation];
 }
 
 - (void)rightSwipeHandle
-{	
+{
+	[[IDPTaskProvider sharedInstance] swipeRecognizedInDirection:UISwipeGestureRecognizerDirectionDown];
+	[self bounceAnimation];
+}
+- (void) bounceAnimation {
 	if ([self.navController.viewControllers count] == 1)
 	{
 		[UIView animateWithDuration:.2 animations:^{
@@ -165,6 +171,7 @@
 }
 - (void)breadcrumbClick:(UIButton *)button
 {
+	[[IDPTaskProvider sharedInstance] breadCrumbClickedToTarget:[button titleLabel].text];
 	while (![[((NCTableViewController *)self.navController.topViewController).menuItem getTitle] isEqualToString:[button titleLabel].text])
 	{
 		[self controllerPop];

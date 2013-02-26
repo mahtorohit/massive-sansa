@@ -9,8 +9,10 @@
 @interface DataProvider : NSObject
 
 + (DataProvider *) sharedInstance;
+
 - (NSArray *) getRootLevelElements;
 - (MenuItem *) getRootMenuItem;
 
+- (void) useDataset:(NSInteger)x;
 
 @end

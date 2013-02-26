@@ -39,7 +39,7 @@
 	
 }
 
-- (void) createViewControllerOfName:(NSString *)viewControllerName
+- (UIViewController *) createViewControllerOfName:(NSString *)viewControllerName
 {
 	[self.taskLabel setText:@"Einführung"];
 	
@@ -50,7 +50,8 @@
 	
 	[self.view addSubview:self.controller.view];
 	[self.controller.view setFrame:CGRectMake(0, 66, self.view.bounds.size.width, self.view.bounds.size.height - 66)];
-
+	
+	return self.controller;
 }
 - (void) setTaskMessage:(NSString *)message
 {

@@ -11,6 +11,7 @@
 @interface IDPExercise : NSObject
 
 @property NSString *menuIdentifier;
+@property NSNumber *dataSet;
 @property NSMutableArray *tasksForMenu;
 
 

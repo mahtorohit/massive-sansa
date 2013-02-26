@@ -17,7 +17,7 @@
 
 @protocol ExperimentController <NSObject>
 
-- (void) createViewControllerOfName:(NSString *)viewControllerName;
+- (UIViewController *) createViewControllerOfName:(NSString *)viewControllerName;
 - (void) setTaskMessage:(NSString *)message;
 - (void) didFinish;
 - (void) didFinishExperiment;
@@ -40,6 +40,14 @@
 //collect all MenuItem clicks
 - (void) selectItem:(MenuItem *)item;
 
-//- (void) registerExperimentStatusDelegate:(id<ExperimentStatus>)experimentStatusDelegate;
+
+//further logging
+- (void) backButtonClicked;
+- (void) breadCrumbClickedToTargetItem:(MenuItem *)item;
+- (void) breadCrumbClickedToTarget:(NSString *)itemTitle;
+- (void) swipeRecognizedFrom:(CGPoint)from to:(CGPoint)to;
+- (void) swipeRecognizedInDirection:(UISwipeGestureRecognizerDirection)direction;
+- (void) clickedOutside;
+- (void) otherActionPerformed:(NSString *)description;
 
 @end

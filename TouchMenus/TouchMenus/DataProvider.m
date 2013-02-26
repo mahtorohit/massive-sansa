@@ -8,7 +8,9 @@
 
 @implementation DataProvider
 
-NSArray* rootElements;
+NSArray* rootElements1;
+NSArray* rootElements2;
+BOOL dataSet1;
 
 static DataProvider *_sharedMySingleton = nil;
 
@@ -38,17 +40,23 @@ static DataProvider *_sharedMySingleton = nil;
 	self = [super init];
 	if (self != nil) {
 		
-		NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sample2" ofType:@"xml"]];
-		
 		NSError *error;
+
+		NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sample2" ofType:@"xml"]];
 		SMXMLDocument *document = [SMXMLDocument documentWithData:data error:&error];
-
 		SMXMLElement *item = document.root;
-
-		rootElements = [[self getChildrenOf:item usingParent:nil] copy];
+		rootElements1 = [[self getChildrenOf:item usingParent:nil] copy];
+		
+		dataSet1 = YES;
+		
+		data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sample2" ofType:@"xml"]];
+		document = [SMXMLDocument documentWithData:data error:&error];
+		item = document.root;
+		rootElements2 = [[self getChildrenOf:item usingParent:nil] copy];
 	
 		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-			[self loadPicsFor:rootElements];
+			[self loadPicsFor:rootElements1];
+			[self loadPicsFor:rootElements2];
 			dispatch_async(dispatch_get_main_queue(), ^{
 				
 				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Cache"
@@ -98,7 +106,7 @@ static DataProvider *_sharedMySingleton = nil;
 
 
 - (NSArray *) getRootLevelElements {
-	return rootElements;
+	return dataSet1 ? rootElements1 : rootElements2;
 }
 
 - (MenuItem *)getRootMenuItem {
@@ -113,6 +121,11 @@ static DataProvider *_sharedMySingleton = nil;
     }
     
     return rootItem;
+}
+
+- (void) useDataset:(NSInteger)x
+{
+	dataSet1 = x == 0;
 }
 
 @end
