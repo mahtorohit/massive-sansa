@@ -22,6 +22,7 @@
 - (void) didFinish;
 - (void) didFinishExperiment;
 - (void) didFinishTask;
+- (UIViewController *) tellMe;
 
 @end
 
@@ -48,6 +49,6 @@
 - (void) swipeRecognizedFrom:(CGPoint)from to:(CGPoint)to;
 - (void) swipeRecognizedInDirection:(UISwipeGestureRecognizerDirection)direction;
 - (void) clickedOutside;
-- (void) otherActionPerformed:(NSString *)description;
+- (void) otherActionPerformed:(NSString *)action withDescription:(NSString *)description;
 
 @end

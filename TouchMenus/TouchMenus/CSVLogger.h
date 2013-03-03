@@ -7,12 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface CSVLogger : NSObject
+@interface CSVLogger : NSObject <MFMailComposeViewControllerDelegate>
 
 + (CSVLogger *) sharedInstance;
 
-- (void) logToFileAt:(double)timestamp mesage:(NSString *)msg itemTitle:(NSString *)title;
+- (void) logToFileAt:(double)timestamp message:(NSString *)msg itemTitle:(NSString *)title;
 
+- (void) logToFileAt:(double)timestamp swipeFrom:(CGPoint)from to:(CGPoint)to direction:(UISwipeGestureRecognizerDirection)dir;
+
+- (void)closeFileHandle:(UIViewController *)ctr;
 
 @end

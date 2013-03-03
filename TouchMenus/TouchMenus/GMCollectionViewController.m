@@ -9,6 +9,7 @@
 #import "GMCollectionViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "MyCollectionViewController.h"
+#import "IDPTaskProvider.h"
 
 @interface GMCollectionViewController ()
 
@@ -69,12 +70,18 @@
 }
 - (IBAction)backButtonClick:(UIButton *)sender
 {
-	[self rightSwipeHandle];
+	[[IDPTaskProvider sharedInstance] backButtonClicked];
+
+	[self navigateBack];
 }
 
 - (void)rightSwipeHandle
 {
-	
+	[[IDPTaskProvider sharedInstance] swipeRecognizedInDirection:UISwipeGestureRecognizerDirectionRight];
+	[self navigateBack];
+}
+- (void)navigateBack
+{
 	if ([self.navController.viewControllers count] == 1)
 	{
 		//bounce
@@ -170,6 +177,7 @@
 }
 - (void)breadcrumbClick:(UIButton *)button
 {
+	[[IDPTaskProvider sharedInstance] breadCrumbClickedToTarget:[button titleLabel].text];
 	while (![[((MyCollectionViewController *)self.navController.topViewController).menuItem getTitle] isEqualToString:[button titleLabel].text])
 	{
 		[self controllerPop];

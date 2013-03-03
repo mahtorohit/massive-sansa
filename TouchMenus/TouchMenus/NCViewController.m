@@ -52,7 +52,7 @@
     rightRecognizer.direction = UISwipeGestureRecognizerDirectionDown;
     [rightRecognizer setNumberOfTouchesRequired:1];
     [navView addGestureRecognizer:rightRecognizer];
-	
+		
 	[self.view addSubview:navView];
 	
 	[self.backButton removeFromSuperview];

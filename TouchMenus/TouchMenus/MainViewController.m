@@ -27,6 +27,11 @@
     return self;
 }
 
+- (UIViewController *)tellMe
+{
+	return self;
+}
+
 - (void)viewDidLoad
 {
     

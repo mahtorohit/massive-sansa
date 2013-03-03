@@ -98,12 +98,14 @@ int cnt = 0;
 	if (audio) [self playClickAudio];
 	
 	endTime = CACurrentMediaTime();
-
+	
 	if (audio)
 	{
 		//this audio flag works for this logmsg as audio is always plaed upon selections but never upon START EXPERIMENT
-		[[CSVLogger sharedInstance] logToFileAt:endTime mesage:@"FOUND" itemTitle:self.targetItem];
+		[[CSVLogger sharedInstance] logToFileAt:endTime message:@"FOUND" itemTitle:self.targetItem];
 	}
+
+	self.targetItem = nil;
 	
 	if ([self.currentExercise.tasksForMenu count] == 0)
 	{
@@ -111,7 +113,7 @@ int cnt = 0;
 		{
 			//done with ex
 			
-			[[CSVLogger sharedInstance] logToFileAt:endTime mesage:@"EXERCISE DONE" itemTitle:@""];
+			[[CSVLogger sharedInstance] logToFileAt:endTime message:@"EXERCISE DONE" itemTitle:@""];
 			
 			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gefunden"
 															message:@"Weiter mit dem nächsten Menü"
@@ -125,7 +127,7 @@ int cnt = 0;
 		{
 			//all done
 
-			[[CSVLogger sharedInstance] logToFileAt:endTime mesage:@"FINISHED" itemTitle:@""];
+			[[CSVLogger sharedInstance] logToFileAt:endTime message:@"FINISHED" itemTitle:@""];
 			
 			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Geschafft"
 															message:@"Danke für die Teilnahme"
@@ -135,6 +137,8 @@ int cnt = 0;
 			[alert show];
 			
 			[self.experimentControllerDelegate didFinish];
+			
+			[[CSVLogger sharedInstance] closeFileHandle:[self.experimentControllerDelegate tellMe]];
 		}
 	}
 	else
@@ -178,7 +182,7 @@ int cnt = 0;
 	}
 	else if ([alertView.title isEqualToString:@"Neue Aufgabe"])
 	{
-		[[CSVLogger sharedInstance] logToFileAt:startTime mesage:@"ISSUED" itemTitle:self.targetItem];
+		[[CSVLogger sharedInstance] logToFileAt:startTime message:@"ISSUED" itemTitle:self.targetItem];
 	}
 }
 
@@ -186,7 +190,7 @@ int cnt = 0;
 {
 	//Protokollierung aller gelaufenen Wege hier möglich!
 
-	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() mesage:@"SELECT" itemTitle:[item getTitle]];
+	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() message:@"SELECT" itemTitle:[item getTitle]];
     NSLog(@"Selected: %@ and target is %@", item.getTitle, _targetItem);
     
 	if ([[item getTitle] isEqualToString:self.targetItem])
@@ -206,34 +210,31 @@ int cnt = 0;
 //only for logging:
 - (void) backButtonClicked
 {
-	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() mesage:@"BACKBUTTON" itemTitle:@""];
+	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() message:@"BACKBUTTON" itemTitle:@""];
 }
 - (void) breadCrumbClickedToTargetItem:(MenuItem *)item
 {
-	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() mesage:@"BREADCRUMB" itemTitle:[item getTitle]];
+	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() message:@"BREADCRUMB" itemTitle:[item getTitle]];
 }
 - (void) breadCrumbClickedToTarget:(NSString *)itemTitle
 {
-	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() mesage:@"BREADCRUMB" itemTitle:itemTitle];
+	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() message:@"BREADCRUMB" itemTitle:itemTitle];
 }
 - (void) swipeRecognizedFrom:(CGPoint)from to:(CGPoint)to
 {
-	//TODO store locations
-	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() mesage:@"SWIPE" itemTitle:@""];
+	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() swipeFrom:from to:to direction:0];
 }
 - (void) swipeRecognizedInDirection:(UISwipeGestureRecognizerDirection)direction
 {
-	//TODO store direction
-	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() mesage:@"SWIPE" itemTitle:@""];
+	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() swipeFrom:CGPointMake(-1, -1) to:CGPointMake(-1, -1) direction:direction];
 }
 - (void) clickedOutside
 {
-	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() mesage:@"OUTSIDE" itemTitle:@""];
+	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() message:@"OUTSIDE" itemTitle:@""];
 }
-- (void) otherActionPerformed:(NSString *)description
+- (void) otherActionPerformed:(NSString *)action withDescription:(NSString *)description
 {
-	//TODO store description
-	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() mesage:@"OTHER" itemTitle:@""];
+	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() message:action itemTitle:description];
 }
 
 @end

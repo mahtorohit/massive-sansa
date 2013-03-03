@@ -7,6 +7,7 @@
 //
 
 #import "MyCollectionViewController.h"
+#import "IDPTaskProvider.h"
 
 @interface MyCollectionViewController ()
 
@@ -93,6 +94,8 @@
 
 - (void)rightSwipeHandle:(UISwipeGestureRecognizer*)gestureRecognizer
 {
+	[[IDPTaskProvider sharedInstance] swipeRecognizedInDirection:UISwipeGestureRecognizerDirectionRight];
+
     [self.navigationController popViewControllerAnimated:YES];
     
     if ([self.menuItem getParent] != nil)

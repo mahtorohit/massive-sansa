@@ -38,8 +38,12 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self forceViewRefresh];
+
+  	self.view.frame = CGRectMake(0, 66, 1024, 702);
+
+	[self forceViewRefresh];
 }
+
 - (void) addRootItem: (MenuItem *) menuItem {
     
     self.rootItemView = [[[NSBundle mainBundle] loadNibNamed:@"TDTreeItemView" owner:self options:nil] objectAtIndex:0];

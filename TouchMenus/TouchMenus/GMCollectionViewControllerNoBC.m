@@ -9,6 +9,7 @@
 #import "GMCollectionViewControllerNoBC.h"
 #import <QuartzCore/QuartzCore.h>
 #import "MyCollectionViewController.h"
+#import "IDPTaskProvider.h"
 
 @interface GMCollectionViewControllerNoBC ()
 
@@ -63,7 +64,8 @@
 
 - (void)rightSwipeHandle
 {
-	
+	[[IDPTaskProvider sharedInstance] swipeRecognizedInDirection:UISwipeGestureRecognizerDirectionRight];
+
 	if ([self.navController.viewControllers count] == 1)
 	{
 		//bounce
