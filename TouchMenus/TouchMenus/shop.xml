@@ -1,0 +1,330 @@
+<items>
+	<item name="Computer, Software" img="Computer_icon.png">
+		<item name="Computer" img="Computer_icon.png">
+			<item name="Desktop PCs" img="Desktop_PC.png">
+				<item name="Apple" img="apple_comp.png">
+					<item name="iMac" img="Imac.png"/>
+					<item name="MacMini" img="Mac_mini.png"/>
+				</item>
+				<item name="Gaming-PC" img="Gaming-PC.png"/>
+				<item name="Multimedia-PC" img="Multimedia_PC.png"/>
+				<item name="Office-PC" img="office_pc.png"/>
+			</item>
+			<item name="Notebooks" img="notebook.png">
+				<item name="MacBook" img="macbook.png"/>
+				<item name="Notebook mit Windows8" img="windows-8-laptop.png"/>
+				<item name="Notebook mit Touchscreen" img="notebook_touchscreen.jpg"/>
+				<item name="Ultrabook" img="Ultrabook.png"/>
+			</item>
+			<item name="Netbook" img="Netbook.png"/>
+			<item name="Tablet" img="tablet.png"/>
+		</item>
+		<item name="Drucker" img="Printer.png">
+			<item name="All-in-One-Drucker" img="All-in-One-Printer.png"/>
+			<item name="Fotodrucker" img="fotodrucker.png"/>
+			<item name="Laserdrucker" img="laserdrucker.png"/>
+			<item name="Nadeldrucker" img="nadeldrucker.png"/>
+			<item name="Plotter" img="plotter.png"/>
+			<item name="Tintenstrahldrucker" img="tintenstrahldrucker.png"/>
+		</item>
+		<item name="PC-Komponenten" img="pc_komponenten.png">
+			<item name="Festplatten" img="festplatte.png">
+				<item name="Externe Festplatte" img="WD-Festplatte.png"/>
+				<item name="Interne Festplatte" img="interne_festplatte.png"/>
+				<item name="Solid State Drive" img="ssd.png"/>
+			</item>
+			<item name="Arbeitsspeicher" img="arbeitsspeicher-RAM.png"/>
+			<item name="Grafikkarte" img="graphikkarte.png"/>
+			<item name="Lüfter" img="luefter.png"/>
+			<item name="Mainboard" img="mainboard.png"/>
+			<item name="Netzwerkkarte" img="netzwerkkarte.png"/>
+			<item name="PC-Kühlung" img="kühler.png"/>
+			<item name="PC-Gehäuse" img="gahaeuse.png"/>
+			<item name="Prozessor" img="prozessor.png"/>
+			<item name="Videoschnittkarte" img="videoschnittkarte.png"/>
+		</item>
+		<item name="Scanner" img="Scanner.png">
+			<item name="Dokumentenscanner" img="Scanner.png"/>
+			<item name="Filmscanner" img="film_scanner.png"/>
+			<item name="Flachbettscanner" img="Flachbettscanner.png"/>
+			<item name="Visitenkartenscanner" img="visitenkarten-scanner.png"/>
+		</item>
+		<item name="Software" img="software.png">
+			<item name="Betriebssysteme" img="os.jpg">
+				<item name="Linux" img="linux-inside.png"/>
+				<item name="MacOS" img="MacOS.png"/>
+				<item name="Windows" img="windows.png">
+					<item name="Windows7" img="win7.png"/>
+					<item name="Windows8" img="Windows8.png"/>
+					<item name="Vista" img="vista.png"/>
+					<item name="XP" img="xp.png"/>
+				</item>
+			</item>
+			<item name="Antivirus" img="antivirus.png"/>
+			<item name="Brennen, Rippen" img="brennen.png"/>
+			<item name="Finanzsoftware" img="finanzsoftware.png"/>
+			<item name="Grafik, Bildbearbeitung" img="Photoshop_CS3.png"/>
+			<item name="Kindersoftware" img="kindersw.jpg"/>
+			<item name="Lernsoftware" img="lernsoftware.png"/>
+			<item name="Musikproduktion" img="Sound-Eigenschaften.png"/>
+			<item name="Officeprogramme" img="Microsoft-Office.jpg"/>
+			<item name="PC-, Video-Games" img="game_cover.png"/>
+			<item name="Reisesoftware" img="reisesoftware.png"/>
+			<item name="Videobearbeitung" img="videosoftware.png"/>
+		</item>
+		<item name="Webcams, VoIP" img="voip.png">
+			<item name="PC-Headset" img="headset.png"/>
+			<item name="PC-Mikrofon" img="mikrofon.png"/>
+			<item name="Webcam" img="webcam.png"/>
+			<item name="Webcam-Headset-Paket" img="web-cam-headset.png"/>
+		</item>
+	</item>
+	<item name="Entertainment" img="entertainment.png">
+		<item name="DJ-Equipment" img="DJ-EQUIPMENT.png">
+			<item name="DJ Mischer" img="DJ-EQUIPMENT.png"/>
+			<item name="DJ Sets" img="dj-set.png"/>
+			<item name="VJ Zubehör" img="vj_equipment.png"/>
+			<item name="Karaoke" img="karaoke.png"/>
+		</item>
+		<item name="Filme, TV" img="tv.png">
+			<item name="Blu-ray" img="blu_ray.png"/>
+			<item name="Blu-ray 3D" img="3d-blu-ray.png"/>
+			<item name="DVDs" img="dvd.png"/>
+			<item name="Filme leihen" img="filme.jpg"/>
+			<item name="TV-Serien" img="tv_show.png"/>
+		</item>
+		<item name="Konsolen" img="konsolen.png">
+			<item name="Nintendos" img="nintendo.png">
+				<item name="Nintendo 3DS" img="nintendo_3ds.png.jpg"/>
+				<item name="Nintendo DS" img="nintendo-ds.png"/>
+				<item name="Wii" img="wii.png"/>
+				<item name="Wii U" img="Wii_U.png"/>
+			</item>
+			<item name="PlayStations" img="playstation.png">
+				<item name="PlayStation 2" img="playstation-2.png"/>
+				<item name="PlayStation 3" img="ps3.png"/>
+				<item name="PlayStation Portable" img="Psp1.png"/>
+				<item name="PlayStation Vita" img="vita.png"/>
+			</item>
+			<item name="Xbox 360" img="Xbox_360.png"/>
+		</item>
+		<item name="Musikinstrumente" img="musik_instrumente.jpg">
+			<item name="Bässe" img="electric-bass.png">
+				<item name="Akustischer Bass" img="acoustic_bass.png"/>
+				<item name="E-Bass" img="electric-bass.png"/>
+			</item>
+			<item name="Blasinstrumente" img="Blasinstrumente.PNG">
+				<item name="Blechblasinstrument" img="trompete_45_big.png"/>
+				<item name="Holzblasinstrument" img="klarinette.png"/>
+				<item name="Mundharmonika" img="Mundharmonika.jpg"/>
+			</item>
+			<item name="Schlagzeug, Percussion" img="drums.png">
+				<item name="Bassdrums" img="bassdrums.jpg"/>
+				<item name="E-Drums" img="Electronic-Drum-Kit.png"/>
+				<item name="Percussion" img="percussion.png"/>
+			</item>
+			<item name="Tasteninstrumente" img="piano.png">
+				<item name="Digitaler Piano" img="digital-piano.png"/>
+				<item name="Keyboard" img="synth_station.png"/>
+				<item name="Klavier" img="piano.png"/>
+			</item>
+		</item>
+	</item>
+	<item name="Elektronik, Foto" img="electronic-devices.jpg">
+		<item name="Audio, Video" img="audio.jpg">
+			<item name="Car-Hifi" img="car-audio.png">
+				<item name="CD-Tuner" img="cd_car.png"/>
+				<item name="Kassetten-Tuner" img="kassetten_tuner.jpg"/>
+				<item name="MP3-Tuner" img="mp3_tuner.jpg"/>
+			</item>
+			<item name="Lautsprecher" img="lautsprecher.png">
+				<item name="Außen-Lautsprecher" img="aussenlautsprecher.jpg"/>
+				<item name="Center-Lautsprecher" img="center-lautsprecher_1.jpg"/>
+				<item name="Einbau-Lautsprecher" img="einbaulautsprecher.jpg"/>
+				<item name="Regal-Lautsprecher" img="regallautsprecher.png"/>
+				<item name="Soundbars" img="Soundbar.png"/>
+				<item name="Standlautsprecher" img="standlautsprecher.png"/>
+				<item name="Subwoofer" img="subwoofer.png"/>
+			</item>
+			<item name="Radios" img="radio.png">
+				<item name="Duschradio" img="Dusch-Radio.png"/>
+				<item name="Küchenradio" img="kuechenradio.png"/>
+				<item name="Radiowecker" img="radiowecker.png"/>
+				<item name="Uhrenradio" img="Uhrenradio.png"/>
+			</item>
+			<item name="Videoplayer, Rekorder" img="dvdplayer.jpg">
+				<item name="Blu-ray-Player" img="blu-ray_player.png"/>
+				<item name="CD-Player" img="CD-Players.jpg"/>
+				<item name="CD-Rekorder" img="cd_recorder.jpg"/>
+				<item name="DVD-Player" img="dvdplayer.jpg"/>
+				<item name="DVD- und Festplattenrekorder" img="hdd_recorder.png"/>
+			</item>
+			<item name="MP3-Player" img="mp3-player.png"/>
+			<item name="Receiver" img="receiver.png"/>
+		</item>
+		<item name="Kamera, Foto" img="kamera.png">
+			<item name="Camcorder" img="camcorder.png">
+				<item name="Digital 8" img="digital-8.png"/>
+				<item name="DVD" img="dvd_camcorder.jpg"/>
+				<item name="HDD" img="camcorder.png"/>
+				<item name="MiniDV" img="minidv.png"/>
+				<item name="Professioneller Camcorder" img="Professional-Camcorder.png"/>
+				<item name="VHS" img="vhs_camcorder.png"/>
+			</item>
+			<item name="Kameras" img="kamera.png">
+				<item name="Kompaktkamera" img="kompaktkamera.png"/>
+				<item name="Spiegelreflexkamera" img="dslr.png"/>
+				<item name="Systemkameras" img="Systemkamera.png"/>
+			</item>
+			<item name="Kamerazubehör" img="camera_accessories.png">
+				<item name="Akku" img="camera_battery.png"/>
+				<item name="Blitz-Zubehör" img="camera_flash.png"/>
+				<item name="Fernglas" img="fernglas.png"/>
+				<item name="Film Rolle" img="film_rolle.png"/>
+				<item name="Filter" img="camera_filter.png"/>
+				<item name="Gehäuse" img="gehaeuse.png"/>
+				<item name="Leinwand" img="leinwand.png"/>
+				<item name="Netzteil" img="kamera-netzteil.png"/>
+				<item name="Objektiv" img="canon-ef-objektiv.png"/>
+				<item name="Speicherkarte" img="speicherkarte.png"/>
+				<item name="Tasche" img="Kamera-Tasche.png"/>
+			</item>
+		</item>
+		<item name="Telekommunikation" img="telefon.png">
+			<item name="Festnetztelefone" img="festnetztelefon.png">
+				<item name="Analoge Telefone" img="festnetz-telefon.png"/>
+				<item name="Anrufbeantworter" img="anrufbeantworter.jpg"/>
+				<item name="ISDN-Telefone" img="isdn_telefon.png"/>
+				<item name="VOIP Telefone" img="voiptelefon.png"/>
+			</item>
+			<item name="Handys" img="Handy.png">
+				<item name="Blockhandy" img="blockhandy.png"/>
+				<item name="Klapp-Handy" img="klapp_handy.png"/>
+				<item name="Slide-Handy" img="slide-handy.png"/>
+				<item name="Touchscreen-Handy" img="Handy.png"/>
+			</item>
+			<item name="PDA und Organizer" img="pda.png"/>
+		</item>
+		<item name="TV, Heimkino" img="tv2.png">
+			<item name="Fernseher" img="tv2.png">
+				<item name="LCD" img="lcd-tv.png"/>
+				<item name="LED Backlight" img="led_Tv.png"/>
+				<item name="OLED" img="OLED-TV.jpg.png"/>
+				<item name="Plasma" img="plasma.png"/>
+				<item name="Röhre" img="tv.png"/>
+			</item>
+			<item name="Heimkinosysteme" img="Heimkinosystem.png">
+				<item name="Blu-Ray Heimkinosystem" img="Heimkinosystem.png"/>
+				<item name="DVD Heimkinosystem" img="dvd_heimkino.jpg"/>
+			</item>
+			<item name="Projektor" img="projektor.png"/>
+		</item>
+	</item>
+	<item name="Haushaltgeräte" img="haus.png">
+		<item name="Beleuchtung" img="lampe.png">
+			<item name="Außenbeleuchtung" img="aussenbeleuchtung.jpg">
+				<item name="Außenwandleuchten" img="aussenwand.jpg"/>
+				<item name="Flur-, Spotbeleuchtung" img="flurbeleuchtung.png"/>
+				<item name="Solarleuchten" img="solar-leuchten.jpg"/>
+				<item name="Wegeleuchten" img="wegeleuchten.jpg"/>
+			</item>
+			<item name="Innenbeleuchtung" img="innenbeleuchtung.jpg">
+				<item name="Deckenbeleuchtung" img="deckenbeleuchtung.jpg">
+					<item name="Büro-Deckenleuchte" img="buero_beleuchtung.jpg"/>
+					<item name="Deckenleuchte" img="deckenleuchte.jpg"/>
+					<item name="Deckenventilator" img="ventilator.jpg"/>
+					<item name="Hängeleuchte" img="haengeleuchte.jpg"/>
+					<item name="Kronleuchter" img="kronleuchter.jpg"/>
+					<item name="Spotleuchte" img="deckenbeleuchtung.jpg"/>
+				</item>
+				<item name="Bad-Beleuchtung" img="Badbeleuchtung.png"/>
+				<item name="Leuchten für Kinder" img="leuchten_kinder.jpg"/>
+				<item name="Lichtwecker" img="lichtwecker.jpg"/>
+				<item name="Nachttischlampe" img="nachttischlampe.jpg"/>
+				<item name="Schreibtischlampe" img="schreibtischlampe.jpg"/>
+				<item name="Standleuchte" img="standleuchte.jpg"/>
+				<item name="Tageslichtleuchte" img="tageslichtleuchte.jpg"/>
+				<item name="Wandbeleuchtung" img="wandleuchte.jpg"/>
+			</item>
+			<item name="Leuchtmittel" img="leuchtmittel.jpg">
+				<item name="Energiesparlampe" img="leuchtmittel.jpg"/>
+				<item name="Glühlampe" img="gluehbirne.jpg"/>
+				<item name="Halogenlampe" img="halogenlampe.jpg"/>
+				<item name="LED-Lampe" img="ledlampe.jpg"/>
+			</item>
+			<item name="Taschenlampe" img="taschenlampe.jpg"/>
+		</item>
+		<item name="Elektro-Kleingeräte" img="kueche.png">
+			<item name="Bügeleisen" img="Buegeleisen.png">
+				<item name="Bügeltisch" img="buegeltisch.png"/>
+				<item name="Dampfbügeleisen" img="Dampfbuegeleisen.jpg"/>
+				<item name="Dampfbügelstation" img="Buegeleisen.png"/>
+				<item name="Reisebügeleisen" img="Reise-Dampfbuegeleisen.png"/>
+			</item>
+			<item name="Elektro-Küchengeräte" img="kueche.png">
+				<item name="Mixer" img="StandMixer.png">
+					<item name="Blender" img="kitchenaid_blender.png"/>
+					<item name="Entsafter" img="entsafter.png"/>
+					<item name="Handrührer" img="handruehrer.png"/>
+					<item name="Stabmixer" img="stabmixer.png"/>
+					<item name="Standmixer" img="StandMixer.png"/>
+				</item>
+				<item name="Allesschneider" img="allesschneider.png"/>
+				<item name="Crepesmaker" img="crepe-maker.png"/>
+				<item name="Eierkocher" img="Eierkocher.jpg"/>
+				<item name="Elektrische Fondue" img="Elektro-Fondue.jpg"/>
+				<item name="Elektromesser" img="elektromesser.png"/>
+				<item name="Fritteuse" img="fritteuse.jpg"/>
+				<item name="Raclette" img="raclette.jpg"/>
+				<item name="Toaster" img="toaster.png"/>
+				<item name="Wasserkocher" img="Wasserkocher.jpg"/>
+				<item name="Zitruspresse" img="zitruspresse.png"/>
+			</item>
+			<item name="Kaffee und Tee" img="Kaffeemaschine.jpg">
+				<item name="Espressomaschine" img="espressomaschine.png"/>
+				<item name="Filterkaffeemaschine" img="Kaffeemaschine.jpg"/>
+				<item name="Kaffeekapsel-Maschine" img="kaffeekapsel.jpg"/>
+				<item name="Kaffeepad-Maschinen" img="kaffeepad.jpg"/>
+				<item name="Kaffeevollautomaten" img="kaffeevollautomat.jpg"/>
+				<item name="Teebereiter" img="teebereiter.jpg"/>
+			</item>
+			<item name="Staubsauger" img="staubsauger.png">
+				<item name="Robotersauger" img="staubsauger-roboter.jpg"/>
+				<item name="Staubsauger mit Beutel" img="staubsauger.png"/>
+				<item name="Staubsauger ohne Beutel" img="staubsauger_ohne_filter.png"/>
+				<item name="Staubsaugerbeutel" img="staubsaugerbeutel.png"/>
+			</item>
+		</item>
+		<item name="Elektro-Großgeräte" img="elektrogeraete_gross.png">
+			<item name="Geschirrspüler" img="geschirrspueler.png">
+				<item name="Freistehende Spüler" img="geschirrspueler.png"/>
+				<item name="Teilintegrierte Spüler" img="teilintegrierbar_spueler.jpg"/>
+				<item name="Vollintegrierte Spüler" img="einbau_geschierspueler.jpg"/>
+				<item name="Tischgeschirrspüler" img="tischgeschierspueler.png"/>
+			</item>
+			<item name="Kochen, Backen" img="backen.png">
+				<item name="Backofen" img="backen.png"/>
+				<item name="Dunstabzugshaube" img="Dunstabzugshaube.jpg"/>
+				<item name="Herd" img="herd.jpg"/>
+				<item name="Herd-Kochfeld-Kombination" img="herd.jpg"/>
+				<item name="Kochfeld" img="kochfeld.jpg"/>
+				<item name="Mikrowelle" img="mikrowelle.png"/>
+				<item name="Mini-Backofen" img="universalofen.png"/>
+			</item>
+			<item name="Kühl- und Gefriergeräte" img="kuehlschrank.png">
+				<item name="Kühlschränke" img="kuehlschrank.png"/>
+				<item name="Mini-Kühlschrank" img="mini_kuehlschrank.jpg"/>
+				<item name="Kühl-Gefrier-Kombination" img="kuehlschrank-2.png"/>
+				<item name="Gefrierschrank" img="Gefrierschrank.jpg"/>
+				<item name="Gefriertruhen" img="Gefrierschrank.jpg"/>
+				<item name="Weinkühlschrank" img="Wein-Kuehlschrank.jpg"/>
+			</item>
+			<item name="Waschmaschinen, Trockner" img="waschmaschine.png">
+				<item name="Trockner" img="trockner.jpg"/>
+				<item name="Waschmaschine" img="waschmaschine.png"/>
+				<item name="Waschtrockner" img="waschtrockner.png"/>
+				<item name="Wäscheschleudern" img="waescheschleudern.png"/>
+			</item>
+		</item>
+	</item>
+</items>

@@ -52,14 +52,14 @@
 //
 //	ex = [[IDPExercise alloc] init];
 //	ex.menuIdentifier = @"GridMenuBC";
-//	ex.dataSet = [NSNumber numberWithInt:0];
+//	ex.dataSet = [NSNumber numberWithInt:1];
 //	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Obst", nil];
 //	
 //	[array addObject:ex];
 //
 	ex = [[IDPExercise alloc] init];
 	ex.menuIdentifier = @"Dropdown";
-	ex.dataSet = [NSNumber numberWithInt:0];
+	ex.dataSet = [NSNumber numberWithInt:1];
 	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Gurke", @"Birne", nil];
 
 	[array addObject:ex];

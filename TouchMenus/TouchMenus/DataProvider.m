@@ -49,7 +49,7 @@ static DataProvider *_sharedMySingleton = nil;
 		
 		dataSet1 = YES;
 		
-		data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sample2" ofType:@"xml"]];
+		data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"shop" ofType:@"xml"]];
 		document = [SMXMLDocument documentWithData:data error:&error];
 		item = document.root;
 		rootElements2 = [[self getChildrenOf:item usingParent:nil] copy];
