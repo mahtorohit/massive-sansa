@@ -584,6 +584,7 @@
 		F9F2C6A416E3A1E900448F2B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F2C6A316E3A1E900448F2B /* MessageUI.framework */; };
 		F9F2C6A616E3AAFA00448F2B /* shop.xml in Resources */ = {isa = PBXBuildFile; fileRef = F9F2C6A516E3AAFA00448F2B /* shop.xml */; };
 		F9F2C6A816E3B58600448F2B /* zitruspresse.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F2C6A716E3B58600448F2B /* zitruspresse.png */; };
+		F9F2C6AA16E3C58900448F2B /* menus_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F2C6A916E3C58900448F2B /* menus_icon@2x.png */; };
 		F9FD19F316D699520076CA29 /* IDPExercise.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FD19F216D699520076CA29 /* IDPExercise.m */; };
 		F9FD19F616D6B37D0076CA29 /* GMCollectionViewControllerNoBC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FD19F516D6B37D0076CA29 /* GMCollectionViewControllerNoBC.m */; };
 		F9FD19F816D6BABF0076CA29 /* back button bw.png in Resources */ = {isa = PBXBuildFile; fileRef = F9FD19F716D6BABE0076CA29 /* back button bw.png */; };
@@ -1201,6 +1202,7 @@
 		F9F2C6A316E3A1E900448F2B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		F9F2C6A516E3AAFA00448F2B /* shop.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = shop.xml; sourceTree = "<group>"; };
 		F9F2C6A716E3B58600448F2B /* zitruspresse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zitruspresse.png; sourceTree = "<group>"; };
+		F9F2C6A916E3C58900448F2B /* menus_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menus_icon@2x.png"; sourceTree = "<group>"; };
 		F9FD19F116D699520076CA29 /* IDPExercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPExercise.h; sourceTree = "<group>"; };
 		F9FD19F216D699520076CA29 /* IDPExercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPExercise.m; sourceTree = "<group>"; };
 		F9FD19F416D6B37D0076CA29 /* GMCollectionViewControllerNoBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMCollectionViewControllerNoBC.h; sourceTree = "<group>"; };
@@ -1719,6 +1721,7 @@
 		F9BAFCC716A83D8500314AA9 = {
 			isa = PBXGroup;
 			children = (
+				F9F2C6A916E3C58900448F2B /* menus_icon@2x.png */,
 				F9F2C6A316E3A1E900448F2B /* MessageUI.framework */,
 				F9BAFCDC16A83D8500314AA9 /* TouchMenus */,
 				F9BAFCD516A83D8500314AA9 /* Frameworks */,
@@ -2631,6 +2634,7 @@
 				85B7CC5316E3A07800584BA7 /* xp.png in Resources */,
 				F9F2C6A616E3AAFA00448F2B /* shop.xml in Resources */,
 				F9F2C6A816E3B58600448F2B /* zitruspresse.png in Resources */,
+				F9F2C6AA16E3C58900448F2B /* menus_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
