@@ -187,7 +187,8 @@ int cnt = 0;
 	//Protokollierung aller gelaufenen Wege hier möglich!
 
 	[[CSVLogger sharedInstance] logToFileAt:CACurrentMediaTime() mesage:@"SELECT" itemTitle:[item getTitle]];
-	
+    NSLog(@"Selected: %@ and target is %@", item.getTitle, _targetItem);
+    
 	if ([[item getTitle] isEqualToString:self.targetItem])
 	{
 		[self finishedTask];

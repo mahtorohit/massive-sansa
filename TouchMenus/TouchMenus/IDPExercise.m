@@ -21,17 +21,25 @@
 //Dropdown
 //FastActionTreeView
 //UnfoldingList
+// Fast Action Tree
 
 //MyCollectionViewController
 
 + (NSMutableArray *) exerciseSet
 {
 	NSMutableArray *array = [[NSMutableArray alloc] init];
-	
+
 	IDPExercise *ex = [[IDPExercise alloc] init];
 	ex.menuIdentifier = @"UnfoldingList";
 	ex.dataSet = [NSNumber numberWithInt:0];
 	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Käse", nil];
+
+	[array addObject:ex];
+    
+    ex = [[IDPExercise alloc] init];
+	ex.menuIdentifier = @"FastActionTreeView";
+	ex.dataSet = [NSNumber numberWithInt:0];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Birne",  @"Apfel", nil];
 	
 	[array addObject:ex];
 

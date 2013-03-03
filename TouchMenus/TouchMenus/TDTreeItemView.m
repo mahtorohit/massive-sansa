@@ -75,6 +75,7 @@
 - (void)setSelected:(BOOL)_selected {
     self->selected_ = _selected;
     if (selected_) {
+        [self.menuItem selectItem];
         self.backgroundColor = COLOR_SELECTED;
     } else {
         self.backgroundColor = COLOR_UNSELECTED;

@@ -63,7 +63,6 @@
 - (void) drawChildrenForMenuItem: (TDTreeItemView *) treeMenuItem {
     
     NSAssert(treeMenuItem != nil, @"TreeItemView is nil!");
-    NSLog(@"Drawing children for menu item %@", treeMenuItem.menuItem.getTitle);
     
     NSArray *children = treeMenuItem.menuItem.getChildren;
     int childrenCount = children.count;
@@ -131,11 +130,8 @@
     MenuItem *clickedMenuItem = treeItemView.menuItem;
     BOOL hasChildren = (clickedMenuItem.getChildren.count > 0);
     
-    if (hasChildren) {
+    if (hasChildren)
         [self drawChildrenForMenuItem: treeItemView];
-    } else {
-        // Proceed to logging handler
-    }
     
     [self playClickAudio];
     previousSelected = currentSelected;
@@ -159,11 +155,8 @@
         if (CGRectContainsPoint(subview.frame, touchLocation)){
             TDTreeItemView *touchedItem = (TDTreeItemView *) subview;
             
-//			NSLog(@"Touch: %@", touchedItem.menuItem.getTitle);
-            [touchedItem.menuItem selectItem];
-			
             if (!touchedItem.isExpanded) {
-                
+
                 touchedItem.isExpanded = YES;
                 [touchedItem setSelected:YES];
                 
