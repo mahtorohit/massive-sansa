@@ -14,6 +14,7 @@
 
 @property NSFileHandle *file;
 @property UIViewController *controller;
+@property NSString *fileName;
 
 @end
 
@@ -21,6 +22,7 @@
 
 @synthesize file = _file;
 @synthesize controller = _controller;
+@synthesize fileName = _fileName;
 
 static CSVLogger *_sharedMySingleton = nil;
 
@@ -51,14 +53,24 @@ static CSVLogger *_sharedMySingleton = nil;
 	self = [super init];
 	if (self != nil) {
 		
-		NSString *name = [NSString stringWithFormat:@"logfile.csv"];
+		NSNumber *number = [[NSUserDefaults standardUserDefaults] objectForKey:@"countingNumber"];
+		if (number == nil)
+		{
+			number = [NSNumber numberWithInt:0];
+			[[NSUserDefaults standardUserDefaults] setObject:number forKey:@"countingNumber"];
+			[[NSUserDefaults standardUserDefaults] synchronize];
+		} else {
+			number = [NSNumber numberWithInt:[number intValue]+1];
+			[[NSUserDefaults standardUserDefaults] setObject:number forKey:@"countingNumber"];
+			[[NSUserDefaults standardUserDefaults] synchronize];
+		}
+		
+		self.fileName = [NSString stringWithFormat:@"logfile%i.csv", [number intValue]];
 		
 		//Get the file path
 		NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-		NSString *fileName = [documentsDirectory stringByAppendingPathComponent:name];
+		NSString *fileName = [documentsDirectory stringByAppendingPathComponent:self.fileName];
 		
-		[[NSFileManager defaultManager] removeItemAtPath:fileName error:nil];
-		NSLog(@"removed");
 		[[NSFileManager defaultManager] createFileAtPath:fileName contents:nil attributes:nil];
 		
 		self.file = [NSFileHandle fileHandleForUpdatingAtPath:fileName];
@@ -112,11 +124,11 @@ static CSVLogger *_sharedMySingleton = nil;
     dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     docsDir = [dirPaths objectAtIndex:0];
     // Build the path to the database file
-    NSString *databasePath = [docsDir stringByAppendingPathComponent: @"logfile.csv"];
+    NSString *databasePath = [docsDir stringByAppendingPathComponent:self.fileName];
 	
     NSData *myData = [NSData dataWithContentsOfFile:databasePath];
     
-    [picker addAttachmentData:myData mimeType:@"application/binary" fileName:@"logfile.csv"];
+    [picker addAttachmentData:myData mimeType:@"application/binary" fileName:self.fileName];
     
     // Fill out the email body text
     NSString *emailBody = @"CSV-File";
