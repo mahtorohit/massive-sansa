@@ -26,6 +26,11 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[self.popover dismissPopoverAnimated:NO];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
