@@ -2,11 +2,8 @@
 	<item name="Computer, Software" img="Computer_icon.png">
 		<item name="Computer" img="Computer_icon.png">
 			<item name="Desktop PCs" img="Desktop_PC.png">
-				<item name="Apple" img="apple_comp.png">
-					<item name="iMac" img="Imac.png"/>
-					<item name="MacMini" img="Mac_mini.png"/>
-				</item>
 				<item name="Gaming-PC" img="Gaming-PC.png"/>
+				<item name="iMac" img="Imac.png"/>
 				<item name="Multimedia-PC" img="Multimedia_PC.png"/>
 				<item name="Office-PC" img="office_pc.png"/>
 			</item>
@@ -53,12 +50,7 @@
 			<item name="Betriebssysteme" img="os.jpg">
 				<item name="Linux" img="linux-inside.png"/>
 				<item name="MacOS" img="MacOS.png"/>
-				<item name="Windows" img="windows.png">
-					<item name="Windows7" img="win7.png"/>
-					<item name="Windows8" img="Windows8.png"/>
-					<item name="Vista" img="vista.png"/>
-					<item name="XP" img="xp.png"/>
-				</item>
+				<item name="Windows 8" img="windows.png"/>
 			</item>
 			<item name="Antivirus" img="antivirus.png"/>
 			<item name="Brennen, Rippen" img="brennen.png"/>
@@ -229,15 +221,10 @@
 				<item name="Wegeleuchten" img="wegeleuchten.jpg"/>
 			</item>
 			<item name="Innenbeleuchtung" img="innenbeleuchtung.jpg">
-				<item name="Deckenbeleuchtung" img="deckenbeleuchtung.jpg">
-					<item name="Büro-Deckenleuchte" img="buero_beleuchtung.jpg"/>
-					<item name="Deckenleuchte" img="deckenleuchte.jpg"/>
-					<item name="Deckenventilator" img="ventilator.jpg"/>
-					<item name="Hängeleuchte" img="haengeleuchte.jpg"/>
-					<item name="Kronleuchter" img="kronleuchter.jpg"/>
-					<item name="Spotleuchte" img="deckenbeleuchtung.jpg"/>
-				</item>
+				<item name="Deckenleuchte" img="deckenleuchte.jpg"/>
 				<item name="Bad-Beleuchtung" img="Badbeleuchtung.png"/>
+				<item name="Hängeleuchte" img="haengeleuchte.jpg"/>
+				<item name="Kronleuchter" img="kronleuchter.jpg"/>
 				<item name="Leuchten für Kinder" img="leuchten_kinder.jpg"/>
 				<item name="Lichtwecker" img="lichtwecker.jpg"/>
 				<item name="Nachttischlampe" img="nachttischlampe.jpg"/>
@@ -262,20 +249,15 @@
 				<item name="Reisebügeleisen" img="Reise-Dampfbuegeleisen.png"/>
 			</item>
 			<item name="Elektro-Küchengeräte" img="kueche.png">
-				<item name="Mixer" img="StandMixer.png">
-					<item name="Blender" img="kitchenaid_blender.png"/>
-					<item name="Entsafter" img="entsafter.png"/>
-					<item name="Handrührer" img="handruehrer.png"/>
-					<item name="Stabmixer" img="stabmixer.png"/>
-					<item name="Standmixer" img="StandMixer.png"/>
-				</item>
 				<item name="Allesschneider" img="allesschneider.png"/>
 				<item name="Crepesmaker" img="crepe-maker.png"/>
 				<item name="Eierkocher" img="Eierkocher.jpg"/>
 				<item name="Elektrische Fondue" img="Elektro-Fondue.jpg"/>
 				<item name="Elektromesser" img="elektromesser.png"/>
 				<item name="Fritteuse" img="fritteuse.jpg"/>
+				<item name="Handrührer" img="handruehrer.png"/>
 				<item name="Raclette" img="raclette.jpg"/>
+				<item name="Stabmixer" img="stabmixer.png"/>
 				<item name="Toaster" img="toaster.png"/>
 				<item name="Wasserkocher" img="Wasserkocher.jpg"/>
 				<item name="Zitruspresse" img="zitruspresse.png"/>

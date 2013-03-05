@@ -202,16 +202,16 @@
 }
 
 - (void) playClickAudio {
-    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/button-46.mp3", [[NSBundle mainBundle] resourcePath]]];
-	
-	NSError *error;
-	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-	audioPlayer.numberOfLoops = 0;
-	
-	if (audioPlayer == nil)
-		NSLog(@"%@", [error description]);
-	else
-		[audioPlayer play];
+//    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/button-46.mp3", [[NSBundle mainBundle] resourcePath]]];
+//	
+//	NSError *error;
+//	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+//	audioPlayer.numberOfLoops = 0;
+//	
+//	if (audioPlayer == nil)
+//		NSLog(@"%@", [error description]);
+//	else
+//		[audioPlayer play];
 }
 
 - (void) setupGestureRecognizer {
