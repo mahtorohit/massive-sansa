@@ -50,7 +50,7 @@
 	UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:gridView];
 	self.navController = nc;
 	
-	UIView *navView = [[UIView alloc] initWithFrame:CGRectMake(0, 66, 1024, 650)];
+	UIView *navView = [[UIView alloc] initWithFrame:CGRectMake(0, 66, 1024, 702)];
 	[navView setClipsToBounds:YES];
 	[navView addSubview:self.navController.view];
 	
