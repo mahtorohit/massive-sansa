@@ -106,13 +106,13 @@
 //    
 //	[array addObject:ex];
 //    
-//    ex = [[IDPExercise alloc] init];
-//	ex.menuIdentifier = @"HorizList";
-//	ex.dataSet = [NSNumber numberWithInt:1];
-//	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Xbox 360", @"Klavier", @"Projektor", @"Blu-Ray Heimkinosystem", @"Kochen, Backen", @"Waschtrockner", nil];
-//    
-//	[array addObject:ex];
-//	
+    ex = [[IDPExercise alloc] init];
+	ex.menuIdentifier = @"HorizList";
+	ex.dataSet = [NSNumber numberWithInt:1];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Xbox 360", @"Klavier", @"Projektor", @"Blu-Ray Heimkinosystem", @"Kochen, Backen", @"Waschtrockner", nil];
+    
+	[array addObject:ex];
+	
 	return array;
 	
 }
