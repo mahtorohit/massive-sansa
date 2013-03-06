@@ -18,6 +18,14 @@
 
 @synthesize treeItems;
 
+- (void)resetMenu
+{
+	for (TreeItem* item in treeItems) {
+		[item setUnfolded:NO];
+	}
+	[self.tableView reloadData];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

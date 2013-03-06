@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "DataProvider.h"
 #import "DDTableViewController.h"
+#import "IDPTaskProvider.h"
 
-@interface DDViewController : UIViewController <selectionDelegate, UIPopoverControllerDelegate>
+
+@interface DDViewController : UIViewController <selectionDelegate, UIPopoverControllerDelegate, MenuCandidate>
 
 @end

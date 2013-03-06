@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IDPTaskProvider.h"
 
-@interface ULViewController : UITableViewController
+@interface ULViewController : UITableViewController<MenuCandidate>
 
 @property (strong, nonatomic) NSArray* treeItems;
 

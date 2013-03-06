@@ -125,7 +125,7 @@
 	
 	} else {
 		
-//		[self.sdelegate selectMenuItem:[self.menuItems objectAtIndex:[indexPath row]]];
+		[self.sdelegate selectMenuItem:[self.menuItems objectAtIndex:[indexPath row]]];
 		
 	}
 }

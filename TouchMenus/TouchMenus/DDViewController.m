@@ -7,7 +7,6 @@
 //
 
 #import "DDViewController.h"
-#import "IDPTaskProvider.h"
 
 @interface DDViewController ()
 
@@ -29,6 +28,11 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[self.popover dismissPopoverAnimated:NO];
+}
+
+- (void) resetMenu
+{
+//	[self.popover dismissPopoverAnimated:NO];
 }
 
 - (void)didReceiveMemoryWarning
