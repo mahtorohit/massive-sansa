@@ -16,7 +16,8 @@
 
 @protocol ExperimentController <NSObject>
 
-- (UIViewController *) createViewControllerOfName:(NSString *)viewControllerName;
+- (void) unlock;
+- (UIViewController *) createViewControllerOfName:(NSString *)viewControllerName andLock:(BOOL)lock;
 - (void) setTaskMessage:(NSString *)message;
 - (void) didFinish;
 - (void) didFinishExperiment;

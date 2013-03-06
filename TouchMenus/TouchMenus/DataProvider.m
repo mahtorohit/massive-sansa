@@ -10,7 +10,9 @@
 
 NSArray* rootElements1;
 NSArray* rootElements2;
-BOOL dataSet1;
+NSArray* rootElements3;
+
+NSInteger dataSet;
 
 static DataProvider *_sharedMySingleton = nil;
 
@@ -47,16 +49,22 @@ static DataProvider *_sharedMySingleton = nil;
 		SMXMLElement *item = document.root;
 		rootElements1 = [[self getChildrenOf:item usingParent:nil] copy];
 		
-		dataSet1 = YES;
+		dataSet = 0;
 		
 		data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"shop" ofType:@"xml"]];
 		document = [SMXMLDocument documentWithData:data error:&error];
 		item = document.root;
 		rootElements2 = [[self getChildrenOf:item usingParent:nil] copy];
-	
+		
+		data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"dummy" ofType:@"xml"]];
+		document = [SMXMLDocument documentWithData:data error:&error];
+		item = document.root;
+		rootElements3 = [[self getChildrenOf:item usingParent:nil] copy];
+
 		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 			[self loadPicsFor:rootElements1];
 			[self loadPicsFor:rootElements2];
+			[self loadPicsFor:rootElements3];
 			dispatch_async(dispatch_get_main_queue(), ^{
 				
 				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Cache"
@@ -106,7 +114,7 @@ static DataProvider *_sharedMySingleton = nil;
 
 
 - (NSArray *) getRootLevelElements {
-	return dataSet1 ? rootElements1 : rootElements2;
+	return dataSet == 0 ? rootElements1 : dataSet == 1 ? rootElements2 : rootElements3;
 }
 
 - (MenuItem *)getRootMenuItem {
@@ -125,7 +133,7 @@ static DataProvider *_sharedMySingleton = nil;
 
 - (void) useDataset:(NSInteger)x
 {
-	dataSet1 = x == 0;
+	dataSet = x;
 }
 
 @end

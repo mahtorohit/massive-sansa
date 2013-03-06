@@ -12,12 +12,14 @@
 @interface MainViewController ()
 
 @property UIViewController *controller;
+@property UIView *lockView;
 
 @end
 
 @implementation MainViewController
 
 @synthesize controller = _controller;
+@synthesize lockView = _lockView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,7 +46,14 @@
 	
 }
 
-- (UIViewController *) createViewControllerOfName:(NSString *)viewControllerName
+- (void)unlock
+{
+	[self.lockView removeFromSuperview];
+	[self.startButton setHidden:NO];
+
+}
+
+- (UIViewController *) createViewControllerOfName:(NSString *)viewControllerName andLock:(BOOL)lock
 {
 	[self.taskLabel setText:@"Einführung"];
 	
@@ -55,6 +64,14 @@
 	
 	[self.view addSubview:self.controller.view];
 	[self.controller.view setFrame:CGRectMake(0, 66, self.view.bounds.size.width, self.view.bounds.size.height - 66)];
+
+	if (lock)
+	{
+		self.lockView = [[UIView alloc] initWithFrame:CGRectMake(0, 66, 1024, 702)];
+		[self.view addSubview:self.lockView];
+		[self.startButton setHidden:YES];
+	}
+	
 	
 	return self.controller;
 }

@@ -21,6 +21,7 @@
 @property NSMutableArray *exercises;
 @property IDPExercise *currentExercise;
 @property AVAudioPlayer *audioPlayer;
+@property UIAlertView *alert;
 
 @end
 
@@ -33,6 +34,9 @@
 @synthesize exercises = _exercises;
 
 @synthesize audioPlayer = _audioPlayer;
+
+@synthesize alert = _alert;
+
 
 static IDPTaskProvider *_sharedMySingleton = nil;
 
@@ -79,10 +83,23 @@ int cnt = 0;
 	
 	[[DataProvider sharedInstance] useDataset:[self.currentExercise.dataSet integerValue]];
 	
-	UIViewController *vc = [self.experimentControllerDelegate createViewControllerOfName:self.currentExercise.menuIdentifier];
+	BOOL lock = [self.currentExercise.dataSet intValue] == 2;
+	
+	UIViewController *vc = [self.experimentControllerDelegate createViewControllerOfName:self.currentExercise.menuIdentifier andLock:lock];
 	self.currentMenu = (id<MenuCandidate>)vc; //TODO: MAKE SURE THIS HOLDS FOR EVERY MENU
 	
 	vc = nil;
+	
+	if (lock)
+	{
+		[NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(unlock) userInfo:nil repeats:NO];
+	} else {
+		[self startNextExperiment];
+	}
+}
+- (void)unlock
+{
+	[self.experimentControllerDelegate unlock];
 }
 
 - (void) startNextExperiment
@@ -112,14 +129,41 @@ int cnt = 0;
 		{
 			//done with ex
 			
-			[[CSVLogger sharedInstance] logToFileAt:endTime message:@"EXERCISE DONE" itemTitle:@""];
-			
-			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gefunden"
-															message:@"Weiter mit dem nächsten Menü"
-														   delegate:self
-												  cancelButtonTitle:@"OK"
-												  otherButtonTitles:nil];
-			[alert show];
+			//was it a dummy exercise???
+			if ([self.currentExercise.dataSet intValue] == 2) {
+				[[CSVLogger sharedInstance] logToFileAt:endTime message:@"EXERCISE DONE" itemTitle:@""];
+				
+				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Los gehts!"
+																message:@""
+															   delegate:self
+													  cancelButtonTitle:@"OK"
+													  otherButtonTitles:nil];
+				[alert show];
+			}
+			//is the next one the same menu???
+			else if ([self.currentExercise.menuIdentifier isEqualToString:((IDPExercise *)[self.exercises lastObject]).menuIdentifier]) {
+				[[CSVLogger sharedInstance] logToFileAt:endTime message:@"EXERCISE DONE" itemTitle:@""];
+				
+				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gefunden"
+																message:@"Weiter mit dem nächsten Shop"
+															   delegate:self
+													  cancelButtonTitle:@"OK"
+													  otherButtonTitles:nil];
+				[alert show];
+			}
+			else
+			{
+				[[CSVLogger sharedInstance] logToFileAt:endTime message:@"EXERCISE DONE" itemTitle:@""];
+				
+				self.alert = [[UIAlertView alloc] initWithTitle:@"Gefunden"
+																message:@"Das wars mit diesem Menü. \n\n Bitte wende dich an den Versuchsleiter um fortzufahren. \n\n  Weiter geht es mit den Fragebögen zu diesem Menü."
+															   delegate:self
+													  cancelButtonTitle:nil
+													  otherButtonTitles:nil];
+				[self.alert show];
+				[NSTimer scheduledTimerWithTimeInterval:120 target:self selector:@selector(makeDoneAlertClickable) userInfo:nil repeats:NO];
+				
+			}
 			
 		}
 		else
@@ -159,6 +203,21 @@ int cnt = 0;
 
 	}	
 }
+
+- (void) makeDoneAlertClickable
+{
+	[self.alert dismissWithClickedButtonIndex:99 animated:NO];
+	
+	[[CSVLogger sharedInstance] logToFileAt:endTime message:@"EXERCISE DONE" itemTitle:@""];
+	
+	self.alert = [[UIAlertView alloc] initWithTitle:@"Gefunden"
+											message:@"Das wars mit diesem Menü. \n\n Bitte wende dich an den Versuchsleiter um fortzufahren. \n\n  Weiter geht es mit den Fragebögen zu diesem Menü."
+										   delegate:self
+								  cancelButtonTitle:@"Ok, fertig"
+								  otherButtonTitles:nil];
+	[self.alert show];
+}
+
 - (void) playClickAudio {
     NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/button-16.mp3", [[NSBundle mainBundle] resourcePath]]];
 	
@@ -174,9 +233,12 @@ int cnt = 0;
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
+	
+	if (buttonIndex == 99) return;
+	
 	startTime = CACurrentMediaTime();
 	
-	if ([alertView.title isEqualToString:@"Gefunden"]) //GEFUNDEN indicates that the current Experiment was completed
+	if ([alertView.title isEqualToString:@"Gefunden"] || [alertView.title isEqualToString:@"Los gehts!"]) //GEFUNDEN indicates that the current Experiment was completed
 	{
 		[self.experimentControllerDelegate didFinishExperiment];
 		[self prepareNextExperiment];

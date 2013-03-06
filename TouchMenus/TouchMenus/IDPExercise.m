@@ -95,24 +95,40 @@
     ex = [[IDPExercise alloc] init];
 	ex.menuIdentifier = @"Dropdown";
 	ex.dataSet = [NSNumber numberWithInt:1];
-	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"DVDs", @"Akustischer Bass" ,@"OLED TV",@"Freistehende Spüler",@"Standmixer", nil];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"DVDs", @"Akustischer Bass" ,@"OLED TV",@"Freistehende Spüler",@"Stabmixer", nil];
 	
 	[array addObject:ex];
     
+	//dummyEx
+	ex = [[IDPExercise alloc] init];
+	ex.menuIdentifier = @"Dropdown";
+	ex.dataSet = [NSNumber numberWithInt:2];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:nil];
+    
+	[array addObject:ex];
+	
 	ex = [[IDPExercise alloc] init];
 	ex.menuIdentifier = @"HorizList";
 	ex.dataSet = [NSNumber numberWithInt:0];
-	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Kaisersemmel", @"Breze", @"Rucola", @"Papaya", @"Himbeere", nil];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:/*@"Kaisersemmel", @"Breze", @"Rucola", @"Papaya",*/ @"Himbeere", nil];
     
 	[array addObject:ex];
     
     ex = [[IDPExercise alloc] init];
 	ex.menuIdentifier = @"HorizList";
 	ex.dataSet = [NSNumber numberWithInt:1];
-	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Xbox 360", @"Klavier", @"Projektor", @"Blu-Ray Heimkinosystem", @"Waschtrockner", nil];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:/*@"Xbox 360", @"Klavier", @"Projektor", @"Blu-Ray Heimkinosystem",*/ @"Waschtrockner", nil];
     
 	[array addObject:ex];
+   
+	//dummyEx
+	ex = [[IDPExercise alloc] init];
+	ex.menuIdentifier = @"HorizList";
+	ex.dataSet = [NSNumber numberWithInt:2];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:nil];
     
+	[array addObject:ex];
+
 	return array;
 	
 }
