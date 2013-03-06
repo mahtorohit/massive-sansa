@@ -31,7 +31,7 @@
     DataProvider *dataProvider = [DataProvider sharedInstance];
     self.rootMenuItem = [dataProvider getRootMenuItem];
     [self addRootItem: self.rootMenuItem];
-
+    
     [self setupGestureRecognizer];
     
 }
@@ -202,16 +202,7 @@
 }
 
 - (void) playClickAudio {
-//    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/button-46.mp3", [[NSBundle mainBundle] resourcePath]]];
-//	
-//	NSError *error;
-//	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-//	audioPlayer.numberOfLoops = 0;
-//	
-//	if (audioPlayer == nil)
-//		NSLog(@"%@", [error description]);
-//	else
-//		[audioPlayer play];
+    // Clenup needed - Antipattern
 }
 
 - (void) setupGestureRecognizer {
@@ -226,6 +217,10 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (void)resetMenu {
+    [self collapseTree:nil];
 }
 
 

@@ -10,8 +10,9 @@
 #import "MenuItem.h"
 #import "TDTreeItemView.h"
 #import <AVFoundation/AVFoundation.h>
+#import "IDPTaskProvider.h"
 
-@interface TDViewController : UIViewController<TDTreeItemProtocol> {
+@interface TDViewController : UIViewController<TDTreeItemProtocol, MenuCandidate> {
     AVAudioPlayer *audioPlayer;
 }
 
