@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "NCTableViewController.h"
+#import "IDPTaskProvider.h"
 
-@interface NCViewController : UIViewController <UIGestureRecognizerDelegate, BreadCrumbDelegate>
+
+@interface NCViewController : UIViewController <UIGestureRecognizerDelegate, BreadCrumbDelegate, MenuCandidate>
 
 @property (strong, nonatomic) IBOutlet UIButton *backButton;
 

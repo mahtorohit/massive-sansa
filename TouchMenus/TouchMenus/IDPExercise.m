@@ -70,7 +70,7 @@
 	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Prozessor",@"Interne Festplatte",@"Uhrenradio",@"Taschenlampe",@"Reisebügeleisen",nil];
 	
 	[array addObject:ex];
-
+    
 	ex = [[IDPExercise alloc] init];
 	ex.menuIdentifier = @"GridMenuBC";
 	ex.dataSet = [NSNumber numberWithInt:0];
@@ -84,7 +84,7 @@
 	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Webcam", @"Nintendo 3DS", @"PDA und Organizer", @"VOIP Telefone",@"Kochfeld", nil];
 	
 	[array addObject:ex];
-
+    
 	ex = [[IDPExercise alloc] init];
 	ex.menuIdentifier = @"Dropdown";
 	ex.dataSet = [NSNumber numberWithInt:0];
@@ -98,7 +98,7 @@
 	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"DVDs", @"Akustischer Bass" ,@"OLED TV",@"Freistehende Spüler",@"Standmixer", nil];
 	
 	[array addObject:ex];
-
+    
 	ex = [[IDPExercise alloc] init];
 	ex.menuIdentifier = @"HorizList";
 	ex.dataSet = [NSNumber numberWithInt:0];
@@ -112,7 +112,7 @@
 	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Xbox 360", @"Klavier", @"Projektor", @"Blu-Ray Heimkinosystem", @"Waschtrockner", nil];
     
 	[array addObject:ex];
-
+    
 	return array;
 	
 }

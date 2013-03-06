@@ -199,11 +199,11 @@
 		</item>
 		<item name="TV, Heimkino" img="tv2.png">
 			<item name="Fernseher" img="tv2.png">
-				<item name="LCD" img="lcd-tv.png"/>
-				<item name="LED Backlight" img="led_Tv.png"/>
-				<item name="OLED" img="OLED-TV.jpg.png"/>
-				<item name="Plasma" img="plasma.png"/>
-				<item name="Röhre" img="tv.png"/>
+				<item name="LCD TV" img="lcd-tv.png"/>
+				<item name="LED Backlight TV" img="led_Tv.png"/>
+				<item name="OLED TV" img="OLED-TV.jpg.png"/>
+				<item name="Plasma TV" img="plasma.png"/>
+				<item name="Röhre TV" img="tv.png"/>
 			</item>
 			<item name="Heimkinosysteme" img="Heimkinosystem.png">
 				<item name="Blu-Ray Heimkinosystem" img="Heimkinosystem.png"/>

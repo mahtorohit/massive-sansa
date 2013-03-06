@@ -9,7 +9,6 @@
 #import "NCViewController.h"
 #import "NCTableViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "IDPTaskProvider.h"
 
 @interface NCViewController ()
 {
@@ -22,6 +21,15 @@
 @end
 
 @implementation NCViewController
+
+
+- (void)resetMenu
+{
+	while ([[self.navController viewControllers] count] > 1)
+	{
+		[self controllerPop];
+	}
+}
 
 - (void)viewDidLoad
 {
