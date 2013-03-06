@@ -78,7 +78,7 @@
 			<item name="VJ Zubehör" img="vj_equipment.png"/>
 			<item name="Karaoke" img="karaoke.png"/>
 		</item>
-		<item name="Filme, TV" img="tv.png">
+		<item name="Filme, TV-Serien" img="tv.png">
 			<item name="Blu-ray" img="blu_ray.png"/>
 			<item name="Blu-ray 3D" img="3d-blu-ray.png"/>
 			<item name="DVDs" img="dvd.png"/>
@@ -197,7 +197,7 @@
 			</item>
 			<item name="PDA und Organizer" img="pda.png"/>
 		</item>
-		<item name="TV, Heimkino" img="tv2.png">
+		<item name="Fernseher, Heimkinos" img="tv2.png">
 			<item name="Fernseher" img="tv2.png">
 				<item name="LCD TV" img="lcd-tv.png"/>
 				<item name="LED Backlight TV" img="led_Tv.png"/>

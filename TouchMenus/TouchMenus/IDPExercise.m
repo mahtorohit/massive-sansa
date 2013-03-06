@@ -95,7 +95,7 @@
     ex = [[IDPExercise alloc] init];
 	ex.menuIdentifier = @"Dropdown";
 	ex.dataSet = [NSNumber numberWithInt:1];
-	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"DVDs", @"Akustischer Bass" ,@"OLED TV",@"Freistehende Spüler",@"Standmixer", nil];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"DVDs", @"Akustischer Bass" ,@"OLED TV",@"Freistehende Spüler",@"Stabmixer", nil];
 	
 	[array addObject:ex];
     
