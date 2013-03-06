@@ -80,7 +80,7 @@ int cnt = 0;
 	[[DataProvider sharedInstance] useDataset:[self.currentExercise.dataSet integerValue]];
 	
 	UIViewController *vc = [self.experimentControllerDelegate createViewControllerOfName:self.currentExercise.menuIdentifier];
-//	self.currentMenu = (id<MenuCandidate>)vc; //TODO: MAKE SURE THIS HOLDS FOR EVERY MENU
+	self.currentMenu = (id<MenuCandidate>)vc; //TODO: MAKE SURE THIS HOLDS FOR EVERY MENU
 	
 	vc = nil;
 }
@@ -89,7 +89,6 @@ int cnt = 0;
 {
 	startTime = CACurrentMediaTime();
 
-//	[self.currentMenu resetMenu];
 	[self startNextTask:NO];
 }
 
@@ -146,6 +145,8 @@ int cnt = 0;
 		//next
 		self.targetItem = [self.currentExercise.tasksForMenu lastObject];
 		[self.currentExercise.tasksForMenu removeLastObject];
+
+		[self.currentMenu resetMenu];
 		
 		[self.experimentControllerDelegate setTaskMessage:[NSString stringWithFormat:@"Bitte suchen Sie \"%@\"", self.targetItem]];
 		

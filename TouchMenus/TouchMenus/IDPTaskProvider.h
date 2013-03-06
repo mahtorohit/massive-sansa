@@ -12,7 +12,6 @@
 @protocol MenuCandidate <NSObject>
 - (void) resetMenu;
 	//resets all menu-structure to default;
-	//?? REQUIRED TO RELOAD DATA! (DataProvider may have been changed by taskprovider)
 @end
 
 @protocol ExperimentController <NSObject>

@@ -9,7 +9,6 @@
 #import "GMCollectionViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "MyCollectionViewController.h"
-#import "IDPTaskProvider.h"
 
 @interface GMCollectionViewController ()
 
@@ -28,6 +27,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+//delegate
+- (void)resetMenu
+{
+		while ([[self.navController viewControllers] count] > 1)
+		{
+			[self controllerPop];
+		}
 }
 
 - (void)viewDidAppear:(BOOL)animated

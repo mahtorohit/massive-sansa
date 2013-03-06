@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "NCTableViewController.h"
+#import "IDPTaskProvider.h"
 
-@interface GMCollectionViewController : UIViewController <BreadCrumbDelegate>
+@interface GMCollectionViewController : UIViewController <BreadCrumbDelegate, MenuCandidate>
 
 @property (strong, nonatomic) IBOutlet UIButton *backButton;
 

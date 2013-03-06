@@ -70,21 +70,7 @@
 	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Prozessor",@"Interne Festplatte", @"Kamerazubehör",@"Uhrenradio",@"Taschenlampe",@"Reisebügeleisen",nil];
 	
 	[array addObject:ex];
-    
-	ex = [[IDPExercise alloc] init];
-	ex.menuIdentifier = @"GridMenu";
-	ex.dataSet = [NSNumber numberWithInt:0];
-	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Muffins", @"Eisbergsalat", @"Schlagsahne", @"Kefir",@"Ananas",@"Cookies", nil];
-	
-	[array addObject:ex];
-    
-    ex = [[IDPExercise alloc] init];
-	ex.menuIdentifier = @"GridMenu";
-	ex.dataSet = [NSNumber numberWithInt:1];
-	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Finanzsoftware", @"Linux", @"Festnetztelefone", @"Leinwand",@"Staubsauger",@"Kaffeepad-Maschine", nil];
-	
-	[array addObject:ex];
-    
+   
 	ex = [[IDPExercise alloc] init];
 	ex.menuIdentifier = @"GridMenuBC";
 	ex.dataSet = [NSNumber numberWithInt:0];
@@ -95,37 +81,37 @@
     ex = [[IDPExercise alloc] init];
 	ex.menuIdentifier = @"GridMenuBC";
 	ex.dataSet = [NSNumber numberWithInt:1];
-	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Webcam", @"Nintendo 3DS", @"PDA und Organizer", @"VOIP Telefon",@"Geschirrspüler",@"Kochfeld", nil];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Webcam", @"Nintendo 3DS", @"PDA und Organizer", @"VOIP Telefone",@"Geschirrspüler",@"Kochfeld", nil];
 	
 	[array addObject:ex];
-    
-	ex = [[IDPExercise alloc] init];
-	ex.menuIdentifier = @"Dropdown";
-	ex.dataSet = [NSNumber numberWithInt:0];
-	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Sesambrötchen", @"Roggenvollkornbrot",@"Weißkohl",@"Lein",@"Birne",@"Zwetschge", nil];
-	
-	[array addObject:ex];
-    
-    ex = [[IDPExercise alloc] init];
-	ex.menuIdentifier = @"Dropdown";
-	ex.dataSet = [NSNumber numberWithInt:1];
-	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"DVDs", @"Akustischer Bass",@"Heimkinosysteme",@"OLED TV",@"Kühl- und Gefriergeräte",@"Freistehender Spüler", nil];
-	
-	[array addObject:ex];
-    
-	ex = [[IDPExercise alloc] init];
-	ex.menuIdentifier = @"HorizList";
-	ex.dataSet = [NSNumber numberWithInt:0];
-	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Kaisersemmel", @"Breze", @"Rucola", @"Stangensellerie", @"Papaya", @"Himbeere", nil];
-    
-	[array addObject:ex];
-    
-    ex = [[IDPExercise alloc] init];
-	ex.menuIdentifier = @"HorizList";
-	ex.dataSet = [NSNumber numberWithInt:1];
-	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Xbox 360", @"Klavier", @"Projektor", @"Blu-Ray Heimkinosystem", @"Waschmaninen, Trockner", @"Waschtrockner", nil];
-    
-	[array addObject:ex];
+//    
+//	ex = [[IDPExercise alloc] init];
+//	ex.menuIdentifier = @"Dropdown";
+//	ex.dataSet = [NSNumber numberWithInt:0];
+//	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Sesambrötchen", @"Roggenvollkornbrot",@"Weißkohl",@"Lein",@"Birne",@"Zwetschge", nil];
+//	
+//	[array addObject:ex];
+//    
+//    ex = [[IDPExercise alloc] init];
+//	ex.menuIdentifier = @"Dropdown";
+//	ex.dataSet = [NSNumber numberWithInt:1];
+//	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"DVDs", @"Akustischer Bass",@"Heimkinosysteme",@"OLED TV",@"Kühl- und Gefriergeräte",@"Freistehender Spüler", nil];
+//	
+//	[array addObject:ex];
+//    
+//	ex = [[IDPExercise alloc] init];
+//	ex.menuIdentifier = @"HorizList";
+//	ex.dataSet = [NSNumber numberWithInt:0];
+//	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Kaisersemmel", @"Breze", @"Rucola", @"Stangensellerie", @"Papaya", @"Himbeere", nil];
+//    
+//	[array addObject:ex];
+//    
+//    ex = [[IDPExercise alloc] init];
+//	ex.menuIdentifier = @"HorizList";
+//	ex.dataSet = [NSNumber numberWithInt:1];
+//	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Xbox 360", @"Klavier", @"Projektor", @"Blu-Ray Heimkinosystem", @"Waschmaninen, Trockner", @"Waschtrockner", nil];
+//    
+//	[array addObject:ex];
 	
 	return array;
 	
