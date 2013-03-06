@@ -32,87 +32,87 @@
 	IDPExercise *ex = [[IDPExercise alloc] init];
 	ex.menuIdentifier = @"UnfoldingList";
 	ex.dataSet = [NSNumber numberWithInt:0];
-	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Lauch",@"Radieschen",@"Aprikose",@"Limette",@"Kaugummis",@"Hustenbonbons", nil];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Lauch",@"Radieschen",@"Aprikose",@"Limette",@"Hustenbonbons", nil];
     
 	[array addObject:ex];
     
     ex = [[IDPExercise alloc] init];
 	ex.menuIdentifier = @"UnfoldingList";
 	ex.dataSet = [NSNumber numberWithInt:1];
-	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Tablet",@"Gaming-PC",@"Radios",@"Center-Lautsprecher",@"Leuchtmittel",@"Nachttischlampe", nil];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Tablet",@"Gaming-PC",@"Center-Lautsprecher",@"Handrührer",@"Nachttischlampe", nil];
     
 	[array addObject:ex];
 	
-//    ex = [[IDPExercise alloc] init];
-//	ex.menuIdentifier = @"FastActionTreeView";
-//	ex.dataSet = [NSNumber numberWithInt:0];
-//	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Erbsen", @"Weizen",@"Kiwi",@"Süßkirsche",@"Chips",@"Studentenfutter", nil];
-//	
-//	[array addObject:ex];
-//    
-//    ex = [[IDPExercise alloc] init];
-//	ex.menuIdentifier = @"FastActionTreeView";
-//	ex.dataSet = [NSNumber numberWithInt:1];
-//	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Fotodrucker", @"MacBook", @"MP3-Player",@"Systemkameras",@"Bügeleisen",@"Fritteuse", nil];
-//	
-//	[array addObject:ex];
-//    
-//	ex = [[IDPExercise alloc] init];
-//	ex.menuIdentifier = @"2DCoverflow";
-//	ex.dataSet = [NSNumber numberWithInt:0];
-//	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Broccoli",@"Kürbis", @"Buttermilch",@"Preiselbeere",@"Fruchtriegel",@"Milchschokolade",nil];
-//	
-//	[array addObject:ex];
-//    
-//    ex = [[IDPExercise alloc] init];
-//	ex.menuIdentifier = @"2DCoverflow";
-//	ex.dataSet = [NSNumber numberWithInt:1];
-//	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Prozessor",@"Interne Festplatte", @"Kamerazubehör",@"Uhrenradio",@"Taschenlampe",@"Reisebügeleisen",nil];
-//	
-//	[array addObject:ex];
-//
-//	ex = [[IDPExercise alloc] init];
-//	ex.menuIdentifier = @"GridMenuBC";
-//	ex.dataSet = [NSNumber numberWithInt:0];
-//	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Croissants", @"Fladenbrot", @"Fettarme Milch", @"Gouda",@"Haselnuss",@"Nektarine", nil];
-//	
-//	[array addObject:ex];
-//    
-//    ex = [[IDPExercise alloc] init];
-//	ex.menuIdentifier = @"GridMenuBC";
-//	ex.dataSet = [NSNumber numberWithInt:1];
-//	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Webcam", @"Nintendo 3DS", @"PDA und Organizer", @"VOIP Telefone",@"Geschirrspüler",@"Kochfeld", nil];
-//	
-//	[array addObject:ex];
-//
-//	ex = [[IDPExercise alloc] init];
-//	ex.menuIdentifier = @"Dropdown";
-//	ex.dataSet = [NSNumber numberWithInt:0];
-//	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Sesambrötchen", @"Roggenvollkornbrot",@"Weißkohl",@"Lein",@"Birne",@"Zwetschge", nil];
-//	
-//	[array addObject:ex];
-//    
-//    ex = [[IDPExercise alloc] init];
-//	ex.menuIdentifier = @"Dropdown";
-//	ex.dataSet = [NSNumber numberWithInt:1];
-//	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"DVDs", @"Akustischer Bass",@"Heimkinosysteme",@"OLED TV",@"Kühl- und Gefriergeräte",@"Freistehende Spüler", nil];
-//	
-//	[array addObject:ex];
-//
-//	ex = [[IDPExercise alloc] init];
-//	ex.menuIdentifier = @"HorizList";
-//	ex.dataSet = [NSNumber numberWithInt:0];
-//	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Kaisersemmel", @"Breze", @"Rucola", @"Stangensellerie", @"Papaya", @"Himbeere", nil];
-//    
-//	[array addObject:ex];
-//    
+    ex = [[IDPExercise alloc] init];
+	ex.menuIdentifier = @"FastActionTreeView";
+	ex.dataSet = [NSNumber numberWithInt:0];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects: @"Weizen",@"Kiwi",@"Süßkirsche",@"Chips",@"Studentenfutter", nil];
+	
+	[array addObject:ex];
+    
+    ex = [[IDPExercise alloc] init];
+	ex.menuIdentifier = @"FastActionTreeView";
+	ex.dataSet = [NSNumber numberWithInt:1];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Fotodrucker", @"MacBook", @"MP3-Player",@"Bügeleisen",@"Fritteuse", nil];
+	
+	[array addObject:ex];
+    
+	ex = [[IDPExercise alloc] init];
+	ex.menuIdentifier = @"2DCoverflow";
+	ex.dataSet = [NSNumber numberWithInt:0];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Broccoli",@"Kürbis", @"Buttermilch",@"Fruchtriegel",@"Milchschokolade",nil];
+	
+	[array addObject:ex];
+    
+    ex = [[IDPExercise alloc] init];
+	ex.menuIdentifier = @"2DCoverflow";
+	ex.dataSet = [NSNumber numberWithInt:1];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Prozessor",@"Interne Festplatte",@"Uhrenradio",@"Taschenlampe",@"Reisebügeleisen",nil];
+	
+	[array addObject:ex];
+    
+	ex = [[IDPExercise alloc] init];
+	ex.menuIdentifier = @"GridMenuBC";
+	ex.dataSet = [NSNumber numberWithInt:0];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Croissants", @"Fettarme Milch", @"Gouda",@"Haselnuss",@"Nektarine", nil];
+	
+	[array addObject:ex];
+    
+    ex = [[IDPExercise alloc] init];
+	ex.menuIdentifier = @"GridMenuBC";
+	ex.dataSet = [NSNumber numberWithInt:1];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Webcam", @"Nintendo 3DS", @"PDA und Organizer", @"VOIP Telefone",@"Kochfeld", nil];
+	
+	[array addObject:ex];
+    
+	ex = [[IDPExercise alloc] init];
+	ex.menuIdentifier = @"Dropdown";
+	ex.dataSet = [NSNumber numberWithInt:0];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Sesambrötchen", @"Roggenvollkornbrot",@"Weißkohl",@"Birne",@"Zwetschge", nil];
+	
+	[array addObject:ex];
+    
+    ex = [[IDPExercise alloc] init];
+	ex.menuIdentifier = @"Dropdown";
+	ex.dataSet = [NSNumber numberWithInt:1];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"DVDs", @"Akustischer Bass" ,@"OLED TV",@"Freistehende Spüler",@"Standmixer", nil];
+	
+	[array addObject:ex];
+    
+	ex = [[IDPExercise alloc] init];
+	ex.menuIdentifier = @"HorizList";
+	ex.dataSet = [NSNumber numberWithInt:0];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Kaisersemmel", @"Breze", @"Rucola", @"Papaya", @"Himbeere", nil];
+    
+	[array addObject:ex];
+    
     ex = [[IDPExercise alloc] init];
 	ex.menuIdentifier = @"HorizList";
 	ex.dataSet = [NSNumber numberWithInt:1];
-	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Xbox 360", @"Klavier", @"Projektor", @"Blu-Ray Heimkinosystem", @"Kochen, Backen", @"Waschtrockner", nil];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Xbox 360", @"Klavier", @"Projektor", @"Blu-Ray Heimkinosystem", @"Waschtrockner", nil];
     
 	[array addObject:ex];
-	
+    
 	return array;
 	
 }
