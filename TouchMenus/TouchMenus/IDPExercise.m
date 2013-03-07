@@ -39,7 +39,7 @@
     ex = [[IDPExercise alloc] init];
 	ex.menuIdentifier = @"FastActionTreeView";
 	ex.dataSet = [NSNumber numberWithInt:1];
-	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Fotodrucker", @"MacBook", @"MP3-Player",@"Bügeleisen",@"Fritteuse", nil];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Fotodrucker", @"MacBook", @"MP3-Player",@"Eierkocher",@"Fritteuse", nil];
 	[array addObject:ex];
 	//dummyEx
 	ex = [[IDPExercise alloc] init];
@@ -75,7 +75,7 @@
     ex = [[IDPExercise alloc] init];
 	ex.menuIdentifier = @"GridMenuBC";
 	ex.dataSet = [NSNumber numberWithInt:1];
-	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Webcam", @"Nintendo 3DS", @"PDA und Organizer", @"VOIP Telefone",@"Kochfeld", nil];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Webcam", @"Nintendo 3DS", @"PDA und Organizer", @"Anrufbeantworter",@"Kochfeld", nil];
 	[array addObject:ex];
 	//dummyEx
 	ex = [[IDPExercise alloc] init];
@@ -111,7 +111,7 @@
     ex = [[IDPExercise alloc] init];
 	ex.menuIdentifier = @"HorizList";
 	ex.dataSet = [NSNumber numberWithInt:1];
-	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"Xbox 360", @"Klavier", @"Projektor", @"Blu-Ray Heimkinosystem", @"Waschtrockner", nil];
+	ex.tasksForMenu = [[NSMutableArray alloc] initWithObjects:@"TV-Serien", @"Klavier", @"Projektor", @"Blu-Ray Heimkinosystem", @"Waschtrockner", nil];
 	[array addObject:ex];
 	//dummyEx
 	ex = [[IDPExercise alloc] init];
