@@ -15,6 +15,6 @@
 @property NSMutableArray *tasksForMenu;
 
 
-+ (NSMutableArray *) exerciseSet;
++ (NSMutableArray *) exerciseSet:(NSInteger)number;
 
 @end

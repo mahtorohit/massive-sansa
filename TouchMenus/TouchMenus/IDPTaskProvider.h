@@ -31,6 +31,8 @@
 @property id<ExperimentController> experimentControllerDelegate;
 @property id<MenuCandidate> currentMenu;
 
+- (void)loadExerciseSet:(NSInteger *)val;
+
 //singleton
 + (IDPTaskProvider *) sharedInstance;
 

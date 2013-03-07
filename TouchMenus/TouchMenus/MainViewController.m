@@ -42,10 +42,25 @@ BOOL locked;
 	[super viewDidLoad];
 	
 	[DataProvider sharedInstance]; //just to be sure the images will be cached in the background
+
 	
+	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Reihenfolge festlegen"
+													 message:@"Limesurvey-Probanden-ID)"
+													delegate:self
+										   cancelButtonTitle:@"OK"
+										   otherButtonTitles:nil];
+	alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+	[alert show];
+	
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	NSString *input = [[alertView textFieldAtIndex:0] text];
+
+	[[IDPTaskProvider sharedInstance] loadExerciseSet:MAX(0,[input integerValue]-1)];
 	[[IDPTaskProvider sharedInstance] setExperimentControllerDelegate:self];
 	[[IDPTaskProvider sharedInstance] prepareNextExperiment];
-	
 }
 
 - (void)unlock
@@ -110,6 +125,12 @@ BOOL locked;
 	if (locked)
 	{
 		[self unlock];
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ausprobieren"
+														message:@"Jetzt hast Du die Möglichkeit, das Menü auszuprobieren"
+													   delegate:nil
+											  cancelButtonTitle:@"OK"
+											  otherButtonTitles:nil];
+		[alert show];
 	}
 	else
 	{

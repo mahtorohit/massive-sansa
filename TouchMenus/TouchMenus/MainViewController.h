@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "IDPTaskProvider.h"
 
-@interface MainViewController : UIViewController <ExperimentController>
+@interface MainViewController : UIViewController <ExperimentController, UIAlertViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *taskLabel;
 @property (strong, nonatomic) IBOutlet UIButton *startButton;

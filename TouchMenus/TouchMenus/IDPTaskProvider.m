@@ -67,10 +67,13 @@ static IDPTaskProvider *_sharedMySingleton = nil;
 	self = [super init];
 	if (self != nil) {
 		
-		self.exercises = [IDPExercise exerciseSet];
-		
 	}
 	return self;
+}
+
+- (void)loadExerciseSet:(NSInteger *)val
+{
+	self.exercises = [IDPExercise exerciseSet:val];
 }
 
 int cnt = 0;
@@ -187,6 +190,7 @@ int cnt = 0;
 	}
 	else
 	{
+		
 		//next
 		self.targetItem = [self.currentExercise.tasksForMenu lastObject];
 		[self.currentExercise.tasksForMenu removeLastObject];
@@ -201,7 +205,7 @@ int cnt = 0;
 											  cancelButtonTitle:@"OK"
 											  otherButtonTitles:nil];
 		[alert show];
-
+		
 	}	
 }
 
