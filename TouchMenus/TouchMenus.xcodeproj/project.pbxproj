@@ -603,6 +603,13 @@
 		F9F2C6CD16E7746100448F2B /* tiger.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F2C6BD16E7746100448F2B /* tiger.png */; };
 		F9F2C6CE16E7746100448F2B /* vogel.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F2C6BE16E7746100448F2B /* vogel.png */; };
 		F9F2C6D016E774BA00448F2B /* saeugetiere.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F2C6CF16E774BA00448F2B /* saeugetiere.png */; };
+		F9F2C6D816E88B3A00448F2B /* laufvogel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9F2C6D116E88B3900448F2B /* laufvogel.jpg */; };
+		F9F2C6D916E88B3A00448F2B /* pinguin.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F2C6D216E88B3900448F2B /* pinguin.png */; };
+		F9F2C6DA16E88B3A00448F2B /* seefische.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9F2C6D316E88B3900448F2B /* seefische.jpg */; };
+		F9F2C6DB16E88B3A00448F2B /* zander.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F2C6D416E88B3900448F2B /* zander.png */; };
+		F9F2C6DC16E88B3A00448F2B /* bachforelle.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F2C6D516E88B3900448F2B /* bachforelle.png */; };
+		F9F2C6DD16E88B3A00448F2B /* Fischecross.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9F2C6D616E88B3900448F2B /* Fischecross.jpg */; };
+		F9F2C6DE16E88B3A00448F2B /* flugvoegel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9F2C6D716E88B3A00448F2B /* flugvoegel.jpg */; };
 		F9FD19F316D699520076CA29 /* IDPExercise.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FD19F216D699520076CA29 /* IDPExercise.m */; };
 		F9FD19F616D6B37D0076CA29 /* GMCollectionViewControllerNoBC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FD19F516D6B37D0076CA29 /* GMCollectionViewControllerNoBC.m */; };
 		F9FD19F816D6BABF0076CA29 /* back button bw.png in Resources */ = {isa = PBXBuildFile; fileRef = F9FD19F716D6BABE0076CA29 /* back button bw.png */; };
@@ -1239,6 +1246,13 @@
 		F9F2C6BD16E7746100448F2B /* tiger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiger.png; sourceTree = "<group>"; };
 		F9F2C6BE16E7746100448F2B /* vogel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vogel.png; sourceTree = "<group>"; };
 		F9F2C6CF16E774BA00448F2B /* saeugetiere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saeugetiere.png; sourceTree = "<group>"; };
+		F9F2C6D116E88B3900448F2B /* laufvogel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = laufvogel.jpg; sourceTree = "<group>"; };
+		F9F2C6D216E88B3900448F2B /* pinguin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinguin.png; sourceTree = "<group>"; };
+		F9F2C6D316E88B3900448F2B /* seefische.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = seefische.jpg; sourceTree = "<group>"; };
+		F9F2C6D416E88B3900448F2B /* zander.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zander.png; sourceTree = "<group>"; };
+		F9F2C6D516E88B3900448F2B /* bachforelle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bachforelle.png; sourceTree = "<group>"; };
+		F9F2C6D616E88B3900448F2B /* Fischecross.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Fischecross.jpg; sourceTree = "<group>"; };
+		F9F2C6D716E88B3A00448F2B /* flugvoegel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flugvoegel.jpg; sourceTree = "<group>"; };
 		F9FD19F116D699520076CA29 /* IDPExercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPExercise.h; sourceTree = "<group>"; };
 		F9FD19F216D699520076CA29 /* IDPExercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPExercise.m; sourceTree = "<group>"; };
 		F9FD19F416D6B37D0076CA29 /* GMCollectionViewControllerNoBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMCollectionViewControllerNoBC.h; sourceTree = "<group>"; };
@@ -2075,6 +2089,13 @@
 		F9F2C6AD16E7743F00448F2B /* Dataset3_images */ = {
 			isa = PBXGroup;
 			children = (
+				F9F2C6D116E88B3900448F2B /* laufvogel.jpg */,
+				F9F2C6D216E88B3900448F2B /* pinguin.png */,
+				F9F2C6D316E88B3900448F2B /* seefische.jpg */,
+				F9F2C6D416E88B3900448F2B /* zander.png */,
+				F9F2C6D516E88B3900448F2B /* bachforelle.png */,
+				F9F2C6D616E88B3900448F2B /* Fischecross.jpg */,
+				F9F2C6D716E88B3A00448F2B /* flugvoegel.jpg */,
 				F9F2C6AE16E7746100448F2B /* DummyDatensatz */,
 			);
 			name = Dataset3_images;
@@ -2723,6 +2744,13 @@
 				F9F2C6CD16E7746100448F2B /* tiger.png in Resources */,
 				F9F2C6CE16E7746100448F2B /* vogel.png in Resources */,
 				F9F2C6D016E774BA00448F2B /* saeugetiere.png in Resources */,
+				F9F2C6D816E88B3A00448F2B /* laufvogel.jpg in Resources */,
+				F9F2C6D916E88B3A00448F2B /* pinguin.png in Resources */,
+				F9F2C6DA16E88B3A00448F2B /* seefische.jpg in Resources */,
+				F9F2C6DB16E88B3A00448F2B /* zander.png in Resources */,
+				F9F2C6DC16E88B3A00448F2B /* bachforelle.png in Resources */,
+				F9F2C6DD16E88B3A00448F2B /* Fischecross.jpg in Resources */,
+				F9F2C6DE16E88B3A00448F2B /* flugvoegel.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

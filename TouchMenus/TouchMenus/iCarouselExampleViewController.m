@@ -50,8 +50,11 @@
 	self.menuItem1 = [dp getRootMenuItem];
 	self.menuItem3 = nil;
 	
-	[self carouselReload:self.carousel1];
-	[self carouselReload:self.carousel3];
+//	[self carouselReload:self.carousel1];
+//	[self carouselReload:self.carousel3];
+	
+	[self.carousel1 reloadData];
+	[self.carousel3 reloadData];
 	
 	[self.carousel1 setCurrentItemIndex:0];
 	[self.carousel3 setCurrentItemIndex:0];
