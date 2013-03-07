@@ -161,7 +161,7 @@ int cnt = 0;
 													  cancelButtonTitle:nil
 													  otherButtonTitles:nil];
 				[self.alert show];
-				[NSTimer scheduledTimerWithTimeInterval:120 target:self selector:@selector(makeDoneAlertClickable) userInfo:nil repeats:NO];
+				[NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(makeDoneAlertClickable) userInfo:nil repeats:NO];
 				
 			}
 			
