@@ -1,9 +1,15 @@
 <items>
 	<item name="Fische" img="fische.png">
-		<item name="Hai" img="hai.png"/>
-		<item name="Lachs" img="lachs.png"/>
-		<item name="Seezunge" img="Seezunge.png"/>
-		<item name="Thunfisch" img="Thunfisch.png"/>
+		<item name="Flussfische" img="Fischecross.jpg">
+			<item name="Bachforelle" img="bachforelle.png"/>
+			<item name="Lachs" img="lachs.png"/>
+			<item name="Zander" img="zander.png"/>
+		</item>
+		<item name="Seefische" img="seefische.jpg">
+			<item name="Hai" img="hai.png"/>
+			<item name="Seezunge" img="Seezunge.png"/>
+			<item name="Thunfisch" img="Thunfisch.png"/>
+		</item>
 	</item>
 	<item name="Säugetiere" img="saeugetiere.png">
 		<item name="Katzen" img="Katze.png">
@@ -18,8 +24,14 @@
 		<item name="Hund" img="hund.png"/>
 	</item>
 	<item name="Vögel" img="vogel.png">
-		<item name="Blaumeise" img="blaumeise.jpg"/>
-		<item name="Kolibri" img="kolibri.png"/>
-		<item name="Rabe" img="Rabe.png"/>
+		<item name="Flugfähige" img="flugvoegel.jpg">
+			<item name="Blaumeise" img="blaumeise.jpg"/>
+			<item name="Kolibri" img="kolibri.png"/>
+			<item name="Rabe" img="Rabe.png"/>
+		</item>
+		<item name="Flugunfähige" img="laufvogel.jpg">
+			<item name="Laufvogel" img="laufvogel.jpg"/>
+			<item name="Pinguin" img="pinguin.png"/>
+		</item>
 	</item>
 </items>
