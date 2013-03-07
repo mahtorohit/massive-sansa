@@ -92,7 +92,7 @@ int cnt = 0;
 	
 	if (lock)
 	{
-		[NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(unlock) userInfo:nil repeats:NO];
+//		[NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(unlock) userInfo:nil repeats:NO];
 	} else {
 		[self startNextExperiment];
 	}

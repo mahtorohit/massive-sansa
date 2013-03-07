@@ -21,6 +21,8 @@
 @synthesize controller = _controller;
 @synthesize lockView = _lockView;
 
+BOOL locked;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -49,8 +51,7 @@
 - (void)unlock
 {
 	[self.lockView removeFromSuperview];
-	[self.startButton setHidden:NO];
-
+	locked = NO;
 }
 
 - (UIViewController *) createViewControllerOfName:(NSString *)viewControllerName andLock:(BOOL)lock
@@ -69,9 +70,15 @@
 	{
 		self.lockView = [[UIView alloc] initWithFrame:CGRectMake(0, 66, 1024, 702)];
 		[self.view addSubview:self.lockView];
-		[self.startButton setHidden:YES];
+		
+		locked = YES;
+		
+		[self.startButton setHidden:NO];
 	}
-	
+	else
+	{
+		[self.startButton setHidden:YES];	
+	}
 	
 	return self.controller;
 }
@@ -100,9 +107,15 @@
 
 - (IBAction)startClicked:(UIButton *)sender
 {
-	[[IDPTaskProvider sharedInstance] startNextExperiment];
-	[self.startButton setHidden:YES];
-
+	if (locked)
+	{
+		[self unlock];
+	}
+	else
+	{
+		[[IDPTaskProvider sharedInstance] startNextExperiment];
+		[self.startButton setHidden:YES];
+	}
 }
 
 - (void)didReceiveMemoryWarning

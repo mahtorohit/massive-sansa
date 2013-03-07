@@ -32,18 +32,24 @@
 	
     NSMutableArray* array = [[NSMutableArray alloc] init];
 
-    [self createTreeInArray:array withMenuItem:[[DataProvider sharedInstance] getRootMenuItem]];
+    [self createTreeInArray:array withMenuItem:[[DataProvider sharedInstance] getRootMenuItem] andParentTreeItem:nil];
     treeItems = array;
     
 //    NSLog(@"%i", [treeItems count]);
     // Do any additional setup after loading the view, typically from a nib.
 }
 
--(void) createTreeInArray:(NSMutableArray *)array withMenuItem:(MenuItem *)menuItem {
+-(void) viewDidAppear:(BOOL)animated
+{
+	[self.tableView setFrame:CGRectMake(0, 66, 400, 702)];
+}
+
+-(void) createTreeInArray:(NSMutableArray *)array withMenuItem:(MenuItem *)menuItem andParentTreeItem:(TreeItem *)ptreeItem {
 
 		
     TreeItem* item = [[TreeItem alloc] init];
     [item setMenuItem:menuItem];
+	[item setPtreeItem:ptreeItem];
     [item setUnfolded:NO];
 
 //	NSLog(@"%@", [item.menuItem getTitle]);
@@ -51,7 +57,7 @@
     [array addObject:item];
     
     for (MenuItem* child in [menuItem getChildren]) {
-        [self createTreeInArray:array withMenuItem:child];
+        [self createTreeInArray:array withMenuItem:child andParentTreeItem:item];
     }
     
 }
@@ -255,17 +261,35 @@
 	[selectedItem.menuItem selectItem];
 	
     for (TreeItem* item in treeItems) {
-        if ([item.menuItem getParent] == [selectedItem.menuItem getParent]) {
+        if ([item ptreeItem] == [selectedItem ptreeItem]) {
             if  (![[item.menuItem getTitle]isEqualToString:[selectedItem.menuItem getTitle]]) {
-                [item setUnfolded:NO];
+				[item setUnfolded:NO];
+				[self collapseTreeFrom:item];
 			}
 		}
     }
+
+	//    for (TreeItem* item in treeItems) {
+	//        if ([item.menuItem getParent] == [selectedItem.menuItem getParent]) {
+	//            if  (![[item.menuItem getTitle]isEqualToString:[selectedItem.menuItem getTitle]]) {
+	//				[item setUnfolded:NO];
+	//			}
+	//		}
+	//    }
+
     
     [self.tableView reloadData];
-    
 }
 
+- (void) collapseTreeFrom:(TreeItem *)parentitem
+{
+	for (TreeItem* item in treeItems) {
+        if ([item ptreeItem] == parentitem) {
+			[item setUnfolded:NO];
+			[self collapseTreeFrom:item];
+		}
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {

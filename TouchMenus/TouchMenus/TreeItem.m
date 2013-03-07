@@ -14,6 +14,7 @@
 }
 
 @synthesize menuItem;
+@synthesize ptreeItem;
 
 - (void) setUnfolded:(BOOL)b {
     unfolded = b;

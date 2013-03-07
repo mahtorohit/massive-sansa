@@ -12,6 +12,7 @@
 @interface TreeItem : NSObject 
 
 @property (strong,nonatomic) MenuItem *menuItem;
+@property (strong,nonatomic) TreeItem *ptreeItem;
 
 - (void) setUnfolded:(BOOL)b;
 - (BOOL) isUnfolded;
