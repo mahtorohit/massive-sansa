@@ -131,7 +131,7 @@ int cnt = 0;
 			
 			//was it a dummy exercise???
 			if ([self.currentExercise.dataSet intValue] == 2) {
-				[[CSVLogger sharedInstance] logToFileAt:endTime message:@"EXERCISE DONE" itemTitle:@""];
+				[[CSVLogger sharedInstance] logToFileAt:endTime message:@"EXERCISE START" itemTitle:self.currentExercise.menuIdentifier];
 				
 				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Los gehts!"
 																message:@""
@@ -142,7 +142,8 @@ int cnt = 0;
 			}
 			//is the next one the same menu???
 			else if ([self.currentExercise.menuIdentifier isEqualToString:((IDPExercise *)[self.exercises lastObject]).menuIdentifier]) {
-				[[CSVLogger sharedInstance] logToFileAt:endTime message:@"EXERCISE DONE" itemTitle:@""];
+				
+				[[CSVLogger sharedInstance] logToFileAt:endTime message:@"EXERCISE DONE" itemTitle:[NSString stringWithFormat:@"%@ %i",self.currentExercise.menuIdentifier, [self.currentExercise.dataSet integerValue]]];
 				
 				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gefunden"
 																message:@"Weiter mit dem nächsten Shop"
@@ -153,7 +154,7 @@ int cnt = 0;
 			}
 			else
 			{
-				[[CSVLogger sharedInstance] logToFileAt:endTime message:@"EXERCISE DONE" itemTitle:@""];
+				[[CSVLogger sharedInstance] logToFileAt:endTime message:@"EXERCISE DONE" itemTitle:[NSString stringWithFormat:@"%@ %i",self.currentExercise.menuIdentifier, [self.currentExercise.dataSet integerValue]]];
 				
 				self.alert = [[UIAlertView alloc] initWithTitle:@"Gefunden"
 																message:@"Das wars mit diesem Menü. \n\n Bitte wende dich an den Versuchsleiter um fortzufahren. \n\n  Weiter geht es mit den Fragebögen zu diesem Menü."
