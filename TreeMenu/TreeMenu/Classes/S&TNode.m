@@ -10,4 +10,10 @@
 
 @implementation S_TNode
 
+-(id)initWithData:(NSDictionary*)data{
+
+    
+    return self;
+}
+
 @end
