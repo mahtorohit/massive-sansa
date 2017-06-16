@@ -32,6 +32,8 @@
 		4F353B8711FCF1A400AABFF1 /* MyLeafView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F353B8611FCF1A400AABFF1 /* MyLeafView.m */; };
 		4F4AA33913FA305700607517 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F4AA33813FA305700607517 /* Entitlements.plist */; };
 		4F4AA34513FA32C700607517 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F4AA34413FA32C700607517 /* Icon-72.png */; };
+		F96494641EF3BB630032DA6B /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F96494631EF3BB630032DA6B /* data.json */; };
+		F96494671EF3BD020032DA6B /* S&TNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F96494661EF3BD020032DA6B /* S&TNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +81,9 @@
 		4F4AA34413FA32C700607517 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Graphics/Icon-72.png"; sourceTree = "<group>"; };
 		4F86D04113FAADAF00A494AE /* PSTreeGraphModelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSTreeGraphModelNode.h; path = ../PSTreeGraphView/PSTreeGraphModelNode.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* PSHTreeGraph-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PSHTreeGraph-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		F96494631EF3BB630032DA6B /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		F96494651EF3BD020032DA6B /* S&TNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "S&TNode.h"; sourceTree = "<group>"; };
+		F96494661EF3BD020032DA6B /* S&TNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "S&TNode.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +103,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F96494631EF3BB630032DA6B /* data.json */,
 				4F3536A811FC7C1F00AABFF1 /* Controller */,
 				4F3536AC11FC7C2A00AABFF1 /* View */,
 				4F3536AB11FC7C2500AABFF1 /* Model */,
@@ -175,6 +181,8 @@
 				4834E0EB16A410C600B72D2D /* TreeMenuItem.h */,
 				4834E0EC16A410C600B72D2D /* TreeMenuItem.m */,
 				4F86D04213FAADC000A494AE /* ObjCClass */,
+				F96494651EF3BD020032DA6B /* S&TNode.h */,
+				F96494661EF3BD020032DA6B /* S&TNode.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -330,6 +338,7 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* PSHTreeGraphViewController.xib in Resources */,
 				4F35382611FC9FD500AABFF1 /* ObjCClassTreeNodeView.xib in Resources */,
+				F96494641EF3BB630032DA6B /* data.json in Resources */,
 				4F35382E11FCA00700AABFF1 /* TreeViewSubtreeCollapsedButton.png in Resources */,
 				4F35382F11FCA00700AABFF1 /* TreeViewSubtreeExpandedButton.png in Resources */,
 				4F35383011FCA00700AABFF1 /* TreeViewDirectLinesButton.png in Resources */,
@@ -355,6 +364,7 @@
 				4F35379F11FC8EC900AABFF1 /* PSBaseSubtreeView.m in Sources */,
 				4F3537A011FC8EC900AABFF1 /* PSBaseTreeGraphView.m in Sources */,
 				4F3537ED11FC9A2F00AABFF1 /* ObjCClassWrapper.m in Sources */,
+				F96494671EF3BD020032DA6B /* S&TNode.m in Sources */,
 				4F353B8711FCF1A400AABFF1 /* MyLeafView.m in Sources */,
 				4895AFB7169EDE98005AC538 /* PSHSampleTree.m in Sources */,
 				4834E0ED16A410C600B72D2D /* TreeDataProvider.m in Sources */,

@@ -63,6 +63,39 @@ static TreeDataProvider *_sharedMySingleton = nil;
 	return self;
 }
 
+- (id) initWithData:(NSDictionary*)data
+{
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"json"];
+    NSError * error=nil;
+    NSString *jsonString = [NSString stringWithContentsOfFile:filePath encoding:nil error:&error];
+    NSData * jsonData = [jsonString dataUsingEncoding:nil];
+    NSDictionary * parsedData = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+    
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 2; i++) {
+        [array addObject:[[TreeMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Cat %i",i] imgUrl:nil usingChildren:nil andParent:nil]];
+    }
+    rootElements = [array copy];
+    
+    
+    return self;
+}
+
+-(NSArray*)getChilds: (NSDictionary*)data{
+    
+    if(data == nil || data[@"ChildNodes"] == nil){
+        return nil;
+    }
+    
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (NSDictionary * node in data[@"ChildNodes"]) {
+        [array addObject:[[TreeMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Cat %i",i] imgUrl:nil usingChildren:nil andParent:nil]];
+    }
+    
+    
+}
+
 - (NSArray *) getRootLevelElements {
 	return rootElements;
 }
