@@ -74,5 +74,10 @@
 - (id)copyWithZone:(NSZone *)zone {
     return [self retain];
 }
-
+- (void) addChildren:(TreeMenuItem*) children{
+    if(childMenuItems == nil){
+        childMenuItems = [[NSMutableArray alloc] init];
+    }
+     [childMenuItems addObject:children];
+}
 @end

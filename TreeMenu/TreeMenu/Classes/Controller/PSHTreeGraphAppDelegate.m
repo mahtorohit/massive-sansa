@@ -9,7 +9,7 @@
 
 #import "PSHTreeGraphAppDelegate.h"
 #import "PSHTreeGraphViewController.h"
-
+#import "TreeDataProvider.h"
 
 #pragma mark - Internal Interface
 
@@ -36,18 +36,50 @@
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
     
     // Override point for customization after app launch
-    // [window addSubview:viewController.view];
-    
+//     [window addSubview:viewController.view];
+    [self printNames];
+    TreeDataProvider * t = [[TreeDataProvider alloc] initWithData:nil];
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = @[viewController_];
     self.window.rootViewController = self.tabBarController;
-    
-    // Hide Bottom bar
-    [self hideTabBar:self.tabBarController animated:NO];
+//
+//    // Hide Bottom bar
+//    [self hideTabBar:self.tabBarController animated:NO];
     
     
     [window_ makeKeyAndVisible];
 }
+
+- (void)printNames{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"json"];
+    NSError * error=nil;
+    NSString *jsonString = [NSString stringWithContentsOfFile:filePath encoding:nil error:&error];
+    NSData * jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary * parsedData = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+    parsedData = parsedData[@"RootNode"];
+    
+    [self printTitalparent:parsedData];
+    
+
+}
+
+
+-(void)printTitalparent:(NSDictionary*)parent{
+    NSArray * nodes = parent[@"ChildNodes"];
+    if(nodes.count == 0 ){
+        NSLog(@"Tree Ended");
+        return;
+    }
+    else{
+        for(int i =0 ;i< nodes.count;i++){
+            NSDictionary *data = nodes[i];
+            NSLog(@"Name : %@ Level : %@",data[@"Caption"],data[@"Number"]);
+            [self printTitalparent:data];
+        }
+    }
+    
+}
+
 
 - (void)hideTabBar:(UITabBarController *)tabBarController
           animated:(BOOL)animated {

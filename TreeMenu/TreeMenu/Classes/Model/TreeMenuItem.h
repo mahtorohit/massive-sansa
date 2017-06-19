@@ -5,17 +5,19 @@
 
 #import <Foundation/Foundation.h>
 #import "PSTreeGraphModelNode.h"
-
+#import "S&TNode.h"
 
 @interface TreeMenuItem : NSObject<PSTreeGraphModelNode, NSCopying> {
 	NSString *title;
 	NSString *imgURL;
-	NSArray *childMenuItems;
+	NSMutableArray *childMenuItems;
+    
 	TreeMenuItem *parent;
 }
 
 - (id) initWithTitle:(NSString*)theTitle imgUrl:(NSString*)theImgURL usingChildren:(NSArray *)children andParent:(TreeMenuItem*)parent;
 - (void) setChildren:(NSArray*) children;
+- (void) addChildren:(TreeMenuItem*) children;
 - (void) setParent:(TreeMenuItem*) parent;
 
 - (NSString*) getTitle; //nil if none
@@ -27,5 +29,5 @@
 - (NSArray *) getChildren; //nil if none
 - (TreeMenuItem *) getParent; //nil if none
 - (BOOL) isLeaf;
-
+@property (nonatomic,strong) S_TNode * s_tNode;
 @end

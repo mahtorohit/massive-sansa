@@ -11,6 +11,6 @@
 + (TreeDataProvider *) sharedInstance;
 - (NSArray *) getRootLevelElements;
 - (TreeMenuItem *) getRootMenuItem;
-
+- (id) initWithData:(NSDictionary*)data;
 
 @end
